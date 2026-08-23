@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://bnwhg1k31ufkt"]
+
+[ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="1_c4amj"]
+[ext_resource type="Script" uid="uid://dbqxeonye75p" path="res://_Components/Scripts/curent_word_letter.gd" id="2_c4amj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oeph3"]
+font = ExtResource("1_c4amj")
+font_size = 80
+font_color = Color(0.227451, 0.52549, 1, 1)
+outline_size = 5
+outline_color = Color(0.227451, 0.52549, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_20t6k"]
+radius = 26.076809
+
+[sub_resource type="Gradient" id="Gradient_pyheu"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_h7xov"]
+gradient = SubResource("Gradient_pyheu")
+width = 20
+height = 20
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_h7xov"]
+offsets = PackedFloat32Array(0.62203413, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Gradient" id="Gradient_mvqqf"]
+offsets = PackedFloat32Array(0.6559324, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Curent Word Letter" type="Label" unique_id=1838218017]
+offset_right = 44.0
+offset_bottom = 112.0
+text = "D"
+label_settings = SubResource("LabelSettings_oeph3")
+script = ExtResource("2_c4amj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2056504125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=898706431]
+position = Vector2(21, 48)
+shape = SubResource("CircleShape2D_20t6k")
+
+[node name="MainParticles" type="CPUParticles2D" parent="." unique_id=1317387302]
+modulate = Color(0.227451, 0.52549, 1, 1)
+position = Vector2(22, 49)
+emitting = false
+texture = SubResource("GradientTexture2D_h7xov")
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.19
+emission_shape = 1
+emission_sphere_radius = 27.67
+direction = Vector2(0, -1)
+initial_velocity_min = 400.0
+initial_velocity_max = 600.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_h7xov")
+
+[node name="UndoParticles" type="CPUParticles2D" parent="MainParticles" unique_id=858066356]
+emitting = false
+amount = 15
+texture = SubResource("GradientTexture2D_h7xov")
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.19
+emission_shape = 2
+emission_sphere_radius = 73.11
+direction = Vector2(0, -1)
+radial_accel_min = -400.0
+radial_accel_max = -200.0
+damping_min = 57.0
+damping_max = 57.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_h7xov")
+
+[node name="FinishedParticles" type="CPUParticles2D" parent="MainParticles" unique_id=1536562053]
+emitting = false
+texture = SubResource("GradientTexture2D_h7xov")
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.49
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector2(0, -1)
+spread = 10.0
+initial_velocity_min = 400.0
+initial_velocity_max = 600.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_mvqqf")
+
+[connection signal="resized" from="." to="." method="_on_resized"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

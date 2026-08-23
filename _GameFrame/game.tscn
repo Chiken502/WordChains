@@ -1,0 +1,298 @@
+[gd_scene format=3 uid="uid://c3l5yj0i2irh2"]
+
+[ext_resource type="Script" uid="uid://baoogqlxpnw3r" path="res://_GameFrame/game.gd" id="1_np61i"]
+[ext_resource type="Script" uid="uid://cycbbtijqjlaw" path="res://_GameFrame/letter_controler.gd" id="2_3g1ng"]
+[ext_resource type="Script" uid="uid://cbbgu0i06p7sf" path="res://_GameFrame/tween_controller.gd" id="2_p1fqw"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="4_3g1ng"]
+[ext_resource type="FontFile" uid="uid://cd4ejwmk1cv4w" path="res://Fonts/Zain-Light.ttf" id="4_6wqon"]
+[ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="5_xb2by"]
+[ext_resource type="FontFile" uid="uid://ca8dx2diwqldv" path="res://Fonts/Zain-Black.ttf" id="6_xb2by"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="7_p1fqw"]
+[ext_resource type="Script" uid="uid://bsyq6eq20ibx" path="res://_GameFrame/ShakingCamera.gd" id="8_6wqon"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
+size = Vector2(506, 188)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6wqon"]
+line_spacing = 0.0
+font = ExtResource("6_xb2by")
+
+[sub_resource type="LabelSettings" id="LabelSettings_feb5d"]
+font = ExtResource("4_6wqon")
+font_size = 64
+font_color = Color(0.227451, 0.52549, 1, 1)
+outline_size = 3
+outline_color = Color(0.227451, 0.52549, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e2o6t"]
+font = ExtResource("5_xb2by")
+font_size = 80
+font_color = Color(0.227451, 0.52549, 1, 1)
+outline_size = 5
+outline_color = Color(0.227451, 0.52549, 1, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_80nbo"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e2o6t"]
+normal = Vector2(-1, 0)
+
+[node name="Game" type="Control" unique_id=1708314369]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_np61i")
+
+[node name="TweenController" type="Node2D" parent="." unique_id=786978022]
+script = ExtResource("2_p1fqw")
+
+[node name="LetterControler" type="Node2D" parent="." unique_id=957083735]
+script = ExtResource("2_3g1ng")
+
+[node name="Bottom" type="StaticBody2D" parent="." unique_id=1473018805]
+position = Vector2(0, 712)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom" unique_id=1195725760]
+position = Vector2(253, 94.5)
+shape = SubResource("RectangleShape2D_e2o6t")
+
+[node name="Control" type="Control" parent="." unique_id=1079211166]
+custom_minimum_size = Vector2(506, 900)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CameraHolder" type="Control" parent="Control" unique_id=640491644]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ShakeCamera2D" type="Camera2D" parent="Control/CameraHolder" unique_id=142745269]
+script = ExtResource("8_6wqon")
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=1690475740]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Bottom" type="Control" parent="Control" unique_id=1646447885]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Control/Bottom" unique_id=1373984676]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Bottom" unique_id=589429596]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Undo" type="Button" parent="Control/Bottom/HBoxContainer" unique_id=1860289325]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("4_3g1ng")
+disabled = true
+text = "arrow-rotate-right"
+
+[node name="Home" type="Button" parent="Control/Bottom/HBoxContainer" unique_id=126771325]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("4_3g1ng")
+text = "Home"
+
+[node name="Hint" type="Button" parent="Control/Bottom/HBoxContainer" unique_id=324054477]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("4_3g1ng")
+disabled = true
+text = "LightBulb"
+
+[node name="Panel" type="Panel" parent="Control/Bottom/HBoxContainer/Hint" unique_id=1707430848]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -25.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("4_3g1ng")
+
+[node name="Label" type="Label" parent="Control/Bottom/HBoxContainer/Hint/Panel" unique_id=659382177]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 2.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_6wqon")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1518605461]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -163.5
+offset_right = 128.0
+offset_bottom = 163.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_constants/separation = -13
+alignment = 1
+
+[node name="TargetWord" type="Label" parent="Control/VBoxContainer" unique_id=2052403758]
+layout_mode = 2
+offset_transform_enabled = true
+text = "XXXX"
+label_settings = SubResource("LabelSettings_feb5d")
+horizontal_alignment = 1
+
+[node name="CurrentWordHBox" type="HBoxContainer" parent="Control/VBoxContainer" unique_id=716434866]
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="Control/VBoxContainer/CurrentWordHBox" unique_id=2747648]
+layout_mode = 2
+text = "X"
+label_settings = SubResource("LabelSettings_e2o6t")
+
+[node name="Label2" type="Label" parent="Control/VBoxContainer/CurrentWordHBox" unique_id=1593382211]
+layout_mode = 2
+text = "X"
+label_settings = SubResource("LabelSettings_e2o6t")
+
+[node name="Label3" type="Label" parent="Control/VBoxContainer/CurrentWordHBox" unique_id=412214963]
+layout_mode = 2
+text = "X"
+label_settings = SubResource("LabelSettings_e2o6t")
+
+[node name="Label4" type="Label" parent="Control/VBoxContainer/CurrentWordHBox" unique_id=1214042748]
+layout_mode = 2
+text = "X"
+label_settings = SubResource("LabelSettings_e2o6t")
+
+[node name="Hint" type="RichTextLabel" parent="Control/VBoxContainer" unique_id=1384336966]
+layout_mode = 2
+size_flags_vertical = 3
+offset_transform_enabled = true
+theme = ExtResource("4_3g1ng")
+theme_override_font_sizes/normal_font_size = 28
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+
+[node name="leftside" type="Control" parent="Control" unique_id=1595105778]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="WorldSides" type="StaticBody2D" parent="Control/leftside" unique_id=1554833999]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/leftside/WorldSides" unique_id=362074360]
+shape = SubResource("WorldBoundaryShape2D_80nbo")
+
+[node name="rightside" type="Control" parent="." unique_id=484780450]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="WorldSide" type="StaticBody2D" parent="rightside" unique_id=2070184825]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="rightside/WorldSide" unique_id=840845970]
+shape = SubResource("WorldBoundaryShape2D_e2o6t")
+
+[node name="ColorAgent" type="Node" parent="." unique_id=2117236080 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
+script = ExtResource("7_p1fqw")
+bg_color_rect = NodePath("../Control/ColorRect")
+ground_color_rect = NodePath("../Control/Bottom/ColorRect2")
+labels = [NodePath("../Control/VBoxContainer/TargetWord")]
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]
+[connection signal="pressed" from="Control/Bottom/HBoxContainer/Home" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="Control/Bottom/HBoxContainer/Hint" to="." method="_on_hint_button_pressed"]

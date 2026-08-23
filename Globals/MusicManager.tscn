@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://bej4m7xpcwpoj"]
+
+[ext_resource type="Script" uid="uid://d3lkopbar7fa6" path="res://Globals/MusicManager.gd" id="1_721ig"]
+[ext_resource type="AudioStream" uid="uid://b0sye0m1n4ump" path="res://Audio/Music/MusicOpener.mp3" id="3_4qjg3"]
+[ext_resource type="AudioStream" uid="uid://d0yagxd1h4w5w" path="res://Audio/Music/MusicLoop.mp3" id="3_58ywj"]
+[ext_resource type="AudioStream" uid="uid://dbp4k6jcgf6ws" path="res://Audio/Sfx/button_press.tres" id="3_wpqth"]
+[ext_resource type="AudioStream" uid="uid://bf62ptypehplv" path="res://Audio/Sfx/connect.tres" id="5_ikyyu"]
+[ext_resource type="AudioStream" uid="uid://b22gagtightox" path="res://Audio/Sfx/complete.mp3" id="6_58ywj"]
+[ext_resource type="AudioStream" uid="uid://3xdi5itq57ei" path="res://Audio/Sfx/error.wav" id="7_4qjg3"]
+[ext_resource type="AudioStream" uid="uid://bokxkaurj4tbf" path="res://Audio/Sfx/soundFeedback1.wav" id="8_58ywj"]
+[ext_resource type="AudioStream" uid="uid://cb6t56ih5ggad" path="res://Audio/Sfx/slide.tres" id="8_ikyyu"]
+
+[node name="MusicManager" type="Node" unique_id=638930847]
+script = ExtResource("1_721ig")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1541956076]
+stream = ExtResource("3_58ywj")
+volume_db = -6.0
+bus = &"Music Bus"
+
+[node name="MusicOpener" type="AudioStreamPlayer" parent="MusicPlayer" unique_id=739914486]
+stream = ExtResource("3_4qjg3")
+volume_db = -11.0
+autoplay = true
+bus = &"Music Bus"
+
+[node name="ButtonPress" type="AudioStreamPlayer" parent="." unique_id=1928073040]
+stream = ExtResource("3_wpqth")
+max_polyphony = 3
+bus = &"SFX Bus"
+
+[node name="Connect" type="AudioStreamPlayer" parent="." unique_id=1368864821]
+stream = ExtResource("5_ikyyu")
+bus = &"SFX Bus"
+
+[node name="Complete" type="AudioStreamPlayer" parent="." unique_id=773588708]
+stream = ExtResource("6_58ywj")
+bus = &"SFX Bus"
+
+[node name="Error" type="AudioStreamPlayer" parent="." unique_id=498004953]
+stream = ExtResource("7_4qjg3")
+bus = &"SFX Bus"
+
+[node name="Slide" type="AudioStreamPlayer" parent="." unique_id=628352024]
+stream = ExtResource("8_ikyyu")
+max_polyphony = 2
+bus = &"SFX Bus"
+
+[node name="SoundFeedback" type="AudioStreamPlayer" parent="." unique_id=523201888]
+stream = ExtResource("8_58ywj")
+bus = &"SFX Bus"
+
+[connection signal="finished" from="MusicPlayer/MusicOpener" to="." method="_on_music_opener_finished"]

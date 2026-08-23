@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dim4tr4e6rmau"]
+
+[ext_resource type="Script" uid="uid://tbfdrgf55iao" path="res://_Frames/Scripts/menu.gd" id="1_ph7o7"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="2_qfaas"]
+[ext_resource type="FontFile" uid="uid://bjy5iambxwpes" path="res://Fonts/Zain-ExtraBold.ttf" id="3_a7p0o"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="4_kmebn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4x8ju"]
+line_spacing = -98.0
+font = ExtResource("3_a7p0o")
+font_size = 128
+font_color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="Menu" type="Control" unique_id=2118893300]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ph7o7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1826354210]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5882353, 0.84705883, 0.99607843, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1450950055]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1425916714]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 56
+alignment = 1
+
+[node name="Settings" type="Button" parent="HBoxContainer" unique_id=833888503]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_vertical = 4
+offset_transform_enabled = true
+theme = ExtResource("2_qfaas")
+text = "gear"
+
+[node name="Play" type="Button" parent="HBoxContainer" unique_id=1596516660]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(97, 97)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("2_qfaas")
+text = "play"
+
+[node name="Credits" type="Button" parent="HBoxContainer" unique_id=616349202]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_vertical = 4
+offset_transform_enabled = true
+theme = ExtResource("2_qfaas")
+text = "info"
+
+[node name="Title" type="Label" parent="." unique_id=1642298935]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -178.0
+offset_top = 62.0
+offset_right = 179.0
+offset_bottom = 324.0
+grow_horizontal = 2
+offset_transform_enabled = true
+mouse_filter = 1
+text = "WORD 
+CHAINS"
+label_settings = SubResource("LabelSettings_4x8ju")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorAgent" type="Node" parent="." unique_id=484538886 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
+script = ExtResource("4_kmebn")
+bg_color_rect = NodePath("../ColorRect")
+ground_color_rect = NodePath("../ColorRect2")
+labels = [NodePath("../Title")]
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_credits_pressed"]

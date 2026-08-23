@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bv3i78d5np156"
+path="res://.godot/imported/Connect 01.mp3-7c227485f072f44ff37b8e426ed37ea2.mp3str"
+
+[deps]
+
+source_file="res://Audio/Sfx/Connect 01.mp3"
+dest_files=["res://.godot/imported/Connect 01.mp3-7c227485f072f44ff37b8e426ed37ea2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

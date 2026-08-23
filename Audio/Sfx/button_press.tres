@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://dbp4k6jcgf6ws"]
+
+[ext_resource type="AudioStream" uid="uid://csosqvqrqp8em" path="res://Audio/Sfx/button_press-02.mp3" id="1_wjeyy"]
+[ext_resource type="AudioStream" uid="uid://bc87d8mqrhupw" path="res://Audio/Sfx/button_press-03.mp3" id="2_hqhsa"]
+[ext_resource type="AudioStream" uid="uid://6tgk3qh37a4p" path="res://Audio/Sfx/button_press-04.mp3" id="3_ldj53"]
+[ext_resource type="AudioStream" uid="uid://dlm7anm8aku7w" path="res://Audio/Sfx/button_press-05.mp3" id="4_cfu6j"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_wjeyy")
+stream_1/stream = ExtResource("2_hqhsa")
+stream_2/stream = ExtResource("3_ldj53")
+stream_3/stream = ExtResource("4_cfu6j")

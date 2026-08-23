@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://bbqryrfcv6lnm"]
+
+[ext_resource type="Script" uid="uid://ce0jkdx7ijl67" path="res://_Frames/Scripts/credits.gd" id="1_shu8t"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="2_hkiig"]
+[ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="3_5ljro"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="6_vo65t"]
+
+[node name="Credits" type="Control" unique_id=1144219969]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_shu8t")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=792742093]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Bottom" type="Control" parent="." unique_id=933010128]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom" unique_id=315906650]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="Home" type="Button" parent="Bottom" unique_id=728651010]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.5
+offset_right = 25.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_hkiig")
+text = "Home"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1252761851]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1870827306]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1433060846]
+layout_mode = 2
+text = "CREDITS"
+label_settings = ExtResource("3_5ljro")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=1193649742]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1681934175]
+layout_mode = 2
+theme = ExtResource("2_hkiig")
+bbcode_enabled = true
+text = "This game was made by [b]Chicken502[/b]
+
+Font is [b] Zain[/b] from [b] Google Fonts [/b]
+
+Icons from [b]Font Awesome Free Version 7 [/b]
+
+Godot splash screen by [b]Guhnahdahb[/b]"
+fit_content = true
+
+[node name="ColorAgent" type="Node" parent="." unique_id=201434127 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect")]
+script = ExtResource("6_vo65t")
+bg_color_rect = NodePath("../ColorRect")
+ground_color_rect = NodePath("../Bottom/ColorRect2")
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="Bottom/Home" to="." method="_on_home_pressed"]

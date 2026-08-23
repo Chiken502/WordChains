@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://db0o5ssdk3nl6"]
+
+[ext_resource type="AudioStream" uid="uid://s52carhr4gre" path="res://Audio/Sfx/collision-01.mp3" id="1_lpcqm"]
+[ext_resource type="AudioStream" uid="uid://cowv2gsd1ykhk" path="res://Audio/Sfx/collision-02.mp3" id="2_4h8lx"]
+[ext_resource type="AudioStream" uid="uid://bndcoahfrwqpm" path="res://Audio/Sfx/collision-03.mp3" id="3_jrap8"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_lpcqm")
+stream_1/stream = ExtResource("2_4h8lx")
+stream_2/stream = ExtResource("3_jrap8")

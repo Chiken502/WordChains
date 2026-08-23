@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://cy7njs0vwbxvn"]
+
+[ext_resource type="Script" uid="uid://d2mf2itg45xmv" path="res://_Frames/Scripts/settings.gd" id="1_wp7ya"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="2_klobn"]
+[ext_resource type="FontFile" uid="uid://bjy5iambxwpes" path="res://Fonts/Zain-ExtraBold.ttf" id="3_s1s6w"]
+[ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="3_x0uk4"]
+[ext_resource type="LabelSettings" uid="uid://cd4808gjis3qt" path="res://Resources/settings_label.tres" id="4_h37ls"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="5_nair6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mvqqf"]
+font = ExtResource("3_s1s6w")
+font_size = 13
+font_color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Settings" type="Control" unique_id=1125354495]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wp7ya")
+metadata/_edit_vertical_guides_ = [225.0]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1739931429]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Bottom" type="Control" parent="." unique_id=87151281]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom" unique_id=320307633]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="Home" type="Button" parent="Bottom" unique_id=1429962972]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.5
+offset_right = 25.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("2_klobn")
+text = "Home"
+
+[node name="Version" type="Label" parent="Bottom" unique_id=418925750]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "v0.2b"
+label_settings = SubResource("LabelSettings_mvqqf")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2131180654]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1079408449]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1126799534]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 1
+text = "SETTINGS"
+label_settings = ExtResource("3_x0uk4")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=858924735]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+
+[node name="Color" type="HBoxContainer" parent="VBoxContainer" unique_id=999394556]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 44
+
+[node name="Label" type="Label" parent="VBoxContainer/Color" unique_id=2044065118]
+layout_mode = 2
+text = "Color"
+label_settings = ExtResource("4_h37ls")
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/Color" unique_id=318284854]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_klobn")
+alignment = 1
+
+[node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=659805451]
+layout_mode = 2
+
+[node name="Music" type="HBoxContainer" parent="VBoxContainer" unique_id=1920857043]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 43
+
+[node name="Label" type="Label" parent="VBoxContainer/Music" unique_id=1082011452]
+layout_mode = 2
+text = "Music"
+label_settings = ExtResource("4_h37ls")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Music" unique_id=78421592]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_klobn")
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Sound" type="HBoxContainer" parent="VBoxContainer" unique_id=1977031223]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 34
+
+[node name="Label" type="Label" parent="VBoxContainer/Sound" unique_id=723964161]
+layout_mode = 2
+text = "Sound"
+label_settings = ExtResource("4_h37ls")
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/Sound" unique_id=1804269823]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("2_klobn")
+max_value = 1.0
+step = 0.01
+
+[node name="ScreenShake" type="HBoxContainer" parent="VBoxContainer" unique_id=1197158340]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 84
+
+[node name="Label" type="Label" parent="VBoxContainer/ScreenShake" unique_id=377312275]
+layout_mode = 2
+text = "Screen Shake"
+label_settings = ExtResource("4_h37ls")
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/ScreenShake" unique_id=1415117339]
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("2_klobn")
+button_pressed = true
+
+[node name="ColorAgent" type="Node" parent="." unique_id=1148928729 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
+script = ExtResource("5_nair6")
+bg_color_rect = NodePath("../ColorRect")
+ground_color_rect = NodePath("../Bottom/ColorRect2")
+labels = [NodePath("../Bottom/Version")]
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="Bottom/Home" to="." method="_on_home_pressed"]
+[connection signal="item_selected" from="VBoxContainer/Color/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="value_changed" from="VBoxContainer/Music/HSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/Sound/HSlider" to="." method="_on_sound_slider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/ScreenShake/CheckBox" to="." method="_on_check_box_pressed"]

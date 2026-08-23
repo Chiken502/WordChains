@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://c4w40ujpcwvfi"]
+
+[ext_resource type="Script" uid="uid://4yjancccl1p1" path="res://_Components/Scripts/falling_letter.gd" id="1_sv07x"]
+[ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="2_sgfju"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wd0ba"]
+font = ExtResource("2_sgfju")
+font_size = 80
+outline_size = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r0wbp"]
+radius = 32.24903
+
+[node name="Falling Letter" type="RigidBody2D" unique_id=14734377 groups=["falling letter"]]
+modulate = Color(0.227451, 0.52549, 1, 1)
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_sv07x")
+
+[node name="Label" type="Label" parent="." unique_id=1125140075]
+offset_left = -24.0
+offset_top = -56.0
+offset_right = 24.0
+offset_bottom = 56.0
+text = "A"
+label_settings = SubResource("LabelSettings_wd0ba")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=24392266]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1023535932]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1705368897]
+shape = SubResource("CircleShape2D_r0wbp")
