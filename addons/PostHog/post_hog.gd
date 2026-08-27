@@ -16,31 +16,34 @@ signal api_response(response: Variant)
 signal initialized
 
 ## Properties included in every event.
-var auto_include_properties = {}
+var auto_include_properties = { }
 
 ## Whether the platform should be included in every event.
 @export var include_platform = true
+
 
 func _ready() -> void:
 	if OS.is_debug_build():
 		enabled = false
 		return
-	
+
 	_update_anonymous_events(anonymous_events)
 	_load_post_hog_json()
 	_load_post_hog_user_json()
 	if include_platform:
 		auto_include_properties["platform"] = get_os_platform()
-	
+
 	initialized.emit()
 
-func capture(event_name: String, properties: Dictionary = {}) -> void:
+
+func capture(event_name: String, properties: Dictionary = { }) -> void:
 	if not enabled:
 		return
 	properties.merge(auto_include_properties)
 	_send(event_name, properties)
 
-func _send(event_name: String, properties: Dictionary = {}) -> void:
+
+func _send(event_name: String, properties: Dictionary = { }) -> void:
 	var request = HTTPRequest.new()
 	var headers = ["Content-Type: application/json"]
 	var data = {
@@ -56,11 +59,13 @@ func _send(event_name: String, properties: Dictionary = {}) -> void:
 	if error != OK:
 		error_occurred.emit(error)
 
+
 func _http_request_completed(_result, _response_code, _headers, body):
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
 	api_response.emit(response)
+
 
 func _load_post_hog_json():
 	if not FileAccess.file_exists(APP_FILE_PATH):
@@ -76,38 +81,39 @@ func _load_post_hog_json():
 	var base_url: String = app_data.base_url
 	capture_url = base_url.path_join('i/v0/e/')
 
+
 ## Gets specfic user data for this device, or creates it.
 func _load_post_hog_user_json():
-	var data = {}
+	var data = { }
 	if FileAccess.file_exists(USER_FILE_PATH):
 		var user_post_hog_file = FileAccess.open(USER_FILE_PATH, FileAccess.READ)
 		var data_content = user_post_hog_file.get_as_text()
 		user_post_hog_file.close()
 		data = JSON.parse_string(data_content)
 	else:
-		data = {
-			"id": uuid()
-		}
+		data = { "id": uuid() }
 		var user_post_hog_file = FileAccess.open(USER_FILE_PATH, FileAccess.WRITE)
 		user_post_hog_file.store_string(JSON.stringify(data))
 		user_post_hog_file.close()
 	distinct_id = data.id
 
+
 ## Updates the auto_include_properties for anonymous events.
 func _update_anonymous_events(val: bool):
 	anonymous_events = val
 	auto_include_properties["$process_person_profile"] = !anonymous_events
-	
+
 
 ## Create an 8 letter UUID.
 static func uuid() -> String:
 	var start = "A".to_ascii_buffer()[0]
-	var letters = [];
+	var letters = []
 	for i in 8:
 		var j = randi() % 26
 		var letter = char(start + j)
 		letters.append(letter)
 	return "".join(letters)
+
 
 ## Grabs the host OS platform.
 static func get_os_platform() -> String:
@@ -125,7 +131,7 @@ static func get_os_platform() -> String:
 		"web_windows",
 		"web",
 		"pc",
-		"mobile"
+		"mobile",
 	]
 	for platform in platforms:
 		if OS.has_feature(platform):

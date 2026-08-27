@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://b7yw8isv2eixq" path="res://Fonts/Font Awesome 7 Free-Solid-900.otf" id="1_gp45f"]
 [ext_resource type="FontFile" uid="uid://ca8dx2diwqldv" path="res://Fonts/Zain-Black.ttf" id="1_jgrfi"]
 [ext_resource type="Texture2D" uid="uid://ugjuccofse4a" path="res://Resources/grabber.svg" id="2_gp45f"]
-[ext_resource type="Texture2D" uid="uid://bqfw5et4map8s" path="res://Resources/checked.svg" id="2_jgdaq"]
+[ext_resource type="Texture2D" uid="uid://3dwmqojuc35t" path="res://Resources/checked.svg" id="2_jgdaq"]
 [ext_resource type="Texture2D" uid="uid://cnbcw6glyrqp3" path="res://Resources/caret-down.png" id="2_vocpi"]
 [ext_resource type="FontFile" uid="uid://cc1ov6crrsoo8" path="res://Fonts/Zain-Bold.ttf" id="3_6kckp"]
 [ext_resource type="Texture2D" uid="uid://c5cl5177vkf8r" path="res://Resources/grabber_highlight.svg" id="3_gp45f"]
