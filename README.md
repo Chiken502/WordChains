@@ -6,3 +6,5 @@ This project was first started back in May of 2026, but once first published, it
 Then in late July of 2026, I decided to completely rework the project, and hopefully finish it this time around. 
 
 So far the code base has been completely reworked, with completely new UI, effects, and music.
+
+The game can currently be played at https://chicken502.itch.io/word-chains
