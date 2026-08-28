@@ -98,15 +98,24 @@ func spawn_letters():
 	var letter_pos = []
 
 	for l in shuffled: # Instantiate letters
-		var letter = preload("res://_Components/falling_letter.tscn").instantiate()
+		letter_pos = spawn_letter(l, letter_pos)
 
-		add_child(letter)
-		letter.position = Vector2(randi_range(100, int(get_viewport_rect().size.x) - 100), -80)
 
-		letter_pos = check_letter_position(letter_pos, letter) # Check if the letter is going to collide with another
-		letter.letter = l
-		letter.get_ready()
+func spawn_letter(l:String, letter_pos:Array):
+	var letter = preload("res://_Components/falling_letter.tscn").instantiate()
 
+	add_child(letter)
+	
+	letter.ground_collider = $Control/Bottom/Bottom
+	letter.game = self
+	
+	letter.position = Vector2(randi_range(100, int(get_viewport_rect().size.x) - 100), -80)
+
+	letter_pos = check_letter_position(letter_pos, letter) # Check if the letter is going to collide with another
+	letter.letter = l
+	letter.get_ready()
+	
+	return letter_pos
 
 # Made sure the letters didn't collide with each other
 func check_letter_position(letter_pos: Array, letter: Node2D) -> Array:
@@ -261,6 +270,8 @@ func _on_undo_button_pressed() -> void:
 		get_parent().add_child(falling_letter) # adds letter to main scene
 		falling_letter.position = letter_node_pos
 		falling_letter.letter = current_char[index]
+		falling_letter.ground_collider = $Control/Bottom/Bottom
+		falling_letter.game = self
 		falling_letter.get_ready() # sets everything up
 		letter_node.flash_undo()
 
@@ -334,3 +345,14 @@ func _on_hint_button_pressed() -> void:
 
 	if hint:
 		$Control/VBoxContainer/Hint.text = hint
+
+
+func _on_resized() -> void:
+	$Control/Bottom/Bottom/CollisionShape2D.shape.size.x = size.x
+	$Control/Bottom/Bottom/CollisionShape2D.position.x = size.x / 2
+
+
+func letter_off_screen(letter):
+	var l = letter.letter
+	
+	spawn_letter(l, [])

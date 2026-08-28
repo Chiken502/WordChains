@@ -36,6 +36,13 @@ const MAX_COLLISOIN_IMPULSE = 100.0
 const SOUND_COOLDOWN = 0.1
 var last_sound_time: float
 
+var ground_collider : StaticBody2D
+var game : Control:
+	set(value):
+		if game:
+			game.resized.disconnect(_parent_resized)
+		game = value
+		game.resized.connect(_parent_resized)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -44,8 +51,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if position.y > 712: # keep above groud plane
-		position.y = 712
+	if global_position.y > ground_collider.global_position.y: # keep above groud plane
+		position.y = ground_collider.global_position.y
 	elif position.y < -800 and linear_velocity.y < 0: # Prevents form flying off screen
 		linear_velocity.y = 0
 
@@ -162,3 +169,9 @@ func _on_body_entered(_body: Node) -> void:
 	#return
 	#$AudioStreamPlayer2D.volume_db = clamp(audio_volume, -50, 5)
 	#$AudioStreamPlayer2D.play()
+
+
+func _parent_resized():
+	if global_position.x > game.size.x:
+		game.letter_off_screen(self)
+		queue_free()

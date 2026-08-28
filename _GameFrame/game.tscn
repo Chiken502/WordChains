@@ -10,12 +10,12 @@
 [ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="7_p1fqw"]
 [ext_resource type="Script" uid="uid://bsyq6eq20ibx" path="res://_GameFrame/ShakingCamera.gd" id="8_6wqon"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
-size = Vector2(506, 188)
-
 [sub_resource type="LabelSettings" id="LabelSettings_6wqon"]
 line_spacing = 0.0
 font = ExtResource("6_xb2by")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
+size = Vector2(506, 188.5)
 
 [sub_resource type="LabelSettings" id="LabelSettings_feb5d"]
 font = ExtResource("4_6wqon")
@@ -51,13 +51,6 @@ script = ExtResource("2_p1fqw")
 
 [node name="LetterControler" type="Node2D" parent="." unique_id=957083735]
 script = ExtResource("2_3g1ng")
-
-[node name="Bottom" type="StaticBody2D" parent="." unique_id=1473018805]
-position = Vector2(0, 712)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom" unique_id=1195725760]
-position = Vector2(253, 94.5)
-shape = SubResource("RectangleShape2D_e2o6t")
 
 [node name="Control" type="Control" parent="." unique_id=1079211166]
 custom_minimum_size = Vector2(506, 900)
@@ -193,6 +186,12 @@ label_settings = SubResource("LabelSettings_6wqon")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Bottom" type="StaticBody2D" parent="Control/Bottom" unique_id=1473018805]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/Bottom/Bottom" unique_id=1195725760]
+position = Vector2(253, 94.25)
+shape = SubResource("RectangleShape2D_e2o6t")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=1518605461]
 layout_mode = 1
 anchors_preset = 8
@@ -270,7 +269,7 @@ grow_vertical = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Control/leftside/WorldSides" unique_id=362074360]
 shape = SubResource("WorldBoundaryShape2D_80nbo")
 
-[node name="rightside" type="Control" parent="." unique_id=484780450]
+[node name="rightside" type="Control" parent="Control" unique_id=484780450]
 custom_maximum_size = Vector2(0, 0)
 layout_mode = 1
 anchors_preset = 6
@@ -281,9 +280,9 @@ anchor_bottom = 0.5
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="WorldSide" type="StaticBody2D" parent="rightside" unique_id=2070184825]
+[node name="WorldSide" type="StaticBody2D" parent="Control/rightside" unique_id=2070184825]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="rightside/WorldSide" unique_id=840845970]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Control/rightside/WorldSide" unique_id=840845970]
 shape = SubResource("WorldBoundaryShape2D_e2o6t")
 
 [node name="ColorAgent" type="Node" parent="." unique_id=2117236080 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
@@ -293,6 +292,7 @@ ground_color_rect = NodePath("../Control/Bottom/ColorRect2")
 labels = [NodePath("../Control/VBoxContainer/TargetWord")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
 
+[connection signal="resized" from="." to="." method="_on_resized"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Home" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Hint" to="." method="_on_hint_button_pressed"]
