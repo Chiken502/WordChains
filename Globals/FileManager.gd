@@ -24,6 +24,7 @@ func load_game():
 	print("Loading game...")
 	if not FileAccess.file_exists(save_path):
 		print("No save file found!")
+		ColorManager.change_color(0) # Set the icons to default, as they can't be preloaded as .svg.txt in the main theme
 		return
 
 	var file = FileAccess.open(save_path, FileAccess.READ)

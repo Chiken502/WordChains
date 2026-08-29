@@ -59,7 +59,7 @@ func change_color(color_idx: int):
 			
 			if theme_type != "OptionButton": # Modifys all icons exept for option button icons
 				for icon_name in theme.get_icon_list(theme_type):
-					var icon_path = "res://Resources/" + icon_name +".svg"
+					var icon_path = "res://Resources/" + icon_name +".svg.txt"
 					
 					theme.set_icon(icon_name, theme_type, modify_svg(icon_path))
 		

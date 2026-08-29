@@ -2,14 +2,8 @@
 
 [ext_resource type="FontFile" uid="uid://b7yw8isv2eixq" path="res://Fonts/Font Awesome 7 Free-Solid-900.otf" id="1_gp45f"]
 [ext_resource type="FontFile" uid="uid://ca8dx2diwqldv" path="res://Fonts/Zain-Black.ttf" id="1_jgrfi"]
-[ext_resource type="Texture2D" uid="uid://ugjuccofse4a" path="res://Resources/grabber.svg" id="2_gp45f"]
-[ext_resource type="Texture2D" uid="uid://3dwmqojuc35t" path="res://Resources/checked.svg" id="2_jgdaq"]
 [ext_resource type="Texture2D" uid="uid://cnbcw6glyrqp3" path="res://Resources/caret-down.png" id="2_vocpi"]
 [ext_resource type="FontFile" uid="uid://cc1ov6crrsoo8" path="res://Fonts/Zain-Bold.ttf" id="3_6kckp"]
-[ext_resource type="Texture2D" uid="uid://c5cl5177vkf8r" path="res://Resources/grabber_highlight.svg" id="3_gp45f"]
-[ext_resource type="Texture2D" uid="uid://83g3tuenql14" path="res://Resources/unchecked.svg" id="3_h0qgs"]
-[ext_resource type="Texture2D" uid="uid://c3oas36vu4q2i" path="res://Resources/radio_checked.svg" id="7_4x8ju"]
-[ext_resource type="Texture2D" uid="uid://ua8tf1jgh8aa" path="res://Resources/radio_unchecked.svg" id="8_gp45f"]
 [ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="9_4x8ju"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gp45f"]
@@ -136,15 +130,15 @@ Button/styles/focus = SubResource("StyleBoxFlat_m0p4l")
 Button/styles/hover = SubResource("StyleBoxFlat_rorxa")
 Button/styles/normal = SubResource("StyleBoxFlat_0tnir")
 Button/styles/pressed = SubResource("StyleBoxFlat_kspvm")
-CheckBox/icons/checked = ExtResource("2_jgdaq")
-CheckBox/icons/unchecked = ExtResource("3_h0qgs")
+CheckBox/icons/checked = null
+CheckBox/icons/unchecked = null
 CheckBox/styles/disabled = SubResource("StyleBoxEmpty_mvqqf")
 CheckBox/styles/hover = SubResource("StyleBoxEmpty_7vydn")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_20t6k")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_8oqab")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_q3jwc")
-HSlider/icons/grabber = ExtResource("2_gp45f")
-HSlider/icons/grabber_highlight = ExtResource("3_gp45f")
+HSlider/icons/grabber = null
+HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_6mhpt")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ohexs")
 HSlider/styles/slider = SubResource("StyleBoxFlat_3j6r5")
@@ -167,8 +161,8 @@ PopupMenu/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 PopupMenu/colors/font_hover_color = Color(0.588235, 0.847059, 0.996078, 1)
 PopupMenu/font_sizes/font_size = 20
 PopupMenu/fonts/font = ExtResource("3_6kckp")
-PopupMenu/icons/radio_checked = ExtResource("7_4x8ju")
-PopupMenu/icons/radio_unchecked = ExtResource("8_gp45f")
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_unchecked = null
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_cj1lu")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_71mqq")
 RichTextLabel/colors/default_color = Color(0.227451, 0.52549, 1, 1)

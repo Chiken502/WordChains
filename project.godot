@@ -17,6 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Word Chains V2"
 run/main_scene="uid://bw26wxxpnbydg"
 config/features=PackedStringArray("4.7", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/stretch_mode=4
 boot_splash/image="uid://r2yx8gwgawkq"
 config/icon="res://icon.svg"
