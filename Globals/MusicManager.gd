@@ -8,6 +8,11 @@ func scene_loaded():
 			node.pressed.connect(button_pressed)
 
 
+func start_music():
+	await get_tree().create_timer(0.5).timeout
+	$MusicPlayer/MusicOpener.play()
+
+
 func button_pressed():
 	$ButtonPress.play()
 
