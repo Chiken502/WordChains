@@ -6,11 +6,11 @@ Word Chains is a word puzzle game made in Godot 4.7. In it you try to reach the 
 ![Game play GIF](example.gif)
 
 ## Credits
-    - Chicken502: Lead, Design, Programming, Music and Sound
+- Chicken502: Lead, Design, Programming, Music and Sound
 
-    - Splash screen made by Guhnahdahb, and you can check it out [here](https://guhnahdahb.itch.io/godot-splash-screen-gnd-pop)!
+- Splash screen made by Guhnahdahb, and you can check it out [here](https://guhnahdahb.itch.io/godot-splash-screen-gnd-pop)!
 
-    - Fonts used were [Zain](https://fonts.google.com/specimen/Zain) and [Font Awesome](https://fontawesome.com/)
+- Fonts used were [Zain](https://fonts.google.com/specimen/Zain) and [Font Awesome](https://fontawesome.com/)
 
 ## More about this project
 This project was first started back in May of 2026, but once first published, it didn't receive any updates, although it was meant to. The old code can be viewed at https://github.com/Chiken502/Word-Chains 
@@ -21,4 +21,4 @@ So far the code base has been completely reworked, with completely new UI, effec
 The game can currently be played at https://chicken502.itch.io/word-chains
 
 ## License
-    - This project is under 'MIT' License
+- This project is under 'MIT' License
