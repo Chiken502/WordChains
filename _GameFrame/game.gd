@@ -17,6 +17,8 @@ var hints := 0:
 		hints = value
 		$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(value)
 
+var hint_word_letter: Label
+
 var completed = false
 
 # Analytics
@@ -101,21 +103,22 @@ func spawn_letters():
 		letter_pos = spawn_letter(l, letter_pos)
 
 
-func spawn_letter(l:String, letter_pos:Array):
+func spawn_letter(l: String, letter_pos: Array):
 	var letter = preload("res://_Components/falling_letter.tscn").instantiate()
 
 	add_child(letter)
-	
+
 	letter.ground_collider = $Control/Bottom/Bottom
 	letter.game = self
-	
+
 	letter.position = Vector2(randi_range(100, int(get_viewport_rect().size.x) - 100), -80)
 
 	letter_pos = check_letter_position(letter_pos, letter) # Check if the letter is going to collide with another
 	letter.letter = l
 	letter.get_ready()
-	
+
 	return letter_pos
+
 
 # Made sure the letters didn't collide with each other
 func check_letter_position(letter_pos: Array, letter: Node2D) -> Array:
@@ -181,6 +184,9 @@ func _on_current_word_letter_changed(node, letter):
 		word_confirmed.emit(node, letter)
 		MusicManager.connect_sound()
 		$Control/VBoxContainer/Hint.text = ""
+		if hint_word_letter:
+			hint_word_letter.hinted = false
+			hint_word_letter = null
 	else:
 		# Run animation
 		if GameManager.screenShakeOn:
@@ -330,7 +336,8 @@ func _on_hint_button_pressed() -> void:
 		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
 		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 26)
 		hint = "Try changing the [b]" + numbers_in_words[letter_idx] + "[/b] letter."
-		# TODO: ADD FLASHING IDICATOR ON THE CURRENT WORD LABEL
+		hint_word_letter = cw_h_box.get_children()[letter_idx]
+		hint_word_letter.hinted = true
 	else:
 		var undo_idx = -1
 		for i in range(len(undo_history)):
@@ -354,5 +361,5 @@ func _on_resized() -> void:
 
 func letter_off_screen(letter):
 	var l = letter.letter
-	
+
 	spawn_letter(l, [])

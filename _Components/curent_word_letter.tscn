@@ -29,6 +29,17 @@ metadata/_snap_enabled = true
 offsets = PackedFloat32Array(0.62203413, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
+[sub_resource type="Gradient" id="Gradient_wkffb"]
+offsets = PackedFloat32Array(0, 0.88032806, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 0.50980395, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7vydn"]
+gradient = SubResource("Gradient_wkffb")
+fill = 1
+fill_from = Vector2(0.49947658, 0.53089005)
+fill_to = Vector2(0.90000004, 0.5)
+metadata/_snap_enabled = true
+
 [sub_resource type="Gradient" id="Gradient_mvqqf"]
 offsets = PackedFloat32Array(0.6559324, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -63,6 +74,12 @@ initial_velocity_max = 600.0
 scale_amount_min = 0.5
 scale_amount_max = 1.5
 color_ramp = SubResource("Gradient_h7xov")
+
+[node name="Sprite2D" type="Sprite2D" parent="MainParticles" unique_id=1147115826]
+visible = false
+position = Vector2(0, -7)
+scale = Vector2(1.4, 1.4)
+texture = SubResource("GradientTexture2D_7vydn")
 
 [node name="UndoParticles" type="CPUParticles2D" parent="MainParticles" unique_id=858066356]
 emitting = false

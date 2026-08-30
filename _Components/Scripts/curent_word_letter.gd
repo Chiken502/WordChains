@@ -9,6 +9,11 @@ var scripted_parent: Node2D # See if this is useful or needed
 var letter = "A"
 var colliding_body: RigidBody2D
 
+var hinted = false:
+	set(value):
+		hinted = value
+		$MainParticles/Sprite2D.visible = value
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
