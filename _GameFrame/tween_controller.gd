@@ -15,10 +15,10 @@ func _ready():
 
 
 ## Slides target words back onto screen.
-func slide_in():
+func slide_in(size: Vector2):
 	var tween = get_tree().create_tween()
 
-	word_container.offset_transform_position = Vector2(400, 0)
+	word_container.offset_transform_position = Vector2(size.x / 2 + 200, 0)
 
 	MusicManager.slide_sound()
 	tween \
@@ -31,12 +31,12 @@ func slide_in():
 
 
 ## Slides target words offscreen
-func slide_off():
+func slide_off(size: Vector2):
 	var tween = get_tree().create_tween()
 
 	MusicManager.slide_sound()
 	tween \
-			.tween_property(word_container, "offset_transform_position", Vector2(-400, 0), 0.75) \
+			.tween_property(word_container, "offset_transform_position", Vector2(-size.x / 2 - 200, 0), 0.75) \
 			.set_ease(Tween.EASE_IN) \
 			.set_trans(Tween.TRANS_QUINT)
 

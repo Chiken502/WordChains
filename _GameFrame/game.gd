@@ -82,7 +82,7 @@ func get_ready():
 	PostHog.capture("level_started", { "level": GameManager.current_level + 1 })
 
 	# Animate words sliding on
-	tween_controler.slide_in()
+	tween_controler.slide_in(self.size)
 	await tween_controler.tween_done
 
 	# Spawn falling letters
@@ -218,7 +218,7 @@ func _process(_delta: float) -> void:
 			await get_tree().create_timer(1).timeout #TODO: ADD CHIME SOUND
 
 			# animation
-			tween_controler.slide_off()
+			tween_controler.slide_off(self.size)
 			await tween_controler.tween_done
 
 			var sucseces = GameManager.load_level(GameManager.current_level + 1)
