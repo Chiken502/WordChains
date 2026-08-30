@@ -22,6 +22,7 @@ offset_left = -24.0
 offset_top = -56.0
 offset_right = 24.0
 offset_bottom = 56.0
+offset_transform_enabled = true
 text = "A"
 label_settings = SubResource("LabelSettings_wd0ba")
 horizontal_alignment = 1

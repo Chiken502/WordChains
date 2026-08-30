@@ -36,13 +36,19 @@ const MAX_COLLISOIN_IMPULSE = 100.0
 const SOUND_COOLDOWN = 0.1
 var last_sound_time: float
 
-var ground_collider : StaticBody2D
-var game : Control:
+var max_strech: float = 1.4
+var min_squash: float = 0.7
+var strech_factor: float = 0.01
+var recovery_speed: float = 15.0
+
+var ground_collider: StaticBody2D
+var game: Control:
 	set(value):
 		if game:
 			game.resized.disconnect(_parent_resized)
 		game = value
 		game.resized.connect(_parent_resized)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -50,11 +56,16 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if global_position.y > ground_collider.global_position.y: # keep above groud plane
 		position.y = ground_collider.global_position.y
 	elif position.y < -800 and linear_velocity.y < 0: # Prevents form flying off screen
 		linear_velocity.y = 0
+
+	$Label.offset_transform_scale = $Label.offset_transform_scale.lerp(
+		Vector2.ONE,
+		recovery_speed * delta,
+	)
 
 
 func get_ready():
@@ -148,6 +159,21 @@ func play_collision_sound(volume_factor: float):
 	sound_player.play()
 
 	sound_player.connect("finished", sound_player.queue_free)
+
+
+func apply_stretch(velocity: Vector2):
+	var speed = velocity.length()
+	if speed > 0.1:
+		var stretch_amount = clamp(1.0 + (speed * strech_factor), 1.0, max_strech)
+		var squash_amount = clamp(1.0 / stretch_amount, min_squash, 1.0)
+
+		var dir = velocity.normalized()
+		if dir.x > dir.y:
+			$Label.offset_transform_scale.x = stretch_amount
+			$Label.offset_transform_scale.y = squash_amount
+		else:
+			$Label.offset_transform_scale.y = stretch_amount
+			$Label.offset_transform_scale.x = squash_amount
 
 
 # More sound stuff. Commented out as sounds arn't in yet

@@ -44,6 +44,8 @@ func _process(delta: float) -> void:
 
 		if letter_being_draged.global_position.distance_to(mouse_pos) > 1:
 			letter_being_draged.global_position = mouse_pos
+			if letter_being_draged.has_method("apply_stretch"):
+				letter_being_draged.apply_stretch(mouse_velocity * delta)
 		letter_being_draged.rotation_degrees = lerp(letter_being_draged.rotation_degrees, 0.0, 0.2)
 
 		prev_mouse_pos = mouse_pos
