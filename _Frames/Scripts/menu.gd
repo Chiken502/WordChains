@@ -19,7 +19,7 @@ func _on_settings_pressed() -> void:
 
 
 func _on_play_pressed() -> void:
-	GameManager.start_game()
+	GameManager.open_level_select()
 
 
 func _on_credits_pressed() -> void:

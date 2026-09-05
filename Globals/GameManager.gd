@@ -49,6 +49,8 @@ func open_settings():
 func open_credits():
 	get_tree().change_scene_to_file("res://_Frames/credits.tscn")
 
+func open_level_select():
+	get_tree().change_scene_to_file("res://_Frames/level_select.tscn")
 
 func start_game():
 	load_level(current_level)

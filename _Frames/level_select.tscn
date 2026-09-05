@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://gfouffimtruu"]
+
+[ext_resource type="Script" uid="uid://bm3uv4dn0no1q" path="res://_Frames/Scripts/level_select.gd" id="1_1br2x"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_s6f1j"]
+[ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="2_6ejmw"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="4_1br2x"]
+
+[node name="Level Select" type="Control" unique_id=1069094375]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1br2x")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1951825111]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Bottom" type="Control" parent="." unique_id=818329897]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom" unique_id=989904502]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Bottom" unique_id=301406184]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Home" type="Button" parent="Bottom/HBoxContainer" unique_id=1658290361]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_s6f1j")
+text = "Home"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1551296240]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=863027879]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=1846998786]
+layout_mode = 2
+text = "LEVEL SELECT"
+label_settings = ExtResource("2_6ejmw")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=325043654]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1428994250]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 5
+
+[node name="ColorAgent" type="Node" parent="." unique_id=1766024760 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
+script = ExtResource("4_1br2x")
+bg_color_rect = NodePath("../ColorRect")
+ground_color_rect = NodePath("../Bottom/ColorRect2")
+labels = [NodePath("../VBoxContainer/Title")]
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="Bottom/HBoxContainer/Home" to="." method="_on_home_pressed"]
