@@ -76,8 +76,8 @@ func get_ready():
 		l.letter_changed.connect(_on_current_word_letter_changed)
 		word_confirmed.connect(l._on_word_confirmed)
 		word_not_found.connect(l._on_word_not_found)
-
-	hints += 1
+	
+	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
 
@@ -227,6 +227,8 @@ func _process(_delta: float) -> void:
 			tween_controler.slide_off(self.size)
 			await tween_controler.tween_done
 
+			GameManager.amt_of_hints = hints
+
 			var sucseces = GameManager.load_level(GameManager.current_level + 1)
 
 			if sucseces:
@@ -291,6 +293,7 @@ func reset_self():
 
 
 func _on_home_button_pressed() -> void:
+	FileManager.save_game()
 	GameManager.back_to_menu()
 
 
@@ -302,6 +305,7 @@ func _on_hint_button_pressed() -> void:
 		return
 
 	hints -= 1
+	GameManager.amt_of_hints = hints
 
 	var hint = ""
 

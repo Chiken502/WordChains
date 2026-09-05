@@ -11,6 +11,9 @@ func _ready() -> void:
 		i.level = idx + 1
 		$ColorAgent.texture_buttons.append(i)
 		i.pressed.connect(_level_selected.bind(idx))
+		
+		if idx > GameManager.max_level:
+			i.locked = true
 
 	ColorManager.change_color(ColorManager.currentColor)
 

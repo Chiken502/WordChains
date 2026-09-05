@@ -49,7 +49,7 @@ func _process(_delta: float) -> void:
 
 func _on_home_pressed() -> void:
 	if settings_changed:
-		FileManager.save_game()
+		FileManager.save_settings()
 	GameManager.back_to_menu()
 
 

@@ -6,6 +6,17 @@ extends TextureButton
 		level = value
 		$Label.text = str(value)
 
+@export var locked: bool = false:
+	set(value):
+		locked = value
+		if locked:
+			$Label.label_settings.font = preload("res://Fonts/Font Awesome 7 Free-Solid-900.otf")
+			$Label.text = "lock"
+			disabled = true
+		if not locked:
+			$Label.label_settings.font = preload("res://Fonts/Zain-Black.ttf")
+			$label.text = level
+			disabled = false
 
 func _on_mouse_entered() -> void:
 	if not disabled:

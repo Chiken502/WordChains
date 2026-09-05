@@ -10,6 +10,8 @@ var solution_long := [] ## Stores solution in words instead of just letters
 var current_game_version := "v0.21b"
 
 var current_level := 0
+var max_level := 0
+var amt_of_hints := 0
 
 # Settings Varibles
 var screenShakeOn = true
@@ -30,6 +32,10 @@ func _ready() -> void:
 func load_level(level_num) -> bool:
 	if level_num <= len(LevelDatabase.levels) - 1:
 		var next_level := LevelDatabase.levels[level_num]
+
+		if level_num > current_level:
+			max_level = level_num
+			FileManager.save_game()
 
 		current_level = level_num
 		starting_word = next_level[0]
