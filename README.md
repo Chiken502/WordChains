@@ -3,7 +3,7 @@ current version : v0.2b
 
 Word Chains is a word puzzle game made in Godot 4.7. In it you try to reach the target word by changing only one letter at a time. [Play it now on itch.io](https://chicken502.itch.io/word-chains)
 
-![Game play GIF](ExampleImgs\example.gif)
+![Game play GIF](ExampleImgs/example.gif)
 
 ## Credits
 - Chicken502: Lead, Design, Programming, Music and Sound
@@ -18,8 +18,8 @@ Then in late July of 2026, I decided to come back to this project and I complete
 
 So far the code base has been completely reworked, with completely new UI, effects, and music. Then I added more levels, a level select system, save files.
 
-![Game level example, static](ExampleImgs\wideshot.png)
-![The level select screen](ExampleImgs\levelselect.png)
+![Game level example, static](ExampleImgs/wideshot.png)
+![The level select screen](ExampleImgs/levelselect.png)
 
 #### The game can currently be played at https://chicken502.itch.io/word-chains
 
