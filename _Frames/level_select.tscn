@@ -90,6 +90,8 @@ layout_mode = 2
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1846998786]
 layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 1
 text = "LEVEL SELECT"
 label_settings = ExtResource("2_6ejmw")
 

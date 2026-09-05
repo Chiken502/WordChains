@@ -48,6 +48,7 @@ offset_right = 0.24399948
 offset_bottom = 0.099998474
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 texture_normal = SubResource("GradientTexture2D_ooo3p")
 texture_pressed = SubResource("GradientTexture2D_c4yf3")
 texture_hover = SubResource("GradientTexture2D_yn0l7")
@@ -64,3 +65,8 @@ text = "100"
 label_settings = SubResource("LabelSettings_mvqqf")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_up"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
