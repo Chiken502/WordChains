@@ -74,6 +74,7 @@ func change_color(color_idx: int):
 		for label_settings: LabelSettings in [
 			preload("res://Resources/settings_label.tres"),
 			preload("res://Resources/header_label.tres"),
+			preload("res://Resources/level_select_label.tres")
 		]:
 			var font_color_idx = _color_in_array(oldColors, label_settings.font_color)
 

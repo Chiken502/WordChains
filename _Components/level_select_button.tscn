@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://brn4syp7cc1w4"]
 
-[ext_resource type="FontFile" uid="uid://ca8dx2diwqldv" path="res://Fonts/Zain-Black.ttf" id="1_2mu5b"]
 [ext_resource type="Script" uid="uid://c42xsmvfv7ir6" path="res://_Components/Scripts/level_select_button.gd" id="1_ehlb8"]
+[ext_resource type="LabelSettings" uid="uid://cjtt2thacqj0u" path="res://Resources/level_select_label.tres" id="2_ehlb8"]
 
 [sub_resource type="Gradient" id="Gradient_ugxlu"]
 offsets = PackedFloat32Array(0.8385323, 1)
@@ -36,10 +36,6 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 metadata/_snap_enabled = true
 
-[sub_resource type="LabelSettings" id="LabelSettings_mvqqf"]
-font = ExtResource("1_2mu5b")
-font_size = 28
-
 [node name="LevelSelectButton" type="TextureButton" unique_id=1147214548]
 anchors_preset = -1
 anchor_right = 0.126
@@ -62,7 +58,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "100"
-label_settings = SubResource("LabelSettings_mvqqf")
+label_settings = ExtResource("2_ehlb8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
