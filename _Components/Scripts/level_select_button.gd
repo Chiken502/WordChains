@@ -15,7 +15,7 @@ extends TextureButton
 			disabled = true
 		if not locked:
 			$Label.label_settings.font = preload("res://Fonts/Zain-Black.ttf")
-			$label.text = level
+			$Label.text = level
 			disabled = false
 
 
@@ -24,6 +24,7 @@ func _on_mouse_entered() -> void:
 		var tween = get_tree().create_tween()
 
 		tween.tween_property(self, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+		$Label.modulate = ColorManager.colors[ColorManager.currentColor][3]
 
 
 func _on_mouse_exited() -> void:
@@ -31,6 +32,7 @@ func _on_mouse_exited() -> void:
 		var tween = get_tree().create_tween()
 
 		tween.tween_property(self, "offset_transform_scale", Vector2(1, 1), 0.1)
+		$Label.modulate = Color(1, 1, 1)
 
 
 func _on_button_down() -> void:

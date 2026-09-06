@@ -16,6 +16,7 @@ func _ready() -> void:
 			i.locked = true
 
 	ColorManager.change_color(ColorManager.currentColor)
+	MusicManager.scene_loaded()
 
 	$VBoxContainer/Title.mouse_entered.connect(_on_control_mouse_entered.bind($VBoxContainer/Title))
 	$VBoxContainer/Title.mouse_exited.connect(_on_control_mouse_exited.bind($VBoxContainer/Title))
