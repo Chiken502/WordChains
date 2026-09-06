@@ -7,7 +7,7 @@ var target_word := ""
 var solution := "" ## Stores the letters needed for the solution in the order they will be used
 var solution_long := [] ## Stores solution in words instead of just letters
 
-var current_game_version := "v0.21b"
+var current_game_version := "v03.b"
 
 var current_level := 0
 var max_level := 0
