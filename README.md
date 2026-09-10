@@ -26,6 +26,31 @@ So far the code base has been completely reworked, with completely new UI, effec
 ## License
 - This project is under 'MIT' License
 
+## Updates
+### v0.3b, 9/6/26
+- Linux and Windows builds
+- 5 new levels
+- Level select screen
+- Game save changes
+
+### v0.21b, 8/29/26
+- Added fullscreen support
+- Fixed settings icon color changing
+- Fixed Phantom letter bug
+- Added sound effects for the Godot splash screen
+
+### v0.2b, 8/23/26
+Complete overhaul of game including:
+- Complete UI reworked
+- Hints!
+- All new sound effects and music
+
+### v0.1b, 6/8/26
+Initial beta release of Word Chains
+- 15 Levels across three difficulties
+- Basic functionality for changing letters and checking words
+- Undo button implemented
+
 ## File Structure
 Here is a little about how my organization system for this project works.
   ##### Audio
