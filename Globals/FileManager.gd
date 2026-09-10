@@ -25,6 +25,7 @@ func save_game():
 	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
 	
 	var save_data = {
+		"needTutorial" : GameManager.need_tutorial,
 		"maxLevel" : GameManager.max_level,
 		"hints" : GameManager.amt_of_hints
 	}
@@ -59,4 +60,5 @@ func load_game():
 		
 		GameManager.max_level = data.get("maxLevel", 1)
 		GameManager.amt_of_hints = data.get("hints", 0)
+		GameManager.need_tutorial = data.get("needTutorial", true)
 	print("Game Loaded")

@@ -16,6 +16,9 @@ var amt_of_hints := 0
 # Settings Varibles
 var screenShakeOn = true
 
+var tutorial_mode = false
+var need_tutorial = true
+
 
 func _ready() -> void:
 	randomize()
@@ -55,8 +58,15 @@ func open_settings():
 func open_credits():
 	get_tree().change_scene_to_file("res://_Frames/credits.tscn")
 
+
 func open_level_select():
-	get_tree().change_scene_to_file("res://_Frames/level_select.tscn")
+	if not need_tutorial:
+		get_tree().change_scene_to_file("res://_Frames/level_select.tscn")
+	else:
+		tutorial_mode = true
+		load_level(0)
+		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+
 
 func start_game():
 	load_level(current_level)

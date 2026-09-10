@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://ca8dx2diwqldv" path="res://Fonts/Zain-Black.ttf" id="6_xb2by"]
 [ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="7_p1fqw"]
 [ext_resource type="Script" uid="uid://bsyq6eq20ibx" path="res://_GameFrame/ShakingCamera.gd" id="8_6wqon"]
+[ext_resource type="Script" uid="uid://cfqtlp2b80r4n" path="res://_GameFrame/tutorial_manager.gd" id="10_56ccj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6wqon"]
 line_spacing = 0.0
@@ -291,6 +292,9 @@ bg_color_rect = NodePath("../Control/ColorRect")
 ground_color_rect = NodePath("../Control/Bottom/ColorRect2")
 labels = [NodePath("../Control/VBoxContainer/TargetWord")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[node name="tutorialManager" type="Node2D" parent="." unique_id=480504236]
+script = ExtResource("10_56ccj")
 
 [connection signal="resized" from="." to="." method="_on_resized"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]

@@ -2,6 +2,7 @@ extends Control
 
 signal word_confirmed(letter_node, new_letter: String)
 signal word_not_found(letter_node)
+signal game_ready
 
 var starting_word: String
 var target_word: String
@@ -31,6 +32,7 @@ var undo_used = 0
 @onready var undo_button := $Control/Bottom/HBoxContainer/Undo
 
 @onready var tween_controler = $TweenController
+@onready var tutorial_manager = $tutorialManager
 
 
 # Called when the node enters the scene tree for the first time.
@@ -41,6 +43,8 @@ func _ready() -> void:
 
 
 func get_ready():
+	#if GameManager.tutorial_mode:
+	tutorial_manager.get_ready(self.game_ready)
 	solution.clear()
 
 	level_start_time = Time.get_ticks_msec()
@@ -89,6 +93,7 @@ func get_ready():
 
 	# Spawn falling letters
 	spawn_letters()
+	game_ready.emit()
 
 
 func spawn_letters():
@@ -228,6 +233,8 @@ func _process(_delta: float) -> void:
 			await tween_controler.tween_done
 
 			GameManager.amt_of_hints = hints
+			GameManager.tutorial_mode = false
+			GameManager.need_tutorial = false
 
 			var sucseces = GameManager.load_level(GameManager.current_level + 1)
 

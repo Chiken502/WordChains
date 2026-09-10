@@ -89,8 +89,8 @@ func change_color(color_idx: int):
 		color_changed.emit(oldColors)
 
 
-## opens a svg icon file and changes the colors. Returns the svg string
-func modify_svg(path: String):
+## opens a svg icon file and changes the colors. Returns the new Image Texture
+func modify_svg(path: String) -> ImageTexture:
 	var file = FileAccess.open(path, FileAccess.READ)
 	if not file:
 		push_error("Failed to open SVG file.")
