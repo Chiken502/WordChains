@@ -10,6 +10,7 @@ var colors := [
 	["Orange", "FB5607", "FD9A48", "FED496"],
 	["Yellow", "FFBE0B", "FEE767", "FEF8BA"],
 	["Red", "FF006E", "FD5C84", "FE9AAC"],
+	["Green", "03D52D", "15E902", "9DFF5B"],
 	["Black", "18003C", "403255", "837992"],
 ]
 
