@@ -43,8 +43,8 @@ func _ready() -> void:
 
 
 func get_ready():
-	#if GameManager.tutorial_mode:
-	tutorial_manager.get_ready(self.game_ready)
+	if GameManager.tutorial_mode:
+		tutorial_manager.get_ready(self.game_ready)
 	solution.clear()
 
 	level_start_time = Time.get_ticks_msec()
@@ -80,7 +80,7 @@ func get_ready():
 		l.letter_changed.connect(_on_current_word_letter_changed)
 		word_confirmed.connect(l._on_word_confirmed)
 		word_not_found.connect(l._on_word_not_found)
-	
+
 	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
@@ -305,64 +305,69 @@ func _on_home_button_pressed() -> void:
 
 
 func _on_hint_button_pressed() -> void:
-	if (
-		completed == true or current_word == target_word
-		or current_word == solution_long[-2] or hints <= 0
-	):
-		return
-
-	hints -= 1
-	GameManager.amt_of_hints = hints
-
-	var hint = ""
-
-	if undo_history.is_empty():
-		hint = "Next word is [b]" + solution_long[1] + "[/b]."
-		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 28)
-		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 32)
-	elif current_word in solution_long:
-		var idx = solution_long.find(current_word)
-		var next_word = solution_long[idx + 1]
-
-		var letter_idx = -1
-		for i in range(len(next_word)):
-			if current_word[i] == next_word[i]:
-				pass
-			else:
-				letter_idx = i
-				break
-
-		var numbers_in_words = [
-			"first",
-			"second",
-			"third",
-			"fourth",
-			"fifth",
-			"sixth",
-			"seventh",
-			"eighth",
-			"ninth",
-		]
-
-		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
-		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 26)
-		hint = "Try changing the [b]" + numbers_in_words[letter_idx] + "[/b] letter."
-		hint_word_letter = cw_h_box.get_children()[letter_idx]
-		hint_word_letter.hinted = true
+	if GameManager.tutorial_mode:
+		if (completed == true or current_word == target_word):
+			return
+		tutorial_manager.get_ready(get_tree().create_timer(0.1).timeout)
 	else:
-		var undo_idx = -1
-		for i in range(len(undo_history)):
-			if solution_long[i] == undo_history[i]:
-				undo_idx = i
-			else:
-				break
+		if (
+			completed == true or current_word == target_word
+			or current_word == solution_long[-2] or hints <= 0
+		):
+			return
 
-		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 18)
-		$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
-		hint = "You need to [b]undo[/b] back to [b]" + undo_history[undo_idx] + "[/b]."
+		hints -= 1
+		GameManager.amt_of_hints = hints
 
-	if hint:
-		$Control/VBoxContainer/Hint.text = hint
+		var hint = ""
+
+		if undo_history.is_empty():
+			hint = "Next word is [b]" + solution_long[1] + "[/b]."
+			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 28)
+			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 32)
+		elif current_word in solution_long:
+			var idx = solution_long.find(current_word)
+			var next_word = solution_long[idx + 1]
+
+			var letter_idx = -1
+			for i in range(len(next_word)):
+				if current_word[i] == next_word[i]:
+					pass
+				else:
+					letter_idx = i
+					break
+
+			var numbers_in_words = [
+				"first",
+				"second",
+				"third",
+				"fourth",
+				"fifth",
+				"sixth",
+				"seventh",
+				"eighth",
+				"ninth",
+			]
+
+			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
+			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 26)
+			hint = "Try changing the [b]" + numbers_in_words[letter_idx] + "[/b] letter."
+			hint_word_letter = cw_h_box.get_children()[letter_idx]
+			hint_word_letter.hinted = true
+		else:
+			var undo_idx = -1
+			for i in range(len(undo_history)):
+				if solution_long[i] == undo_history[i]:
+					undo_idx = i
+				else:
+					break
+
+			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 18)
+			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
+			hint = "You need to [b]undo[/b] back to [b]" + undo_history[undo_idx] + "[/b]."
+
+		if hint:
+			$Control/VBoxContainer/Hint.text = hint
 
 
 func _on_resized() -> void:
