@@ -243,6 +243,14 @@ layout_mode = 2
 text = "X"
 label_settings = SubResource("LabelSettings_e2o6t")
 
+[node name="WrongWord" type="RichTextLabel" parent="Control/VBoxContainer" unique_id=2025210295]
+layout_mode = 2
+theme = ExtResource("4_3g1ng")
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Hint" type="RichTextLabel" parent="Control/VBoxContainer" unique_id=1384336966]
 layout_mode = 2
 size_flags_vertical = 3

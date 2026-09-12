@@ -4,6 +4,7 @@ signal tween_done
 
 @onready var word_container = $"../Control/VBoxContainer"
 @onready var current_word_container = $"../Control/VBoxContainer/CurrentWordHBox"
+@onready var wrong_word_label = $"../Control/VBoxContainer/WrongWord"
 
 
 func _ready():
@@ -36,7 +37,12 @@ func slide_off(size: Vector2):
 
 	MusicManager.slide_sound()
 	tween \
-			.tween_property(word_container, "offset_transform_position", Vector2(-size.x / 2 - 200, 0), 0.75) \
+			.tween_property(
+		word_container,
+		"offset_transform_position",
+		Vector2(-size.x / 2 - 200, 0),
+		0.75,
+	) \
 			.set_ease(Tween.EASE_IN) \
 			.set_trans(Tween.TRANS_QUINT)
 
@@ -54,7 +60,14 @@ func not_a_word():
 			.set_trans(Tween.TRANS_ELASTIC) \
 			.set_ease(Tween.EASE_IN_OUT)
 
+	tween \
+			.tween_property(wrong_word_label, "modulate", Color.TRANSPARENT, 1.0) \
+			.set_ease(Tween.EASE_OUT) \
+			.set_trans(Tween.TRANS_SINE)
+
 	await tween.finished
+	wrong_word_label.text = ""
+	wrong_word_label.modulate = Color.WHITE
 	tween_done.emit()
 
 
