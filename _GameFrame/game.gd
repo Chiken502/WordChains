@@ -214,8 +214,10 @@ func _process(_delta: float) -> void:
 
 	if hints <= 0:
 		%Hint.disabled = true
+		%Hint.tooltip_text = "To get more hints complete levels!"
 	else:
 		%Hint.disabled = false
+		%Hint.tooltip_text = ""
 
 	# Checks if puzzle is completed
 	if current_word == target_word:
