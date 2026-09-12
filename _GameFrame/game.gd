@@ -173,11 +173,11 @@ func _on_current_word_letter_changed(node, letter):
 	if index == -1:
 		return
 
-	var char = current_word.split("")
-	if char[index] == letter:
+	var chars = current_word.split("")
+	if chars[index] == letter:
 		return
-	char[index] = letter
-	var new_word = "".join(char)
+	chars[index] = letter
+	var new_word = "".join(chars)
 
 	#print(new_word)
 
