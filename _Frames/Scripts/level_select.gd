@@ -64,3 +64,7 @@ func _on_button_down(button: Button):
 		var tween = get_tree().create_tween()
 
 		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
+
+
+func _on_daily_button_pressed() -> void:
+	GameManager.load_daily_puzzle()

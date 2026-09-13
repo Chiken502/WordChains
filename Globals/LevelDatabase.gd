@@ -1,5 +1,7 @@
 extends Node
 
+signal daily_loaded
+
 ## Stores an array of level arrays. inside each level array is a starting word, target word, solution letters, and solution word path (words are comma seperated)
 var levels: Array[Array] = [
 	# starting_word, target_word, solution(conjoined), sulution comma seperated
@@ -35,7 +37,8 @@ var levels: Array[Array] = [
 	],
 ]
 
-var day_of_year = -1
+var day_of_year: int = -1
+var utc_datetime : String
 
 func fetch_daily_level():
 	print("Loading daily level")
@@ -68,6 +71,47 @@ func fetch_daily_level():
 	else:
 		print("Requested Time")
 
+func load_daily_level():
+	if day_of_year != -1:
+		print("Loading puzzle file")
+		var puzzle_file = FileAccess.open("res://Globals/Puzzles/daily_puzzles.json", FileAccess.READ)
+		var data = JSON.parse_string(puzzle_file.get_as_text())
+		
+		print(data["puzzles"][day_of_year - 1])
+		print(get_short_solution(data["puzzles"][day_of_year - 1]["solution"]))
+		
+		var puzzle = data["puzzles"][day_of_year - 1]
+		
+		GameManager.starting_word = puzzle["start"]
+		GameManager.current_word = puzzle["start"]
+		GameManager.target_word = puzzle["target"]
+		GameManager.solution = get_short_solution(puzzle["solution"])
+		GameManager.solution_long = puzzle["solution"]
+		
+		daily_loaded.emit()
+
+
+func get_short_solution(solution_long : Array) -> String:
+	var result = ""
+	
+	for i in range(len(solution_long)):
+		if i+1 < solution_long.size():
+			var word = solution_long[i]
+			var next_word = solution_long[i+1]
+			
+			var letter_idx = -1
+			for j in range(len(next_word)):
+				if word[j] == next_word[j]:
+					pass
+				else:
+					letter_idx = j
+					break
+			
+			if letter_idx != -1:
+				result += next_word[letter_idx]
+	
+	return result
+
 
 func _http_request_completed(_result: int, response_code: int, _response_headers: PackedStringArray, body: PackedByteArray):
 	if response_code == 200:
@@ -77,8 +121,10 @@ func _http_request_completed(_result: int, response_code: int, _response_headers
 		if raw_text.contains("day_of_year"):
 			print("The request was successful!")
 			var response = parse_response(raw_text)
-			day_of_year = response["day_of_year"]
+			day_of_year = int(response["day_of_year"])
+			utc_datetime = String(response["utc_datetime"])
 			print(day_of_year)
+			load_daily_level()
 	else:
 		print("API Request failed with response code: ", response_code)
 

@@ -239,28 +239,51 @@ func _process(_delta: float) -> void:
 			GameManager.amt_of_hints = hints
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
+			
+			if not GameManager.daily_mode:
+				var sucseces = GameManager.load_level(GameManager.current_level + 1)
 
-			var sucseces = GameManager.load_level(GameManager.current_level + 1)
+				if sucseces:
+					var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
 
-			if sucseces:
-				var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
+					PostHog.capture(
+						"level complete",
+						{
+							"level": GameManager.current_level,
+							"time": level_time,
+							"hints used": hints_used,
+							"undos used": undo_used,
+						},
+					)
+					get_ready()
+				else: # Happens on the last level.
+					print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
 
-				PostHog.capture(
-					"level complete",
-					{
-						"level": GameManager.current_level,
-						"time": level_time,
-						"hints used": hints_used,
-						"undos used": undo_used,
-					},
-				)
-				get_ready()
-			else: # Happens on the last level.
-				print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
+					PostHog.capture("GAME_COMPLETE")
+					GameManager.current_level = 0
+					GameManager.back_to_menu()
+			else:
+				var sucseces = GameManager.load_level(GameManager.max_level + 1)
 
-				PostHog.capture("GAME_COMPLETE")
-				GameManager.current_level = 0
-				GameManager.back_to_menu()
+				if sucseces:
+					var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
+
+					PostHog.capture(
+						"daily_complete",
+						{
+							"date": LevelDatabase.utc_datetime,
+							"time": level_time,
+							"hints used": hints_used,
+							"undos used": undo_used,
+						},
+					)
+					get_ready()
+				else: # Happens on the last level.
+					print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
+
+					PostHog.capture("GAME_COMPLETE")
+					GameManager.current_level = 0
+					GameManager.back_to_menu() 
 
 
 func _on_undo_button_pressed() -> void:

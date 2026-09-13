@@ -20,6 +20,9 @@ var tutorial_mode = false
 var need_tutorial = true
 
 
+var daily_mode = false
+
+
 func _ready() -> void:
 	randomize()
 	FileManager.load_game()
@@ -62,7 +65,6 @@ func open_credits():
 func open_level_select():
 	if not need_tutorial:
 		get_tree().change_scene_to_file("res://_Frames/level_select.tscn")
-		LevelDatabase.fetch_daily_level()
 	else:
 		tutorial_mode = true
 		load_level(0)
@@ -76,3 +78,9 @@ func start_game():
 
 func back_to_menu():
 	get_tree().change_scene_to_file("res://_Frames/menu.tscn")
+
+func load_daily_puzzle():
+	LevelDatabase.fetch_daily_level()
+	await LevelDatabase.daily_loaded
+	daily_mode = true
+	get_tree().change_scene_to_file("res://_GameFrame/game.tscn")

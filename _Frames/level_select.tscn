@@ -127,3 +127,4 @@ labels = [NodePath("../VBoxContainer/Title")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
 
 [connection signal="pressed" from="Bottom/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="VBoxContainer/DailyButton" to="." method="_on_daily_button_pressed"]
