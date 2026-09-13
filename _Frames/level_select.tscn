@@ -99,6 +99,17 @@ label_settings = ExtResource("2_6ejmw")
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=615345161]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme = ExtResource("1_s6f1j")
+theme_type_variation = &"ReadableButton"
+text = "Daily Puzzle"
+
+[node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=10815102]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=1428994250]
 layout_mode = 2
 size_flags_horizontal = 4
