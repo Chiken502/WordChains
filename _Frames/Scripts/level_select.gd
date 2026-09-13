@@ -67,4 +67,5 @@ func _on_button_down(button: Button):
 
 
 func _on_daily_button_pressed() -> void:
-	GameManager.load_daily_puzzle()
+	$Panel.show()
+	GameManager.load_daily_puzzle($Panel)

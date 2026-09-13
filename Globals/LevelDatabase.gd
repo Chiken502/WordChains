@@ -1,6 +1,7 @@
 extends Node
 
-signal daily_loaded
+signal daily_loaded(response_code: int)
+signal daily_failed(response_code: int)
 
 ## Stores an array of level arrays. inside each level array is a starting word, target word, solution letters, and solution word path (words are comma seperated)
 var levels: Array[Array] = [
@@ -43,6 +44,7 @@ var utc_datetime : String
 func fetch_daily_level():
 	print("Loading daily level")
 	var http = HTTPRequest.new()
+	http.timeout = 30
 	add_child(http)
 	http.request_completed.connect(self._http_request_completed)
 	
@@ -88,7 +90,7 @@ func load_daily_level():
 		GameManager.solution = get_short_solution(puzzle["solution"])
 		GameManager.solution_long = puzzle["solution"]
 		
-		daily_loaded.emit()
+		daily_loaded.emit(200)
 
 
 func get_short_solution(solution_long : Array) -> String:
@@ -127,6 +129,7 @@ func _http_request_completed(_result: int, response_code: int, _response_headers
 			load_daily_level()
 	else:
 		print("API Request failed with response code: ", response_code)
+		daily_failed.emit(response_code)
 
 
 func parse_response(raw_text: String) -> Dictionary:

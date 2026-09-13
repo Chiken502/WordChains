@@ -126,5 +126,36 @@ ground_color_rect = NodePath("../Bottom/ColorRect2")
 labels = [NodePath("../VBoxContainer/Title")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
 
+[node name="Panel" type="Panel" parent="." unique_id=1663190126]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 150.0
+offset_right = -50.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_s6f1j")
+
+[node name="Label" type="Label" parent="Panel" unique_id=360175047]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -34.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Loading Puzzle"
+label_settings = ExtResource("2_6ejmw")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [connection signal="pressed" from="Bottom/HBoxContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/DailyButton" to="." method="_on_daily_button_pressed"]

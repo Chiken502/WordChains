@@ -79,8 +79,29 @@ func start_game():
 func back_to_menu():
 	get_tree().change_scene_to_file("res://_Frames/menu.tscn")
 
-func load_daily_puzzle():
+func load_daily_puzzle(panel : Panel):
+	var error = {"response_code" : 0}
+	var resolver = SignalResolver.new() 
+	
+	LevelDatabase.daily_failed.connect(func (response):
+		error.response_code = response
+		resolver.done.emit()
+		, CONNECT_ONE_SHOT)
+	
+	LevelDatabase.daily_loaded.connect(func (response):
+		error.response_code = response
+		resolver.done.emit()
+		, CONNECT_ONE_SHOT)
+	
 	LevelDatabase.fetch_daily_level()
-	await LevelDatabase.daily_loaded
-	daily_mode = true
-	get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+	await resolver.done
+	
+	if error.response_code == 200:
+		daily_mode = true
+		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+	else:
+		var label : Label = panel.get_child(0)
+		label.text = "Error loading daily puzzle. \n Error code: " + str(error.response_code)
+
+class SignalResolver:
+	signal done
