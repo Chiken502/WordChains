@@ -62,6 +62,7 @@ func open_credits():
 func open_level_select():
 	if not need_tutorial:
 		get_tree().change_scene_to_file("res://_Frames/level_select.tscn")
+		LevelDatabase.fetch_daily_level()
 	else:
 		tutorial_mode = true
 		load_level(0)

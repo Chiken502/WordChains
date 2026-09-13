@@ -2,6 +2,7 @@
 .godot/
 /android/
 posthog.json
+api_key.json
 /addons/godot_super-wakatime
 Export
 .vscode/
