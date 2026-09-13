@@ -6,10 +6,9 @@ var level_select_node = preload("res://_Components/level_select_button.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for idx in range(len(LevelDatabase.levels)):
-		var i: TextureButton = level_select_node.instantiate()
+		var i: Button = level_select_node.instantiate()
 		$VBoxContainer/GridContainer.add_child(i)
 		i.level = idx + 1
-		$ColorAgent.texture_buttons.append(i)
 		i.pressed.connect(_level_selected.bind(idx))
 		
 		if idx > GameManager.max_level:
@@ -25,6 +24,11 @@ func _ready() -> void:
 	%Home.mouse_exited.connect(_on_control_mouse_exited.bind(%Home))
 	%Home.button_down.connect(_on_button_down.bind(%Home))
 	%Home.button_up.connect(_on_button_up.bind(%Home))
+	
+	%DailyButton.mouse_entered.connect(_on_control_mouse_entered.bind(%DailyButton))
+	%DailyButton.mouse_exited.connect(_on_control_mouse_exited.bind(%DailyButton))
+	%DailyButton.button_down.connect(_on_button_down.bind(%DailyButton))
+	%DailyButton.button_up.connect(_on_button_up.bind(%DailyButton))
 
 
 func _on_home_pressed() -> void:

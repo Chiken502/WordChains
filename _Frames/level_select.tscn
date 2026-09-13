@@ -99,9 +99,11 @@ label_settings = ExtResource("2_6ejmw")
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=615345161]
+[node name="DailyButton" type="Button" parent="VBoxContainer" unique_id=615345161]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
+offset_transform_enabled = true
 theme = ExtResource("1_s6f1j")
 theme_type_variation = &"ReadableButton"
 text = "Daily Puzzle"
