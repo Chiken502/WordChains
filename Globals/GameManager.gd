@@ -19,19 +19,43 @@ var screenShakeOn = true
 var tutorial_mode = false
 var need_tutorial = true
 
-
 var daily_mode = false
+var daily_time = 0 # seconds
+
+var nickname = ""
 
 
 func _ready() -> void:
 	randomize()
 	FileManager.load_game()
 
+	var file = FileAccess.open("res://api_key.json", FileAccess.READ)
+	var raw_data = file.get_as_text()
+	file.close()
+	var data = JSON.parse_string(raw_data)
+	var api_key = data.cheddaboards_api_key
+
+	print(api_key)
+
+	CheddaBoards.set_api_key(str(api_key))
+	CheddaBoards.set_game_id("word-chains")
+	
+	CheddaBoards.login_success.connect(_on_chedda_login_success)
+	CheddaBoards.login_failed.connect(_on_chedda_login_failed)
+
+	
+	CheddaBoards.login_anonymous(nickname)
+
 	await PostHog.initialized
 	PostHog.auto_include_properties["distribution_platform"] = "itchio"
 	PostHog.auto_include_properties["game_version"] = current_game_version
 	PostHog.capture("GAME_START")
 
+func _on_chedda_login_success(nickname):
+	print(nickname + " login successful")
+
+func _on_chedda_login_failed(error):
+	print("CheddaBoards login failed: ", error)
 
 ## Populates GameManagers level varibles with the new level data
 ## Returns true if level_num is a valid level, and everything is updated accordingly
@@ -79,29 +103,35 @@ func start_game():
 func back_to_menu():
 	get_tree().change_scene_to_file("res://_Frames/menu.tscn")
 
-func load_daily_puzzle(panel : Panel):
-	var error = {"response_code" : 0}
-	var resolver = SignalResolver.new() 
-	
-	LevelDatabase.daily_failed.connect(func (response):
-		error.response_code = response
-		resolver.done.emit()
-		, CONNECT_ONE_SHOT)
-	
-	LevelDatabase.daily_loaded.connect(func (response):
-		error.response_code = response
-		resolver.done.emit()
-		, CONNECT_ONE_SHOT)
-	
+
+func load_daily_puzzle(panel: Panel):
+	var error = { "response_code": 0 }
+	var resolver = SignalResolver.new()
+
+	LevelDatabase.daily_failed.connect(
+		func(response):
+			error.response_code = response
+			resolver.done.emit(),
+		CONNECT_ONE_SHOT,
+	)
+
+	LevelDatabase.daily_loaded.connect(
+		func(response):
+			error.response_code = response
+			resolver.done.emit(),
+		CONNECT_ONE_SHOT,
+	)
+
 	LevelDatabase.fetch_daily_level()
 	await resolver.done
-	
+
 	if error.response_code == 200:
 		daily_mode = true
 		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 	else:
-		var label : Label = panel.get_child(0)
+		var label: Label = panel.get_child(0)
 		label.text = "Error loading daily puzzle. \n Error code: " + str(error.response_code)
+
 
 class SignalResolver:
 	signal done

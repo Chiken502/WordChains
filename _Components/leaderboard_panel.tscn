@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dddc7f3ais746"]
+
+[ext_resource type="Script" uid="uid://ddpsxx1yufsu7" path="res://_Components/leaderboard_panel.gd" id="1_16irk"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_82i0u"]
+[ext_resource type="LabelSettings" uid="uid://3qmxjb40dj5d" path="res://Resources/leaderboard_label.tres" id="2_16irk"]
+
+[node name="LeaderboardPanel" type="Control" unique_id=1973229007]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+script = ExtResource("1_16irk")
+
+[node name="Panel" type="Panel" parent="." unique_id=754075552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_82i0u")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1121079139]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_right = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Name" type="Label" parent="HBoxContainer" unique_id=576016347]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1. Chicken502"
+label_settings = ExtResource("2_16irk")
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="Time" type="Label" parent="HBoxContainer" unique_id=453600121]
+layout_mode = 2
+text = "2:20"
+label_settings = ExtResource("2_16irk")

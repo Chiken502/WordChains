@@ -79,6 +79,35 @@ corner_radius_bottom_left = 10
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kckp"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.447059, 0.690196, 0.992157, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvqqf"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+border_width_bottom = 4
+border_color = Color(0.447059, 0.690196, 0.992157, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_3ykye"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ykye"]
@@ -97,7 +126,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvqqf"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vocpi"]
 bg_color = Color(0.447059, 0.690196, 0.992157, 1)
 corner_radius_top_left = 30
 corner_radius_top_right = 30
@@ -159,6 +188,14 @@ HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_6mhpt")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ohexs")
 HSlider/styles/slider = SubResource("StyleBoxFlat_3j6r5")
+LineEdit/colors/caret_color = Color(0.588235, 0.847059, 0.996078, 1)
+LineEdit/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
+LineEdit/colors/font_placeholder_color = Color(0.447059, 0.690196, 0.992157, 1)
+LineEdit/constants/caret_width = 2
+LineEdit/font_sizes/font_size = 32
+LineEdit/fonts/font = ExtResource("3_6kckp")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_6kckp")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_mvqqf")
 OptionButton/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 OptionButton/colors/font_focus_color = Color(0.588235, 0.847059, 0.996078, 1)
 OptionButton/colors/font_pressed_color = Color(0.447059, 0.690196, 0.992157, 1)
@@ -173,7 +210,7 @@ OptionButton/styles/focus = SubResource("StyleBoxFlat_3ykye")
 OptionButton/styles/hover = SubResource("StyleBoxFlat_gc0em")
 OptionButton/styles/normal = SubResource("StyleBoxFlat_3ykye")
 OptionButton/styles/pressed = SubResource("StyleBoxFlat_3ykye")
-Panel/styles/panel = SubResource("StyleBoxFlat_mvqqf")
+Panel/styles/panel = SubResource("StyleBoxFlat_vocpi")
 PopupMenu/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 PopupMenu/colors/font_hover_color = Color(0.588235, 0.847059, 0.996078, 1)
 PopupMenu/font_sizes/font_size = 20
@@ -190,6 +227,7 @@ RichTextLabel/font_sizes/bold_font_size = 24
 RichTextLabel/font_sizes/normal_font_size = 24
 RichTextLabel/fonts/bold_font = ExtResource("1_jgrfi")
 RichTextLabel/fonts/normal_font = ExtResource("9_4x8ju")
+ScrollContainer/constants/scrollbar_h_separation = 8
 TooltipLabel/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 TooltipLabel/font_sizes/font_size = 26
 TooltipLabel/fonts/font = ExtResource("6_vocpi")

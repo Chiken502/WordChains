@@ -52,9 +52,7 @@ func fetch_daily_level():
 	var raw_data = file.get_as_text()
 	file.close()
 	var data = JSON.parse_string(raw_data)
-	var api_key = data.api_key
-	
-	print(api_key)
+	var api_key = data.rapid_api_key
 	
 	var headers: PackedStringArray = [
 		"x-rapidapi-key: " + api_key,

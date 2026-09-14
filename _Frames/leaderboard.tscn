@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://bqmak74lamitb"]
+
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_bg40d"]
+[ext_resource type="Script" uid="uid://owmxg2afekhq" path="res://_Frames/Scripts/leaderboard.gd" id="1_ly34k"]
+[ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="2_ly34k"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="4_0khxy"]
+[ext_resource type="LabelSettings" uid="uid://cd4808gjis3qt" path="res://Resources/settings_label.tres" id="4_uw418"]
+
+[node name="Leaderboard" type="Control" unique_id=2132258922]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ly34k")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1347522115]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Bottom" type="Control" parent="." unique_id=192947246]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom" unique_id=1418776955]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Bottom" unique_id=812351359]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Home" type="Button" parent="Bottom/HBoxContainer" unique_id=1100905666]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_bg40d")
+text = "Home"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1486084824]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=374166105]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=2022684207]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 1
+text = "LEADERBOARD"
+label_settings = ExtResource("2_ly34k")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=969894008]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1019235518]
+layout_mode = 2
+text = "What do you want to be know as?"
+label_settings = ExtResource("4_uw418")
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/VBoxContainer" unique_id=907668006]
+layout_mode = 2
+theme = ExtResource("1_bg40d")
+placeholder_text = "Display Name"
+
+[node name="Spacer" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=995473453]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer/VBoxContainer" unique_id=444881964]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_bg40d")
+theme_type_variation = &"ReadableButton"
+text = "Save Score"
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=2098507694]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=489964035]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_bg40d")
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=1692190974]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer2" unique_id=2100247924]
+visible = false
+layout_mode = 2
+text = "LOADING"
+label_settings = ExtResource("4_uw418")
+horizontal_alignment = 1
+
+[node name="ColorAgent" type="Node" parent="." unique_id=303691738 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
+script = ExtResource("4_0khxy")
+bg_color_rect = NodePath("../ColorRect")
+ground_color_rect = NodePath("../Bottom/ColorRect2")
+labels = [NodePath("../VBoxContainer/Title")]
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="Bottom/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

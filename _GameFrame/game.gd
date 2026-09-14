@@ -263,27 +263,19 @@ func _process(_delta: float) -> void:
 					GameManager.current_level = 0
 					GameManager.back_to_menu()
 			else:
-				var sucseces = GameManager.load_level(GameManager.max_level + 1)
+				var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
+				GameManager.daily_time = level_time
 
-				if sucseces:
-					var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
-
-					PostHog.capture(
-						"daily_complete",
-						{
-							"date": LevelDatabase.utc_datetime,
-							"time": level_time,
-							"hints used": hints_used,
-							"undos used": undo_used,
-						},
-					)
-					get_ready()
-				else: # Happens on the last level.
-					print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
-
-					PostHog.capture("GAME_COMPLETE")
-					GameManager.current_level = 0
-					GameManager.back_to_menu() 
+				PostHog.capture(
+					"daily_complete",
+					{
+						"date": LevelDatabase.utc_datetime,
+						"time": level_time,
+						"hints used": hints_used,
+						"undos used": undo_used,
+					},
+				)
+				get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
 
 
 func _on_undo_button_pressed() -> void:

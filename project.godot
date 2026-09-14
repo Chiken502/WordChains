@@ -35,6 +35,7 @@ ColorManager="*uid://dcw6oj4mujq3"
 MusicManager="*uid://bej4m7xpcwpoj"
 FileManager="*uid://dqnutrsx0adh6"
 PostHog="*uid://cehj16mdi8olo"
+CheddaBoards="*res://addons/cheddaboards/CheddaBoards.gd"
 
 [display]
 
@@ -43,7 +44,7 @@ window/size/viewport_height=900
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDQuest_GDScript_formatter/plugin.cfg", "res://addons/LootLockerSDK/plugin.cfg", "res://addons/cheddaboards/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
 [file_customization]
 
