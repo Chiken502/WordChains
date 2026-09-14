@@ -84,8 +84,11 @@ func get_ready():
 	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
-
-	PostHog.capture("level_started", { "level": GameManager.current_level + 1 })
+	
+	if GameManager.daily_mode:
+		PostHog.capture("daily_started", {"day_of_year" : GameManager.day_of_year, "date": LevelDatabase.utc_datetime, "starting_word" : starting_word, "target_word": target_word})
+	else:
+		PostHog.capture("level_started", { "level": GameManager.current_level + 1 })
 
 	# Animate words sliding on
 	tween_controler.slide_in(self.size)
