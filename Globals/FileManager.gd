@@ -28,7 +28,8 @@ func save_game():
 		"needTutorial" : GameManager.need_tutorial,
 		"maxLevel" : GameManager.max_level,
 		"hints" : GameManager.amt_of_hints,
-		"nickname" : GameManager.nickname
+		"nickname" : GameManager.nickname,
+		"lastDailyComplete" : GameManager.day_of_year if GameManager.daily_completed else GameManager.last_day_completed
 	}
 	
 	save_file.store_var(save_data)
@@ -63,4 +64,5 @@ func load_game():
 		GameManager.amt_of_hints = data.get("hints", 0)
 		GameManager.need_tutorial = data.get("needTutorial", true)
 		GameManager.nickname = data.get("nickname", "")
+		GameManager.last_day_completed = data.get("lastDailyComplete", -1)
 	print("Game Loaded")

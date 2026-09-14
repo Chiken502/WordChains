@@ -21,6 +21,13 @@ var need_tutorial = true
 
 var daily_mode = false
 var daily_time = 0 # seconds
+var daily_completed = false
+var day_of_year = -1:
+	set(value):
+		day_of_year = value
+		if day_of_year != -1:
+			daily_completed = last_day_completed == day_of_year
+var last_day_completed = -1
 
 var nickname = ""
 
@@ -45,6 +52,8 @@ func _ready() -> void:
 
 	
 	CheddaBoards.login_anonymous(nickname)
+	
+	LevelDatabase.fetch_date()
 
 	await PostHog.initialized
 	PostHog.auto_include_properties["distribution_platform"] = "itchio"
@@ -105,33 +114,41 @@ func back_to_menu():
 
 
 func load_daily_puzzle(panel: Panel):
-	var error = { "response_code": 0 }
-	var resolver = SignalResolver.new()
+	if GameManager.day_of_year != -1:
+		var error = { "response_code": 0 }
+		var resolver = SignalResolver.new()
 
-	LevelDatabase.daily_failed.connect(
-		func(response):
-			error.response_code = response
-			resolver.done.emit(),
-		CONNECT_ONE_SHOT,
-	)
+		LevelDatabase.daily_failed.connect(
+			func(response):
+				error.response_code = response
+				resolver.done.emit(),
+			CONNECT_ONE_SHOT,
+		)
 
-	LevelDatabase.daily_loaded.connect(
-		func(response):
-			error.response_code = response
-			resolver.done.emit(),
-		CONNECT_ONE_SHOT,
-	)
+		LevelDatabase.request_received.connect(
+			func(value):
+				error.response_code = value
+				resolver.done.emit(),
+			CONNECT_ONE_SHOT,
+		)
 
-	LevelDatabase.fetch_daily_level()
-	await resolver.done
+		LevelDatabase.fetch_date()
+		await resolver.done
 
-	if error.response_code == 200:
-		daily_mode = true
-		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+		if error.response_code == 200:
+			daily_mode = true
+			LevelDatabase.load_daily_level()
+			get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+		else:
+			var label: Label = panel.get_child(0)
+			label.text = "Error loading daily puzzle. \n Error code: " + str(error.response_code)
 	else:
-		var label: Label = panel.get_child(0)
-		label.text = "Error loading daily puzzle. \n Error code: " + str(error.response_code)
+		daily_mode = true
+		LevelDatabase.load_daily_level()
+		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
+func open_leaderboard():
+	get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
 
 class SignalResolver:
 	signal done

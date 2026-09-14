@@ -29,6 +29,9 @@ func _ready() -> void:
 	%DailyButton.mouse_exited.connect(_on_control_mouse_exited.bind(%DailyButton))
 	%DailyButton.button_down.connect(_on_button_down.bind(%DailyButton))
 	%DailyButton.button_up.connect(_on_button_up.bind(%DailyButton))
+	
+	if GameManager.daily_completed:
+		%DailyButton.text = "View Daily Leaderboard"
 
 
 func _on_home_pressed() -> void:
@@ -67,5 +70,8 @@ func _on_button_down(button: Button):
 
 
 func _on_daily_button_pressed() -> void:
-	$Panel.show()
-	GameManager.load_daily_puzzle($Panel)
+	if GameManager.daily_completed:
+		GameManager.open_leaderboard()
+	else:
+		$Panel.show()
+		GameManager.load_daily_puzzle($Panel)

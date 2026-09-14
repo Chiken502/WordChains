@@ -266,6 +266,11 @@ func _process(_delta: float) -> void:
 				var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
 				GameManager.daily_time = level_time
 
+				GameManager.daily_completed = true
+				GameManager.last_day_completed = GameManager.day_of_year
+				
+				FileManager.save_game()
+
 				PostHog.capture(
 					"daily_complete",
 					{
@@ -275,7 +280,7 @@ func _process(_delta: float) -> void:
 						"undos used": undo_used,
 					},
 				)
-				get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
+				GameManager.open_leaderboard()
 
 
 func _on_undo_button_pressed() -> void:
