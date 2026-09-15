@@ -12,10 +12,14 @@ func _ready() -> void:
 	CheddaBoards.scoreboard_loaded.connect(_on_leaderboard)
 	CheddaBoards.scoreboard_error.connect(func(error):print("score board error: " + str(error)))
 	
-	if (GameManager.daily_mode and !CheddaBoards.is_logged_in()) or CheddaBoards.get_nickname().strip_edges() == "":
+	if GameManager.nickname.strip_edges() == "" or CheddaBoards.get_nickname().strip_edges() == "":
 		print("Nickname is \"" + CheddaBoards.get_nickname() + "\"")
 		$VBoxContainer/VBoxContainer.show()
 	else:
+		if GameManager.daily_mode:
+			var score = maxi(0, 3600 - GameManager.daily_time)
+			CheddaBoards.submit_score(score)
+		
 		$VBoxContainer/VBoxContainer.hide()
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
 		show_leaderboard()

@@ -60,8 +60,8 @@ func _ready() -> void:
 	PostHog.auto_include_properties["game_version"] = current_game_version
 	PostHog.capture("GAME_START")
 
-func _on_chedda_login_success(nickname):
-	print(nickname + " login successful")
+func _on_chedda_login_success(_nickname):
+	print(_nickname + " login successful")
 
 func _on_chedda_login_failed(error):
 	print("CheddaBoards login failed: ", error)

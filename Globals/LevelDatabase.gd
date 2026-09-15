@@ -62,7 +62,7 @@ func fetch_date():
 	]
 	
 	var error = http.request(
-		"https://world-time-api3.p.rapidapi.com/ip.txt", 
+		"https://world-time-api3.p.rapidapi.com/timezone/Etc/UTC", 
 		headers, 
 		HTTPClient.METHOD_GET
 		)
@@ -122,9 +122,9 @@ func _http_request_completed(_result: int, response_code: int, _response_headers
 		if raw_text.contains("day_of_year"):
 			print("The request was successful!")
 			var response = parse_response(raw_text)
-			day_of_year = int(response["day_of_year"])
+			day_of_year = int(response["\"day_of_year\""])
 			GameManager.day_of_year = day_of_year
-			utc_datetime = String(response["utc_datetime"])
+			utc_datetime = String(response["\"utc_datetime\""])
 			print(day_of_year)
 			request_received.emit(200)
 	else:
@@ -135,7 +135,8 @@ func _http_request_completed(_result: int, response_code: int, _response_headers
 func parse_response(raw_text: String) -> Dictionary:
 	var result_dict : Dictionary = {}
 	
-	var lines: PackedStringArray = raw_text.split("\n")
+	raw_text = raw_text.remove_chars("{}")
+	var lines: PackedStringArray = raw_text.split(",")
 	for line in lines:
 		line.strip_edges()
 		if line.is_empty():
