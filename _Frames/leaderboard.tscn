@@ -127,6 +127,7 @@ custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=489964035]
+clip_contents = false
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("1_bg40d")

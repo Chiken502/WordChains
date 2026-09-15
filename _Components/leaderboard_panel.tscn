@@ -10,6 +10,7 @@ layout_mode = 3
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
+offset_transform_enabled = true
 script = ExtResource("1_16irk")
 
 [node name="Panel" type="Panel" parent="." unique_id=754075552]
@@ -45,3 +46,6 @@ text_overrun_behavior = 3
 layout_mode = 2
 text = "2:20"
 label_settings = ExtResource("2_16irk")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

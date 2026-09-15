@@ -3,6 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	MusicManager.scene_loaded()
+	
 	if !CheddaBoards.is_logged_in():
 		CheddaBoards.login_anonymous()
 		await CheddaBoards.login_success
@@ -18,6 +20,14 @@ func _ready() -> void:
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
 		show_leaderboard()
 		GameManager.daily_mode = false
+	
+	$VBoxContainer/Title.mouse_entered.connect(_on_control_mouse_entered.bind($VBoxContainer/Title))
+	$VBoxContainer/Title.mouse_exited.connect(_on_control_mouse_exited.bind($VBoxContainer/Title))
+	
+	%Home.mouse_entered.connect(_on_control_mouse_entered.bind(%Home))
+	%Home.mouse_exited.connect(_on_control_mouse_exited.bind($%Home))
+	%Home.button_up.connect(_on_button_up.bind(%Home))
+	%Home.button_down.connect(_on_button_down.bind($%Home))
 
 
 func show_leaderboard():
@@ -25,17 +35,22 @@ func show_leaderboard():
 	CheddaBoards.get_scoreboard("daily-puzzle-times")
 	print("GET_SCOREBOARD CALLED")
 
-func _on_leaderboard(sb_id, config, entries):
+func _on_leaderboard(_sb_id, _config, entries):
 	print("LEADERBOARD RECEIVED")
 	$VBoxContainer/ScrollContainer/VBoxContainer2/Label.hide()
 	for i in entries:
 		print("ENTRY: ", i)
 		
-		var panel = preload("res://_Components/leaderboard_panel.tscn").instantiate()
+		var panel : Control = preload("res://_Components/leaderboard_panel.tscn").instantiate()
 		$VBoxContainer/ScrollContainer/VBoxContainer2.add_child(panel)
 		panel.rank = int(i["rank"])
 		panel.nickname = i["nickname"]
 		panel.seconds = 3600 - i["score"]
+		
+		panel.offset_transform_scale = Vector2(1.2, 1.2)
+		var tween = get_tree().create_tween()
+		tween.tween_property(panel, "offset_transform_scale", Vector2.ONE, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
+		await tween.finished
 
 
 func _on_button_pressed() -> void:
@@ -61,3 +76,30 @@ func _on_button_pressed() -> void:
 
 func _on_home_pressed() -> void:
 	GameManager.back_to_menu()
+
+
+# Animations
+func _on_control_mouse_entered(control: Control) -> void:
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(control, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+
+
+func _on_control_mouse_exited(control: Control) -> void:
+	var tween = get_tree().create_tween()
+
+	tween.tween_property(control, "offset_transform_scale", Vector2(1, 1), 0.1)
+
+
+func _on_button_up(button: Button):
+	if not button.disabled:
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(button, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+
+
+func _on_button_down(button: Button):
+	if not button.disabled:
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
