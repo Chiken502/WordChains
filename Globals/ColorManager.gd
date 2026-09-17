@@ -2,15 +2,16 @@ extends Node
 
 signal color_changed(oldColors: Array) ## Notifys listeners when the color has been changed
 
-var currentColor := 0
+var currentColor := 5 # Starts as the idx of Blue, as blue is the base color that color manager uses to create all the others.
 
 var colors := [
-	["Blue", "3A86FF", "72B0FD", "96D8FE"],
-	["Purple", "8338EC", "AD72F1", "DCA0F3"],
+	["Red", "FF006E", "FD5C84", "FE9AAC"],
 	["Orange", "FB5607", "FD9A48", "FED496"],
 	["Yellow", "FFBE0B", "FEE767", "FEF8BA"],
-	["Red", "FF006E", "FD5C84", "FE9AAC"],
 	["Green", "03D52D", "15E902", "9DFF5B"],
+	["Teal", "3AD8FF", "72E8FD", "96FEF0"],
+	["Blue", "3A86FF", "72B0FD", "96D8FE"],
+	["Purple", "8338EC", "AD72F1", "DCA0F3"],
 	["Black", "18003C", "403255", "837992"],
 ]
 
