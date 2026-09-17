@@ -74,7 +74,7 @@ func load_level(level_num) -> bool:
 	if level_num <= len(LevelDatabase.levels) - 1:
 		var next_level := LevelDatabase.levels[level_num]
 
-		if level_num > current_level:
+		if level_num > max_level:
 			max_level = level_num
 			FileManager.save_game()
 
