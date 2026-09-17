@@ -10,7 +10,7 @@ func _ready() -> void:
 		$VBoxContainer/GridContainer.add_child(i)
 		i.level = idx + 1
 		i.pressed.connect(_level_selected.bind(idx))
-		
+
 		if idx > GameManager.max_level:
 			i.locked = true
 
@@ -24,12 +24,12 @@ func _ready() -> void:
 	%Home.mouse_exited.connect(_on_control_mouse_exited.bind(%Home))
 	%Home.button_down.connect(_on_button_down.bind(%Home))
 	%Home.button_up.connect(_on_button_up.bind(%Home))
-	
+
 	%DailyButton.mouse_entered.connect(_on_control_mouse_entered.bind(%DailyButton))
 	%DailyButton.mouse_exited.connect(_on_control_mouse_exited.bind(%DailyButton))
 	%DailyButton.button_down.connect(_on_button_down.bind(%DailyButton))
 	%DailyButton.button_up.connect(_on_button_up.bind(%DailyButton))
-	
+
 	if GameManager.daily_completed:
 		%DailyButton.text = "View Daily Leaderboard"
 

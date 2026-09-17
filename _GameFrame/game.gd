@@ -84,9 +84,17 @@ func get_ready():
 	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
-	
+
 	if GameManager.daily_mode:
-		PostHog.capture("daily_started", {"day_of_year" : GameManager.day_of_year, "date": LevelDatabase.utc_datetime, "starting_word" : starting_word, "target_word": target_word})
+		PostHog.capture(
+			"daily_started",
+			{
+				"day_of_year": GameManager.day_of_year,
+				"date": LevelDatabase.utc_datetime,
+				"starting_word": starting_word,
+				"target_word": target_word,
+			},
+		)
 	else:
 		PostHog.capture("level_started", { "level": GameManager.current_level + 1 })
 
@@ -242,7 +250,7 @@ func _process(_delta: float) -> void:
 			GameManager.amt_of_hints = hints
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
-			
+
 			if not GameManager.daily_mode:
 				var sucseces = GameManager.load_level(GameManager.current_level + 1)
 
@@ -271,7 +279,7 @@ func _process(_delta: float) -> void:
 
 				GameManager.daily_completed = true
 				GameManager.last_day_completed = GameManager.day_of_year
-				
+
 				FileManager.save_game()
 
 				PostHog.capture(

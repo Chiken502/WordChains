@@ -46,15 +46,20 @@ func _ready() -> void:
 
 	CheddaBoards.set_api_key(str(api_key))
 	CheddaBoards.set_game_id("word-chains")
-	
+
 	CheddaBoards.login_success.connect(_on_chedda_login_success)
 	CheddaBoards.login_failed.connect(_on_chedda_login_failed)
-	CheddaBoards.nickname_error.connect(func(error): print("nickname error: "+error))
-	CheddaBoards.nickname_changed.connect(func(new_nickname): print("nickname changed: " + new_nickname))
+	CheddaBoards.nickname_error.connect(
+		func(error):
+			print("nickname error: " + error),
+	)
+	CheddaBoards.nickname_changed.connect(
+		func(new_nickname):
+			print("nickname changed: " + new_nickname),
+	)
 
-	
 	CheddaBoards.login_anonymous(nickname)
-	
+
 	LevelDatabase.fetch_date()
 
 	await PostHog.initialized
@@ -62,11 +67,14 @@ func _ready() -> void:
 	PostHog.auto_include_properties["game_version"] = current_game_version
 	PostHog.capture("GAME_START")
 
+
 func _on_chedda_login_success(_nickname):
 	print(_nickname + " login successful")
 
+
 func _on_chedda_login_failed(error):
 	print("CheddaBoards login failed: ", error)
+
 
 ## Populates GameManagers level varibles with the new level data
 ## Returns true if level_num is a valid level, and everything is updated accordingly
@@ -149,8 +157,10 @@ func load_daily_puzzle(panel: Panel):
 		LevelDatabase.load_daily_level()
 		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
+
 func open_leaderboard():
 	get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
+
 
 class SignalResolver:
 	signal done

@@ -43,21 +43,25 @@ func show_leaderboard():
 	CheddaBoards.get_scoreboard("daily-puzzle-times")
 	print("GET_SCOREBOARD CALLED")
 
+
 func _on_leaderboard(_sb_id, _config, entries):
 	print("LEADERBOARD RECEIVED")
 	$VBoxContainer/ScrollContainer/VBoxContainer2/Label.hide()
 	for i in entries:
 		print("ENTRY: ", i)
-		
-		var panel : Control = preload("res://_Components/leaderboard_panel.tscn").instantiate()
+
+		var panel: Control = preload("res://_Components/leaderboard_panel.tscn").instantiate()
 		$VBoxContainer/ScrollContainer/VBoxContainer2.add_child(panel)
 		panel.rank = int(i["rank"])
 		panel.nickname = i["nickname"]
 		panel.seconds = 3600 - i["score"]
-		
+
 		panel.offset_transform_scale = Vector2(1.2, 1.2)
 		var tween = get_tree().create_tween()
-		tween.tween_property(panel, "offset_transform_scale", Vector2.ONE, 0.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
+		tween \
+				.tween_property(panel, "offset_transform_scale", Vector2.ONE, 0.5) \
+				.set_ease(Tween.EASE_OUT) \
+				.set_trans(Tween.TRANS_QUINT)
 		await tween.finished
 
 
@@ -75,7 +79,7 @@ func _on_button_pressed() -> void:
 
 		var score = maxi(0, 3600 - GameManager.daily_time)
 		CheddaBoards.submit_score(score)
-		
+
 		$VBoxContainer/VBoxContainer.hide()
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
 		await CheddaBoards.score_submitted
@@ -116,12 +120,12 @@ func _on_button_down(button: Button):
 func _on_line_edit_text_changed(new_text: String) -> void:
 	var lineedit = $VBoxContainer/VBoxContainer/LineEdit
 	var filtered := ""
-	
+
 	for character in new_text:
 		if character in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_":
 			filtered += character
-	
+
 	if filtered != new_text:
-		var cursor_position : int = lineedit.caret_column
+		var cursor_position: int = lineedit.caret_column
 		lineedit.text = filtered
 		lineedit.caret_column = min(cursor_position - 1, filtered.length())

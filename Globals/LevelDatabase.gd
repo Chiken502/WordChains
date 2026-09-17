@@ -40,7 +40,8 @@ var levels: Array[Array] = [
 ]
 
 var day_of_year: int = -1
-var utc_datetime : String
+var utc_datetime: String
+
 
 func fetch_date():
 	print("Loading daily level")
@@ -48,58 +49,62 @@ func fetch_date():
 	http.timeout = 30
 	add_child(http)
 	http.request_completed.connect(self._http_request_completed)
-	
+
 	var file = FileAccess.open("res://api_key.json", FileAccess.READ)
 	var raw_data = file.get_as_text()
 	file.close()
 	var data = JSON.parse_string(raw_data)
 	var api_key = data.rapid_api_key
-	
+
 	var headers: PackedStringArray = [
 		"x-rapidapi-key: " + api_key,
 		"x-rapidapi-host: world-time-api3.p.rapidapi.com",
-		"Content-Type: application/json"
+		"Content-Type: application/json",
 	]
-	
+
 	var error = http.request(
-		"https://world-time-api3.p.rapidapi.com/timezone/Etc/UTC", 
-		headers, 
-		HTTPClient.METHOD_GET
-		)
-	
+		"https://world-time-api3.p.rapidapi.com/timezone/Etc/UTC",
+		headers,
+		HTTPClient.METHOD_GET,
+	)
+
 	if error != OK:
 		push_error("An error occurred while initiating the Time HTTP request.")
 	else:
 		print("Requested Time")
 
+
 func load_daily_level():
 	if day_of_year != -1:
 		print("Loading puzzle file")
-		var puzzle_file = FileAccess.open("res://Globals/Puzzles/daily_puzzles.json", FileAccess.READ)
+		var puzzle_file = FileAccess.open(
+			"res://Globals/Puzzles/daily_puzzles.json",
+			FileAccess.READ,
+		)
 		var data = JSON.parse_string(puzzle_file.get_as_text())
-		
+
 		print(data["puzzles"][day_of_year - 1])
 		print(get_short_solution(data["puzzles"][day_of_year - 1]["solution"]))
-		
+
 		var puzzle = data["puzzles"][day_of_year - 1]
-		
+
 		GameManager.starting_word = puzzle["start"]
 		GameManager.current_word = puzzle["start"]
 		GameManager.target_word = puzzle["target"]
 		GameManager.solution = get_short_solution(puzzle["solution"])
 		GameManager.solution_long = puzzle["solution"]
-		
+
 		daily_loaded.emit()
 
 
-func get_short_solution(solution_long : Array) -> String:
+func get_short_solution(solution_long: Array) -> String:
 	var result = ""
-	
+
 	for i in range(len(solution_long)):
-		if i+1 < solution_long.size():
+		if i + 1 < solution_long.size():
 			var word = solution_long[i]
-			var next_word = solution_long[i+1]
-			
+			var next_word = solution_long[i + 1]
+
 			var letter_idx = -1
 			for j in range(len(next_word)):
 				if word[j] == next_word[j]:
@@ -107,18 +112,23 @@ func get_short_solution(solution_long : Array) -> String:
 				else:
 					letter_idx = j
 					break
-			
+
 			if letter_idx != -1:
 				result += next_word[letter_idx]
-	
+
 	return result
 
 
-func _http_request_completed(_result: int, response_code: int, _response_headers: PackedStringArray, body: PackedByteArray):
+func _http_request_completed(
+	_result: int,
+	response_code: int,
+	_response_headers: PackedStringArray,
+	body: PackedByteArray,
+):
 	if response_code == 200:
 		# Convert the raw byte array directly into a readable string
 		var raw_text: String = body.get_string_from_utf8()
-		
+
 		if raw_text.contains("day_of_year"):
 			print("The request was successful!")
 			var response = parse_response(raw_text)
@@ -133,21 +143,21 @@ func _http_request_completed(_result: int, response_code: int, _response_headers
 
 
 func parse_response(raw_text: String) -> Dictionary:
-	var result_dict : Dictionary = {}
-	
+	var result_dict: Dictionary = { }
+
 	raw_text = raw_text.remove_chars("{}")
 	var lines: PackedStringArray = raw_text.split(",")
 	for line in lines:
 		line.strip_edges()
 		if line.is_empty():
 			continue
-		
+
 		var parts: PackedStringArray = line.split(":", true, 1)
-		
+
 		if parts.size() == 2:
 			var key = parts[0].strip_edges()
 			var value = parts[1].strip_edges()
-			
+
 			result_dict[key] = value
-	
+
 	return result_dict

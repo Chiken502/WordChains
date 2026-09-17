@@ -1,7 +1,6 @@
 extends Button
 
-
-@export var level : int = 1:
+@export var level: int = 1:
 	set(value):
 		level = value
 		self.text = str(value)
@@ -14,7 +13,7 @@ extends Button
 			self.text = "lock"
 			disabled = true
 			theme_type_variation = ""
-			
+
 			$Label.show()
 			$Label.text = str(level)
 		if not locked:
@@ -22,7 +21,7 @@ extends Button
 			self.text = str(level)
 			disabled = false
 			theme_type_variation = "ReadableButton"
-			
+
 			$Label.hide()
 
 

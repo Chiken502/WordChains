@@ -43,7 +43,7 @@ func _ready() -> void:
 
 	$VBoxContainer/Music/HSlider.value = db_to_linear(AudioServer.get_bus_volume_db(music_bus_idx))
 	$VBoxContainer/Sound/HSlider.value = db_to_linear(AudioServer.get_bus_volume_db(sound_bus_idx))
-	
+
 	$VBoxContainer/Nickname/LineEdit.text = GameManager.nickname
 
 
@@ -62,7 +62,7 @@ func save_settings():
 		if !CheddaBoards.is_logged_in():
 			CheddaBoards.login_anonymous()
 			await CheddaBoards.login_success
-		
+
 		GameManager.nickname = $VBoxContainer/Nickname/LineEdit.text
 		print(GameManager.nickname)
 		CheddaBoards.change_nickname(GameManager.nickname)
@@ -126,17 +126,16 @@ func _on_sound_slider_value_changed(value: float) -> void:
 func _on_line_edit_text_changed(new_text: String) -> void:
 	var lineedit = $VBoxContainer/Nickname/LineEdit
 	var filtered := ""
-	
+
 	for character in new_text:
 		if character in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_":
 			filtered += character
-	
+
 	if filtered != new_text:
-		var cursor_position : int = lineedit.caret_column
+		var cursor_position: int = lineedit.caret_column
 		lineedit.text = filtered
 		lineedit.caret_column = min(cursor_position - 1, filtered.length())
-	
-	
+
 	if filtered != GameManager.nickname:
 		settings_changed = true
 		nickname_changed = true
