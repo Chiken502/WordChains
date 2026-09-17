@@ -30,8 +30,10 @@ func _ready() -> void:
 	$VBoxContainer/ScreenShake/CheckBox.button_down.connect(
 		_on_button_down.bind($VBoxContainer/ScreenShake/CheckBox)
 	)
+	%TutorialButton.button_up.connect(_on_button_up.bind(%TutorialButton))
+	%TutorialButton.button_down.connect(_on_button_down.bind(%TutorialButton))
 
-	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake, %Nickname]:
+	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake, %Nickname, %TutorialButton]:
 		control.mouse_entered.connect(_on_control_mouse_entered.bind(control))
 		control.mouse_exited.connect(_on_control_mouse_exited.bind(control))
 
@@ -51,6 +53,11 @@ func _process(_delta: float) -> void:
 
 
 func _on_home_pressed() -> void:
+	save_settings()
+	GameManager.back_to_menu()
+
+
+func save_settings():
 	if nickname_changed:
 		if !CheddaBoards.is_logged_in():
 			CheddaBoards.login_anonymous()
@@ -62,7 +69,6 @@ func _on_home_pressed() -> void:
 		FileManager.save_game()
 	if settings_changed:
 		FileManager.save_settings()
-	GameManager.back_to_menu()
 
 
 # Animations
@@ -137,3 +143,9 @@ func _on_line_edit_text_changed(new_text: String) -> void:
 	else:
 		settings_changed = false
 		nickname_changed = false
+
+
+func _on_replay_tutorial_button_pressed() -> void:
+	save_settings()
+	GameManager.need_tutorial = true
+	GameManager.open_level_select()
