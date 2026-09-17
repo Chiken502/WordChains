@@ -109,6 +109,7 @@ label_settings = ExtResource("4_uw418")
 layout_mode = 2
 theme = ExtResource("1_bg40d")
 placeholder_text = "Display Name"
+max_length = 16
 
 [node name="Spacer" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=995473453]
 custom_minimum_size = Vector2(0, 50)
@@ -154,4 +155,5 @@ labels = [NodePath("../VBoxContainer/Title")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
 
 [connection signal="pressed" from="Bottom/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="text_changed" from="VBoxContainer/VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

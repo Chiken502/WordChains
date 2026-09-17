@@ -49,6 +49,8 @@ func _ready() -> void:
 	
 	CheddaBoards.login_success.connect(_on_chedda_login_success)
 	CheddaBoards.login_failed.connect(_on_chedda_login_failed)
+	CheddaBoards.nickname_error.connect(func(error): print("nickname error: "+error))
+	CheddaBoards.nickname_changed.connect(func(new_nickname): print("nickname changed: " + new_nickname))
 
 	
 	CheddaBoards.login_anonymous(nickname)

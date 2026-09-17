@@ -7,6 +7,7 @@ var sound_feedback_cooldown := 0.4
 var last_sound_feedback: float
 
 var settings_changed = false
+var nickname_changed = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -30,7 +31,7 @@ func _ready() -> void:
 		_on_button_down.bind($VBoxContainer/ScreenShake/CheckBox)
 	)
 
-	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake]:
+	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake, %Nickname]:
 		control.mouse_entered.connect(_on_control_mouse_entered.bind(control))
 		control.mouse_exited.connect(_on_control_mouse_exited.bind(control))
 
@@ -40,6 +41,8 @@ func _ready() -> void:
 
 	$VBoxContainer/Music/HSlider.value = db_to_linear(AudioServer.get_bus_volume_db(music_bus_idx))
 	$VBoxContainer/Sound/HSlider.value = db_to_linear(AudioServer.get_bus_volume_db(sound_bus_idx))
+	
+	$VBoxContainer/Nickname/LineEdit.text = GameManager.nickname
 
 
 func _process(_delta: float) -> void:
@@ -48,6 +51,15 @@ func _process(_delta: float) -> void:
 
 
 func _on_home_pressed() -> void:
+	if nickname_changed:
+		if !CheddaBoards.is_logged_in():
+			CheddaBoards.login_anonymous()
+			await CheddaBoards.login_success
+		
+		GameManager.nickname = $VBoxContainer/Nickname/LineEdit.text
+		print(GameManager.nickname)
+		CheddaBoards.change_nickname(GameManager.nickname)
+		FileManager.save_game()
 	if settings_changed:
 		FileManager.save_settings()
 	GameManager.back_to_menu()
@@ -103,3 +115,25 @@ func _on_sound_slider_value_changed(value: float) -> void:
 	if current_time - last_sound_feedback > sound_feedback_cooldown:
 		last_sound_feedback = current_time
 		MusicManager.sound_feedback_noise()
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	var lineedit = $VBoxContainer/Nickname/LineEdit
+	var filtered := ""
+	
+	for character in new_text:
+		if character in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_":
+			filtered += character
+	
+	if filtered != new_text:
+		var cursor_position : int = lineedit.caret_column
+		lineedit.text = filtered
+		lineedit.caret_column = min(cursor_position - 1, filtered.length())
+	
+	
+	if filtered != GameManager.nickname:
+		settings_changed = true
+		nickname_changed = true
+	else:
+		settings_changed = false
+		nickname_changed = false

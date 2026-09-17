@@ -12,6 +12,9 @@ func _ready() -> void:
 	CheddaBoards.scoreboard_loaded.connect(_on_leaderboard)
 	CheddaBoards.scoreboard_error.connect(func(error):print("score board error: " + str(error)))
 	
+	CheddaBoards.score_error.connect((func(error):print("score submit error: "+ str(error))))
+	CheddaBoards.score_submitted.connect((func(score, _streak):print("score submitted: " + str(score))))
+	
 	if GameManager.nickname.strip_edges() == "" or CheddaBoards.get_nickname().strip_edges() == "":
 		print("Nickname is \"" + CheddaBoards.get_nickname() + "\"")
 		$VBoxContainer/VBoxContainer.show()
@@ -19,6 +22,7 @@ func _ready() -> void:
 		if GameManager.daily_mode:
 			var score = maxi(0, 3600 - GameManager.daily_time)
 			CheddaBoards.submit_score(score)
+			print("Submitting score")
 		
 		$VBoxContainer/VBoxContainer.hide()
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
@@ -107,3 +111,17 @@ func _on_button_down(button: Button):
 		var tween = get_tree().create_tween()
 
 		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
+
+
+func _on_line_edit_text_changed(new_text: String) -> void:
+	var lineedit = $VBoxContainer/VBoxContainer/LineEdit
+	var filtered := ""
+	
+	for character in new_text:
+		if character in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_":
+			filtered += character
+	
+	if filtered != new_text:
+		var cursor_position : int = lineedit.caret_column
+		lineedit.text = filtered
+		lineedit.caret_column = min(cursor_position - 1, filtered.length())

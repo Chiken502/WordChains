@@ -190,6 +190,22 @@ offset_transform_enabled = true
 theme = ExtResource("2_klobn")
 button_pressed = true
 
+[node name="Nickname" type="VBoxContainer" parent="VBoxContainer" unique_id=1515430220]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Nickname" unique_id=345500714]
+layout_mode = 2
+text = "Display Name"
+label_settings = ExtResource("4_h37ls")
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/Nickname" unique_id=341988913]
+layout_mode = 2
+theme = ExtResource("2_klobn")
+placeholder_text = "Not set yet"
+max_length = 16
+emoji_menu_enabled = false
+
 [node name="ColorAgent" type="Node" parent="." unique_id=1148928729 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("5_nair6")
 bg_color_rect = NodePath("../ColorRect")
@@ -202,3 +218,4 @@ metadata/_custom_type_script = "uid://d2toi3smadpcb"
 [connection signal="value_changed" from="VBoxContainer/Music/HSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/Sound/HSlider" to="." method="_on_sound_slider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/ScreenShake/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="text_changed" from="VBoxContainer/Nickname/LineEdit" to="." method="_on_line_edit_text_changed"]

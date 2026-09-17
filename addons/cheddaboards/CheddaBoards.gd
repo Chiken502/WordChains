@@ -1553,7 +1553,7 @@ func migrate_anonymous_to_current(anonymous_device_id: String) -> void:
 # PUBLIC API - SCORES
 # ============================================================
 
-func submit_score(score: int, streak: int = 0, _nickname="") -> void:
+func submit_score(score: int, streak: int = 0) -> void:
 	if not is_authenticated():
 		_log("Not authenticated, cannot submit")
 		score_error.emit("Not authenticated")
@@ -1571,9 +1571,10 @@ func submit_score(score: int, streak: int = 0, _nickname="") -> void:
 		"playerId": get_player_id(),
 		"gameId": game_id,
 		"score": score,
-		"streak": streak,
-		"nickname": _nickname if _nickname != "" else _get_default_nickname()
+		"streak": streak
 	}
+	if _nickname != "":
+		body["nickname"] = _nickname
 	if _play_session_token != "":
 		body["playSessionToken"] = _play_session_token
 	_log("Submitting: score=%d, streak=%d, nickname=%s, gameId=%s, playerId=%s, session=%s" % [score, streak, body.nickname, game_id, body.playerId, _play_session_token.left(20)])
