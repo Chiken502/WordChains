@@ -1,0 +1,827 @@
+{
+  "word_length": "mixed",
+  "total_puzzles": 50,
+  "puzzles": [
+    {
+      "start": "LOCKS",
+      "target": "ROAST",
+      "solution": [
+        "LOCKS",
+        "ROCKS",
+        "ROOKS",
+        "ROOTS",
+        "ROUTS",
+        "ROUTE",
+        "ROUSE",
+        "ROUST",
+        "ROAST"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "AWAY",
+      "target": "DOVE",
+      "solution": [
+        "AWAY",
+        "AWRY",
+        "AIRY",
+        "WIRY",
+        "WIRE",
+        "DIRE",
+        "DIVE",
+        "DOVE"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "BUTT",
+      "target": "FLUE",
+      "solution": [
+        "BUTT",
+        "BUNT",
+        "BENT",
+        "BEAT",
+        "FEAT",
+        "FLAT",
+        "FLAB",
+        "FLUB",
+        "FLUE"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "MEANER",
+      "target": "ROUSED",
+      "solution": [
+        "MEANER",
+        "MOANER",
+        "MOANED",
+        "MOONED",
+        "MOOTED",
+        "ROOTED",
+        "ROUTED",
+        "ROUSED"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "CADDY",
+      "target": "HARED",
+      "solution": [
+        "CADDY",
+        "BADDY",
+        "BANDY",
+        "BANDS",
+        "BARDS",
+        "BARES",
+        "HARES",
+        "HARED"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "LOCKER",
+      "target": "SOLVED",
+      "solution": [
+        "LOCKER",
+        "LOCKED",
+        "LACKED",
+        "BACKED",
+        "BALKED",
+        "CALKED",
+        "CALVED",
+        "SALVED",
+        "SOLVED"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "COLT",
+      "target": "DUMB",
+      "solution": [
+        "COLT",
+        "DOLT",
+        "DOLE",
+        "DALE",
+        "DAME",
+        "DAMP",
+        "DUMP",
+        "DUMB"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "PLANER",
+      "target": "WEAVED",
+      "solution": [
+        "PLANER",
+        "PLANED",
+        "PLATED",
+        "SLATED",
+        "SEATED",
+        "HEATED",
+        "HEAVED",
+        "WEAVED"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "HOBBIES",
+      "target": "JOLTING",
+      "solution": [
+        "HOBBIES",
+        "BOBBIES",
+        "BOBBINS",
+        "BOBBING",
+        "BOOBING",
+        "BOOTING",
+        "BOLTING",
+        "JOLTING"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "EVER",
+      "target": "YEAH",
+      "solution": [
+        "EVER",
+        "EVES",
+        "EYES",
+        "BYES",
+        "BEES",
+        "PEES",
+        "PEAS",
+        "YEAS",
+        "YEAH"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "DRAG",
+      "target": "ROIL",
+      "solution": [
+        "DRAG",
+        "BRAG",
+        "BRAS",
+        "BOAS",
+        "BOWS",
+        "BOWL",
+        "BOIL",
+        "ROIL"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "FLUXES",
+      "target": "GOOFED",
+      "solution": [
+        "FLUXES",
+        "FLUMES",
+        "FLAMES",
+        "FLAMED",
+        "FOAMED",
+        "ROAMED",
+        "ROOMED",
+        "ROOFED",
+        "GOOFED"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "DRINK",
+      "target": "NAILS",
+      "solution": [
+        "DRINK",
+        "DRANK",
+        "PRANK",
+        "PLANK",
+        "PLANS",
+        "PAANS",
+        "PAINS",
+        "PAILS",
+        "NAILS"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "COOTS",
+      "target": "SKIRT",
+      "solution": [
+        "COOTS",
+        "CLOTS",
+        "SLOTS",
+        "SLITS",
+        "SKITS",
+        "SKINS",
+        "SKINT",
+        "SKIRT"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "GLAZE",
+      "target": "GLUTS",
+      "solution": [
+        "GLAZE",
+        "GLACE",
+        "PLACE",
+        "PLATE",
+        "SLATE",
+        "SLATS",
+        "SLUTS",
+        "GLUTS"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "SNOBS",
+      "target": "THICK",
+      "solution": [
+        "SNOBS",
+        "SNOTS",
+        "SHOTS",
+        "SHITS",
+        "SHINS",
+        "THINS",
+        "THINK",
+        "THICK"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "GOOSING",
+      "target": "MUGGING",
+      "solution": [
+        "GOOSING",
+        "LOOSING",
+        "LOOKING",
+        "BOOKING",
+        "BONKING",
+        "BUNKING",
+        "BUNGING",
+        "BUGGING",
+        "MUGGING"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "PLAID",
+      "target": "STACK",
+      "solution": [
+        "PLAID",
+        "PLAIN",
+        "SLAIN",
+        "STAIN",
+        "STAID",
+        "STAND",
+        "STANK",
+        "STACK"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "PRONG",
+      "target": "SHIFT",
+      "solution": [
+        "PRONG",
+        "PRONE",
+        "PHONE",
+        "SHONE",
+        "SHINE",
+        "SHIRE",
+        "SHIRT",
+        "SHIFT"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "FIVER",
+      "target": "POURS",
+      "solution": [
+        "FIVER",
+        "RIVER",
+        "ROVER",
+        "ROVES",
+        "ROUES",
+        "ROUTS",
+        "POUTS",
+        "POURS"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "BESTED",
+      "target": "SLATES",
+      "solution": [
+        "BESTED",
+        "BETTED",
+        "BETTER",
+        "BEATER",
+        "HEATER",
+        "HEATED",
+        "SEATED",
+        "SLATED",
+        "SLATES"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "LISTEN",
+      "target": "SOUSES",
+      "solution": [
+        "LISTEN",
+        "LISTED",
+        "MISTED",
+        "MISSED",
+        "MISSES",
+        "MOSSES",
+        "MOUSES",
+        "SOUSES"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "DOUSE",
+      "target": "ROCKY",
+      "solution": [
+        "DOUSE",
+        "ROUSE",
+        "ROUTE",
+        "ROUTS",
+        "ROOTS",
+        "ROOKS",
+        "ROCKS",
+        "ROCKY"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "DETER",
+      "target": "SUCKS",
+      "solution": [
+        "DETER",
+        "METER",
+        "METES",
+        "MATES",
+        "MACES",
+        "MACKS",
+        "SACKS",
+        "SUCKS"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "CHOKING",
+      "target": "FRAYING",
+      "solution": [
+        "CHOKING",
+        "COOKING",
+        "CORKING",
+        "FORKING",
+        "FORMING",
+        "FOAMING",
+        "FRAMING",
+        "FRAYING"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "CREEL",
+      "target": "GLOSS",
+      "solution": [
+        "CREEL",
+        "CREED",
+        "FREED",
+        "FREES",
+        "FLEES",
+        "FLOES",
+        "FLOSS",
+        "GLOSS"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "GASSES",
+      "target": "WOOFER",
+      "solution": [
+        "GASSES",
+        "LASSES",
+        "LOSSES",
+        "LOOSES",
+        "GOOSES",
+        "GOOSED",
+        "GOOFED",
+        "WOOFED",
+        "WOOFER"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "BOOTS",
+      "target": "SWEET",
+      "solution": [
+        "BOOTS",
+        "BLOTS",
+        "SLOTS",
+        "SLOES",
+        "FLOES",
+        "FLEES",
+        "FLEET",
+        "SLEET",
+        "SWEET"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "MASHER",
+      "target": "POPPER",
+      "solution": [
+        "MASHER",
+        "MASHED",
+        "CASHED",
+        "COSHED",
+        "COSIED",
+        "COPIED",
+        "COPPED",
+        "POPPED",
+        "POPPER"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "LORRY",
+      "target": "ZONED",
+      "solution": [
+        "LORRY",
+        "WORRY",
+        "WORDY",
+        "WOODY",
+        "HOODY",
+        "HOOEY",
+        "HONEY",
+        "HONED",
+        "ZONED"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "FESTER",
+      "target": "OINKED",
+      "solution": [
+        "FESTER",
+        "FASTER",
+        "WASTER",
+        "WASTED",
+        "WANTED",
+        "WANKED",
+        "WINKED",
+        "OINKED"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "NOUN",
+      "target": "SCUM",
+      "solution": [
+        "NOUN",
+        "NOON",
+        "SOON",
+        "SOOT",
+        "SLOT",
+        "SLUT",
+        "SLUM",
+        "SCUM"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "PEEKS",
+      "target": "TOWNS",
+      "solution": [
+        "PEEKS",
+        "LEEKS",
+        "LEAKS",
+        "LEANS",
+        "LOANS",
+        "LOONS",
+        "GOONS",
+        "GOWNS",
+        "TOWNS"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "KRILL",
+      "target": "SHADY",
+      "solution": [
+        "KRILL",
+        "TRILL",
+        "TWILL",
+        "SWILL",
+        "SHILL",
+        "SHALL",
+        "SHALE",
+        "SHADE",
+        "SHADY"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "BADGER",
+      "target": "DITHER",
+      "solution": [
+        "BADGER",
+        "BANGER",
+        "BANTER",
+        "BATTER",
+        "HATTER",
+        "HITTER",
+        "HITHER",
+        "DITHER"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "HASHES",
+      "target": "MINGER",
+      "solution": [
+        "HASHES",
+        "BASHES",
+        "BATHES",
+        "BATHER",
+        "BATTER",
+        "BANTER",
+        "BANGER",
+        "MANGER",
+        "MINGER"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "GODLY",
+      "target": "HARDY",
+      "solution": [
+        "GODLY",
+        "GOLLY",
+        "DOLLY",
+        "DALLY",
+        "DAILY",
+        "DAIRY",
+        "HAIRY",
+        "HARRY",
+        "HARDY"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "BERRY",
+      "target": "CHAMP",
+      "solution": [
+        "BERRY",
+        "TERRY",
+        "TEARY",
+        "TEARS",
+        "TEAMS",
+        "TRAMS",
+        "CRAMS",
+        "CRAMP",
+        "CHAMP"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "CHICK",
+      "target": "WRAPT",
+      "solution": [
+        "CHICK",
+        "CRICK",
+        "CROCK",
+        "CROCS",
+        "CROPS",
+        "CRAPS",
+        "WRAPS",
+        "WRAPT"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "BLEATED",
+      "target": "SHUTTER",
+      "solution": [
+        "BLEATED",
+        "BLOATED",
+        "BLOTTED",
+        "SLOTTED",
+        "SPOTTED",
+        "SPOTTER",
+        "SPUTTER",
+        "SHUTTER"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "BALKY",
+      "target": "MOODY",
+      "solution": [
+        "BALKY",
+        "BALKS",
+        "BALES",
+        "MALES",
+        "MOLES",
+        "MOLDS",
+        "MOODS",
+        "MOODY"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "MOLLS",
+      "target": "PAPAL",
+      "solution": [
+        "MOLLS",
+        "POLLS",
+        "PALLS",
+        "PALES",
+        "PARES",
+        "PARAS",
+        "PAPAS",
+        "PAPAL"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "DROVE",
+      "target": "SNAGS",
+      "solution": [
+        "DROVE",
+        "GROVE",
+        "GLOVE",
+        "GLOBE",
+        "GLOBS",
+        "SLOBS",
+        "SNOBS",
+        "SNOGS",
+        "SNAGS"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "EMOTE",
+      "target": "STACK",
+      "solution": [
+        "EMOTE",
+        "SMOTE",
+        "SMITE",
+        "SMILE",
+        "STILE",
+        "STALE",
+        "STALK",
+        "STACK"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "BUNTED",
+      "target": "STARES",
+      "solution": [
+        "BUNTED",
+        "BUNKED",
+        "BUCKED",
+        "SUCKED",
+        "SOCKED",
+        "SOAKED",
+        "STAKED",
+        "STARED",
+        "STARES"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "FELLERS",
+      "target": "TIPPERS",
+      "solution": [
+        "FELLERS",
+        "FEELERS",
+        "PEELERS",
+        "PEEPERS",
+        "PEPPERS",
+        "POPPERS",
+        "TOPPERS",
+        "TIPPERS"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "SUITE",
+      "target": "WILTS",
+      "solution": [
+        "SUITE",
+        "SPITE",
+        "SPATE",
+        "SPATS",
+        "SEATS",
+        "BEATS",
+        "BELTS",
+        "WELTS",
+        "WILTS"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "RASPS",
+      "target": "ROPED",
+      "solution": [
+        "RASPS",
+        "GASPS",
+        "GASES",
+        "CASES",
+        "CAPES",
+        "COPES",
+        "ROPES",
+        "ROPED"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    },
+    {
+      "start": "GOALS",
+      "target": "PACEY",
+      "solution": [
+        "GOALS",
+        "COALS",
+        "COOLS",
+        "POOLS",
+        "POLLS",
+        "PALLS",
+        "PALES",
+        "PACES",
+        "PACEY"
+      ],
+      "steps": 8,
+      "difficulty": 5
+    },
+    {
+      "start": "HOOPED",
+      "target": "YAWNED",
+      "solution": [
+        "HOOPED",
+        "COOPED",
+        "COMPED",
+        "CAMPED",
+        "DAMPED",
+        "DAMNED",
+        "DAWNED",
+        "YAWNED"
+      ],
+      "steps": 7,
+      "difficulty": 5
+    }
+  ]
+}
