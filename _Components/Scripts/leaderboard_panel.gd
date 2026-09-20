@@ -9,13 +9,19 @@ var nickname := "":
 		nickname = value
 		$HBoxContainer/Name.text = str(rank) + ". " + value
 
-var seconds := 0:
+var time : int = 0:
 	set(value):
-		seconds = value
-		$HBoxContainer/Time.text = str(int(floor(seconds / 60.0))) + ":" \
-		+ str(seconds % 60).pad_zeros(
-			2
-		)
+		time = value
+
+		var minutes := int(floor(time / 600.0))
+		var seconds := int(floor((time % 600)) / 10.0)
+		var tenths := time % 10
+
+		$HBoxContainer/Time.text = "%d:%02d.%d" % [
+			minutes,
+			seconds,
+			tenths
+		]
 
 
 func _on_mouse_entered() -> void:

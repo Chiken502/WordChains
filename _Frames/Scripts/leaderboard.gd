@@ -22,7 +22,7 @@ func _ready() -> void:
 		$VBoxContainer/VBoxContainer.show()
 	else:
 		if GameManager.daily_mode:
-			var score = maxi(0, 3600 - GameManager.daily_time)
+			var score = maxi(0, 36000 - GameManager.daily_time)
 			CheddaBoards.submit_score(score)
 			print("Submitting score")
 		
@@ -56,7 +56,7 @@ func _on_leaderboard(_sb_id, _config, entries):
 		$VBoxContainer/ScrollContainer/VBoxContainer2.add_child(panel)
 		panel.rank = int(i["rank"])
 		panel.nickname = i["nickname"]
-		panel.seconds = 3600 - i["score"]
+		panel.time = 36000 - i["score"]
 
 		panel.offset_transform_scale = Vector2(1.2, 1.2)
 		var tween = get_tree().create_tween()
@@ -79,7 +79,7 @@ func _on_button_pressed() -> void:
 		GameManager.nickname = $VBoxContainer/VBoxContainer/LineEdit.text
 		FileManager.save_game()
 
-		var score = maxi(0, 3600 - GameManager.daily_time)
+		var score = maxi(0, 36000 - GameManager.daily_time)
 		CheddaBoards.submit_score(score)
 
 		$VBoxContainer/VBoxContainer.hide()

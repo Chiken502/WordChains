@@ -28,6 +28,7 @@ var hints_used = 0
 var undo_used = 0
 
 const FALLING_LETTER = preload("res://_Components/falling_letter.tscn")
+const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn")
 
 @onready var target_label := $Control/VBoxContainer/TargetWord
 @onready var cw_h_box := $Control/VBoxContainer/CurrentWordHBox
@@ -73,7 +74,7 @@ func get_ready():
 	target_label.text = target_word
 
 	for i in range(len(starting_word)): # Spawning in current word letters
-		var l: Label = FALLING_LETTER.instantiate()
+		var l: Label = CURRENT_WORD_LETTER.instantiate()
 		cw_h_box.add_child(l)
 
 		l.text = starting_word[i].to_upper()
@@ -288,7 +289,7 @@ func _process(_delta: float) -> void:
 					GameManager.current_level = 0
 					GameManager.back_to_menu()
 			else:
-				var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
+				var level_time = (Time.get_ticks_msec() - level_start_time) / 100.0
 				GameManager.daily_time = level_time
 
 				GameManager.daily_completed = true

@@ -20,7 +20,7 @@ var tutorial_mode = false
 var need_tutorial = true
 
 var daily_mode = false
-var daily_time = 0 # seconds
+var daily_time = 0 # tenth of seconds
 var daily_completed = false
 var day_of_year = -1:
 	set(value):
