@@ -29,16 +29,16 @@ var letters = [
 	"Z",
 ]
 var letter = ""
-var being_draged = false
+var being_dragged = false
 
 const COLLISION_THRESHOLD = 20.0
-const MAX_COLLISOIN_IMPULSE = 100.0
+const MAX_COLLISION_IMPULSE = 100.0
 const SOUND_COOLDOWN = 0.1
 var last_sound_time: float
 
-var max_strech: float = 1.4
+var max_stretch: float = 1.4
 var min_squash: float = 0.7
-var strech_factor: float = 0.01
+var stretch_factor: float = 0.01
 var recovery_speed: float = 15.0
 
 var ground_collider: StaticBody2D
@@ -52,13 +52,13 @@ var game: Control:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	modulate = ColorManager.colors[ColorManager.currentColor][1]
+	modulate = ColorManager.colors[ColorManager.current_color][1]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if is_instance_valid(self):
-		if global_position.y > ground_collider.global_position.y: # keep above groud plane
+		if global_position.y > ground_collider.global_position.y: # keep above ground plane
 			position.y = ground_collider.global_position.y
 		elif position.y < -800 and linear_velocity.y < 0: # Prevents form flying off screen
 			linear_velocity.y = 0
@@ -78,7 +78,7 @@ func get_ready():
 	var texture_path = "res://Letter Images/" + letter + ".res"
 	$Sprite2D.texture = load(texture_path)
 
-	make_collision2D()
+	make_collision_2d()
 	$Sprite2D.position = Vector2.ZERO
 
 
@@ -88,7 +88,7 @@ func _capture_label_image(label: Label) -> Texture:
 	vp.disable_3d = true
 	vp.transparent_bg = true
 	#vp.render_target_update_mode = SubViewport.UPDATE_ONCE
-	var orginal_vp_size = vp.get_visible_rect().size
+	var original_vp_size = vp.get_visible_rect().size
 	vp.size = Vector2i(label.get_rect().size)
 
 	# Duplicate the label so the original isn’t disturbed.
@@ -100,7 +100,7 @@ func _capture_label_image(label: Label) -> Texture:
 	var texture = vp.get_texture().get_image()
 
 	label_copy.queue_free()
-	vp.size = orginal_vp_size
+	vp.size = original_vp_size
 	vp.transparent_bg = false
 	$Sprite2D.hide()
 
@@ -108,7 +108,7 @@ func _capture_label_image(label: Label) -> Texture:
 
 
 # Make a collision shape from the image
-func make_collision2D():
+func make_collision_2d():
 	var bitmap = BitMap.new()
 	bitmap.create_from_image_alpha($Sprite2D.texture.get_image())
 
@@ -141,7 +141,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		if impulse > COLLISION_THRESHOLD:
 			last_sound_time = current_time
 			var volume_factor = clamp(
-				(impulse - COLLISION_THRESHOLD) / (MAX_COLLISOIN_IMPULSE - COLLISION_THRESHOLD),
+				(impulse - COLLISION_THRESHOLD) / (MAX_COLLISION_IMPULSE - COLLISION_THRESHOLD),
 				0.0,
 				1.0,
 			)
@@ -165,7 +165,7 @@ func play_collision_sound(volume_factor: float):
 func apply_stretch(velocity: Vector2):
 	var speed = velocity.length()
 	if speed > 0.1:
-		var stretch_amount = clamp(1.0 + (speed * strech_factor), 1.0, max_strech)
+		var stretch_amount = clamp(1.0 + (speed * stretch_factor), 1.0, max_stretch)
 		var squash_amount = clamp(1.0 / stretch_amount, min_squash, 1.0)
 
 		var dir = velocity.normalized()
@@ -180,7 +180,7 @@ func apply_stretch(velocity: Vector2):
 # More sound stuff. Commented out as sounds arn't in yet
 func _on_body_entered(_body: Node) -> void:
 	pass
-	#if being_draged:
+	#if being_dragged:
 	#return
 	#
 	#var forces
@@ -189,7 +189,8 @@ func _on_body_entered(_body: Node) -> void:
 	#else:
 	#forces = self.linear_velocity.length()
 	#
-	## Remap the forces variable to the appropriate volume range (this is a handy function I found online)
+	## Remap the forces variable to the appropriate volume range
+	##(this is a handy function I found online)
 	#var audio_volume = -50 + (pow(forces, 1.5) * 5)
 	## Set the AudioStreamPlayer's volume accordingly
 	#if $AudioStreamPlayer2D.playing:

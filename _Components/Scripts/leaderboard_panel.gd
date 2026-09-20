@@ -1,6 +1,5 @@
 extends Control
 
-
 var rank := 1:
 	set(value):
 		rank = value
@@ -13,7 +12,10 @@ var nickname := "":
 var seconds := 0:
 	set(value):
 		seconds = value
-		$HBoxContainer/Time.text = str(floor(seconds / 60)) + ":" + str(seconds % 60).pad_zeros(2)
+		$HBoxContainer/Time.text = str(int(floor(seconds / 60.0))) + ":" \
+		+ str(seconds % 60).pad_zeros(
+			2
+		)
 
 
 func _on_mouse_entered() -> void:

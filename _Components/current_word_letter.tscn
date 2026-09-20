@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bnwhg1k31ufkt"]
 
-[ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="1_c4amj"]
-[ext_resource type="Script" uid="uid://dbqxeonye75p" path="res://_Components/Scripts/curent_word_letter.gd" id="2_c4amj"]
+[ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="1_b178d"]
+[ext_resource type="Script" uid="uid://dbqxeonye75p" path="res://_Components/Scripts/current_word_letter.gd" id="2_b178d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oeph3"]
-font = ExtResource("1_c4amj")
+font = ExtResource("1_b178d")
 font_size = 80
 font_color = Color(0.227451, 0.52549, 1, 1)
 outline_size = 5
@@ -49,7 +49,7 @@ offset_right = 44.0
 offset_bottom = 112.0
 text = "D"
 label_settings = SubResource("LabelSettings_oeph3")
-script = ExtResource("2_c4amj")
+script = ExtResource("2_b178d")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2056504125]
 

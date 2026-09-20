@@ -1,22 +1,22 @@
 extends Node
 
-var dictoinary = ""
+var dictionary = ""
 var words: Array
 var words_loaded = false
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	dictoinary = load_dictionary()
-	words = dictoinary.split("\n", false)
+	dictionary = load_dictionary()
+	words = dictionary.split("\n", false)
 	words_loaded = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if not words_loaded:
-		dictoinary = load_dictionary()
-		words = dictoinary.split("\n", false)
+		dictionary = load_dictionary()
+		words = dictionary.split("\n", false)
 		words_loaded = true
 
 
@@ -33,6 +33,5 @@ func load_dictionary():
 	if file:
 		var file_content = file.get_as_text()
 		return file_content
-	else:
-		push_warning("Failed to load dictioary")
-		return null
+	push_warning("Failed to load dictionary")
+	return null

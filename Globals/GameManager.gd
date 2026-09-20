@@ -1,6 +1,6 @@
 extends Node
 
-# Level Varibles
+# Level Variables
 var current_word := ""
 var starting_word := ""
 var target_word := ""
@@ -13,8 +13,8 @@ var current_levels := [0, 0, 0, 0]
 var current_difficulty := 0
 var amt_of_hints := 0
 
-# Settings Varibles
-var screenShakeOn = true
+# Settings Variables
+var screen_shake_on = true
 
 var tutorial_mode = false
 var need_tutorial = true
@@ -76,38 +76,38 @@ func _on_chedda_login_failed(error):
 	print("CheddaBoards login failed: ", error)
 
 
-## Populates GameManagers level varibles with the new level data
+## Populates GameManagers level variables with the new level data
 ## Returns true if level_num is a valid level, and everything is updated accordingly
 func load_level(difficulty: int, level_num: int) -> bool:
 	print("LOADING LEVEL")
 	var error = { "result": "fail" }
 	var resolver = SignalResolver.new()
-	
+
 	LevelDatabase.level_loaded.connect(
 		func():
-			print("RECIVED: SUCCESS")
+			print("RECEIVED: SUCCESS")
 			error.result = "success"
 			resolver.done.emit(),
 		CONNECT_ONE_SHOT,
 	)
-	
+
 	LevelDatabase.level_load_fail.connect(
 		func():
-			print("RECIVED: FAIL")
+			print("RECEIVED: FAIL")
 			error.result = "fail"
 			resolver.done.emit(),
 		CONNECT_ONE_SHOT,
 	)
-	
+
 	LevelDatabase.load_level(difficulty, level_num)
 	await resolver.done
-	
+
 	print("RESOLVER DONE")
-	
+
 	if error.result == "success":
 		print("LEVEL LOADED")
 		return true
-	
+
 	print("LEVEL FAILED TO LOAD")
 	return false
 
@@ -177,4 +177,5 @@ func open_leaderboard():
 
 
 class SignalResolver:
+	@warning_ignore("unused_signal")
 	signal done

@@ -1,7 +1,5 @@
 extends Label
 
-# NOTE: CONSIDER NOTE HAVING THE FLASH ANIMATION. Use screen shake and sound instead or smth
-
 signal letter_changed(node, letter)
 
 var scripted_parent: Node2D # See if this is useful or needed
@@ -17,10 +15,10 @@ var hinted = false:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	label_settings.font_color = ColorManager.colors[ColorManager.currentColor][1]
-	label_settings.outline_color = ColorManager.colors[ColorManager.currentColor][1]
+	label_settings.font_color = ColorManager.colors[ColorManager.current_color][1]
+	label_settings.outline_color = ColorManager.colors[ColorManager.current_color][1]
 
-	$MainParticles.modulate = ColorManager.colors[ColorManager.currentColor][1]
+	$MainParticles.modulate = ColorManager.colors[ColorManager.current_color][1]
 
 	_on_resized()
 
@@ -29,7 +27,7 @@ func change_letter(new_letter: String):
 	letter_changed.emit(self, new_letter) # game will check if letter makes a legal word
 	#var node = await scripted_parent.word_confirmed
 	#if node == self:
-	#print("sucseces")
+	#print("success")
 	#text = new_letter.to_upper()
 	#letter = new_letter.to_upper()
 
@@ -42,14 +40,14 @@ func _on_resized() -> void:
 # handles a falling letter being put into this slot
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("falling letter"):
-		if body.being_draged:
+		if body.being_dragged:
 			var new_letter = body.letter
 			colliding_body = body
 			letter_changed.emit(self, new_letter)
 
 
 # New letter is legal, so we can keep it
-func _on_word_confirmed(node, new_letter: String):
+func on_word_confirmed(node, new_letter: String):
 	if node == self:
 		if colliding_body: # Delete falling letter node
 			text = new_letter.to_upper()
@@ -62,12 +60,12 @@ func _on_word_confirmed(node, new_letter: String):
 
 
 # Word was not legal
-func _on_word_not_found(_node):
+func on_word_not_found(_node):
 	MusicManager.error_sound()
 
 
 # Called when puzzle is completed
-func succses():
+func success():
 	$MainParticles/FinishedParticles.emitting = true
 
 

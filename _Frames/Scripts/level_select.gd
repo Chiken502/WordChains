@@ -6,18 +6,17 @@ var level_select_node = preload("res://_Components/level_select_button.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in range(4):
-		var button : Button = preload("res://_Components/difficulty_button.tscn").instantiate()
+		var button: Button = preload("res://_Components/difficulty_button.tscn").instantiate()
 		button.difficulty = i + 1
 		$VBoxContainer/GridContainer.add_child(button)
 		button.pressed.connect(_level_selected.bind(i))
-		
+
 		button.mouse_entered.connect(_on_control_mouse_entered.bind(button))
 		button.mouse_exited.connect(_on_control_mouse_exited.bind(button))
 		button.button_up.connect(_on_button_up.bind(button))
 		button.button_down.connect(_on_button_down.bind(button))
-	
-	
-	ColorManager.change_color(ColorManager.currentColor)
+
+	ColorManager.change_color(ColorManager.current_color)
 	MusicManager.scene_loaded()
 
 	$VBoxContainer/Title.mouse_entered.connect(_on_control_mouse_entered.bind($VBoxContainer/Title))

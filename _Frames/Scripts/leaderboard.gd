@@ -13,7 +13,9 @@ func _ready() -> void:
 	CheddaBoards.scoreboard_error.connect(func(error):print("score board error: " + str(error)))
 	
 	CheddaBoards.score_error.connect((func(error):print("score submit error: "+ str(error))))
-	CheddaBoards.score_submitted.connect((func(score, _streak):print("score submitted: " + str(score))))
+	CheddaBoards.score_submitted.connect(
+		(func(score, _streak):print("score submitted: " + str(score)))
+	)
 	
 	if GameManager.nickname.strip_edges() == "" or CheddaBoards.get_nickname().strip_edges() == "":
 		print("Nickname is \"" + CheddaBoards.get_nickname() + "\"")

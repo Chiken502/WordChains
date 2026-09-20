@@ -12,7 +12,7 @@ var utc_datetime: String
 
 
 func load_level(difficulty: int, level: int):
-	await  get_tree().process_frame
+	await get_tree().process_frame
 	if FileAccess.file_exists("res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1)):
 		var puzzle_file = FileAccess.open(
 			"res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1),
@@ -30,7 +30,7 @@ func load_level(difficulty: int, level: int):
 			GameManager.solution_long = puzzle["solution"]
 
 			GameManager.current_difficulty = difficulty
-			print("EMITING SIGNAL")
+			print("EMITTING SIGNAL")
 			level_loaded.emit()
 		else:
 			level_load_fail.emit()

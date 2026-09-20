@@ -54,16 +54,17 @@ func slide_off(size: Vector2):
 func not_a_word():
 	var tween = get_tree().create_tween()
 
-	current_word_container.offset_transform_position = Vector2(randf_range(0, 1), randf_range(0, 1)).normalized() * 5
+	var random_offset = Vector2(randf_range(0, 1), randf_range(0, 1)).normalized() * 5
+	current_word_container.offset_transform_position = random_offset
 	tween \
-			.tween_property(current_word_container, "offset_transform_position", Vector2.ZERO, 0.5) \
-			.set_trans(Tween.TRANS_ELASTIC) \
-			.set_ease(Tween.EASE_IN_OUT)
+		.tween_property(current_word_container, "offset_transform_position", Vector2.ZERO, 0.5) \
+		.set_trans(Tween.TRANS_ELASTIC) \
+		.set_ease(Tween.EASE_IN_OUT)
 
 	tween \
-			.tween_property(wrong_word_label, "modulate", Color.TRANSPARENT, 1.0) \
-			.set_ease(Tween.EASE_OUT) \
-			.set_trans(Tween.TRANS_SINE)
+		.tween_property(wrong_word_label, "modulate", Color.TRANSPARENT, 1.0) \
+		.set_ease(Tween.EASE_OUT) \
+		.set_trans(Tween.TRANS_SINE)
 
 	await tween.finished
 	wrong_word_label.text = ""

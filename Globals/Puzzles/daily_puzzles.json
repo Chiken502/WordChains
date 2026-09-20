@@ -2,5171 +2,5171 @@
   "word_length": "mixed",
   "total_puzzles": 365,
   "puzzles": [
-    {
-      "start": "LETS",
-      "target": "TOWN",
-      "solution": [
-        "LETS",
-        "LOTS",
-        "TOTS",
-        "TOWS",
+	{
+	  "start": "LETS",
+	  "target": "TOWN",
+	  "solution": [
+		"LETS",
+		"LOTS",
+		"TOTS",
+		"TOWS",
         "TOWN"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SCORED",
-      "target": "SNOOTS",
-      "solution": [
-        "SCORED",
-        "SNORED",
-        "SNORES",
-        "SNORTS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SCORED",
+	  "target": "SNOOTS",
+	  "solution": [
+		"SCORED",
+		"SNORED",
+		"SNORES",
+		"SNORTS",
         "SNOOTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "COMB",
-      "target": "DAIS",
-      "solution": [
-        "COMB",
-        "COME",
-        "DOME",
-        "DAME",
-        "DAMS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "COMB",
+	  "target": "DAIS",
+	  "solution": [
+		"COMB",
+		"COME",
+		"DOME",
+		"DAME",
+		"DAMS",
         "DAIS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DRAB",
-      "target": "WEDS",
-      "solution": [
-        "DRAB",
-        "DRAM",
-        "TRAM",
-        "TEAM",
-        "TEAS",
-        "TEDS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DRAB",
+	  "target": "WEDS",
+	  "solution": [
+		"DRAB",
+		"DRAM",
+		"TRAM",
+		"TEAM",
+		"TEAS",
+		"TEDS",
         "WEDS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BAKER",
-      "target": "BEAUT",
-      "solution": [
-        "BAKER",
-        "BARER",
-        "BARES",
-        "BARKS",
-        "BERKS",
-        "BEAKS",
-        "BEAUS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BAKER",
+	  "target": "BEAUT",
+	  "solution": [
+		"BAKER",
+		"BARER",
+		"BARES",
+		"BARKS",
+		"BERKS",
+		"BEAKS",
+		"BEAUS",
         "BEAUT"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "ASP",
-      "target": "VIA",
-      "solution": [
-        "ASP",
-        "ASK",
-        "ARK",
-        "ARM",
-        "AIM",
-        "VIM",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "ASP",
+	  "target": "VIA",
+	  "solution": [
+		"ASP",
+		"ASK",
+		"ARK",
+		"ARM",
+		"AIM",
+		"VIM",
         "VIA"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "MOOTED",
-      "target": "MOSSES",
-      "solution": [
-        "MOOTED",
-        "LOOTED",
-        "LOOSED",
-        "LOOSES",
-        "LOSSES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "MOOTED",
+	  "target": "MOSSES",
+	  "solution": [
+		"MOOTED",
+		"LOOTED",
+		"LOOSED",
+		"LOOSES",
+		"LOSSES",
         "MOSSES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "POUT",
-      "target": "WENT",
-      "solution": [
-        "POUT",
-        "PORT",
-        "PERT",
-        "WERT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "POUT",
+	  "target": "WENT",
+	  "solution": [
+		"POUT",
+		"PORT",
+		"PERT",
+		"WERT",
         "WENT"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BITTER",
-      "target": "WANNER",
-      "solution": [
-        "BITTER",
-        "WITTER",
-        "WINTER",
-        "WINNER",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BITTER",
+	  "target": "WANNER",
+	  "solution": [
+		"BITTER",
+		"WITTER",
+		"WINTER",
+		"WINNER",
         "WANNER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BASER",
-      "target": "RASPY",
-      "solution": [
-        "BASER",
-        "BASES",
-        "GASES",
-        "GASPS",
-        "RASPS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BASER",
+	  "target": "RASPY",
+	  "solution": [
+		"BASER",
+		"BASES",
+		"GASES",
+		"GASPS",
+		"RASPS",
         "RASPY"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BOATING",
-      "target": "SACKING",
-      "solution": [
-        "BOATING",
-        "BEATING",
-        "BESTING",
-        "BASTING",
-        "BASKING",
-        "BACKING",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BOATING",
+	  "target": "SACKING",
+	  "solution": [
+		"BOATING",
+		"BEATING",
+		"BESTING",
+		"BASTING",
+		"BASKING",
+		"BACKING",
         "SACKING"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COZYING",
-      "target": "YACKING",
-      "solution": [
-        "COZYING",
-        "COSYING",
-        "COSHING",
-        "CASHING",
-        "BASHING",
-        "BASKING",
-        "BACKING",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COZYING",
+	  "target": "YACKING",
+	  "solution": [
+		"COZYING",
+		"COSYING",
+		"COSHING",
+		"CASHING",
+		"BASHING",
+		"BASKING",
+		"BACKING",
         "YACKING"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "CHORES",
-      "target": "FOOTER",
-      "solution": [
-        "CHORES",
-        "CHOKES",
-        "CHOKER",
-        "COOKER",
-        "HOOKER",
-        "HOOTER",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "CHORES",
+	  "target": "FOOTER",
+	  "solution": [
+		"CHORES",
+		"CHOKES",
+		"CHOKER",
+		"COOKER",
+		"HOOKER",
+		"HOOTER",
         "FOOTER"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BROOKED",
-      "target": "BROWSED",
-      "solution": [
-        "BROOKED",
-        "CROOKED",
-        "CROONED",
-        "CROWNED",
-        "BROWNED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BROOKED",
+	  "target": "BROWSED",
+	  "solution": [
+		"BROOKED",
+		"CROOKED",
+		"CROONED",
+		"CROWNED",
+		"BROWNED",
         "BROWSED"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BEGS",
-      "target": "WARP",
-      "solution": [
-        "BEGS",
-        "BAGS",
-        "WAGS",
-        "WARS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BEGS",
+	  "target": "WARP",
+	  "solution": [
+		"BEGS",
+		"BAGS",
+		"WAGS",
+		"WARS",
         "WARP"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FOXY",
-      "target": "PORE",
-      "solution": [
-        "FOXY",
-        "POXY",
-        "POKY",
-        "POKE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FOXY",
+	  "target": "PORE",
+	  "solution": [
+		"FOXY",
+		"POXY",
+		"POKY",
+		"POKE",
         "PORE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BALKED",
-      "target": "CHOKED",
-      "solution": [
-        "BALKED",
-        "BANKED",
-        "BONKED",
-        "CONKED",
-        "COOKED",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BALKED",
+	  "target": "CHOKED",
+	  "solution": [
+		"BALKED",
+		"BANKED",
+		"BONKED",
+		"CONKED",
+		"COOKED",
         "CHOKED"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FERNS",
-      "target": "JOKES",
-      "solution": [
-        "FERNS",
-        "TERNS",
-        "TARNS",
-        "TARES",
-        "TAKES",
-        "TOKES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FERNS",
+	  "target": "JOKES",
+	  "solution": [
+		"FERNS",
+		"TERNS",
+		"TARNS",
+		"TARES",
+		"TAKES",
+		"TOKES",
         "JOKES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GENUS",
-      "target": "GLOSS",
-      "solution": [
-        "GENUS",
-        "GENTS",
-        "BENTS",
-        "BEATS",
-        "BRATS",
-        "BRASS",
-        "GRASS",
-        "GLASS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GENUS",
+	  "target": "GLOSS",
+	  "solution": [
+		"GENUS",
+		"GENTS",
+		"BENTS",
+		"BEATS",
+		"BRATS",
+		"BRASS",
+		"GRASS",
+		"GLASS",
         "GLOSS"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "NEVER",
-      "target": "WADIS",
-      "solution": [
-        "NEVER",
-        "SEVER",
-        "SAVER",
-        "WAVER",
-        "WADER",
-        "WADES",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "NEVER",
+	  "target": "WADIS",
+	  "solution": [
+		"NEVER",
+		"SEVER",
+		"SAVER",
+		"WAVER",
+		"WADER",
+		"WADES",
         "WADIS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BINNING",
-      "target": "BOOBING",
-      "solution": [
-        "BINNING",
-        "BANNING",
-        "BANKING",
-        "BONKING",
-        "BOOKING",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BINNING",
+	  "target": "BOOBING",
+	  "solution": [
+		"BINNING",
+		"BANNING",
+		"BANKING",
+		"BONKING",
+		"BOOKING",
         "BOOBING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "SAILS",
-      "target": "WEIRS",
-      "solution": [
-        "SAILS",
-        "HAILS",
-        "HAIRS",
-        "HEIRS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "SAILS",
+	  "target": "WEIRS",
+	  "solution": [
+		"SAILS",
+		"HAILS",
+		"HAIRS",
+		"HEIRS",
         "WEIRS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BOOBIES",
-      "target": "HOBBLED",
-      "solution": [
-        "BOOBIES",
-        "BOBBIES",
-        "HOBBIES",
-        "HOBBLES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BOOBIES",
+	  "target": "HOBBLED",
+	  "solution": [
+		"BOOBIES",
+		"BOBBIES",
+		"HOBBIES",
+		"HOBBLES",
         "HOBBLED"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DAME",
-      "target": "LUNG",
-      "solution": [
-        "DAME",
-        "LAME",
-        "LANE",
-        "LONE",
-        "LONG",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DAME",
+	  "target": "LUNG",
+	  "solution": [
+		"DAME",
+		"LAME",
+		"LANE",
+		"LONE",
+		"LONG",
         "LUNG"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "AILS",
-      "target": "RANG",
-      "solution": [
-        "AILS",
-        "AIDS",
-        "BIDS",
-        "BINS",
-        "BANS",
-        "BANG",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "AILS",
+	  "target": "RANG",
+	  "solution": [
+		"AILS",
+		"AIDS",
+		"BIDS",
+		"BINS",
+		"BANS",
+		"BANG",
         "RANG"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BASS",
-      "target": "DHOW",
-      "solution": [
-        "BASS",
-        "BOSS",
-        "BOOS",
-        "COOS",
-        "COOP",
-        "CHOP",
-        "CHOW",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BASS",
+	  "target": "DHOW",
+	  "solution": [
+		"BASS",
+		"BOSS",
+		"BOOS",
+		"COOS",
+		"COOP",
+		"CHOP",
+		"CHOW",
         "DHOW"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "FLOWS",
-      "target": "ROUES",
-      "solution": [
-        "FLOWS",
-        "BLOWS",
-        "BLOTS",
-        "BOOTS",
-        "ROOTS",
-        "ROUTS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "FLOWS",
+	  "target": "ROUES",
+	  "solution": [
+		"FLOWS",
+		"BLOWS",
+		"BLOTS",
+		"BOOTS",
+		"ROOTS",
+		"ROUTS",
         "ROUES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LUNG",
-      "target": "RIFE",
-      "solution": [
-        "LUNG",
-        "RUNG",
-        "RUNE",
-        "RUDE",
-        "RIDE",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LUNG",
+	  "target": "RIFE",
+	  "solution": [
+		"LUNG",
+		"RUNG",
+		"RUNE",
+		"RUDE",
+		"RIDE",
         "RIFE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "ALTER",
-      "target": "UNDER",
-      "solution": [
-        "ALTER",
-        "ALDER",
-        "ADDER",
-        "UDDER",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "ALTER",
+	  "target": "UNDER",
+	  "solution": [
+		"ALTER",
+		"ALDER",
+		"ADDER",
+		"UDDER",
         "UNDER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CUBS",
-      "target": "DISC",
-      "solution": [
-        "CUBS",
-        "DUBS",
-        "DIBS",
-        "DISS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CUBS",
+	  "target": "DISC",
+	  "solution": [
+		"CUBS",
+		"DUBS",
+		"DIBS",
+		"DISS",
         "DISC"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "PAUSING",
-      "target": "SURFING",
-      "solution": [
-        "PAUSING",
-        "PARSING",
-        "PURSING",
-        "PURGING",
-        "SURGING",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "PAUSING",
+	  "target": "SURFING",
+	  "solution": [
+		"PAUSING",
+		"PARSING",
+		"PURSING",
+		"PURGING",
+		"SURGING",
         "SURFING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HARMED",
-      "target": "SEAMED",
-      "solution": [
-        "HARMED",
-        "FARMED",
-        "FORMED",
-        "FOAMED",
-        "ROAMED",
-        "REAMED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HARMED",
+	  "target": "SEAMED",
+	  "solution": [
+		"HARMED",
+		"FARMED",
+		"FORMED",
+		"FOAMED",
+		"ROAMED",
+		"REAMED",
         "SEAMED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BOSSY",
-      "target": "SOWED",
-      "solution": [
-        "BOSSY",
-        "MOSSY",
-        "MOSEY",
-        "NOSEY",
-        "NOSED",
-        "DOSED",
-        "DOLED",
-        "SOLED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BOSSY",
+	  "target": "SOWED",
+	  "solution": [
+		"BOSSY",
+		"MOSSY",
+		"MOSEY",
+		"NOSEY",
+		"NOSED",
+		"DOSED",
+		"DOLED",
+		"SOLED",
         "SOWED"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "CLOG",
-      "target": "MORE",
-      "solution": [
-        "CLOG",
-        "SLOG",
-        "SLOT",
-        "SOOT",
-        "SORT",
-        "SORE",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "CLOG",
+	  "target": "MORE",
+	  "solution": [
+		"CLOG",
+		"SLOG",
+		"SLOT",
+		"SOOT",
+		"SORT",
+		"SORE",
         "MORE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CUNTS",
-      "target": "LAMES",
-      "solution": [
-        "CUNTS",
-        "PUNTS",
-        "PANTS",
-        "PANES",
-        "LANES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CUNTS",
+	  "target": "LAMES",
+	  "solution": [
+		"CUNTS",
+		"PUNTS",
+		"PANTS",
+		"PANES",
+		"LANES",
         "LAMES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DUDE",
-      "target": "WING",
-      "solution": [
-        "DUDE",
-        "DUNE",
-        "DINE",
-        "WINE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DUDE",
+	  "target": "WING",
+	  "solution": [
+		"DUDE",
+		"DUNE",
+		"DINE",
+		"WINE",
         "WING"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SPIVS",
-      "target": "STUNS",
-      "solution": [
-        "SPIVS",
-        "SPINS",
-        "SHINS",
-        "SHUNS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SPIVS",
+	  "target": "STUNS",
+	  "solution": [
+		"SPIVS",
+		"SPINS",
+		"SHINS",
+		"SHUNS",
         "STUNS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FURL",
-      "target": "VAPE",
-      "solution": [
-        "FURL",
-        "CURL",
-        "CURE",
-        "CARE",
-        "CAPE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FURL",
+	  "target": "VAPE",
+	  "solution": [
+		"FURL",
+		"CURL",
+		"CURE",
+		"CARE",
+		"CAPE",
         "VAPE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FLAB",
-      "target": "LETS",
-      "solution": [
-        "FLAB",
-        "SLAB",
-        "SLAM",
-        "SEAM",
-        "SEAS",
-        "SETS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FLAB",
+	  "target": "LETS",
+	  "solution": [
+		"FLAB",
+		"SLAB",
+		"SLAM",
+		"SEAM",
+		"SEAS",
+		"SETS",
         "LETS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "MISTING",
-      "target": "MOANING",
-      "solution": [
-        "MISTING",
-        "LISTING",
-        "LIFTING",
-        "LOFTING",
-        "LOOTING",
-        "MOOTING",
-        "MOONING",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "MISTING",
+	  "target": "MOANING",
+	  "solution": [
+		"MISTING",
+		"LISTING",
+		"LIFTING",
+		"LOFTING",
+		"LOOTING",
+		"MOOTING",
+		"MOONING",
         "MOANING"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "FORDS",
-      "target": "SULKS",
-      "solution": [
-        "FORDS",
-        "CORDS",
-        "CORKS",
-        "COCKS",
-        "SOCKS",
-        "SUCKS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "FORDS",
+	  "target": "SULKS",
+	  "solution": [
+		"FORDS",
+		"CORDS",
+		"CORKS",
+		"COCKS",
+		"SOCKS",
+		"SUCKS",
         "SULKS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BACK",
-      "target": "CURT",
-      "solution": [
-        "BACK",
-        "HACK",
-        "HARK",
-        "HART",
-        "CART",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BACK",
+	  "target": "CURT",
+	  "solution": [
+		"BACK",
+		"HACK",
+		"HARK",
+		"HART",
+		"CART",
         "CURT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CATERS",
-      "target": "ROWERS",
-      "solution": [
-        "CATERS",
-        "CAVERS",
-        "RAVERS",
-        "ROVERS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CATERS",
+	  "target": "ROWERS",
+	  "solution": [
+		"CATERS",
+		"CAVERS",
+		"RAVERS",
+		"ROVERS",
         "ROWERS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GHAT",
-      "target": "THEE",
-      "solution": [
-        "GHAT",
-        "THAT",
-        "THAN",
-        "THEN",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GHAT",
+	  "target": "THEE",
+	  "solution": [
+		"GHAT",
+		"THAT",
+		"THAN",
+		"THEN",
         "THEE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CARVE",
-      "target": "PASSE",
-      "solution": [
-        "CARVE",
-        "CURVE",
-        "CURSE",
-        "PURSE",
-        "PARSE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CARVE",
+	  "target": "PASSE",
+	  "solution": [
+		"CARVE",
+		"CURVE",
+		"CURSE",
+		"PURSE",
+		"PARSE",
         "PASSE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LARDS",
-      "target": "VAPID",
-      "solution": [
-        "LARDS",
-        "CARDS",
-        "CARES",
-        "CAPES",
-        "VAPES",
-        "VAPED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LARDS",
+	  "target": "VAPID",
+	  "solution": [
+		"LARDS",
+		"CARDS",
+		"CARES",
+		"CAPES",
+		"VAPES",
+		"VAPED",
         "VAPID"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LEAVE",
-      "target": "SCOPE",
-      "solution": [
-        "LEAVE",
-        "LEASE",
-        "CEASE",
-        "CHASE",
-        "CHOSE",
-        "CHORE",
-        "SHORE",
-        "SCORE",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LEAVE",
+	  "target": "SCOPE",
+	  "solution": [
+		"LEAVE",
+		"LEASE",
+		"CEASE",
+		"CHASE",
+		"CHOSE",
+		"CHORE",
+		"SHORE",
+		"SCORE",
         "SCOPE"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "BONKS",
-      "target": "FETES",
-      "solution": [
-        "BONKS",
-        "MONKS",
-        "MINKS",
-        "MINES",
-        "MITES",
-        "METES",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BONKS",
+	  "target": "FETES",
+	  "solution": [
+		"BONKS",
+		"MONKS",
+		"MINKS",
+		"MINES",
+		"MITES",
+		"METES",
         "FETES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LOCKING",
-      "target": "SIGNING",
-      "solution": [
-        "LOCKING",
-        "SOCKING",
-        "SICKING",
-        "SINKING",
-        "SINNING",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LOCKING",
+	  "target": "SIGNING",
+	  "solution": [
+		"LOCKING",
+		"SOCKING",
+		"SICKING",
+		"SINKING",
+		"SINNING",
         "SIGNING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DING",
-      "target": "TACK",
-      "solution": [
-        "DING",
-        "DANG",
-        "TANG",
-        "TANK",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DING",
+	  "target": "TACK",
+	  "solution": [
+		"DING",
+		"DANG",
+		"TANG",
+		"TANK",
         "TACK"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "JIVES",
-      "target": "TILLS",
-      "solution": [
-        "JIVES",
-        "FIVES",
-        "FILES",
-        "TILES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "JIVES",
+	  "target": "TILLS",
+	  "solution": [
+		"JIVES",
+		"FIVES",
+		"FILES",
+		"TILES",
         "TILLS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DUBS",
-      "target": "KIND",
-      "solution": [
-        "DUBS",
-        "BUBS",
-        "BIBS",
-        "BINS",
-        "BIND",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DUBS",
+	  "target": "KIND",
+	  "solution": [
+		"DUBS",
+		"BUBS",
+		"BIBS",
+		"BINS",
+		"BIND",
         "KIND"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "KITTY",
-      "target": "WARMS",
-      "solution": [
-        "KITTY",
-        "TITTY",
-        "TATTY",
-        "TARTY",
-        "WARTY",
-        "WARTS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "KITTY",
+	  "target": "WARMS",
+	  "solution": [
+		"KITTY",
+		"TITTY",
+		"TATTY",
+		"TARTY",
+		"WARTY",
+		"WARTS",
         "WARMS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "MODEL",
-      "target": "SANDY",
-      "solution": [
-        "MODEL",
-        "MODES",
-        "BODES",
-        "BONES",
-        "BANES",
-        "BANDS",
-        "SANDS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "MODEL",
+	  "target": "SANDY",
+	  "solution": [
+		"MODEL",
+		"MODES",
+		"BODES",
+		"BONES",
+		"BANES",
+		"BANDS",
+		"SANDS",
         "SANDY"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "HAULED",
-      "target": "JILTED",
-      "solution": [
-        "HAULED",
-        "HAILED",
-        "WAILED",
-        "WALLED",
-        "WILLED",
-        "WILTED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "HAULED",
+	  "target": "JILTED",
+	  "solution": [
+		"HAULED",
+		"HAILED",
+		"WAILED",
+		"WALLED",
+		"WILLED",
+		"WILTED",
         "JILTED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COINS",
-      "target": "MITES",
-      "solution": [
-        "COINS",
-        "CORNS",
-        "MORNS",
-        "MORES",
-        "MOTES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COINS",
+	  "target": "MITES",
+	  "solution": [
+		"COINS",
+		"CORNS",
+		"MORNS",
+		"MORES",
+		"MOTES",
         "MITES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "MINTS",
-      "target": "TOTES",
-      "solution": [
-        "MINTS",
-        "TINTS",
-        "TINES",
-        "TONES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "MINTS",
+	  "target": "TOTES",
+	  "solution": [
+		"MINTS",
+		"TINTS",
+		"TINES",
+		"TONES",
         "TOTES"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "ASK",
-      "target": "ERR",
-      "solution": [
-        "ASK",
-        "ARK",
-        "ARE",
-        "ERE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "ASK",
+	  "target": "ERR",
+	  "solution": [
+		"ASK",
+		"ARK",
+		"ARE",
+		"ERE",
         "ERR"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SAGAS",
-      "target": "VISES",
-      "solution": [
-        "SAGAS",
-        "SAGES",
-        "CAGES",
-        "CASES",
-        "VASES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SAGAS",
+	  "target": "VISES",
+	  "solution": [
+		"SAGAS",
+		"SAGES",
+		"CAGES",
+		"CASES",
+		"VASES",
         "VISES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CURVED",
-      "target": "HAILED",
-      "solution": [
-        "CURVED",
-        "CARVED",
-        "CALVED",
-        "CALLED",
-        "BALLED",
-        "BAILED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CURVED",
+	  "target": "HAILED",
+	  "solution": [
+		"CURVED",
+		"CARVED",
+		"CALVED",
+		"CALLED",
+		"BALLED",
+		"BAILED",
         "HAILED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "WAILED",
-      "target": "ZAPPER",
-      "solution": [
-        "WAILED",
-        "WALLED",
-        "CALLED",
-        "CALVED",
-        "CARVED",
-        "CARPED",
-        "CAPPED",
-        "ZAPPED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "WAILED",
+	  "target": "ZAPPER",
+	  "solution": [
+		"WAILED",
+		"WALLED",
+		"CALLED",
+		"CALVED",
+		"CARVED",
+		"CARPED",
+		"CAPPED",
+		"ZAPPED",
         "ZAPPER"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "LOINS",
-      "target": "WILLS",
-      "solution": [
-        "LOINS",
-        "COINS",
-        "COILS",
-        "BOILS",
-        "BOLLS",
-        "BILLS",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "LOINS",
+	  "target": "WILLS",
+	  "solution": [
+		"LOINS",
+		"COINS",
+		"COILS",
+		"BOILS",
+		"BOLLS",
+		"BILLS",
         "WILLS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DUCKS",
-      "target": "FUSSY",
-      "solution": [
-        "DUCKS",
-        "DUCTS",
-        "DUSTS",
-        "DUSTY",
-        "FUSTY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DUCKS",
+	  "target": "FUSSY",
+	  "solution": [
+		"DUCKS",
+		"DUCTS",
+		"DUSTS",
+		"DUSTY",
+		"FUSTY",
         "FUSSY"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BEND",
-      "target": "FUEL",
-      "solution": [
-        "BEND",
-        "FEND",
-        "FEED",
-        "FEEL",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BEND",
+	  "target": "FUEL",
+	  "solution": [
+		"BEND",
+		"FEND",
+		"FEED",
+		"FEEL",
         "FUEL"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FOUR",
-      "target": "PROF",
-      "solution": [
-        "FOUR",
-        "POUR",
-        "POOR",
-        "POOF",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FOUR",
+	  "target": "PROF",
+	  "solution": [
+		"FOUR",
+		"POUR",
+		"POOR",
+		"POOF",
         "PROF"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BRIG",
-      "target": "ROOT",
-      "solution": [
-        "BRIG",
-        "BRAG",
-        "BRAT",
-        "BOAT",
-        "BOOT",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BRIG",
+	  "target": "ROOT",
+	  "solution": [
+		"BRIG",
+		"BRAG",
+		"BRAT",
+		"BOAT",
+		"BOOT",
         "ROOT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PATTER",
-      "target": "SOARED",
-      "solution": [
-        "PATTER",
-        "POTTER",
-        "POTTED",
-        "POUTED",
-        "POURED",
-        "SOURED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PATTER",
+	  "target": "SOARED",
+	  "solution": [
+		"PATTER",
+		"POTTER",
+		"POTTED",
+		"POUTED",
+		"POURED",
+		"SOURED",
         "SOARED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "NIGGER",
-      "target": "RUCKED",
-      "solution": [
-        "NIGGER",
-        "BIGGER",
-        "BUGGER",
-        "BUGGED",
-        "BULGED",
-        "BULKED",
-        "BUCKED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "NIGGER",
+	  "target": "RUCKED",
+	  "solution": [
+		"NIGGER",
+		"BIGGER",
+		"BUGGER",
+		"BUGGED",
+		"BULGED",
+		"BULKED",
+		"BUCKED",
         "RUCKED"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "CASTE",
-      "target": "DAZED",
-      "solution": [
-        "CASTE",
-        "CASTS",
-        "CARTS",
-        "DARTS",
-        "DARES",
-        "DARED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "CASTE",
+	  "target": "DAZED",
+	  "solution": [
+		"CASTE",
+		"CASTS",
+		"CARTS",
+		"DARTS",
+		"DARES",
+		"DARED",
         "DAZED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BITES",
-      "target": "HANDS",
-      "solution": [
-        "BITES",
-        "MITES",
-        "MINES",
-        "MINDS",
-        "HINDS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BITES",
+	  "target": "HANDS",
+	  "solution": [
+		"BITES",
+		"MITES",
+		"MINES",
+		"MINDS",
+		"HINDS",
         "HANDS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BOA",
-      "target": "SAX",
-      "solution": [
-        "BOA",
-        "BAA",
-        "BAD",
-        "SAD",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BOA",
+	  "target": "SAX",
+	  "solution": [
+		"BOA",
+		"BAA",
+		"BAD",
+		"SAD",
         "SAX"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LEG",
-      "target": "PRY",
-      "solution": [
-        "LEG",
-        "LAG",
-        "LAY",
-        "PAY",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LEG",
+	  "target": "PRY",
+	  "solution": [
+		"LEG",
+		"LAG",
+		"LAY",
+		"PAY",
         "PRY"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CROSS",
-      "target": "PERPS",
-      "solution": [
-        "CROSS",
-        "CRESS",
-        "PRESS",
-        "PREPS",
-        "PEEPS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CROSS",
+	  "target": "PERPS",
+	  "solution": [
+		"CROSS",
+		"CRESS",
+		"PRESS",
+		"PREPS",
+		"PEEPS",
         "PERPS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DUAL",
-      "target": "TAGS",
-      "solution": [
-        "DUAL",
-        "DEAL",
-        "TEAL",
-        "TEAS",
-        "TENS",
-        "TANS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DUAL",
+	  "target": "TAGS",
+	  "solution": [
+		"DUAL",
+		"DEAL",
+		"TEAL",
+		"TEAS",
+		"TENS",
+		"TANS",
         "TAGS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DARNS",
-      "target": "TINGE",
-      "solution": [
-        "DARNS",
-        "BARNS",
-        "BANNS",
-        "BANGS",
-        "PANGS",
-        "PINGS",
-        "SINGS",
-        "SINGE",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DARNS",
+	  "target": "TINGE",
+	  "solution": [
+		"DARNS",
+		"BARNS",
+		"BANNS",
+		"BANGS",
+		"PANGS",
+		"PINGS",
+		"SINGS",
+		"SINGE",
         "TINGE"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "FLECKING",
-      "target": "PLUNGING",
-      "solution": [
-        "FLECKING",
-        "FLICKING",
-        "CLICKING",
-        "CLUCKING",
-        "PLUCKING",
-        "PLUNKING",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "FLECKING",
+	  "target": "PLUNGING",
+	  "solution": [
+		"FLECKING",
+		"FLICKING",
+		"CLICKING",
+		"CLUCKING",
+		"PLUCKING",
+		"PLUNKING",
         "PLUNGING"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GRADED",
-      "target": "HEADER",
-      "solution": [
-        "GRADED",
-        "GOADED",
-        "LOADED",
-        "LEADED",
-        "HEADED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GRADED",
+	  "target": "HEADER",
+	  "solution": [
+		"GRADED",
+		"GOADED",
+		"LOADED",
+		"LEADED",
+		"HEADED",
         "HEADER"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FENDING",
-      "target": "WARDING",
-      "solution": [
-        "FENDING",
-        "LENDING",
-        "LANDING",
-        "LARDING",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FENDING",
+	  "target": "WARDING",
+	  "solution": [
+		"FENDING",
+		"LENDING",
+		"LANDING",
+		"LARDING",
         "WARDING"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CHIME",
-      "target": "GRAPE",
-      "solution": [
-        "CHIME",
-        "CRIME",
-        "GRIME",
-        "GRIPE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CHIME",
+	  "target": "GRAPE",
+	  "solution": [
+		"CHIME",
+		"CRIME",
+		"GRIME",
+		"GRIPE",
         "GRAPE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DEAR",
-      "target": "WOKS",
-      "solution": [
-        "DEAR",
-        "DEER",
-        "DOER",
-        "DOES",
-        "WOES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DEAR",
+	  "target": "WOKS",
+	  "solution": [
+		"DEAR",
+		"DEER",
+		"DOER",
+		"DOES",
+		"WOES",
         "WOKS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LAKES",
-      "target": "WISPY",
-      "solution": [
-        "LAKES",
-        "WAKES",
-        "WANES",
-        "WINES",
-        "WISES",
-        "WISPS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LAKES",
+	  "target": "WISPY",
+	  "solution": [
+		"LAKES",
+		"WAKES",
+		"WANES",
+		"WINES",
+		"WISES",
+		"WISPS",
         "WISPY"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CONKED",
-      "target": "FLUXES",
-      "solution": [
-        "CONKED",
-        "COCKED",
-        "SOCKED",
-        "SOAKED",
-        "SLAKED",
-        "FLAKED",
-        "FLAKES",
-        "FLUKES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CONKED",
+	  "target": "FLUXES",
+	  "solution": [
+		"CONKED",
+		"COCKED",
+		"SOCKED",
+		"SOAKED",
+		"SLAKED",
+		"FLAKED",
+		"FLAKES",
+		"FLUKES",
         "FLUXES"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "BARK",
-      "target": "SKIM",
-      "solution": [
-        "BARK",
-        "LARK",
-        "LARD",
-        "LAID",
-        "SAID",
-        "SKID",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BARK",
+	  "target": "SKIM",
+	  "solution": [
+		"BARK",
+		"LARK",
+		"LARD",
+		"LAID",
+		"SAID",
+		"SKID",
         "SKIM"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BOATS",
-      "target": "HOAGY",
-      "solution": [
-        "BOATS",
-        "BOARS",
-        "BOARD",
-        "HOARD",
-        "HOARY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BOATS",
+	  "target": "HOAGY",
+	  "solution": [
+		"BOATS",
+		"BOARS",
+		"BOARD",
+		"HOARD",
+		"HOARY",
         "HOAGY"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "VAC",
-      "target": "WRY",
-      "solution": [
-        "VAC",
-        "MAC",
-        "MAY",
-        "WAY",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "VAC",
+	  "target": "WRY",
+	  "solution": [
+		"VAC",
+		"MAC",
+		"MAY",
+		"WAY",
         "WRY"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "PAGER",
-      "target": "VILER",
-      "solution": [
-        "PAGER",
-        "PAPER",
-        "PIPER",
-        "VIPER",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "PAGER",
+	  "target": "VILER",
+	  "solution": [
+		"PAGER",
+		"PAPER",
+		"PIPER",
+		"VIPER",
         "VILER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FIRMING",
-      "target": "GOADING",
-      "solution": [
-        "FIRMING",
-        "FORMING",
-        "FORDING",
-        "LORDING",
-        "LOADING",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FIRMING",
+	  "target": "GOADING",
+	  "solution": [
+		"FIRMING",
+		"FORMING",
+		"FORDING",
+		"LORDING",
+		"LOADING",
         "GOADING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PISTE",
-      "target": "TALKS",
-      "solution": [
-        "PISTE",
-        "PASTE",
-        "CASTE",
-        "CASTS",
-        "CASKS",
-        "TASKS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PISTE",
+	  "target": "TALKS",
+	  "solution": [
+		"PISTE",
+		"PASTE",
+		"CASTE",
+		"CASTS",
+		"CASKS",
+		"TASKS",
         "TALKS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DARED",
-      "target": "STATS",
-      "solution": [
-        "DARED",
-        "BARED",
-        "BARES",
-        "BARKS",
-        "BERKS",
-        "BEAKS",
-        "BEATS",
-        "SEATS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DARED",
+	  "target": "STATS",
+	  "solution": [
+		"DARED",
+		"BARED",
+		"BARES",
+		"BARKS",
+		"BERKS",
+		"BEAKS",
+		"BEATS",
+		"SEATS",
         "STATS"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "ODES",
-      "target": "PUPA",
-      "solution": [
-        "ODES",
-        "OWES",
-        "OWNS",
-        "PWNS",
-        "PUNS",
-        "PUPS",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "ODES",
+	  "target": "PUPA",
+	  "solution": [
+		"ODES",
+		"OWES",
+		"OWNS",
+		"PWNS",
+		"PUNS",
+		"PUPS",
         "PUPA"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GOLD",
-      "target": "HEWS",
-      "solution": [
-        "GOLD",
-        "HOLD",
-        "HELD",
-        "HERD",
-        "HERS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GOLD",
+	  "target": "HEWS",
+	  "solution": [
+		"GOLD",
+		"HOLD",
+		"HELD",
+		"HERD",
+		"HERS",
         "HEWS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PASTA",
-      "target": "SACKS",
-      "solution": [
-        "PASTA",
-        "PASTS",
-        "PACTS",
-        "PACKS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PASTA",
+	  "target": "SACKS",
+	  "solution": [
+		"PASTA",
+		"PASTS",
+		"PACTS",
+		"PACKS",
         "SACKS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SINES",
-      "target": "YACKS",
-      "solution": [
-        "SINES",
-        "SINKS",
-        "SICKS",
-        "SACKS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SINES",
+	  "target": "YACKS",
+	  "solution": [
+		"SINES",
+		"SINKS",
+		"SICKS",
+		"SACKS",
         "YACKS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "HULK",
-      "target": "REAP",
-      "solution": [
-        "HULK",
-        "HULL",
-        "HELL",
-        "HEAL",
-        "REAL",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "HULK",
+	  "target": "REAP",
+	  "solution": [
+		"HULK",
+		"HULL",
+		"HELL",
+		"HEAL",
+		"REAL",
         "REAP"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CRAZED",
-      "target": "JOTTED",
-      "solution": [
-        "CRAZED",
-        "CRATED",
-        "COATED",
-        "MOATED",
-        "MOLTED",
-        "JOLTED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CRAZED",
+	  "target": "JOTTED",
+	  "solution": [
+		"CRAZED",
+		"CRATED",
+		"COATED",
+		"MOATED",
+		"MOLTED",
+		"JOLTED",
         "JOTTED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COOLS",
-      "target": "LEPER",
-      "solution": [
-        "COOLS",
-        "COOKS",
-        "CONKS",
-        "CONES",
-        "COVES",
-        "LOVES",
-        "LOVER",
-        "LEVER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COOLS",
+	  "target": "LEPER",
+	  "solution": [
+		"COOLS",
+		"COOKS",
+		"CONKS",
+		"CONES",
+		"COVES",
+		"LOVES",
+		"LOVER",
+		"LEVER",
         "LEPER"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "BOOTING",
-      "target": "GILDING",
-      "solution": [
-        "BOOTING",
-        "MOOTING",
-        "MOLTING",
-        "MELTING",
-        "MELDING",
-        "GELDING",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BOOTING",
+	  "target": "GILDING",
+	  "solution": [
+		"BOOTING",
+		"MOOTING",
+		"MOLTING",
+		"MELTING",
+		"MELDING",
+		"GELDING",
         "GILDING"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COAL",
-      "target": "REND",
-      "solution": [
-        "COAL",
-        "GOAL",
-        "GOAD",
-        "ROAD",
-        "READ",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COAL",
+	  "target": "REND",
+	  "solution": [
+		"COAL",
+		"GOAL",
+		"GOAD",
+		"ROAD",
+		"READ",
         "REND"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "NARKS",
-      "target": "WALLS",
-      "solution": [
-        "NARKS",
-        "BARKS",
-        "BALKS",
-        "WALKS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "NARKS",
+	  "target": "WALLS",
+	  "solution": [
+		"NARKS",
+		"BARKS",
+		"BALKS",
+		"WALKS",
         "WALLS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FOOTED",
-      "target": "PESTER",
-      "solution": [
-        "FOOTED",
-        "FOOTER",
-        "FOSTER",
-        "POSTER",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FOOTED",
+	  "target": "PESTER",
+	  "solution": [
+		"FOOTED",
+		"FOOTER",
+		"FOSTER",
+		"POSTER",
         "PESTER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "APPS",
-      "target": "NOES",
-      "solution": [
-        "APPS",
-        "APES",
-        "AYES",
-        "DYES",
-        "DOES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "APPS",
+	  "target": "NOES",
+	  "solution": [
+		"APPS",
+		"APES",
+		"AYES",
+		"DYES",
+		"DOES",
         "NOES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DEMO",
-      "target": "MOLL",
-      "solution": [
-        "DEMO",
-        "MEMO",
-        "MEME",
-        "MIME",
-        "MILE",
-        "MOLE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DEMO",
+	  "target": "MOLL",
+	  "solution": [
+		"DEMO",
+		"MEMO",
+		"MEME",
+		"MIME",
+		"MILE",
+		"MOLE",
         "MOLL"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BALED",
-      "target": "HOVEL",
-      "solution": [
-        "BALED",
-        "PALED",
-        "PAVED",
-        "CAVED",
-        "CAVER",
-        "COVER",
-        "HOVER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BALED",
+	  "target": "HOVEL",
+	  "solution": [
+		"BALED",
+		"PALED",
+		"PAVED",
+		"CAVED",
+		"CAVER",
+		"COVER",
+		"HOVER",
         "HOVEL"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "SCARY",
-      "target": "SHELF",
-      "solution": [
-        "SCARY",
-        "SCALY",
-        "SCALE",
-        "SHALE",
-        "SHALL",
-        "SHELL",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "SCARY",
+	  "target": "SHELF",
+	  "solution": [
+		"SCARY",
+		"SCALY",
+		"SCALE",
+		"SHALE",
+		"SHALL",
+		"SHELL",
         "SHELF"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "MERCY",
-      "target": "TASTY",
-      "solution": [
-        "MERCY",
-        "MERRY",
-        "TERRY",
-        "TARRY",
-        "TARTY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "MERCY",
+	  "target": "TASTY",
+	  "solution": [
+		"MERCY",
+		"MERRY",
+		"TERRY",
+		"TARRY",
+		"TARTY",
         "TASTY"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LIST",
-      "target": "LOAM",
-      "solution": [
-        "LIST",
-        "LOST",
-        "LOOT",
-        "LOOM",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LIST",
+	  "target": "LOAM",
+	  "solution": [
+		"LIST",
+		"LOST",
+		"LOOT",
+		"LOOM",
         "LOAM"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CLEFS",
-      "target": "TRESS",
-      "solution": [
-        "CLEFS",
-        "CHEFS",
-        "CHESS",
-        "CRESS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CLEFS",
+	  "target": "TRESS",
+	  "solution": [
+		"CLEFS",
+		"CHEFS",
+		"CHESS",
+		"CRESS",
         "TRESS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SIRES",
-      "target": "YANKS",
-      "solution": [
-        "SIRES",
-        "HIRES",
-        "HARES",
-        "HARKS",
-        "HANKS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SIRES",
+	  "target": "YANKS",
+	  "solution": [
+		"SIRES",
+		"HIRES",
+		"HARES",
+		"HARKS",
+		"HANKS",
         "YANKS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "COATING",
-      "target": "SHORING",
-      "solution": [
-        "COATING",
-        "BOATING",
-        "BEATING",
-        "SEATING",
-        "SEARING",
-        "SHARING",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "COATING",
+	  "target": "SHORING",
+	  "solution": [
+		"COATING",
+		"BOATING",
+		"BEATING",
+		"SEATING",
+		"SEARING",
+		"SHARING",
         "SHORING"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DITTO",
-      "target": "WASPS",
-      "solution": [
-        "DITTO",
-        "DITTY",
-        "TITTY",
-        "TATTY",
-        "TARTY",
-        "WARTY",
-        "WARTS",
-        "WARPS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DITTO",
+	  "target": "WASPS",
+	  "solution": [
+		"DITTO",
+		"DITTY",
+		"TITTY",
+		"TATTY",
+		"TARTY",
+		"WARTY",
+		"WARTS",
+		"WARPS",
         "WASPS"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "GRASP",
-      "target": "MAIMS",
-      "solution": [
-        "GRASP",
-        "GRASS",
-        "GRANS",
-        "GRINS",
-        "GAINS",
-        "MAINS",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "GRASP",
+	  "target": "MAIMS",
+	  "solution": [
+		"GRASP",
+		"GRASS",
+		"GRANS",
+		"GRINS",
+		"GAINS",
+		"MAINS",
         "MAIMS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CLOTH",
-      "target": "SPIVS",
-      "solution": [
-        "CLOTH",
-        "SLOTH",
-        "SLOTS",
-        "SPOTS",
-        "SPITS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CLOTH",
+	  "target": "SPIVS",
+	  "solution": [
+		"CLOTH",
+		"SLOTH",
+		"SLOTS",
+		"SPOTS",
+		"SPITS",
         "SPIVS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BURBLES",
-      "target": "RAMBLED",
-      "solution": [
-        "BURBLES",
-        "BUMBLES",
-        "RUMBLES",
-        "RAMBLES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BURBLES",
+	  "target": "RAMBLED",
+	  "solution": [
+		"BURBLES",
+		"BUMBLES",
+		"RUMBLES",
+		"RAMBLES",
         "RAMBLED"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BAIT",
-      "target": "SHUT",
-      "solution": [
-        "BAIT",
-        "WAIT",
-        "WHIT",
-        "SHIT",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BAIT",
+	  "target": "SHUT",
+	  "solution": [
+		"BAIT",
+		"WAIT",
+		"WHIT",
+		"SHIT",
         "SHUT"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CUDS",
-      "target": "LARK",
-      "solution": [
-        "CUDS",
-        "BUDS",
-        "BURS",
-        "BARS",
-        "BARK",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CUDS",
+	  "target": "LARK",
+	  "solution": [
+		"CUDS",
+		"BUDS",
+		"BURS",
+		"BARS",
+		"BARK",
         "LARK"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "SORES",
-      "target": "WINCE",
-      "solution": [
-        "SORES",
-        "SIRES",
-        "SINES",
-        "SINGS",
-        "SINGE",
-        "SINCE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "SORES",
+	  "target": "WINCE",
+	  "solution": [
+		"SORES",
+		"SIRES",
+		"SINES",
+		"SINGS",
+		"SINGE",
+		"SINCE",
         "WINCE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "ALUM",
-      "target": "LINO",
-      "solution": [
-        "ALUM",
-        "GLUM",
-        "GLUT",
-        "GOUT",
-        "LOUT",
-        "LOFT",
-        "LIFT",
-        "LINT",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "ALUM",
+	  "target": "LINO",
+	  "solution": [
+		"ALUM",
+		"GLUM",
+		"GLUT",
+		"GOUT",
+		"LOUT",
+		"LOFT",
+		"LIFT",
+		"LINT",
         "LINO"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "BEEPS",
-      "target": "SLIME",
-      "solution": [
-        "BEEPS",
-        "SEEPS",
-        "SEEMS",
-        "SEAMS",
-        "SLAMS",
-        "SLIMS",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BEEPS",
+	  "target": "SLIME",
+	  "solution": [
+		"BEEPS",
+		"SEEPS",
+		"SEEMS",
+		"SEAMS",
+		"SLAMS",
+		"SLIMS",
         "SLIME"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BELYING",
-      "target": "BUCKING",
-      "solution": [
-        "BELYING",
-        "BELTING",
-        "BESTING",
-        "BUSTING",
-        "BUSKING",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BELYING",
+	  "target": "BUCKING",
+	  "solution": [
+		"BELYING",
+		"BELTING",
+		"BESTING",
+		"BUSTING",
+		"BUSKING",
         "BUCKING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "SPARK",
-      "target": "SUITE",
-      "solution": [
-        "SPARK",
-        "SPARE",
-        "SPIRE",
-        "SPITE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "SPARK",
+	  "target": "SUITE",
+	  "solution": [
+		"SPARK",
+		"SPARE",
+		"SPIRE",
+		"SPITE",
         "SUITE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BUSKED",
-      "target": "DASHES",
-      "solution": [
-        "BUSKED",
-        "BASKED",
-        "BASHED",
-        "DASHED",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BUSKED",
+	  "target": "DASHES",
+	  "solution": [
+		"BUSKED",
+		"BASKED",
+		"BASHED",
+		"DASHED",
         "DASHES"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BEST",
-      "target": "CHIT",
-      "solution": [
-        "BEST",
-        "PEST",
-        "PEAT",
-        "PHAT",
-        "CHAT",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BEST",
+	  "target": "CHIT",
+	  "solution": [
+		"BEST",
+		"PEST",
+		"PEAT",
+		"PHAT",
+		"CHAT",
         "CHIT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BERGS",
-      "target": "JOLTS",
-      "solution": [
-        "BERGS",
-        "BERKS",
-        "BEAKS",
-        "BEATS",
-        "BOATS",
-        "BOLTS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BERGS",
+	  "target": "JOLTS",
+	  "solution": [
+		"BERGS",
+		"BERKS",
+		"BEAKS",
+		"BEATS",
+		"BOATS",
+		"BOLTS",
         "JOLTS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "TERSER",
-      "target": "VETOES",
-      "solution": [
-        "TERSER",
-        "TENSER",
-        "TENSED",
-        "TENTED",
-        "VENTED",
-        "VETTED",
-        "VETOED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "TERSER",
+	  "target": "VETOES",
+	  "solution": [
+		"TERSER",
+		"TENSER",
+		"TENSED",
+		"TENTED",
+		"VENTED",
+		"VETTED",
+		"VETOED",
         "VETOES"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "CHOWS",
-      "target": "LAMBS",
-      "solution": [
-        "CHOWS",
-        "CHOPS",
-        "COOPS",
-        "COMPS",
-        "CAMPS",
-        "LAMPS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "CHOWS",
+	  "target": "LAMBS",
+	  "solution": [
+		"CHOWS",
+		"CHOPS",
+		"COOPS",
+		"COMPS",
+		"CAMPS",
+		"LAMPS",
         "LAMBS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DRANK",
-      "target": "FLIPS",
-      "solution": [
-        "DRANK",
-        "FRANK",
-        "FLANK",
-        "FLANS",
-        "FLAPS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DRANK",
+	  "target": "FLIPS",
+	  "solution": [
+		"DRANK",
+		"FRANK",
+		"FLANK",
+		"FLANS",
+		"FLAPS",
         "FLIPS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CAST",
-      "target": "COBS",
-      "solution": [
-        "CAST",
-        "COST",
-        "COOT",
-        "COOS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CAST",
+	  "target": "COBS",
+	  "solution": [
+		"CAST",
+		"COST",
+		"COOT",
+		"COOS",
         "COBS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GAGE",
-      "target": "RULE",
-      "solution": [
-        "GAGE",
-        "GALE",
-        "MALE",
-        "MULE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GAGE",
+	  "target": "RULE",
+	  "solution": [
+		"GAGE",
+		"GALE",
+		"MALE",
+		"MULE",
         "RULE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BALED",
-      "target": "MOTEL",
-      "solution": [
-        "BALED",
-        "BATED",
-        "MATED",
-        "MATES",
-        "MOTES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BALED",
+	  "target": "MOTEL",
+	  "solution": [
+		"BALED",
+		"BATED",
+		"MATED",
+		"MATES",
+		"MOTES",
         "MOTEL"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FLAY",
-      "target": "MAIL",
-      "solution": [
-        "FLAY",
-        "PLAY",
-        "PLAN",
-        "PAAN",
-        "PAIN",
-        "MAIN",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FLAY",
+	  "target": "MAIL",
+	  "solution": [
+		"FLAY",
+		"PLAY",
+		"PLAN",
+		"PAAN",
+		"PAIN",
+		"MAIN",
         "MAIL"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "FLUES",
-      "target": "MINKS",
-      "solution": [
-        "FLUES",
-        "BLUES",
-        "BLUBS",
-        "BLOBS",
-        "BOOBS",
-        "BOOKS",
-        "BONKS",
-        "MONKS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "FLUES",
+	  "target": "MINKS",
+	  "solution": [
+		"FLUES",
+		"BLUES",
+		"BLUBS",
+		"BLOBS",
+		"BOOBS",
+		"BOOKS",
+		"BONKS",
+		"MONKS",
         "MINKS"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "MISTS",
-      "target": "PANSY",
-      "solution": [
-        "MISTS",
-        "MASTS",
-        "PASTS",
-        "PASTY",
-        "PATTY",
-        "PATSY",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "MISTS",
+	  "target": "PANSY",
+	  "solution": [
+		"MISTS",
+		"MASTS",
+		"PASTS",
+		"PASTY",
+		"PATTY",
+		"PATSY",
         "PANSY"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "SENDS",
-      "target": "VALES",
-      "solution": [
-        "SENDS",
-        "BENDS",
-        "BANDS",
-        "BANES",
-        "VANES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "SENDS",
+	  "target": "VALES",
+	  "solution": [
+		"SENDS",
+		"BENDS",
+		"BANDS",
+		"BANES",
+		"VANES",
         "VALES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BOBBING",
-      "target": "TABLING",
-      "solution": [
-        "BOBBING",
-        "DOBBING",
-        "DABBING",
-        "TABBING",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BOBBING",
+	  "target": "TABLING",
+	  "solution": [
+		"BOBBING",
+		"DOBBING",
+		"DABBING",
+		"TABBING",
         "TABLING"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BIRDS",
-      "target": "MARTS",
-      "solution": [
-        "BIRDS",
-        "BARDS",
-        "CARDS",
-        "CARTS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BIRDS",
+	  "target": "MARTS",
+	  "solution": [
+		"BIRDS",
+		"BARDS",
+		"CARDS",
+		"CARTS",
         "MARTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DICKS",
-      "target": "YELLS",
-      "solution": [
-        "DICKS",
-        "SICKS",
-        "SILKS",
-        "SILLS",
-        "SELLS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DICKS",
+	  "target": "YELLS",
+	  "solution": [
+		"DICKS",
+		"SICKS",
+		"SILKS",
+		"SILLS",
+		"SELLS",
         "YELLS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FLITS",
-      "target": "SIRED",
-      "solution": [
-        "FLITS",
-        "SLITS",
-        "SHITS",
-        "SHIES",
-        "SHIED",
-        "SHRED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FLITS",
+	  "target": "SIRED",
+	  "solution": [
+		"FLITS",
+		"SLITS",
+		"SHITS",
+		"SHIES",
+		"SHIED",
+		"SHRED",
         "SIRED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CHANT",
-      "target": "LOFTS",
-      "solution": [
-        "CHANT",
-        "CHART",
-        "CHARS",
-        "CHATS",
-        "COATS",
-        "COOTS",
-        "LOOTS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CHANT",
+	  "target": "LOFTS",
+	  "solution": [
+		"CHANT",
+		"CHART",
+		"CHARS",
+		"CHATS",
+		"COATS",
+		"COOTS",
+		"LOOTS",
         "LOFTS"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "BOOZED",
-      "target": "ZAPPED",
-      "solution": [
-        "BOOZED",
-        "BOOKED",
-        "COOKED",
-        "COOPED",
-        "COPPED",
-        "CAPPED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BOOZED",
+	  "target": "ZAPPED",
+	  "solution": [
+		"BOOZED",
+		"BOOKED",
+		"COOKED",
+		"COOPED",
+		"COPPED",
+		"CAPPED",
         "ZAPPED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "FATTER",
-      "target": "PAINED",
-      "solution": [
-        "FATTER",
-        "PATTER",
-        "PATTED",
-        "PANTED",
-        "PANNED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "FATTER",
+	  "target": "PAINED",
+	  "solution": [
+		"FATTER",
+		"PATTER",
+		"PATTED",
+		"PANTED",
+		"PANNED",
         "PAINED"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FAWNS",
-      "target": "GOONS",
-      "solution": [
-        "FAWNS",
-        "DAWNS",
-        "DOWNS",
-        "GOWNS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FAWNS",
+	  "target": "GOONS",
+	  "solution": [
+		"FAWNS",
+		"DAWNS",
+		"DOWNS",
+		"GOWNS",
         "GOONS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LOSES",
-      "target": "MISER",
-      "solution": [
-        "LOSES",
-        "ROSES",
-        "RISES",
-        "RISER",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LOSES",
+	  "target": "MISER",
+	  "solution": [
+		"LOSES",
+		"ROSES",
+		"RISES",
+		"RISER",
         "MISER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CAME",
-      "target": "NEST",
-      "solution": [
-        "CAME",
-        "CASE",
-        "VASE",
-        "VAST",
-        "VEST",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CAME",
+	  "target": "NEST",
+	  "solution": [
+		"CAME",
+		"CASE",
+		"VASE",
+		"VAST",
+		"VEST",
         "NEST"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CANED",
-      "target": "RULER",
-      "solution": [
-        "CANED",
-        "CANES",
-        "MANES",
-        "MALES",
-        "MULES",
-        "RULES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CANED",
+	  "target": "RULER",
+	  "solution": [
+		"CANED",
+		"CANES",
+		"MANES",
+		"MALES",
+		"MULES",
+		"RULES",
         "RULER"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GULPED",
-      "target": "HOLIER",
-      "solution": [
-        "GULPED",
-        "PULPED",
-        "PULLED",
-        "POLLED",
-        "ROLLED",
-        "ROLLER",
-        "HOLLER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GULPED",
+	  "target": "HOLIER",
+	  "solution": [
+		"GULPED",
+		"PULPED",
+		"PULLED",
+		"POLLED",
+		"ROLLED",
+		"ROLLER",
+		"HOLLER",
         "HOLIER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "BATCHES",
-      "target": "VOUCHED",
-      "solution": [
-        "BATCHES",
-        "PATCHES",
-        "PARCHES",
-        "PORCHES",
-        "POUCHES",
-        "VOUCHES",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BATCHES",
+	  "target": "VOUCHED",
+	  "solution": [
+		"BATCHES",
+		"PATCHES",
+		"PARCHES",
+		"PORCHES",
+		"POUCHES",
+		"VOUCHES",
         "VOUCHED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BILLY",
-      "target": "WENDS",
-      "solution": [
-        "BILLY",
-        "WILLY",
-        "WELLY",
-        "WELLS",
-        "WELDS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BILLY",
+	  "target": "WENDS",
+	  "solution": [
+		"BILLY",
+		"WILLY",
+		"WELLY",
+		"WELLS",
+		"WELDS",
         "WENDS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "TOSS",
-      "target": "WOVE",
-      "solution": [
-        "TOSS",
-        "DOSS",
-        "DOSE",
-        "DOVE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "TOSS",
+	  "target": "WOVE",
+	  "solution": [
+		"TOSS",
+		"DOSS",
+		"DOSE",
+		"DOVE",
         "WOVE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SPICS",
-      "target": "STANK",
-      "solution": [
-        "SPICS",
-        "SPINS",
-        "SPANS",
-        "SPANK",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SPICS",
+	  "target": "STANK",
+	  "solution": [
+		"SPICS",
+		"SPINS",
+		"SPANS",
+		"SPANK",
         "STANK"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FAXED",
-      "target": "MOLTS",
-      "solution": [
-        "FAXED",
-        "MAXED",
-        "MAXES",
-        "MALES",
-        "MOLES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FAXED",
+	  "target": "MOLTS",
+	  "solution": [
+		"FAXED",
+		"MAXED",
+		"MAXES",
+		"MALES",
+		"MOLES",
         "MOLTS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "GOOEY",
-      "target": "MACKS",
-      "solution": [
-        "GOOEY",
-        "HOOEY",
-        "HOOKY",
-        "HOOKS",
-        "HOCKS",
-        "MOCKS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "GOOEY",
+	  "target": "MACKS",
+	  "solution": [
+		"GOOEY",
+		"HOOEY",
+		"HOOKY",
+		"HOOKS",
+		"HOCKS",
+		"MOCKS",
         "MACKS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "TRIG",
-      "target": "WAVY",
-      "solution": [
-        "TRIG",
-        "BRIG",
-        "BRAG",
-        "BRAS",
-        "BAAS",
-        "BARS",
-        "WARS",
-        "WARY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "TRIG",
+	  "target": "WAVY",
+	  "solution": [
+		"TRIG",
+		"BRIG",
+		"BRAG",
+		"BRAS",
+		"BAAS",
+		"BARS",
+		"WARS",
+		"WARY",
         "WAVY"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "MAULS",
-      "target": "SAVOR",
-      "solution": [
-        "MAULS",
-        "MALLS",
-        "MALES",
-        "SALES",
-        "SAVES",
-        "SAVER",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "MAULS",
+	  "target": "SAVOR",
+	  "solution": [
+		"MAULS",
+		"MALLS",
+		"MALES",
+		"SALES",
+		"SAVES",
+		"SAVER",
         "SAVOR"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "MAKES",
-      "target": "MODAL",
-      "solution": [
-        "MAKES",
-        "MALES",
-        "MOLES",
-        "MODES",
-        "MODEL",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "MAKES",
+	  "target": "MODAL",
+	  "solution": [
+		"MAKES",
+		"MALES",
+		"MOLES",
+		"MODES",
+		"MODEL",
         "MODAL"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "MOLD",
-      "target": "NUDE",
-      "solution": [
-        "MOLD",
-        "MOLE",
-        "MODE",
-        "NODE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "MOLD",
+	  "target": "NUDE",
+	  "solution": [
+		"MOLD",
+		"MOLE",
+		"MODE",
+		"NODE",
         "NUDE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DIES",
-      "target": "DOPE",
-      "solution": [
-        "DIES",
-        "DOES",
-        "DONS",
-        "DONE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DIES",
+	  "target": "DOPE",
+	  "solution": [
+		"DIES",
+		"DOES",
+		"DONS",
+		"DONE",
         "DOPE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "PAGED",
-      "target": "PEEKS",
-      "solution": [
-        "PAGED",
-        "PACED",
-        "PACES",
-        "PACKS",
-        "PECKS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "PAGED",
+	  "target": "PEEKS",
+	  "solution": [
+		"PAGED",
+		"PACED",
+		"PACES",
+		"PACKS",
+		"PECKS",
         "PEEKS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PATE",
-      "target": "YOUR",
-      "solution": [
-        "PATE",
-        "PARE",
-        "PORE",
-        "PORT",
-        "POUT",
-        "POUR",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PATE",
+	  "target": "YOUR",
+	  "solution": [
+		"PATE",
+		"PARE",
+		"PORE",
+		"PORT",
+		"POUT",
+		"POUR",
         "YOUR"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LURKED",
-      "target": "WHILES",
-      "solution": [
-        "LURKED",
-        "LARKED",
-        "BARKED",
-        "BALKED",
-        "WALKED",
-        "WALLED",
-        "WAILED",
-        "WHILED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LURKED",
+	  "target": "WHILES",
+	  "solution": [
+		"LURKED",
+		"LARKED",
+		"BARKED",
+		"BALKED",
+		"WALKED",
+		"WALLED",
+		"WAILED",
+		"WHILED",
         "WHILES"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "GERMS",
-      "target": "TOADS",
-      "solution": [
-        "GERMS",
-        "BERMS",
-        "BEAMS",
-        "REAMS",
-        "ROAMS",
-        "ROADS",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "GERMS",
+	  "target": "TOADS",
+	  "solution": [
+		"GERMS",
+		"BERMS",
+		"BEAMS",
+		"REAMS",
+		"ROAMS",
+		"ROADS",
         "TOADS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CALM",
-      "target": "TENS",
-      "solution": [
-        "CALM",
-        "PALM",
-        "PALS",
-        "PANS",
-        "TANS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CALM",
+	  "target": "TENS",
+	  "solution": [
+		"CALM",
+		"PALM",
+		"PALS",
+		"PANS",
+		"TANS",
         "TENS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FOIL",
-      "target": "GOON",
-      "solution": [
-        "FOIL",
-        "COIL",
-        "COOL",
-        "COON",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FOIL",
+	  "target": "GOON",
+	  "solution": [
+		"FOIL",
+		"COIL",
+		"COOL",
+		"COON",
         "GOON"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CAGEY",
-      "target": "PACTS",
-      "solution": [
-        "CAGEY",
-        "CAGES",
-        "PAGES",
-        "PACES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CAGEY",
+	  "target": "PACTS",
+	  "solution": [
+		"CAGEY",
+		"CAGES",
+		"PAGES",
+		"PACES",
         "PACTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BAAED",
-      "target": "LAMPS",
-      "solution": [
-        "BAAED",
-        "BAKED",
-        "BAKES",
-        "LAKES",
-        "LAMES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BAAED",
+	  "target": "LAMPS",
+	  "solution": [
+		"BAAED",
+		"BAKED",
+		"BAKES",
+		"LAKES",
+		"LAMES",
         "LAMPS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "GILD",
-      "target": "TUBE",
-      "solution": [
-        "GILD",
-        "MILD",
-        "MIND",
-        "MINE",
-        "TINE",
-        "TUNE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "GILD",
+	  "target": "TUBE",
+	  "solution": [
+		"GILD",
+		"MILD",
+		"MIND",
+		"MINE",
+		"TINE",
+		"TUNE",
         "TUBE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "SNORES",
-      "target": "STEELS",
-      "solution": [
-        "SNORES",
-        "SNORTS",
-        "SNOOTS",
-        "SNOOPS",
-        "STOOPS",
-        "STOEPS",
-        "STEEPS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "SNORES",
+	  "target": "STEELS",
+	  "solution": [
+		"SNORES",
+		"SNORTS",
+		"SNOOTS",
+		"SNOOPS",
+		"STOOPS",
+		"STOEPS",
+		"STEEPS",
         "STEELS"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "EYES",
-      "target": "GIRL",
-      "solution": [
-        "EYES",
-        "DYES",
-        "DIES",
-        "DIET",
-        "DIRT",
-        "GIRT",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "EYES",
+	  "target": "GIRL",
+	  "solution": [
+		"EYES",
+		"DYES",
+		"DIES",
+		"DIET",
+		"DIRT",
+		"GIRT",
         "GIRL"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DORK",
-      "target": "ZEAL",
-      "solution": [
-        "DORK",
-        "PORK",
-        "PERK",
-        "PEAK",
-        "PEAL",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DORK",
+	  "target": "ZEAL",
+	  "solution": [
+		"DORK",
+		"PORK",
+		"PERK",
+		"PEAK",
+		"PEAL",
         "ZEAL"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PURR",
-      "target": "TORN",
-      "solution": [
-        "PURR",
-        "BURR",
-        "BURN",
-        "TURN",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PURR",
+	  "target": "TORN",
+	  "solution": [
+		"PURR",
+		"BURR",
+		"BURN",
+		"TURN",
         "TORN"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BOOBING",
-      "target": "HACKING",
-      "solution": [
-        "BOOBING",
-        "BOOKING",
-        "HOOKING",
-        "HOCKING",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BOOBING",
+	  "target": "HACKING",
+	  "solution": [
+		"BOOBING",
+		"BOOKING",
+		"HOOKING",
+		"HOCKING",
         "HACKING"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "HOVE",
-      "target": "TUBA",
-      "solution": [
-        "HOVE",
-        "LOVE",
-        "LOBE",
-        "LUBE",
-        "TUBE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "HOVE",
+	  "target": "TUBA",
+	  "solution": [
+		"HOVE",
+		"LOVE",
+		"LOBE",
+		"LUBE",
+		"TUBE",
         "TUBA"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DEFY",
-      "target": "ROUE",
-      "solution": [
-        "DEFY",
-        "DEFT",
-        "LEFT",
-        "LOFT",
-        "LOUT",
-        "ROUT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DEFY",
+	  "target": "ROUE",
+	  "solution": [
+		"DEFY",
+		"DEFT",
+		"LEFT",
+		"LOFT",
+		"LOUT",
+		"ROUT",
         "ROUE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BITES",
-      "target": "CURRY",
-      "solution": [
-        "BITES",
-        "MITES",
-        "MATES",
-        "MARES",
-        "CARES",
-        "CURES",
-        "CURLS",
-        "CURLY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BITES",
+	  "target": "CURRY",
+	  "solution": [
+		"BITES",
+		"MITES",
+		"MATES",
+		"MARES",
+		"CARES",
+		"CURES",
+		"CURLS",
+		"CURLY",
         "CURRY"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "GRACING",
-      "target": "MEANING",
-      "solution": [
-        "GRACING",
-        "GRADING",
-        "GOADING",
-        "LOADING",
-        "LEADING",
-        "LEANING",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "GRACING",
+	  "target": "MEANING",
+	  "solution": [
+		"GRACING",
+		"GRADING",
+		"GOADING",
+		"LOADING",
+		"LEADING",
+		"LEANING",
         "MEANING"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BUNKED",
-      "target": "GASSES",
-      "solution": [
-        "BUNKED",
-        "BUSKED",
-        "BUSSED",
-        "BUSSES",
-        "BASSES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BUNKED",
+	  "target": "GASSES",
+	  "solution": [
+		"BUNKED",
+		"BUSKED",
+		"BUSSED",
+		"BUSSES",
+		"BASSES",
         "GASSES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "COMPEL",
-      "target": "SAPPED",
-      "solution": [
-        "COMPEL",
-        "COMPED",
-        "CAMPED",
-        "CAPPED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "COMPEL",
+	  "target": "SAPPED",
+	  "solution": [
+		"COMPEL",
+		"COMPED",
+		"CAMPED",
+		"CAPPED",
         "SAPPED"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FOOT",
-      "target": "LESS",
-      "solution": [
-        "FOOT",
-        "LOOT",
-        "LOST",
-        "LEST",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FOOT",
+	  "target": "LESS",
+	  "solution": [
+		"FOOT",
+		"LOOT",
+		"LOST",
+		"LEST",
         "LESS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BENDING",
-      "target": "TUCKING",
-      "solution": [
-        "BENDING",
-        "BANDING",
-        "BANKING",
-        "TANKING",
-        "TACKING",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BENDING",
+	  "target": "TUCKING",
+	  "solution": [
+		"BENDING",
+		"BANDING",
+		"BANKING",
+		"TANKING",
+		"TACKING",
         "TUCKING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "NAILED",
-      "target": "PISTES",
-      "solution": [
-        "NAILED",
-        "BAILED",
-        "BAITED",
-        "BASTED",
-        "PASTED",
-        "PASTES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "NAILED",
+	  "target": "PISTES",
+	  "solution": [
+		"NAILED",
+		"BAILED",
+		"BAITED",
+		"BASTED",
+		"PASTED",
+		"PASTES",
         "PISTES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "PESKY",
-      "target": "TATER",
-      "solution": [
-        "PESKY",
-        "PERKY",
-        "PARKY",
-        "PARKS",
-        "PARES",
-        "PATES",
-        "PATER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "PESKY",
+	  "target": "TATER",
+	  "solution": [
+		"PESKY",
+		"PERKY",
+		"PARKY",
+		"PARKS",
+		"PARES",
+		"PATES",
+		"PATER",
         "TATER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "GRIND",
-      "target": "SOILS",
-      "solution": [
-        "GRIND",
-        "GRINS",
-        "GAINS",
-        "MAINS",
-        "MAILS",
-        "SAILS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "GRIND",
+	  "target": "SOILS",
+	  "solution": [
+		"GRIND",
+		"GRINS",
+		"GAINS",
+		"MAINS",
+		"MAILS",
+		"SAILS",
         "SOILS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BARE",
-      "target": "GELD",
-      "solution": [
-        "BARE",
-        "HARE",
-        "HERE",
-        "HERD",
-        "HELD",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BARE",
+	  "target": "GELD",
+	  "solution": [
+		"BARE",
+		"HARE",
+		"HERE",
+		"HERD",
+		"HELD",
         "GELD"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LEANT",
-      "target": "MELTS",
-      "solution": [
-        "LEANT",
-        "MEANT",
-        "MEANS",
-        "MEATS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LEANT",
+	  "target": "MELTS",
+	  "solution": [
+		"LEANT",
+		"MEANT",
+		"MEANS",
+		"MEATS",
         "MELTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "JAW",
-      "target": "OHM",
-      "solution": [
-        "JAW",
-        "MAW",
-        "MAM",
-        "MHM",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "JAW",
+	  "target": "OHM",
+	  "solution": [
+		"JAW",
+		"MAW",
+		"MAM",
+		"MHM",
         "OHM"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LANES",
-      "target": "POWER",
-      "solution": [
-        "LANES",
-        "BANES",
-        "BONES",
-        "BONER",
-        "BOWER",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LANES",
+	  "target": "POWER",
+	  "solution": [
+		"LANES",
+		"BANES",
+		"BONES",
+		"BONER",
+		"BOWER",
         "POWER"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "IRATE",
-      "target": "SOARS",
-      "solution": [
-        "IRATE",
-        "PRATE",
-        "PRATS",
-        "BRATS",
-        "BOATS",
-        "BOARS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "IRATE",
+	  "target": "SOARS",
+	  "solution": [
+		"IRATE",
+		"PRATE",
+		"PRATS",
+		"BRATS",
+		"BOATS",
+		"BOARS",
         "SOARS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BOBBINS",
-      "target": "WOOLIER",
-      "solution": [
-        "BOBBINS",
-        "BOBBIES",
-        "BOOBIES",
-        "BOOKIES",
-        "COOKIES",
-        "COOLIES",
-        "WOOLIES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BOBBINS",
+	  "target": "WOOLIER",
+	  "solution": [
+		"BOBBINS",
+		"BOBBIES",
+		"BOOBIES",
+		"BOOKIES",
+		"COOKIES",
+		"COOLIES",
+		"WOOLIES",
         "WOOLIER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "SOARS",
-      "target": "UNITS",
-      "solution": [
-        "SOARS",
-        "SPARS",
-        "SPATS",
-        "SPITS",
-        "SNITS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "SOARS",
+	  "target": "UNITS",
+	  "solution": [
+		"SOARS",
+		"SPARS",
+		"SPATS",
+		"SPITS",
+		"SNITS",
         "UNITS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "JOLT",
-      "target": "TINS",
-      "solution": [
-        "JOLT",
-        "JILT",
-        "TILT",
-        "TINT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "JOLT",
+	  "target": "TINS",
+	  "solution": [
+		"JOLT",
+		"JILT",
+		"TILT",
+		"TINT",
         "TINS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "COATS",
-      "target": "TOLLS",
-      "solution": [
-        "COATS",
-        "BOATS",
-        "BOLTS",
-        "BOLLS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "COATS",
+	  "target": "TOLLS",
+	  "solution": [
+		"COATS",
+		"BOATS",
+		"BOLTS",
+		"BOLLS",
         "TOLLS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CHIC",
-      "target": "FLAK",
-      "solution": [
-        "CHIC",
-        "CHIP",
-        "CLIP",
-        "FLIP",
-        "FLAP",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CHIC",
+	  "target": "FLAK",
+	  "solution": [
+		"CHIC",
+		"CHIP",
+		"CLIP",
+		"FLIP",
+		"FLAP",
         "FLAK"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PLOD",
-      "target": "YORE",
-      "solution": [
-        "PLOD",
-        "PLOT",
-        "SLOT",
-        "SOOT",
-        "SORT",
-        "SORE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PLOD",
+	  "target": "YORE",
+	  "solution": [
+		"PLOD",
+		"PLOT",
+		"SLOT",
+		"SOOT",
+		"SORT",
+		"SORE",
         "YORE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DAGS",
-      "target": "KNOB",
-      "solution": [
-        "DAGS",
-        "BAGS",
-        "BOGS",
-        "BOOS",
-        "BOOB",
-        "BLOB",
-        "SLOB",
-        "SNOB",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DAGS",
+	  "target": "KNOB",
+	  "solution": [
+		"DAGS",
+		"BAGS",
+		"BOGS",
+		"BOOS",
+		"BOOB",
+		"BLOB",
+		"SLOB",
+		"SNOB",
         "KNOB"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "FACE",
-      "target": "GAWD",
-      "solution": [
-        "FACE",
-        "LACE",
-        "LACK",
-        "HACK",
-        "HAWK",
-        "GAWK",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "FACE",
+	  "target": "GAWD",
+	  "solution": [
+		"FACE",
+		"LACE",
+		"LACK",
+		"HACK",
+		"HAWK",
+		"GAWK",
         "GAWD"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COMP",
-      "target": "PACT",
-      "solution": [
-        "COMP",
-        "CAMP",
-        "CARP",
-        "CART",
-        "PART",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COMP",
+	  "target": "PACT",
+	  "solution": [
+		"COMP",
+		"CAMP",
+		"CARP",
+		"CART",
+		"PART",
         "PACT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BASK",
-      "target": "RAFT",
-      "solution": [
-        "BASK",
-        "BANK",
-        "RANK",
-        "RANT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BASK",
+	  "target": "RAFT",
+	  "solution": [
+		"BASK",
+		"BANK",
+		"RANK",
+		"RANT",
         "RAFT"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BASED",
-      "target": "FARTS",
-      "solution": [
-        "BASED",
-        "BARED",
-        "FARED",
-        "FARES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BASED",
+	  "target": "FARTS",
+	  "solution": [
+		"BASED",
+		"BARED",
+		"FARED",
+		"FARES",
         "FARTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DOSED",
-      "target": "LAKES",
-      "solution": [
-        "DOSED",
-        "DOMED",
-        "DOMES",
-        "DAMES",
-        "LAMES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DOSED",
+	  "target": "LAKES",
+	  "solution": [
+		"DOSED",
+		"DOMED",
+		"DOMES",
+		"DAMES",
+		"LAMES",
         "LAKES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CROPS",
-      "target": "LEERY",
-      "solution": [
-        "CROPS",
-        "PROPS",
-        "PREPS",
-        "PEEPS",
-        "PEERS",
-        "LEERS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CROPS",
+	  "target": "LEERY",
+	  "solution": [
+		"CROPS",
+		"PROPS",
+		"PREPS",
+		"PEEPS",
+		"PEERS",
+		"LEERS",
         "LEERY"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "SLIPS",
-      "target": "STRIP",
-      "solution": [
-        "SLIPS",
-        "SHIPS",
-        "SHIES",
-        "SHIED",
-        "SHRED",
-        "SHREW",
-        "STREW",
-        "STREP",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "SLIPS",
+	  "target": "STRIP",
+	  "solution": [
+		"SLIPS",
+		"SHIPS",
+		"SHIES",
+		"SHIED",
+		"SHRED",
+		"SHREW",
+		"STREW",
+		"STREP",
         "STRIP"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "DATE",
-      "target": "WHIR",
-      "solution": [
-        "DATE",
-        "MATE",
-        "MATT",
-        "WATT",
-        "WAIT",
-        "WHIT",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "DATE",
+	  "target": "WHIR",
+	  "solution": [
+		"DATE",
+		"MATE",
+		"MATT",
+		"WATT",
+		"WAIT",
+		"WHIT",
         "WHIR"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COALS",
-      "target": "TARPS",
-      "solution": [
-        "COALS",
-        "COOLS",
-        "COOPS",
-        "CORPS",
-        "CARPS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COALS",
+	  "target": "TARPS",
+	  "solution": [
+		"COALS",
+		"COOLS",
+		"COOPS",
+		"CORPS",
+		"CARPS",
         "TARPS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "RODE",
-      "target": "TOIL",
-      "solution": [
-        "RODE",
-        "ROLE",
-        "ROLL",
-        "TOLL",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "RODE",
+	  "target": "TOIL",
+	  "solution": [
+		"RODE",
+		"ROLE",
+		"ROLL",
+		"TOLL",
         "TOIL"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "SOD",
-      "target": "WHO",
-      "solution": [
-        "SOD",
-        "BOD",
-        "BOO",
-        "WOO",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "SOD",
+	  "target": "WHO",
+	  "solution": [
+		"SOD",
+		"BOD",
+		"BOO",
+		"WOO",
         "WHO"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CAST",
-      "target": "STAT",
-      "solution": [
-        "CAST",
-        "PAST",
-        "PEST",
-        "PEAT",
-        "SEAT",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CAST",
+	  "target": "STAT",
+	  "solution": [
+		"CAST",
+		"PAST",
+		"PEST",
+		"PEAT",
+		"SEAT",
         "STAT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "COMP",
-      "target": "FALL",
-      "solution": [
-        "COMP",
-        "POMP",
-        "PUMP",
-        "PULP",
-        "PULL",
-        "FULL",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "COMP",
+	  "target": "FALL",
+	  "solution": [
+		"COMP",
+		"POMP",
+		"PUMP",
+		"PULP",
+		"PULL",
+		"FULL",
         "FALL"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DRAMS",
-      "target": "SOULS",
-      "solution": [
-        "DRAMS",
-        "CRAMS",
-        "CLAMS",
-        "SLAMS",
-        "SLUMS",
-        "SLURS",
-        "SOURS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DRAMS",
+	  "target": "SOULS",
+	  "solution": [
+		"DRAMS",
+		"CRAMS",
+		"CLAMS",
+		"SLAMS",
+		"SLUMS",
+		"SLURS",
+		"SOURS",
         "SOULS"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "BRAN",
-      "target": "TOMB",
-      "solution": [
-        "BRAN",
-        "BRAS",
-        "BOAS",
-        "BOGS",
-        "TOGS",
-        "TOMS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BRAN",
+	  "target": "TOMB",
+	  "solution": [
+		"BRAN",
+		"BRAS",
+		"BOAS",
+		"BOGS",
+		"TOGS",
+		"TOMS",
         "TOMB"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "ELAN",
-      "target": "SPAR",
-      "solution": [
-        "ELAN",
-        "CLAN",
-        "CLAM",
-        "SLAM",
-        "SPAM",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "ELAN",
+	  "target": "SPAR",
+	  "solution": [
+		"ELAN",
+		"CLAN",
+		"CLAM",
+		"SLAM",
+		"SPAM",
         "SPAR"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LAKHS",
-      "target": "RAVEN",
-      "solution": [
-        "LAKHS",
-        "LAKES",
-        "RAKES",
-        "RAVES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LAKHS",
+	  "target": "RAVEN",
+	  "solution": [
+		"LAKHS",
+		"LAKES",
+		"RAKES",
+		"RAVES",
         "RAVEN"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GILTS",
-      "target": "HOODS",
-      "solution": [
-        "GILTS",
-        "GILDS",
-        "GOLDS",
-        "HOLDS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GILTS",
+	  "target": "HOODS",
+	  "solution": [
+		"GILTS",
+		"GILDS",
+		"GOLDS",
+		"HOLDS",
         "HOODS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "OUTED",
-      "target": "SINES",
-      "solution": [
-        "OUTED",
-        "MUTED",
-        "MUTES",
-        "MITES",
-        "SITES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "OUTED",
+	  "target": "SINES",
+	  "solution": [
+		"OUTED",
+		"MUTED",
+		"MUTES",
+		"MITES",
+		"SITES",
         "SINES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BONDS",
-      "target": "STAGS",
-      "solution": [
-        "BONDS",
-        "BENDS",
-        "BEADS",
-        "BEARS",
-        "SEARS",
-        "STARS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BONDS",
+	  "target": "STAGS",
+	  "solution": [
+		"BONDS",
+		"BENDS",
+		"BEADS",
+		"BEARS",
+		"SEARS",
+		"STARS",
         "STAGS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CANDOR",
-      "target": "SUCKED",
-      "solution": [
-        "CANDOR",
-        "CANTOR",
-        "CANTER",
-        "BANTER",
-        "BANKER",
-        "BUNKER",
-        "BUNKED",
-        "BUCKED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CANDOR",
+	  "target": "SUCKED",
+	  "solution": [
+		"CANDOR",
+		"CANTOR",
+		"CANTER",
+		"BANTER",
+		"BANKER",
+		"BUNKER",
+		"BUNKED",
+		"BUCKED",
         "SUCKED"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "HEARER",
-      "target": "STOREY",
-      "solution": [
-        "HEARER",
-        "NEARER",
-        "NEARED",
-        "SEARED",
-        "STARED",
-        "STORED",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "HEARER",
+	  "target": "STOREY",
+	  "solution": [
+		"HEARER",
+		"NEARER",
+		"NEARED",
+		"SEARED",
+		"STARED",
+		"STORED",
         "STOREY"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CITY",
-      "target": "PAWN",
-      "solution": [
-        "CITY",
-        "PITY",
-        "PITS",
-        "PATS",
-        "PAWS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CITY",
+	  "target": "PAWN",
+	  "solution": [
+		"CITY",
+		"PITY",
+		"PITS",
+		"PATS",
+		"PAWS",
         "PAWN"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DIME",
-      "target": "DULL",
-      "solution": [
-        "DIME",
-        "DOME",
-        "DOLE",
-        "DOLL",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DIME",
+	  "target": "DULL",
+	  "solution": [
+		"DIME",
+		"DOME",
+		"DOLE",
+		"DOLL",
         "DULL"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BRAS",
-      "target": "FLAK",
-      "solution": [
-        "BRAS",
-        "BRAG",
-        "BLAG",
-        "FLAG",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BRAS",
+	  "target": "FLAK",
+	  "solution": [
+		"BRAS",
+		"BRAG",
+		"BLAG",
+		"FLAG",
         "FLAK"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GAPED",
-      "target": "WELLS",
-      "solution": [
-        "GAPED",
-        "GAPES",
-        "GALES",
-        "GALLS",
-        "WALLS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GAPED",
+	  "target": "WELLS",
+	  "solution": [
+		"GAPED",
+		"GAPES",
+		"GALES",
+		"GALLS",
+		"WALLS",
         "WELLS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PEALING",
-      "target": "WINCING",
-      "solution": [
-        "PEALING",
-        "PEAKING",
-        "PECKING",
-        "PICKING",
-        "WICKING",
-        "WINKING",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PEALING",
+	  "target": "WINCING",
+	  "solution": [
+		"PEALING",
+		"PEAKING",
+		"PECKING",
+		"PICKING",
+		"WICKING",
+		"WINKING",
         "WINCING"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "FOCUS",
-      "target": "SOOTY",
-      "solution": [
-        "FOCUS",
-        "LOCUS",
-        "LOCKS",
-        "LOOKS",
-        "BOOKS",
-        "BOOTS",
-        "BOOTY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "FOCUS",
+	  "target": "SOOTY",
+	  "solution": [
+		"FOCUS",
+		"LOCUS",
+		"LOCKS",
+		"LOOKS",
+		"BOOKS",
+		"BOOTS",
+		"BOOTY",
         "SOOTY"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "LUCKY",
-      "target": "POOFS",
-      "solution": [
-        "LUCKY",
-        "LUCKS",
-        "RUCKS",
-        "ROCKS",
-        "ROOKS",
-        "ROOFS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "LUCKY",
+	  "target": "POOFS",
+	  "solution": [
+		"LUCKY",
+		"LUCKS",
+		"RUCKS",
+		"ROCKS",
+		"ROOKS",
+		"ROOFS",
         "POOFS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "EARNS",
-      "target": "TAPER",
-      "solution": [
-        "EARNS",
-        "TARNS",
-        "TARES",
-        "TAPES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "EARNS",
+	  "target": "TAPER",
+	  "solution": [
+		"EARNS",
+		"TARNS",
+		"TARES",
+		"TAPES",
         "TAPER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "OATS",
-      "target": "TACT",
-      "solution": [
-        "OATS",
-        "OARS",
-        "TARS",
-        "TART",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "OATS",
+	  "target": "TACT",
+	  "solution": [
+		"OATS",
+		"OARS",
+		"TARS",
+		"TART",
         "TACT"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "AFT",
-      "target": "LEE",
-      "solution": [
-        "AFT",
-        "ACT",
-        "ACE",
-        "AYE",
-        "LYE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "AFT",
+	  "target": "LEE",
+	  "solution": [
+		"AFT",
+		"ACT",
+		"ACE",
+		"AYE",
+		"LYE",
         "LEE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BEANS",
-      "target": "DOLED",
-      "solution": [
-        "BEANS",
-        "DEANS",
-        "DEALS",
-        "DELLS",
-        "DOLLS",
-        "DOLES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BEANS",
+	  "target": "DOLED",
+	  "solution": [
+		"BEANS",
+		"DEANS",
+		"DEALS",
+		"DELLS",
+		"DOLLS",
+		"DOLES",
         "DOLED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "MOLTED",
-      "target": "SIGHED",
-      "solution": [
-        "MOLTED",
-        "JOLTED",
-        "JILTED",
-        "TILTED",
-        "TINTED",
-        "TINNED",
-        "SINNED",
-        "SIGNED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "MOLTED",
+	  "target": "SIGHED",
+	  "solution": [
+		"MOLTED",
+		"JOLTED",
+		"JILTED",
+		"TILTED",
+		"TINTED",
+		"TINNED",
+		"SINNED",
+		"SIGNED",
         "SIGHED"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "BASHED",
-      "target": "PRATED",
-      "solution": [
-        "BASHED",
-        "CASHED",
-        "COSHED",
-        "COSTED",
-        "COATED",
-        "CRATED",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BASHED",
+	  "target": "PRATED",
+	  "solution": [
+		"BASHED",
+		"CASHED",
+		"COSHED",
+		"COSTED",
+		"COATED",
+		"CRATED",
         "PRATED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "HOOK",
-      "target": "TILT",
-      "solution": [
-        "HOOK",
-        "TOOK",
-        "TOOL",
-        "TOLL",
-        "TILL",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "HOOK",
+	  "target": "TILT",
+	  "solution": [
+		"HOOK",
+		"TOOK",
+		"TOOL",
+		"TOLL",
+		"TILL",
         "TILT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BAPS",
-      "target": "WAVY",
-      "solution": [
-        "BAPS",
-        "BARS",
-        "WARS",
-        "WARY",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BAPS",
+	  "target": "WAVY",
+	  "solution": [
+		"BAPS",
+		"BARS",
+		"WARS",
+		"WARY",
         "WAVY"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GALS",
-      "target": "TOTS",
-      "solution": [
-        "GALS",
-        "PALS",
-        "POLS",
-        "POTS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GALS",
+	  "target": "TOTS",
+	  "solution": [
+		"GALS",
+		"PALS",
+		"POLS",
+		"POTS",
         "TOTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BANE",
-      "target": "DUMP",
-      "solution": [
-        "BANE",
-        "CANE",
-        "CAME",
-        "DAME",
-        "DAMP",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BANE",
+	  "target": "DUMP",
+	  "solution": [
+		"BANE",
+		"CANE",
+		"CAME",
+		"DAME",
+		"DAMP",
         "DUMP"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DOOR",
-      "target": "NEXT",
-      "solution": [
-        "DOOR",
-        "BOOR",
-        "BOAR",
-        "BEAR",
-        "NEAR",
-        "NEAT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DOOR",
+	  "target": "NEXT",
+	  "solution": [
+		"DOOR",
+		"BOOR",
+		"BOAR",
+		"BEAR",
+		"NEAR",
+		"NEAT",
         "NEXT"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "COUCH",
-      "target": "PLUNK",
-      "solution": [
-        "COUCH",
-        "POUCH",
-        "POACH",
-        "PEACH",
-        "PEACE",
-        "PLACE",
-        "PLANE",
-        "PLANK",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "COUCH",
+	  "target": "PLUNK",
+	  "solution": [
+		"COUCH",
+		"POUCH",
+		"POACH",
+		"PEACH",
+		"PEACE",
+		"PLACE",
+		"PLANE",
+		"PLANK",
         "PLUNK"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "MOAN",
-      "target": "PLED",
-      "solution": [
-        "MOAN",
-        "ROAN",
-        "ROAD",
-        "READ",
-        "REED",
-        "PEED",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "MOAN",
+	  "target": "PLED",
+	  "solution": [
+		"MOAN",
+		"ROAN",
+		"ROAD",
+		"READ",
+		"REED",
+		"PEED",
         "PLED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BYES",
-      "target": "HINT",
-      "solution": [
-        "BYES",
-        "DYES",
-        "DIES",
-        "DINS",
-        "DINT",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BYES",
+	  "target": "HINT",
+	  "solution": [
+		"BYES",
+		"DYES",
+		"DIES",
+		"DINS",
+		"DINT",
         "HINT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FASTED",
-      "target": "FORDED",
-      "solution": [
-        "FASTED",
-        "FARTED",
-        "FARMED",
-        "FORMED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FASTED",
+	  "target": "FORDED",
+	  "solution": [
+		"FASTED",
+		"FARTED",
+		"FARMED",
+		"FORMED",
         "FORDED"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CORE",
-      "target": "DENS",
-      "solution": [
-        "CORE",
-        "CONE",
-        "DONE",
-        "DONS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CORE",
+	  "target": "DENS",
+	  "solution": [
+		"CORE",
+		"CONE",
+		"DONE",
+		"DONS",
         "DENS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LANE",
-      "target": "LOAN",
-      "solution": [
-        "LANE",
-        "LONE",
-        "LORE",
-        "LORD",
-        "LOAD",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LANE",
+	  "target": "LOAN",
+	  "solution": [
+		"LANE",
+		"LONE",
+		"LORE",
+		"LORD",
+		"LOAD",
         "LOAN"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DETER",
-      "target": "LEVEE",
-      "solution": [
-        "DETER",
-        "METER",
-        "MITER",
-        "LITER",
-        "LIVER",
-        "LEVER",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DETER",
+	  "target": "LEVEE",
+	  "solution": [
+		"DETER",
+		"METER",
+		"MITER",
+		"LITER",
+		"LIVER",
+		"LEVER",
         "LEVEE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DHOW",
-      "target": "LAUD",
-      "solution": [
-        "DHOW",
-        "SHOW",
-        "SHOT",
-        "SOOT",
-        "LOOT",
-        "LOUT",
-        "LOUD",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DHOW",
+	  "target": "LAUD",
+	  "solution": [
+		"DHOW",
+		"SHOW",
+		"SHOT",
+		"SOOT",
+		"LOOT",
+		"LOUT",
+		"LOUD",
         "LAUD"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "PIGGED",
-      "target": "POSSES",
-      "solution": [
-        "PIGGED",
-        "PINGED",
-        "PONGED",
-        "PONIED",
-        "PONIES",
-        "POSIES",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "PIGGED",
+	  "target": "POSSES",
+	  "solution": [
+		"PIGGED",
+		"PINGED",
+		"PONGED",
+		"PONIED",
+		"PONIES",
+		"POSIES",
         "POSSES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CHECK",
-      "target": "SLUNG",
-      "solution": [
-        "CHECK",
-        "CHUCK",
-        "CLUCK",
-        "CLUNK",
-        "SLUNK",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CHECK",
+	  "target": "SLUNG",
+	  "solution": [
+		"CHECK",
+		"CHUCK",
+		"CLUCK",
+		"CLUNK",
+		"SLUNK",
         "SLUNG"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HATED",
-      "target": "NAVEL",
-      "solution": [
-        "HATED",
-        "RATED",
-        "RAVED",
-        "RAVEL",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HATED",
+	  "target": "NAVEL",
+	  "solution": [
+		"HATED",
+		"RATED",
+		"RAVED",
+		"RAVEL",
         "NAVEL"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "RESTING",
-      "target": "WEDDING",
-      "solution": [
-        "RESTING",
-        "RENTING",
-        "RENDING",
-        "WENDING",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "RESTING",
+	  "target": "WEDDING",
+	  "solution": [
+		"RESTING",
+		"RENTING",
+		"RENDING",
+		"WENDING",
         "WEDDING"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LAZY",
-      "target": "LEIS",
-      "solution": [
-        "LAZY",
-        "LADY",
-        "LADS",
-        "LAGS",
-        "LEGS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LAZY",
+	  "target": "LEIS",
+	  "solution": [
+		"LAZY",
+		"LADY",
+		"LADS",
+		"LAGS",
+		"LEGS",
         "LEIS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "JEERS",
-      "target": "MINES",
-      "solution": [
-        "JEERS",
-        "SEERS",
-        "SEEDS",
-        "SENDS",
-        "MENDS",
-        "MINDS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "JEERS",
+	  "target": "MINES",
+	  "solution": [
+		"JEERS",
+		"SEERS",
+		"SEEDS",
+		"SENDS",
+		"MENDS",
+		"MINDS",
         "MINES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CRAZY",
-      "target": "ELITE",
-      "solution": [
-        "CRAZY",
-        "CRAZE",
-        "GRAZE",
-        "GLAZE",
-        "GLADE",
-        "GLIDE",
-        "ELIDE",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CRAZY",
+	  "target": "ELITE",
+	  "solution": [
+		"CRAZY",
+		"CRAZE",
+		"GRAZE",
+		"GLAZE",
+		"GLADE",
+		"GLIDE",
+		"ELIDE",
         "ELITE"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "HOOTER",
-      "target": "JUNKED",
-      "solution": [
-        "HOOTER",
-        "HOOKER",
-        "HOOKED",
-        "BOOKED",
-        "BONKED",
-        "BUNKED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "HOOTER",
+	  "target": "JUNKED",
+	  "solution": [
+		"HOOTER",
+		"HOOKER",
+		"HOOKED",
+		"BOOKED",
+		"BONKED",
+		"BUNKED",
         "JUNKED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BENDS",
-      "target": "STATE",
-      "solution": [
-        "BENDS",
-        "BEADS",
-        "BEATS",
-        "SEATS",
-        "STATS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BENDS",
+	  "target": "STATE",
+	  "solution": [
+		"BENDS",
+		"BEADS",
+		"BEATS",
+		"SEATS",
+		"STATS",
         "STATE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "COCKS",
-      "target": "DOMES",
-      "solution": [
-        "COCKS",
-        "CONKS",
-        "CONES",
-        "COMES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "COCKS",
+	  "target": "DOMES",
+	  "solution": [
+		"COCKS",
+		"CONKS",
+		"CONES",
+		"COMES",
         "DOMES"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "HUBS",
-      "target": "RANG",
-      "solution": [
-        "HUBS",
-        "RUBS",
-        "RUNS",
-        "RUNG",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "HUBS",
+	  "target": "RANG",
+	  "solution": [
+		"HUBS",
+		"RUBS",
+		"RUNS",
+		"RUNG",
         "RANG"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GAIT",
-      "target": "ROAD",
-      "solution": [
-        "GAIT",
-        "GRIT",
-        "GRID",
-        "GRAD",
-        "GOAD",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GAIT",
+	  "target": "ROAD",
+	  "solution": [
+		"GAIT",
+		"GRIT",
+		"GRID",
+		"GRAD",
+		"GOAD",
         "ROAD"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "ARCED",
-      "target": "TILLS",
-      "solution": [
-        "ARCED",
-        "ARMED",
-        "AIMED",
-        "TIMED",
-        "TILED",
-        "TILES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "ARCED",
+	  "target": "TILLS",
+	  "solution": [
+		"ARCED",
+		"ARMED",
+		"AIMED",
+		"TIMED",
+		"TILED",
+		"TILES",
         "TILLS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BUGGIES",
-      "target": "HANDIER",
-      "solution": [
-        "BUGGIES",
-        "BUDGIES",
-        "BUDDIES",
-        "BADDIES",
-        "DADDIES",
-        "DANDIES",
-        "DANDIER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BUGGIES",
+	  "target": "HANDIER",
+	  "solution": [
+		"BUGGIES",
+		"BUDGIES",
+		"BUDDIES",
+		"BADDIES",
+		"DADDIES",
+		"DANDIES",
+		"DANDIER",
         "HANDIER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "CLOWN",
-      "target": "CORDS",
-      "solution": [
-        "CLOWN",
-        "CROWN",
-        "CROWS",
-        "CROPS",
-        "COOPS",
-        "CORPS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "CLOWN",
+	  "target": "CORDS",
+	  "solution": [
+		"CLOWN",
+		"CROWN",
+		"CROWS",
+		"CROPS",
+		"COOPS",
+		"CORPS",
         "CORDS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LAUD",
-      "target": "SNIT",
-      "solution": [
-        "LAUD",
-        "LAID",
-        "SAID",
-        "SKID",
-        "SKIT",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LAUD",
+	  "target": "SNIT",
+	  "solution": [
+		"LAUD",
+		"LAID",
+		"SAID",
+		"SKID",
+		"SKIT",
         "SNIT"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "COPES",
-      "target": "DELLS",
-      "solution": [
-        "COPES",
-        "DOPES",
-        "DOLES",
-        "DOLLS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "COPES",
+	  "target": "DELLS",
+	  "solution": [
+		"COPES",
+		"DOPES",
+		"DOLES",
+		"DOLLS",
         "DELLS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "JUGGLED",
-      "target": "TINGLES",
-      "solution": [
-        "JUGGLED",
-        "JIGGLED",
-        "JINGLED",
-        "TINGLED",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "JUGGLED",
+	  "target": "TINGLES",
+	  "solution": [
+		"JUGGLED",
+		"JIGGLED",
+		"JINGLED",
+		"TINGLED",
         "TINGLES"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "OURS",
-      "target": "SEWS",
-      "solution": [
-        "OURS",
-        "BURS",
-        "BUTS",
-        "BETS",
-        "SETS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "OURS",
+	  "target": "SEWS",
+	  "solution": [
+		"OURS",
+		"BURS",
+		"BUTS",
+		"BETS",
+		"SETS",
         "SEWS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CHEWED",
-      "target": "LOCKER",
-      "solution": [
-        "CHEWED",
-        "CHOWED",
-        "CHOKED",
-        "COOKED",
-        "LOOKED",
-        "LOCKED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CHEWED",
+	  "target": "LOCKER",
+	  "solution": [
+		"CHEWED",
+		"CHOWED",
+		"CHOKED",
+		"COOKED",
+		"LOOKED",
+		"LOCKED",
         "LOCKER"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BOILS",
-      "target": "LEARN",
-      "solution": [
-        "BOILS",
-        "SOILS",
-        "SOULS",
-        "SOURS",
-        "SOARS",
-        "SEARS",
-        "YEARS",
-        "YEARN",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BOILS",
+	  "target": "LEARN",
+	  "solution": [
+		"BOILS",
+		"SOILS",
+		"SOULS",
+		"SOURS",
+		"SOARS",
+		"SEARS",
+		"YEARS",
+		"YEARN",
         "LEARN"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "GOAD",
-      "target": "SACK",
-      "solution": [
-        "GOAD",
-        "LOAD",
-        "LORD",
-        "LARD",
-        "LARK",
-        "LACK",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "GOAD",
+	  "target": "SACK",
+	  "solution": [
+		"GOAD",
+		"LOAD",
+		"LORD",
+		"LARD",
+		"LARK",
+		"LACK",
         "SACK"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DUNKED",
-      "target": "MUSTER",
-      "solution": [
-        "DUNKED",
-        "BUNKED",
-        "BUSKED",
-        "BUSTED",
-        "BUSTER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DUNKED",
+	  "target": "MUSTER",
+	  "solution": [
+		"DUNKED",
+		"BUNKED",
+		"BUSKED",
+		"BUSTED",
+		"BUSTER",
         "MUSTER"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HERD",
-      "target": "JAMS",
-      "solution": [
-        "HERD",
-        "HERS",
-        "HEMS",
-        "HAMS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HERD",
+	  "target": "JAMS",
+	  "solution": [
+		"HERD",
+		"HERS",
+		"HEMS",
+		"HAMS",
         "JAMS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LIES",
-      "target": "RUNS",
-      "solution": [
-        "LIES",
-        "DIES",
-        "DUES",
-        "RUES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LIES",
+	  "target": "RUNS",
+	  "solution": [
+		"LIES",
+		"DIES",
+		"DUES",
+		"RUES",
         "RUNS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BAND",
-      "target": "HOOF",
-      "solution": [
-        "BAND",
-        "HAND",
-        "HANK",
-        "HONK",
-        "HOOK",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BAND",
+	  "target": "HOOF",
+	  "solution": [
+		"BAND",
+		"HAND",
+		"HANK",
+		"HONK",
+		"HOOK",
         "HOOF"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FENCED",
-      "target": "WODGES",
-      "solution": [
-        "FENCED",
-        "FENDED",
-        "WENDED",
-        "WEDDED",
-        "WEDGED",
-        "WEDGES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FENCED",
+	  "target": "WODGES",
+	  "solution": [
+		"FENCED",
+		"FENDED",
+		"WENDED",
+		"WEDDED",
+		"WEDGED",
+		"WEDGES",
         "WODGES"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "NUDGES",
-      "target": "PADDED",
-      "solution": [
-        "NUDGES",
-        "BUDGES",
-        "BUDGED",
-        "BUDDED",
-        "BEDDED",
-        "WEDDED",
-        "WADDED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "NUDGES",
+	  "target": "PADDED",
+	  "solution": [
+		"NUDGES",
+		"BUDGES",
+		"BUDGED",
+		"BUDDED",
+		"BEDDED",
+		"WEDDED",
+		"WADDED",
         "PADDED"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "BONDED",
-      "target": "DOUSED",
-      "solution": [
-        "BONDED",
-        "BONKED",
-        "BOOKED",
-        "LOOKED",
-        "LOOSED",
-        "LOUSED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BONDED",
+	  "target": "DOUSED",
+	  "solution": [
+		"BONDED",
+		"BONKED",
+		"BOOKED",
+		"LOOKED",
+		"LOOSED",
+		"LOUSED",
         "DOUSED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CHINS",
-      "target": "SLUGS",
-      "solution": [
-        "CHINS",
-        "SHINS",
-        "SHUNS",
-        "SHUTS",
-        "SLUTS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CHINS",
+	  "target": "SLUGS",
+	  "solution": [
+		"CHINS",
+		"SHINS",
+		"SHUNS",
+		"SHUTS",
+		"SLUTS",
         "SLUGS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PARA",
-      "target": "PIKE",
-      "solution": [
-        "PARA",
-        "PARE",
-        "PORE",
-        "POKE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PARA",
+	  "target": "PIKE",
+	  "solution": [
+		"PARA",
+		"PARE",
+		"PORE",
+		"POKE",
         "PIKE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "LENS",
-      "target": "POSE",
-      "solution": [
-        "LENS",
-        "LESS",
-        "LOSS",
-        "POSS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "LENS",
+	  "target": "POSE",
+	  "solution": [
+		"LENS",
+		"LESS",
+		"LOSS",
+		"POSS",
         "POSE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GALA",
-      "target": "LAVA",
-      "solution": [
-        "GALA",
-        "GAGA",
-        "GAGS",
-        "LAGS",
-        "LAVS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GALA",
+	  "target": "LAVA",
+	  "solution": [
+		"GALA",
+		"GAGA",
+		"GAGS",
+		"LAGS",
+		"LAVS",
         "LAVA"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "PESOS",
-      "target": "WRITS",
-      "solution": [
-        "PESOS",
-        "PESTS",
-        "PASTS",
-        "PANTS",
-        "WANTS",
-        "WAITS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "PESOS",
+	  "target": "WRITS",
+	  "solution": [
+		"PESOS",
+		"PESTS",
+		"PASTS",
+		"PANTS",
+		"WANTS",
+		"WAITS",
         "WRITS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BLED",
-      "target": "WREN",
-      "solution": [
-        "BLED",
-        "FLED",
-        "FEED",
-        "TEED",
-        "TEEN",
-        "THEN",
-        "WHEN",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BLED",
+	  "target": "WREN",
+	  "solution": [
+		"BLED",
+		"FLED",
+		"FEED",
+		"TEED",
+		"TEEN",
+		"THEN",
+		"WHEN",
         "WREN"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "DOSE",
-      "target": "SPAT",
-      "solution": [
-        "DOSE",
-        "HOSE",
-        "HOST",
-        "HOOT",
-        "SOOT",
-        "SPOT",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "DOSE",
+	  "target": "SPAT",
+	  "solution": [
+		"DOSE",
+		"HOSE",
+		"HOST",
+		"HOOT",
+		"SOOT",
+		"SPOT",
         "SPAT"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "HERDS",
-      "target": "HOARD",
-      "solution": [
-        "HERDS",
-        "HEADS",
-        "HEARS",
-        "HEARD",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "HERDS",
+	  "target": "HOARD",
+	  "solution": [
+		"HERDS",
+		"HEADS",
+		"HEARS",
+		"HEARD",
         "HOARD"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FAX",
-      "target": "WET",
-      "solution": [
-        "FAX",
-        "MAX",
-        "MAT",
-        "MET",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FAX",
+	  "target": "WET",
+	  "solution": [
+		"FAX",
+		"MAX",
+		"MAT",
+		"MET",
         "WET"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "DICK",
-      "target": "ROAM",
-      "solution": [
-        "DICK",
-        "RICK",
-        "ROCK",
-        "ROOK",
-        "ROOM",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "DICK",
+	  "target": "ROAM",
+	  "solution": [
+		"DICK",
+		"RICK",
+		"ROCK",
+		"ROOK",
+		"ROOM",
         "ROAM"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DRAMS",
-      "target": "LEAFS",
-      "solution": [
-        "DRAMS",
-        "GRAMS",
-        "GRADS",
-        "GOADS",
-        "LOADS",
-        "LEADS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DRAMS",
+	  "target": "LEAFS",
+	  "solution": [
+		"DRAMS",
+		"GRAMS",
+		"GRADS",
+		"GOADS",
+		"LOADS",
+		"LEADS",
         "LEAFS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GEN",
-      "target": "IVY",
-      "solution": [
-        "GEN",
-        "DEN",
-        "DON",
-        "ION",
-        "INN",
-        "INK",
-        "ICK",
-        "ICY",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GEN",
+	  "target": "IVY",
+	  "solution": [
+		"GEN",
+		"DEN",
+		"DON",
+		"ION",
+		"INN",
+		"INK",
+		"ICK",
+		"ICY",
         "IVY"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "COMAS",
-      "target": "LEVEE",
-      "solution": [
-        "COMAS",
-        "COMES",
-        "COVES",
-        "LOVES",
-        "LOVER",
-        "LEVER",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "COMAS",
+	  "target": "LEVEE",
+	  "solution": [
+		"COMAS",
+		"COMES",
+		"COVES",
+		"LOVES",
+		"LOVER",
+		"LEVER",
         "LEVEE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GASPS",
-      "target": "HIDES",
-      "solution": [
-        "GASPS",
-        "HASPS",
-        "HARPS",
-        "HARES",
-        "HIRES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GASPS",
+	  "target": "HIDES",
+	  "solution": [
+		"GASPS",
+		"HASPS",
+		"HARPS",
+		"HARES",
+		"HIRES",
         "HIDES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "TIC",
-      "target": "YOU",
-      "solution": [
-        "TIC",
-        "TIN",
-        "YIN",
-        "YON",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "TIC",
+	  "target": "YOU",
+	  "solution": [
+		"TIC",
+		"TIN",
+		"YIN",
+		"YON",
         "YOU"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BOBS",
-      "target": "BYTE",
-      "solution": [
-        "BOBS",
-        "BIBS",
-        "BITS",
-        "BITE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BOBS",
+	  "target": "BYTE",
+	  "solution": [
+		"BOBS",
+		"BIBS",
+		"BITS",
+		"BITE",
         "BYTE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BOOTY",
-      "target": "ROUGE",
-      "solution": [
-        "BOOTY",
-        "BOOTS",
-        "ROOTS",
-        "ROUTS",
-        "ROUTE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BOOTY",
+	  "target": "ROUGE",
+	  "solution": [
+		"BOOTY",
+		"BOOTS",
+		"ROOTS",
+		"ROUTS",
+		"ROUTE",
         "ROUGE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "GOBBED",
-      "target": "TANKED",
-      "solution": [
-        "GOBBED",
-        "BOBBED",
-        "BOOBED",
-        "BOOKED",
-        "BONKED",
-        "BANKED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "GOBBED",
+	  "target": "TANKED",
+	  "solution": [
+		"GOBBED",
+		"BOBBED",
+		"BOOBED",
+		"BOOKED",
+		"BONKED",
+		"BANKED",
         "TANKED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "PINTOS",
-      "target": "TINKER",
-      "solution": [
-        "PINTOS",
-        "PANTOS",
-        "CANTOS",
-        "CANTOR",
-        "CANTER",
-        "CANKER",
-        "TANKER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "PINTOS",
+	  "target": "TINKER",
+	  "solution": [
+		"PINTOS",
+		"PANTOS",
+		"CANTOS",
+		"CANTOR",
+		"CANTER",
+		"CANKER",
+		"TANKER",
         "TINKER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "ANT",
-      "target": "TEA",
-      "solution": [
-        "ANT",
-        "AND",
-        "AID",
-        "BID",
-        "BED",
-        "TED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "ANT",
+	  "target": "TEA",
+	  "solution": [
+		"ANT",
+		"AND",
+		"AID",
+		"BID",
+		"BED",
+		"TED",
         "TEA"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "HEWS",
-      "target": "TORE",
-      "solution": [
-        "HEWS",
-        "MEWS",
-        "MOWS",
-        "TOWS",
-        "TORS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "HEWS",
+	  "target": "TORE",
+	  "solution": [
+		"HEWS",
+		"MEWS",
+		"MOWS",
+		"TOWS",
+		"TORS",
         "TORE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CRATES",
-      "target": "PRANGS",
-      "solution": [
-        "CRATES",
-        "CRANES",
-        "CRANKS",
-        "PRANKS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CRATES",
+	  "target": "PRANGS",
+	  "solution": [
+		"CRATES",
+		"CRANES",
+		"CRANKS",
+		"PRANKS",
         "PRANGS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "FOULS",
-      "target": "RORTS",
-      "solution": [
-        "FOULS",
-        "FOOLS",
-        "FOOTS",
-        "ROOTS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "FOULS",
+	  "target": "RORTS",
+	  "solution": [
+		"FOULS",
+		"FOOLS",
+		"FOOTS",
+		"ROOTS",
         "RORTS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "PLOPS",
-      "target": "SPICS",
-      "solution": [
-        "PLOPS",
-        "SLOPS",
-        "SLIPS",
-        "SLITS",
-        "SPITS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "PLOPS",
+	  "target": "SPICS",
+	  "solution": [
+		"PLOPS",
+		"SLOPS",
+		"SLIPS",
+		"SLITS",
+		"SPITS",
         "SPICS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CHATS",
-      "target": "SCOOT",
-      "solution": [
-        "CHATS",
-        "CHITS",
-        "SHITS",
-        "SHOTS",
-        "SHOOS",
-        "SHOOT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CHATS",
+	  "target": "SCOOT",
+	  "solution": [
+		"CHATS",
+		"CHITS",
+		"SHITS",
+		"SHOTS",
+		"SHOOS",
+		"SHOOT",
         "SCOOT"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "JEEPS",
-      "target": "NIXES",
-      "solution": [
-        "JEEPS",
-        "WEEPS",
-        "WEEDS",
-        "WENDS",
-        "WINDS",
-        "WINES",
-        "NINES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "JEEPS",
+	  "target": "NIXES",
+	  "solution": [
+		"JEEPS",
+		"WEEPS",
+		"WEEDS",
+		"WENDS",
+		"WINDS",
+		"WINES",
+		"NINES",
         "NIXES"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "DUCT",
-      "target": "WEDS",
-      "solution": [
-        "DUCT",
-        "DUET",
-        "SUET",
-        "SUES",
-        "SEES",
-        "WEES",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "DUCT",
+	  "target": "WEDS",
+	  "solution": [
+		"DUCT",
+		"DUET",
+		"SUET",
+		"SUES",
+		"SEES",
+		"WEES",
         "WEDS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "OAKS",
-      "target": "PIED",
-      "solution": [
-        "OAKS",
-        "OATS",
-        "PATS",
-        "PITS",
-        "PIES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "OAKS",
+	  "target": "PIED",
+	  "solution": [
+		"OAKS",
+		"OATS",
+		"PATS",
+		"PITS",
+		"PIES",
         "PIED"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "CAGES",
-      "target": "TOWED",
-      "solution": [
-        "CAGES",
-        "CAGED",
-        "CAWED",
-        "COWED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "CAGES",
+	  "target": "TOWED",
+	  "solution": [
+		"CAGES",
+		"CAGED",
+		"CAWED",
+		"COWED",
         "TOWED"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CITE",
-      "target": "PUGS",
-      "solution": [
-        "CITE",
-        "CUTE",
-        "CUTS",
-        "PUTS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CITE",
+	  "target": "PUGS",
+	  "solution": [
+		"CITE",
+		"CUTE",
+		"CUTS",
+		"PUTS",
         "PUGS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BULK",
-      "target": "COOL",
-      "solution": [
-        "BULK",
-        "BUNK",
-        "BONK",
-        "CONK",
-        "COOK",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BULK",
+	  "target": "COOL",
+	  "solution": [
+		"BULK",
+		"BUNK",
+		"BONK",
+		"CONK",
+		"COOK",
         "COOL"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HOSTS",
-      "target": "MIXER",
-      "solution": [
-        "HOSTS",
-        "HOSES",
-        "ROSES",
-        "RISES",
-        "RISER",
-        "MISER",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HOSTS",
+	  "target": "MIXER",
+	  "solution": [
+		"HOSTS",
+		"HOSES",
+		"ROSES",
+		"RISES",
+		"RISER",
+		"MISER",
         "MIXER"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "EVES",
-      "target": "HILT",
-      "solution": [
-        "EVES",
-        "EYES",
-        "DYES",
-        "DIES",
-        "DINS",
-        "DINT",
-        "HINT",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "EVES",
+	  "target": "HILT",
+	  "solution": [
+		"EVES",
+		"EYES",
+		"DYES",
+		"DIES",
+		"DINS",
+		"DINT",
+		"HINT",
         "HILT"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "CLUE",
-      "target": "GRIP",
-      "solution": [
-        "CLUE",
-        "GLUE",
-        "GLUM",
-        "GLAM",
-        "GRAM",
-        "GRIM",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "CLUE",
+	  "target": "GRIP",
+	  "solution": [
+		"CLUE",
+		"GLUE",
+		"GLUM",
+		"GLAM",
+		"GRAM",
+		"GRIM",
         "GRIP"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "FOILS",
-      "target": "GAMES",
-      "solution": [
-        "FOILS",
-        "FAILS",
-        "FALLS",
-        "GALLS",
-        "GALES",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "FOILS",
+	  "target": "GAMES",
+	  "solution": [
+		"FOILS",
+		"FAILS",
+		"FALLS",
+		"GALLS",
+		"GALES",
         "GAMES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HILT",
-      "target": "VEST",
-      "solution": [
-        "HILT",
-        "LILT",
-        "LIST",
-        "LEST",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HILT",
+	  "target": "VEST",
+	  "solution": [
+		"HILT",
+		"LILT",
+		"LIST",
+		"LEST",
         "VEST"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "MORE",
-      "target": "RINK",
-      "solution": [
-        "MORE",
-        "MIRE",
-        "MINE",
-        "MINK",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "MORE",
+	  "target": "RINK",
+	  "solution": [
+		"MORE",
+		"MIRE",
+		"MINE",
+		"MINK",
         "RINK"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CASK",
-      "target": "PUPS",
-      "solution": [
-        "CASK",
-        "BASK",
-        "BASS",
-        "PASS",
-        "PUSS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CASK",
+	  "target": "PUPS",
+	  "solution": [
+		"CASK",
+		"BASK",
+		"BASS",
+		"PASS",
+		"PUSS",
         "PUPS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "TRAD",
-      "target": "WAIL",
-      "solution": [
-        "TRAD",
-        "GRAD",
-        "GRID",
-        "GRIT",
-        "WRIT",
-        "WAIT",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "TRAD",
+	  "target": "WAIL",
+	  "solution": [
+		"TRAD",
+		"GRAD",
+		"GRID",
+		"GRIT",
+		"WRIT",
+		"WAIT",
         "WAIL"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "HOLIER",
-      "target": "WITTER",
-      "solution": [
-        "HOLIER",
-        "HOLDER",
-        "FOLDER",
-        "FONDER",
-        "WONDER",
-        "WINDER",
-        "WINTER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "HOLIER",
+	  "target": "WITTER",
+	  "solution": [
+		"HOLIER",
+		"HOLDER",
+		"FOLDER",
+		"FONDER",
+		"WONDER",
+		"WINDER",
+		"WINTER",
         "WITTER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "SINGED",
-      "target": "TUFTED",
-      "solution": [
-        "SINGED",
-        "BINGED",
-        "BUNGED",
-        "BUNTED",
-        "BUTTED",
-        "TUTTED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "SINGED",
+	  "target": "TUFTED",
+	  "solution": [
+		"SINGED",
+		"BINGED",
+		"BUNGED",
+		"BUNTED",
+		"BUTTED",
+		"TUTTED",
         "TUFTED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "TILING",
-      "target": "TOEING",
-      "solution": [
-        "TILING",
-        "PILING",
-        "PIKING",
-        "POKING",
-        "TOKING",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "TILING",
+	  "target": "TOEING",
+	  "solution": [
+		"TILING",
+		"PILING",
+		"PIKING",
+		"POKING",
+		"TOKING",
         "TOEING"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HONK",
-      "target": "SOUP",
-      "solution": [
-        "HONK",
-        "HOCK",
-        "SOCK",
-        "SOUK",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HONK",
+	  "target": "SOUP",
+	  "solution": [
+		"HONK",
+		"HOCK",
+		"SOCK",
+		"SOUK",
         "SOUP"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "RATS",
-      "target": "TAME",
-      "solution": [
-        "RATS",
-        "CATS",
-        "CAMS",
-        "CAME",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "RATS",
+	  "target": "TAME",
+	  "solution": [
+		"RATS",
+		"CATS",
+		"CAMS",
+		"CAME",
         "TAME"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BLAMED",
-      "target": "DEALER",
-      "solution": [
-        "BLAMED",
-        "BEAMED",
-        "SEAMED",
-        "SEALED",
-        "SEALER",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BLAMED",
+	  "target": "DEALER",
+	  "solution": [
+		"BLAMED",
+		"BEAMED",
+		"SEAMED",
+		"SEALED",
+		"SEALER",
         "DEALER"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "OWNS",
-      "target": "TOTE",
-      "solution": [
-        "OWNS",
-        "PWNS",
-        "PANS",
-        "TANS",
-        "TONS",
-        "TOTS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "OWNS",
+	  "target": "TOTE",
+	  "solution": [
+		"OWNS",
+		"PWNS",
+		"PANS",
+		"TANS",
+		"TONS",
+		"TOTS",
         "TOTE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "GOOFED",
-      "target": "WETTER",
-      "solution": [
-        "GOOFED",
-        "HOOFED",
-        "HOOTED",
-        "HOTTED",
-        "JOTTED",
-        "JETTED",
-        "WETTED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "GOOFED",
+	  "target": "WETTER",
+	  "solution": [
+		"GOOFED",
+		"HOOFED",
+		"HOOTED",
+		"HOTTED",
+		"JOTTED",
+		"JETTED",
+		"WETTED",
         "WETTER"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "METER",
-      "target": "NAILS",
-      "solution": [
-        "METER",
-        "METES",
-        "MATES",
-        "MALES",
-        "MALLS",
-        "MAILS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "METER",
+	  "target": "NAILS",
+	  "solution": [
+		"METER",
+		"METES",
+		"MATES",
+		"MALES",
+		"MALLS",
+		"MAILS",
         "NAILS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CAPE",
-      "target": "DINS",
-      "solution": [
-        "CAPE",
-        "NAPE",
-        "NAPS",
-        "NIPS",
-        "DIPS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CAPE",
+	  "target": "DINS",
+	  "solution": [
+		"CAPE",
+		"NAPE",
+		"NAPS",
+		"NIPS",
+		"DIPS",
         "DINS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LOPS",
-      "target": "TALE",
-      "solution": [
-        "LOPS",
-        "TOPS",
-        "TAPS",
-        "TAPE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LOPS",
+	  "target": "TALE",
+	  "solution": [
+		"LOPS",
+		"TOPS",
+		"TAPS",
+		"TAPE",
         "TALE"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "MICE",
-      "target": "VANS",
-      "solution": [
-        "MICE",
-        "VICE",
-        "VINE",
-        "VANE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "MICE",
+	  "target": "VANS",
+	  "solution": [
+		"MICE",
+		"VICE",
+		"VINE",
+		"VANE",
         "VANS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "MATTER",
-      "target": "ROOFED",
-      "solution": [
-        "MATTER",
-        "MATTED",
-        "RATTED",
-        "ROTTED",
-        "ROOTED",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "MATTER",
+	  "target": "ROOFED",
+	  "solution": [
+		"MATTER",
+		"MATTED",
+		"RATTED",
+		"ROTTED",
+		"ROOTED",
         "ROOFED"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FUSE",
-      "target": "SORT",
-      "solution": [
-        "FUSE",
-        "MUSE",
-        "MULE",
-        "MOLE",
-        "SOLE",
-        "SORE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FUSE",
+	  "target": "SORT",
+	  "solution": [
+		"FUSE",
+		"MUSE",
+		"MULE",
+		"MOLE",
+		"SOLE",
+		"SORE",
         "SORT"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "CAREER",
-      "target": "WINDED",
-      "solution": [
-        "CAREER",
-        "CARVER",
-        "CARVED",
-        "CALVED",
-        "CALKED",
-        "WALKED",
-        "WANKED",
-        "WINKED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "CAREER",
+	  "target": "WINDED",
+	  "solution": [
+		"CAREER",
+		"CARVER",
+		"CARVED",
+		"CALVED",
+		"CALKED",
+		"WALKED",
+		"WANKED",
+		"WINKED",
         "WINDED"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "BLOTS",
-      "target": "PALMS",
-      "solution": [
-        "BLOTS",
-        "BOOTS",
-        "BOLTS",
-        "BOLLS",
-        "POLLS",
-        "PALLS",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "BLOTS",
+	  "target": "PALMS",
+	  "solution": [
+		"BLOTS",
+		"BOOTS",
+		"BOLTS",
+		"BOLLS",
+		"POLLS",
+		"PALLS",
         "PALMS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "PLOD",
-      "target": "STAG",
-      "solution": [
-        "PLOD",
-        "CLOD",
-        "CLOG",
-        "SLOG",
-        "SLAG",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "PLOD",
+	  "target": "STAG",
+	  "solution": [
+		"PLOD",
+		"CLOD",
+		"CLOG",
+		"SLOG",
+		"SLAG",
         "STAG"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "HACK",
-      "target": "WEND",
-      "solution": [
-        "HACK",
-        "WACK",
-        "WANK",
-        "WAND",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "HACK",
+	  "target": "WEND",
+	  "solution": [
+		"HACK",
+		"WACK",
+		"WANK",
+		"WAND",
         "WEND"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "MOSH",
-      "target": "PAWS",
-      "solution": [
-        "MOSH",
-        "POSH",
-        "POSS",
-        "PASS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "MOSH",
+	  "target": "PAWS",
+	  "solution": [
+		"MOSH",
+		"POSH",
+		"POSS",
+		"PASS",
         "PAWS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "JINN",
-      "target": "LYRE",
-      "solution": [
-        "JINN",
-        "JINK",
-        "LINK",
-        "LINE",
-        "LIRE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "JINN",
+	  "target": "LYRE",
+	  "solution": [
+		"JINN",
+		"JINK",
+		"LINK",
+		"LINE",
+		"LIRE",
         "LYRE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "FORGER",
-      "target": "HOOPED",
-      "solution": [
-        "FORGER",
-        "FORGED",
-        "FORDED",
-        "WORDED",
-        "WOODED",
-        "HOODED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "FORGER",
+	  "target": "HOOPED",
+	  "solution": [
+		"FORGER",
+		"FORGED",
+		"FORDED",
+		"WORDED",
+		"WOODED",
+		"HOODED",
         "HOOPED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "HASTE",
-      "target": "PIMPS",
-      "solution": [
-        "HASTE",
-        "CASTE",
-        "CASTS",
-        "LASTS",
-        "LISTS",
-        "LISPS",
-        "LIMPS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "HASTE",
+	  "target": "PIMPS",
+	  "solution": [
+		"HASTE",
+		"CASTE",
+		"CASTS",
+		"LASTS",
+		"LISTS",
+		"LISPS",
+		"LIMPS",
         "PIMPS"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "DULLED",
-      "target": "MENDER",
-      "solution": [
-        "DULLED",
-        "GULLED",
-        "GELLED",
-        "GELDED",
-        "MELDED",
-        "MENDED",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "DULLED",
+	  "target": "MENDER",
+	  "solution": [
+		"DULLED",
+		"GULLED",
+		"GELLED",
+		"GELDED",
+		"MELDED",
+		"MENDED",
         "MENDER"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "HOSTS",
-      "target": "SOLID",
-      "solution": [
-        "HOSTS",
-        "HOSES",
-        "HOLES",
-        "SOLES",
-        "SOLED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "HOSTS",
+	  "target": "SOLID",
+	  "solution": [
+		"HOSTS",
+		"HOSES",
+		"HOLES",
+		"SOLES",
+		"SOLED",
         "SOLID"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "MOSHED",
-      "target": "SOUSES",
-      "solution": [
-        "MOSHED",
-        "MOSHES",
-        "MOSSES",
-        "MOUSES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "MOSHED",
+	  "target": "SOUSES",
+	  "solution": [
+		"MOSHED",
+		"MOSHES",
+		"MOSSES",
+		"MOUSES",
         "SOUSES"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "HANGS",
-      "target": "WACKO",
-      "solution": [
-        "HANGS",
-        "HANKS",
-        "WANKS",
-        "WACKS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "HANGS",
+	  "target": "WACKO",
+	  "solution": [
+		"HANGS",
+		"HANKS",
+		"WANKS",
+		"WACKS",
         "WACKO"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "MENDS",
-      "target": "SILLS",
-      "solution": [
-        "MENDS",
-        "WENDS",
-        "WINDS",
-        "WILDS",
-        "WILLS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "MENDS",
+	  "target": "SILLS",
+	  "solution": [
+		"MENDS",
+		"WENDS",
+		"WINDS",
+		"WILDS",
+		"WILLS",
         "SILLS"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LOOTER",
-      "target": "TARTED",
-      "solution": [
-        "LOOTER",
-        "FOOTER",
-        "FOSTER",
-        "FASTER",
-        "TASTER",
-        "TARTER",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LOOTER",
+	  "target": "TARTED",
+	  "solution": [
+		"LOOTER",
+		"FOOTER",
+		"FOSTER",
+		"FASTER",
+		"TASTER",
+		"TARTER",
         "TARTED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LIVED",
-      "target": "TWATS",
-      "solution": [
-        "LIVED",
-        "LINED",
-        "LINES",
-        "TINES",
-        "TINTS",
-        "TENTS",
-        "TEATS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LIVED",
+	  "target": "TWATS",
+	  "solution": [
+		"LIVED",
+		"LINED",
+		"LINES",
+		"TINES",
+		"TINTS",
+		"TENTS",
+		"TEATS",
         "TWATS"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "HAIR",
-      "target": "MODE",
-      "solution": [
-        "HAIR",
-        "HAIL",
-        "MAIL",
-        "MALL",
-        "MOLL",
-        "MOLE",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "HAIR",
+	  "target": "MODE",
+	  "solution": [
+		"HAIR",
+		"HAIL",
+		"MAIL",
+		"MALL",
+		"MOLL",
+		"MOLE",
         "MODE"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "DEARER",
-      "target": "LOAFER",
-      "solution": [
-        "DEARER",
-        "DEADER",
-        "LEADER",
-        "LEANER",
-        "LOANER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "DEARER",
+	  "target": "LOAFER",
+	  "solution": [
+		"DEARER",
+		"DEADER",
+		"LEADER",
+		"LEANER",
+		"LOANER",
         "LOAFER"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "EYED",
-      "target": "HEAD",
-      "solution": [
-        "EYED",
-        "DYED",
-        "DEED",
-        "HEED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "EYED",
+	  "target": "HEAD",
+	  "solution": [
+		"EYED",
+		"DYED",
+		"DEED",
+		"HEED",
         "HEAD"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "CAGE",
-      "target": "JUGS",
-      "solution": [
-        "CAGE",
-        "GAGE",
-        "GAGS",
-        "JAGS",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "CAGE",
+	  "target": "JUGS",
+	  "solution": [
+		"CAGE",
+		"GAGE",
+		"GAGS",
+		"JAGS",
         "JUGS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "GENE",
-      "target": "MOAN",
-      "solution": [
-        "GENE",
-        "GONE",
-        "GORE",
-        "MORE",
-        "MORN",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "GENE",
+	  "target": "MOAN",
+	  "solution": [
+		"GENE",
+		"GONE",
+		"GORE",
+		"MORE",
+		"MORN",
         "MOAN"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "BONE",
-      "target": "PESO",
-      "solution": [
-        "BONE",
-        "DONE",
-        "DOSE",
-        "POSE",
-        "POST",
-        "PEST",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "BONE",
+	  "target": "PESO",
+	  "solution": [
+		"BONE",
+		"DONE",
+		"DOSE",
+		"POSE",
+		"POST",
+		"PEST",
         "PESO"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "EKED",
-      "target": "GONE",
-      "solution": [
-        "EKED",
-        "EYED",
-        "DYED",
-        "DYES",
-        "DOES",
-        "DONS",
-        "DONE",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "EKED",
+	  "target": "GONE",
+	  "solution": [
+		"EKED",
+		"EYED",
+		"DYED",
+		"DYES",
+		"DOES",
+		"DONS",
+		"DONE",
         "GONE"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "FITS",
-      "target": "KILN",
-      "solution": [
-        "FITS",
-        "BITS",
-        "BITE",
-        "BILE",
-        "BILL",
-        "KILL",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "FITS",
+	  "target": "KILN",
+	  "solution": [
+		"FITS",
+		"BITS",
+		"BITE",
+		"BILE",
+		"BILL",
+		"KILL",
         "KILN"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "ROOF",
-      "target": "SLAY",
-      "solution": [
-        "ROOF",
-        "ROOT",
-        "SOOT",
-        "SLOT",
-        "SLAT",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "ROOF",
+	  "target": "SLAY",
+	  "solution": [
+		"ROOF",
+		"ROOT",
+		"SOOT",
+		"SLOT",
+		"SLAT",
         "SLAY"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "MOOTS",
-      "target": "POKES",
-      "solution": [
-        "MOOTS",
-        "MOLTS",
-        "MOLES",
-        "POLES",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "MOOTS",
+	  "target": "POKES",
+	  "solution": [
+		"MOOTS",
+		"MOLTS",
+		"MOLES",
+		"POLES",
         "POKES"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "ARM",
-      "target": "DAD",
-      "solution": [
-        "ARM",
-        "AIM",
-        "DIM",
-        "DAM",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "ARM",
+	  "target": "DAD",
+	  "solution": [
+		"ARM",
+		"AIM",
+		"DIM",
+		"DAM",
         "DAD"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BRAG",
-      "target": "DARE",
-      "solution": [
-        "BRAG",
-        "BRAS",
-        "BAAS",
-        "BARS",
-        "BARE",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BRAG",
+	  "target": "DARE",
+	  "solution": [
+		"BRAG",
+		"BRAS",
+		"BAAS",
+		"BARS",
+		"BARE",
         "DARE"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "DIGS",
-      "target": "TYPO",
-      "solution": [
-        "DIGS",
-        "DAGS",
-        "TAGS",
-        "TAPS",
-        "TAPE",
-        "TYPE",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "DIGS",
+	  "target": "TYPO",
+	  "solution": [
+		"DIGS",
+		"DAGS",
+		"TAGS",
+		"TAPS",
+		"TAPE",
+		"TYPE",
         "TYPO"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "AUNT",
-      "target": "GNAW",
-      "solution": [
-        "AUNT",
-        "BUNT",
-        "BENT",
-        "BEAT",
-        "BOAT",
-        "GOAT",
-        "GNAT",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "AUNT",
+	  "target": "GNAW",
+	  "solution": [
+		"AUNT",
+		"BUNT",
+		"BENT",
+		"BEAT",
+		"BOAT",
+		"GOAT",
+		"GNAT",
         "GNAW"
-      ],
-      "steps": 7,
-      "difficulty": 5
-    },
-    {
-      "start": "NASTY",
-      "target": "WINGS",
-      "solution": [
-        "NASTY",
-        "PASTY",
-        "PASTS",
-        "PANTS",
-        "PINTS",
-        "PINGS",
+	  ],
+	  "steps": 7,
+	  "difficulty": 5
+	},
+	{
+	  "start": "NASTY",
+	  "target": "WINGS",
+	  "solution": [
+		"NASTY",
+		"PASTY",
+		"PASTS",
+		"PANTS",
+		"PINTS",
+		"PINGS",
         "WINGS"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "BUNKS",
-      "target": "VOWED",
-      "solution": [
-        "BUNKS",
-        "BONKS",
-        "BONES",
-        "BONED",
-        "BOWED",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "BUNKS",
+	  "target": "VOWED",
+	  "solution": [
+		"BUNKS",
+		"BONKS",
+		"BONES",
+		"BONED",
+		"BOWED",
         "VOWED"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "LANES",
-      "target": "PULLS",
-      "solution": [
-        "LANES",
-        "PANES",
-        "PALES",
-        "PALLS",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "LANES",
+	  "target": "PULLS",
+	  "solution": [
+		"LANES",
+		"PANES",
+		"PALES",
+		"PALLS",
         "PULLS"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    },
-    {
-      "start": "BASED",
-      "target": "NOSES",
-      "solution": [
-        "BASED",
-        "BUSED",
-        "BUSES",
-        "RUSES",
-        "ROSES",
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	},
+	{
+	  "start": "BASED",
+	  "target": "NOSES",
+	  "solution": [
+		"BASED",
+		"BUSED",
+		"BUSES",
+		"RUSES",
+		"ROSES",
         "NOSES"
-      ],
-      "steps": 5,
-      "difficulty": 3
-    },
-    {
-      "start": "MYTHS",
-      "target": "SEWER",
-      "solution": [
-        "MYTHS",
-        "METHS",
-        "METES",
-        "METED",
-        "MEWED",
-        "SEWED",
+	  ],
+	  "steps": 5,
+	  "difficulty": 3
+	},
+	{
+	  "start": "MYTHS",
+	  "target": "SEWER",
+	  "solution": [
+		"MYTHS",
+		"METHS",
+		"METES",
+		"METED",
+		"MEWED",
+		"SEWED",
         "SEWER"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "LOWLY",
-      "target": "PINKO",
-      "solution": [
-        "LOWLY",
-        "LOLLY",
-        "LOLLS",
-        "MOLLS",
-        "MILLS",
-        "MILKS",
-        "MINKS",
-        "PINKS",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "LOWLY",
+	  "target": "PINKO",
+	  "solution": [
+		"LOWLY",
+		"LOLLY",
+		"LOLLS",
+		"MOLLS",
+		"MILLS",
+		"MILKS",
+		"MINKS",
+		"PINKS",
         "PINKO"
-      ],
-      "steps": 8,
-      "difficulty": 5
-    },
-    {
-      "start": "LATTE",
-      "target": "RAKED",
-      "solution": [
-        "LATTE",
-        "LATHE",
-        "LATHS",
-        "LAKHS",
-        "LAKES",
-        "RAKES",
+	  ],
+	  "steps": 8,
+	  "difficulty": 5
+	},
+	{
+	  "start": "LATTE",
+	  "target": "RAKED",
+	  "solution": [
+		"LATTE",
+		"LATHE",
+		"LATHS",
+		"LAKHS",
+		"LAKES",
+		"RAKES",
         "RAKED"
-      ],
-      "steps": 6,
-      "difficulty": 4
-    },
-    {
-      "start": "FORDED",
-      "target": "WARIER",
-      "solution": [
-        "FORDED",
-        "WORDED",
-        "WARDED",
-        "WARDER",
+	  ],
+	  "steps": 6,
+	  "difficulty": 4
+	},
+	{
+	  "start": "FORDED",
+	  "target": "WARIER",
+	  "solution": [
+		"FORDED",
+		"WORDED",
+		"WARDED",
+		"WARDER",
         "WARIER"
-      ],
-      "steps": 4,
-      "difficulty": 2
-    }
+	  ],
+	  "steps": 4,
+	  "difficulty": 2
+	}
   ]
 }

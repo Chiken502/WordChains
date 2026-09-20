@@ -19,7 +19,7 @@ func _ready() -> void:
 	for colors in ColorManager.colors:
 		$VBoxContainer/Color/OptionButton.add_item(colors[0])
 
-	$VBoxContainer/Color/OptionButton.selected = ColorManager.currentColor
+	$VBoxContainer/Color/OptionButton.selected = ColorManager.current_color
 
 	# Connect signals for animations
 	%Home.button_up.connect(_on_button_up.bind(%Home))
@@ -37,7 +37,7 @@ func _ready() -> void:
 		control.mouse_entered.connect(_on_control_mouse_entered.bind(control))
 		control.mouse_exited.connect(_on_control_mouse_exited.bind(control))
 
-	$VBoxContainer/ScreenShake/CheckBox.button_pressed = GameManager.screenShakeOn
+	$VBoxContainer/ScreenShake/CheckBox.button_pressed = GameManager.screen_shake_on
 
 	last_sound_feedback = Time.get_ticks_msec() / 1000.0 + 0.5
 
@@ -106,7 +106,7 @@ func _on_option_button_item_selected(index: int) -> void:
 
 func _on_check_box_pressed() -> void:
 	settings_changed = true
-	GameManager.screenShakeOn = $VBoxContainer/ScreenShake/CheckBox.button_pressed
+	GameManager.screen_shake_on = $VBoxContainer/ScreenShake/CheckBox.button_pressed
 
 
 func _on_music_slider_value_changed(value: float) -> void:

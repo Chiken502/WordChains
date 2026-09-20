@@ -27,11 +27,13 @@ var level_start_time = 0.0
 var hints_used = 0
 var undo_used = 0
 
+const FALLING_LETTER = preload("res://_Components/falling_letter.tscn")
+
 @onready var target_label := $Control/VBoxContainer/TargetWord
 @onready var cw_h_box := $Control/VBoxContainer/CurrentWordHBox
 @onready var undo_button := $Control/Bottom/HBoxContainer/Undo
 
-@onready var tween_controler = $TweenController
+@onready var tween_controller = $TweenController
 @onready var tutorial_manager = $tutorialManager
 
 
@@ -62,7 +64,7 @@ func get_ready():
 
 	target_word = GameManager.target_word
 
-	# reset varibles and Current letter nodes
+	# reset variables and Current letter nodes
 	reset_self()
 
 	completed = false
@@ -71,15 +73,15 @@ func get_ready():
 	target_label.text = target_word
 
 	for i in range(len(starting_word)): # Spawning in current word letters
-		var l: Label = preload("res://_Components/curent_word_letter.tscn").instantiate()
+		var l: Label = FALLING_LETTER.instantiate()
 		cw_h_box.add_child(l)
 
 		l.text = starting_word[i].to_upper()
 		l.letter = starting_word[i].to_upper()
 
 		l.letter_changed.connect(_on_current_word_letter_changed)
-		word_confirmed.connect(l._on_word_confirmed)
-		word_not_found.connect(l._on_word_not_found)
+		word_confirmed.connect(l.on_word_confirmed)
+		word_not_found.connect(l.on_word_not_found)
 
 	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
@@ -96,11 +98,17 @@ func get_ready():
 			},
 		)
 	else:
-		PostHog.capture("level_started", { "level": GameManager.current_levels[GameManager.current_difficulty] + 1, "difficulty": GameManager.current_difficulty})
+		PostHog.capture(
+			"level_started",
+			{
+				"level": GameManager.current_levels[GameManager.current_difficulty] + 1,
+				"difficulty": GameManager.current_difficulty,
+			},
+		)
 
 	# Animate words sliding on
-	tween_controler.slide_in(self.size)
-	await tween_controler.tween_done
+	tween_controller.slide_in(self.size)
+	await tween_controller.tween_done
 
 	# Spawn falling letters
 	spawn_letters()
@@ -108,7 +116,7 @@ func get_ready():
 
 
 func spawn_letters():
-	shuffled = solution.duplicate() # duplicate to avoid shufling the original solution
+	shuffled = solution.duplicate() # duplicate to avoid shuffling the original solution
 	if solution is PackedStringArray:
 		shuffled = Array(solution.duplicate())
 	shuffled.shuffle()
@@ -120,7 +128,7 @@ func spawn_letters():
 
 
 func spawn_letter(l: String, letter_pos: Array):
-	var letter = preload("res://_Components/falling_letter.tscn").instantiate()
+	var letter = FALLING_LETTER.instantiate()
 
 	add_child(letter)
 
@@ -129,7 +137,8 @@ func spawn_letter(l: String, letter_pos: Array):
 
 	letter.position = Vector2(randi_range(100, int(get_viewport_rect().size.x) - 100), -80)
 
-	letter_pos = check_letter_position(letter_pos, letter) # Check if the letter is going to collide with another
+	# Check if the letter is going to collide with another
+	letter_pos = check_letter_position(letter_pos, letter)
 	letter.letter = l
 	letter.get_ready()
 
@@ -205,7 +214,7 @@ func _on_current_word_letter_changed(node, letter):
 			hint_word_letter = null
 	else:
 		# Run animation
-		if GameManager.screenShakeOn:
+		if GameManager.screen_shake_on:
 			$Control/CameraHolder/ShakeCamera2D.screen_shake(10, 0.75)
 
 		$Control/VBoxContainer/WrongWord.text = "[b]" + new_word.capitalize() + "[/b] is not a word"
@@ -236,7 +245,7 @@ func _process(_delta: float) -> void:
 			completed = true
 			await get_tree().create_timer(1).timeout
 			for child in cw_h_box.get_children():
-				child.succses()
+				child.success()
 			MusicManager.complete_sound()
 
 			$Control/VBoxContainer/Hint.text = ""
@@ -244,18 +253,21 @@ func _process(_delta: float) -> void:
 			await get_tree().create_timer(1).timeout #TODO: ADD CHIME SOUND
 
 			# animation
-			tween_controler.slide_off(self.size)
-			await tween_controler.tween_done
+			tween_controller.slide_off(self.size)
+			await tween_controller.tween_done
 
 			GameManager.amt_of_hints = hints
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
 
 			if not GameManager.daily_mode:
-				var sucseces = await GameManager.load_level(GameManager.current_difficulty, GameManager.current_levels[GameManager.current_difficulty] + 1)
+				var success = await GameManager.load_level(
+					GameManager.current_difficulty,
+					GameManager.current_levels[GameManager.current_difficulty] + 1,
+				)
 				GameManager.current_levels[GameManager.current_difficulty] += 1
 
-				if sucseces:
+				if success:
 					var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
 
 					PostHog.capture(
@@ -264,8 +276,8 @@ func _process(_delta: float) -> void:
 							"level": GameManager.current_levels[GameManager.current_difficulty],
 							"difficulty": GameManager.current_difficulty,
 							"time": level_time,
-							"hints used": hints_used,
-							"undos used": undo_used,
+							"hintsUsed": hints_used,
+							"undosUsed": undo_used,
 						},
 					)
 					get_ready()
@@ -289,8 +301,8 @@ func _process(_delta: float) -> void:
 					{
 						"date": LevelDatabase.utc_datetime,
 						"time": level_time,
-						"hints used": hints_used,
-						"undos used": undo_used,
+						"hintsUsed": hints_used,
+						"undosUsed": undo_used,
 					},
 				)
 				GameManager.open_leaderboard()
@@ -318,7 +330,7 @@ func _on_undo_button_pressed() -> void:
 
 		var letter_node_pos = letter_node.global_position + (letter_node.size / 2)
 
-		var falling_letter = preload("res://_Components/falling_letter.tscn").instantiate()
+		var falling_letter = FALLING_LETTER.instantiate()
 		get_parent().add_child(falling_letter) # adds letter to main scene
 		falling_letter.position = letter_node_pos
 		falling_letter.letter = current_char[index]
