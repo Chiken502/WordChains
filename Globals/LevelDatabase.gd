@@ -4,43 +4,40 @@ signal daily_loaded()
 signal request_received(response_code: int)
 signal daily_failed(response_code: int)
 
-## Stores an array of level arrays. inside each level array is a starting word, target word, solution letters, and solution word path (words are comma seperated)
-var levels: Array[Array] = [
-	# starting_word, target_word, solution(conjoined), sulution comma seperated
-	["POT", "GEM", "GEM", "POT,GOT,GET,GEM"],
-	["CAT", "BED", "BDE", "CAT,BAT,BAD,BED"],
-	["CARD", "GAME", "EMG", "CARD,CARE,CAME,GAME"],
-	["LOVE", "HATE", "HAT", "LOVE,HOVE,HAVE,HATE"],
-	["RING", "LIFE", "DELF", "RING,DING,DINE,LINE,LIFE"],
-	["CARE", "BEAR", "BKEAR", "CARE,BARE,BARK,BERK,BEAK,BEAR"],
-	["CARD", "KING", "BNIKG", "CARD,BARD,BAND,BIND,KIND,KING"],
-	["FAST", "SLOW", "COOLSW", "FAST,CAST,COST,COOT,CLOT,SLOT,SLOW"],
-	["GLASS", "SHARD", "CPHRDS", "GLASS,CLASS,CLAPS,CHAPS,CHARD,SHARD"],
-	["SLIDE", "COAST", "GABSTOC", "SLIDE,GLIDE,GLADE,BLADE,BLASE,BLAST,BOAST,COAST"],
-	["EARLY", "LATER", "SNBERSLT", "EARLY,EARLS,EARNS,BARNS,BARES,BARER,BASER,LASER,LATER"],
-	["SMART", "BRAIN", "TKCLBNDRIN", "SMART,START,STARK,STACK,SLACK,BLACK,BLANK,BLAND,BRAID,BRAIN"],
-	[
-		"WATER",
-		"SPILL",
-		"HDRISHIPLL",
-		"WATER,HATER,HATED,HARED,HIRED,SIRED,SHRED,SHIED,SPIED,SPIEL,SPILL",
-	], # Need to find better stuff for this
-	[
-		"BROKE",
-		"CHEAP",
-		"ACTKCIHEEPA",
-		"BROKE,BRAKE,BRACE,TRACE,TRACK,CRACK,CRICK,CHICK,CHECK,CHEEK,CHEEP,CHEAP",
-	],
-	[
-		"MAGIC",
-		"SPELL",
-		"NAGYLWLDIRLTWSPE",
-		"MAGIC,MANIA,MANGA,MANGY,MANLY,WANLY,WALLY,DAILY,DIRTLY,DRILL,TRILL,TWILL,SWILL,SPILL,SPELL",
-	],
-]
+signal level_loaded
+signal level_load_fail
 
 var day_of_year: int = -1
 var utc_datetime: String
+
+
+func load_level(difficulty: int, level: int):
+	await  get_tree().process_frame
+	if FileAccess.file_exists("res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1)):
+		var puzzle_file = FileAccess.open(
+			"res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1),
+			FileAccess.READ,
+		)
+		var data = JSON.parse_string(puzzle_file.get_as_text())
+		print("DATA READ")
+		if level >= 0 and level < data["puzzles"].size():
+			var puzzle = data["puzzles"][level]
+
+			GameManager.starting_word = puzzle["start"]
+			GameManager.current_word = puzzle["start"]
+			GameManager.target_word = puzzle["target"]
+			GameManager.solution = get_short_solution(puzzle["solution"])
+			GameManager.solution_long = puzzle["solution"]
+
+			GameManager.current_difficulty = difficulty
+			print("EMITING SIGNAL")
+			level_loaded.emit()
+		else:
+			level_load_fail.emit()
+			print("Level %s out of range for difficulty level %d" % [level, difficulty])
+	else:
+		level_load_fail.emit()
+		print("Difficulty %s's file couldn't be found" % difficulty)
 
 
 func fetch_date():

@@ -5,15 +5,13 @@ var level_select_node = preload("res://_Components/level_select_button.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for idx in range(len(LevelDatabase.levels)):
-		var i: Button = level_select_node.instantiate()
-		$VBoxContainer/GridContainer.add_child(i)
-		i.level = idx + 1
-		i.pressed.connect(_level_selected.bind(idx))
-
-		if idx > GameManager.max_level:
-			i.locked = true
-
+	for i in range(4):
+		var button : Button = preload("res://_Components/difficulty_button.tscn").instantiate()
+		button.difficulty = i + 1
+		$VBoxContainer/GridContainer.add_child(button)
+		button.pressed.connect(_level_selected.bind(i))
+	
+	
 	ColorManager.change_color(ColorManager.currentColor)
 	MusicManager.scene_loaded()
 
@@ -38,8 +36,8 @@ func _on_home_pressed() -> void:
 	GameManager.back_to_menu()
 
 
-func _level_selected(level: int):
-	GameManager.current_level = level
+func _level_selected(difficulty: int):
+	GameManager.load_level(difficulty, GameManager.current_levels[difficulty])
 	GameManager.start_game()
 
 

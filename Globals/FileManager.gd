@@ -27,7 +27,7 @@ func save_game():
 
 	var save_data = {
 		"needTutorial": GameManager.need_tutorial,
-		"maxLevel": GameManager.max_level,
+		"current_levels": GameManager.current_levels,
 		"hints": GameManager.amt_of_hints,
 		"nickname": GameManager.nickname,
 		"lastDailyComplete": GameManager.day_of_year if GameManager.daily_completed else GameManager.last_day_completed,
@@ -63,7 +63,7 @@ func load_game():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		var data: Dictionary = file.get_var()
 
-		GameManager.max_level = data.get("maxLevel", 1)
+		GameManager.current_levels = data.get("current_levels", [0,0,0,0])
 		GameManager.amt_of_hints = data.get("hints", 0)
 		GameManager.need_tutorial = data.get("needTutorial", true)
 		GameManager.nickname = data.get("nickname", "")

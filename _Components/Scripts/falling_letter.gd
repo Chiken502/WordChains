@@ -57,15 +57,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if global_position.y > ground_collider.global_position.y: # keep above groud plane
-		position.y = ground_collider.global_position.y
-	elif position.y < -800 and linear_velocity.y < 0: # Prevents form flying off screen
-		linear_velocity.y = 0
+	if is_instance_valid(self):
+		if global_position.y > ground_collider.global_position.y: # keep above groud plane
+			position.y = ground_collider.global_position.y
+		elif position.y < -800 and linear_velocity.y < 0: # Prevents form flying off screen
+			linear_velocity.y = 0
 
-	$Label.offset_transform_scale = $Label.offset_transform_scale.lerp(
-		Vector2.ONE,
-		recovery_speed * delta,
-	)
+		$Label.offset_transform_scale = $Label.offset_transform_scale.lerp(
+			Vector2.ONE,
+			recovery_speed * delta,
+		)
 
 
 func get_ready():

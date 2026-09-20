@@ -9,8 +9,8 @@ var solution_long := [] ## Stores solution in words instead of just letters
 
 var current_game_version := "v03.b"
 
-var current_level := 0
-var max_level := 0
+var current_levels := [0, 0, 0, 0]
+var current_difficulty := 0
 var amt_of_hints := 0
 
 # Settings Varibles
@@ -78,22 +78,37 @@ func _on_chedda_login_failed(error):
 
 ## Populates GameManagers level varibles with the new level data
 ## Returns true if level_num is a valid level, and everything is updated accordingly
-func load_level(level_num) -> bool:
-	if level_num <= len(LevelDatabase.levels) - 1:
-		var next_level := LevelDatabase.levels[level_num]
-
-		if level_num > max_level:
-			max_level = level_num
-			FileManager.save_game()
-
-		current_level = level_num
-		starting_word = next_level[0]
-		current_word = starting_word
-		target_word = next_level[1]
-		solution = next_level[2]
-		solution_long = next_level[3].split(",")
-
+func load_level(difficulty: int, level_num: int) -> bool:
+	print("LOADING LEVEL")
+	var error = { "result": "fail" }
+	var resolver = SignalResolver.new()
+	
+	LevelDatabase.level_loaded.connect(
+		func():
+			print("RECIVED: SUCCESS")
+			error.result = "success"
+			resolver.done.emit(),
+		CONNECT_ONE_SHOT,
+	)
+	
+	LevelDatabase.level_load_fail.connect(
+		func():
+			print("RECIVED: FAIL")
+			error.result = "fail"
+			resolver.done.emit(),
+		CONNECT_ONE_SHOT,
+	)
+	
+	LevelDatabase.load_level(difficulty, level_num)
+	await resolver.done
+	
+	print("RESOLVER DONE")
+	
+	if error.result == "success":
+		print("LEVEL LOADED")
 		return true
+	
+	print("LEVEL FAILED TO LOAD")
 	return false
 
 
@@ -110,12 +125,11 @@ func open_level_select():
 		get_tree().change_scene_to_file("res://_Frames/level_select.tscn")
 	else:
 		tutorial_mode = true
-		load_level(0)
+		load_level(0, 0)
 		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
 
 func start_game():
-	load_level(current_level)
 	get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
 

@@ -7,6 +7,43 @@
 [ext_resource type="FontFile" uid="uid://bjy5iambxwpes" path="res://Fonts/Zain-ExtraBold.ttf" id="6_vocpi"]
 [ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="9_4x8ju"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4x8ju"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_42u4b"]
+bg_color = Color(0.447059, 0.690196, 0.992157, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.227451, 0.52549, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgdaq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.588235, 0.847059, 0.996078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gp45f"]
 bg_color = Color(0.22745098, 0.5254902, 1, 0)
 corner_radius_top_left = 50
@@ -51,6 +88,55 @@ corner_radius_bottom_left = 50
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8oqab"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q3jwc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h0qgs"]
+bg_color = Color(0.22745098, 0.5254902, 1, 0)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qrl17"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d5r8n"]
+bg_color = Color(0.447059, 0.690196, 0.992157, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dr5h5"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.447059, 0.690196, 0.992157, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+corner_detail = 20
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gcf8i"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+corner_radius_top_left = 128
+corner_radius_top_right = 128
+corner_radius_bottom_right = 128
+corner_radius_bottom_left = 128
+corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6mhpt"]
 bg_color = Color(0.227451, 0.52549, 1, 1)
@@ -164,6 +250,12 @@ shadow_size = 5
 shadow_offset = Vector2(5, 5)
 
 [resource]
+BigSlider/base_type = &"HSlider"
+BigSlider/icons/grabber = null
+BigSlider/icons/grabber_highlight = null
+BigSlider/styles/grabber_area = SubResource("StyleBoxFlat_4x8ju")
+BigSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_42u4b")
+BigSlider/styles/slider = SubResource("StyleBoxFlat_jgdaq")
 Button/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 Button/colors/font_disabled_color = Color(0.447059, 0.690196, 0.992157, 1)
 Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
@@ -183,6 +275,12 @@ CheckBox/styles/hover = SubResource("StyleBoxEmpty_7vydn")
 CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_20t6k")
 CheckBox/styles/normal = SubResource("StyleBoxEmpty_8oqab")
 CheckBox/styles/pressed = SubResource("StyleBoxEmpty_q3jwc")
+DifficultyButton/base_type = &"Button"
+DifficultyButton/styles/disabled = SubResource("StyleBoxFlat_h0qgs")
+DifficultyButton/styles/focus = SubResource("StyleBoxFlat_qrl17")
+DifficultyButton/styles/hover = SubResource("StyleBoxFlat_d5r8n")
+DifficultyButton/styles/normal = SubResource("StyleBoxFlat_dr5h5")
+DifficultyButton/styles/pressed = SubResource("StyleBoxFlat_gcf8i")
 HSlider/icons/grabber = null
 HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_6mhpt")

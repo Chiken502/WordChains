@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://dxqf3qtmchiof"]
+
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_3hfrv"]
+[ext_resource type="Script" uid="uid://qddxs6kmrcyu" path="res://_Components/Scripts/difficulty_button.gd" id="2_v37ql"]
+[ext_resource type="LabelSettings" uid="uid://c8njp0ld1iiya" path="res://Resources/difficulty_level_label.tres" id="3_v37ql"]
+[ext_resource type="LabelSettings" uid="uid://cxmj64361rj8r" path="res://Resources/difficulty_stars_label.tres" id="4_ksy20"]
+[ext_resource type="LabelSettings" uid="uid://cewof6iccnss1" path="res://Resources/difficulty_title_label.tres" id="5_u6s6a"]
+
+[node name="DifficultyButton" type="Button" unique_id=2130862618]
+custom_minimum_size = Vector2(128, 128)
+custom_maximum_size = Vector2(128, 128)
+offset_right = 128.0
+offset_bottom = 128.0
+theme = ExtResource("1_3hfrv")
+theme_type_variation = &"DifficultyButton"
+script = ExtResource("2_v37ql")
+
+[node name="Level" type="Label" parent="." unique_id=150035734]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -39.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Level 100"
+label_settings = ExtResource("3_v37ql")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Control" type="VBoxContainer" parent="." unique_id=197779164]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -34.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stars" type="Label" parent="Control" unique_id=157259837]
+layout_mode = 2
+text = "StarStarStarStar"
+label_settings = ExtResource("4_ksy20")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Difficulty" type="Label" parent="Control" unique_id=1834092277]
+layout_mode = 2
+text = "Very hard"
+label_settings = ExtResource("5_u6s6a")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

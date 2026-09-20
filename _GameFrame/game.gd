@@ -96,7 +96,7 @@ func get_ready():
 			},
 		)
 	else:
-		PostHog.capture("level_started", { "level": GameManager.current_level + 1 })
+		PostHog.capture("level_started", { "level": GameManager.current_levels[GameManager.current_difficulty] + 1, "difficulty": GameManager.current_difficulty})
 
 	# Animate words sliding on
 	tween_controler.slide_in(self.size)
@@ -252,7 +252,8 @@ func _process(_delta: float) -> void:
 			GameManager.need_tutorial = false
 
 			if not GameManager.daily_mode:
-				var sucseces = GameManager.load_level(GameManager.current_level + 1)
+				var sucseces = await GameManager.load_level(GameManager.current_difficulty, GameManager.current_levels[GameManager.current_difficulty] + 1)
+				GameManager.current_levels[GameManager.current_difficulty] += 1
 
 				if sucseces:
 					var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
@@ -260,7 +261,8 @@ func _process(_delta: float) -> void:
 					PostHog.capture(
 						"level complete",
 						{
-							"level": GameManager.current_level,
+							"level": GameManager.current_levels[GameManager.current_difficulty],
+							"difficulty": GameManager.current_difficulty,
 							"time": level_time,
 							"hints used": hints_used,
 							"undos used": undo_used,

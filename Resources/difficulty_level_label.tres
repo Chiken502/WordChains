@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://c8njp0ld1iiya"]
+
+[ext_resource type="FontFile" uid="uid://bo7ym3u2d3iej" path="res://Fonts/Zain-Regular.ttf" id="1_lxgwr"]
+
+[resource]
+font = ExtResource("1_lxgwr")
+font_size = 20
+font_color = Color(0.588235, 0.847059, 0.996078, 1)

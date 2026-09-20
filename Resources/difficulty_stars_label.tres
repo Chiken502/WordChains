@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cxmj64361rj8r"]
+
+[ext_resource type="FontFile" uid="uid://b7yw8isv2eixq" path="res://Fonts/Font Awesome 7 Free-Solid-900.otf" id="1_as65x"]
+
+[resource]
+font = ExtResource("1_as65x")
+font_size = 24
+font_color = Color(0.588235, 0.847059, 0.996078, 1)
+stacked_outline_count = 1
