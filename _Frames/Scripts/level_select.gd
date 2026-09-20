@@ -10,6 +10,11 @@ func _ready() -> void:
 		button.difficulty = i + 1
 		$VBoxContainer/GridContainer.add_child(button)
 		button.pressed.connect(_level_selected.bind(i))
+		
+		button.mouse_entered.connect(_on_control_mouse_entered.bind(button))
+		button.mouse_exited.connect(_on_control_mouse_exited.bind(button))
+		button.button_up.connect(_on_button_up.bind(button))
+		button.button_down.connect(_on_button_down.bind(button))
 	
 	
 	ColorManager.change_color(ColorManager.currentColor)
