@@ -13,7 +13,7 @@ func save_settings():
 	var settings_data = {
 		"soundDB": AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX Bus")),
 		"musicDB": AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music Bus")),
-		"gameColor": ColorManager.colors[ColorManager.currentColor][0],
+		"gameColor": ColorManager.colors[ColorManager.current_color][0],
 		"cameraShake": GameManager.screen_shake_on,
 	}
 
@@ -49,20 +49,21 @@ func load_game():
 		print("No settings file found!")
 
 		# Set the icons to default, as they can't be preloaded as .svg.txt in the main theme
-		ColorManager.change_color(0)
+		ColorManager.change_color(ColorManager.current_color)
 	else:
 		var file = FileAccess.open(settings_path, FileAccess.READ)
 		var data = file.get_var()
-		print("Settings File Retrieved...")
+		if data:
+			print("Settings File Retrieved...")
 
-		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX Bus"), data.get("soundDB", 0))
-		AudioServer.set_bus_volume_db(
-			AudioServer.get_bus_index("Music Bus"),
-			data.get("musicDB", 0),
-		)
-		ColorManager.change_color(ColorManager.get_color_idx(data.get("gameColor", "Blue")))
-		GameManager.screen_shake_on = data.get("cameraShake", true)
-		print("Settings Loaded")
+			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX Bus"), data.get("soundDB", 0))
+			AudioServer.set_bus_volume_db(
+				AudioServer.get_bus_index("Music Bus"),
+				data.get("musicDB", 0),
+			)
+			ColorManager.change_color(ColorManager.get_color_idx(data.get("gameColor", "Blue")))
+			GameManager.screen_shake_on = data.get("cameraShake", true)
+			print("Settings Loaded")
 
 	if not FileAccess.file_exists(save_path):
 		print("No save file found!")

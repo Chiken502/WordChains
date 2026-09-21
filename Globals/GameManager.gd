@@ -42,8 +42,6 @@ func _ready() -> void:
 	var data = JSON.parse_string(raw_data)
 	var api_key = data.cheddaboards_api_key
 
-	print(api_key)
-
 	CheddaBoards.set_api_key(str(api_key))
 	CheddaBoards.set_game_id("word-chains")
 
