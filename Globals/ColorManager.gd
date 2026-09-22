@@ -17,16 +17,17 @@ var colors := [
 	["Black", "18003C", "403255", "837992"],
 ]
 
-
+## Gets the index from ColorManagers.colors that has the same name as color_name.
+## Returns the index for BLUE if color_name wasn't found.
 func get_color_idx(color_name: String) -> int:
 	for i in range(len(colors)):
 		if colors[i][0] == color_name:
 			return i
 
-	return 0 # default to blue
+	return 5 # default to blue
 
 
-## Changes colors in the main theme for the game.
+## Changes colors in the main theme for the game to the color at ColorManager.colors[color_idx].
 func change_color(color_idx: int):
 	if color_idx >= 0 and color_idx < colors.size(): # Check if its a legal color
 		var old_colors: Array = colors[current_color].duplicate()
@@ -51,6 +52,7 @@ func change_color(color_idx: int):
 						Color(colors[current_color][prop_color_idx + 1]),
 					)
 
+			# Change colors in style boxes
 			var stylebox_list = theme.get_stylebox_list(theme_type)
 			for stylebox_name in stylebox_list:
 				var style_box := theme.get_stylebox(stylebox_name, theme_type).duplicate()
@@ -96,7 +98,7 @@ func change_color(color_idx: int):
 		color_changed.emit(old_colors)
 
 
-## opens a svg icon file and changes the colors. Returns the new Image Texture
+## Opens a svg icon file and changes the colors. Returns the new Image Texture
 func modify_svg(path: String) -> ImageTexture:
 	var file = FileAccess.open(path, FileAccess.READ)
 	if not file:
@@ -122,7 +124,8 @@ func modify_svg(path: String) -> ImageTexture:
 	return
 
 
-## finds the color int the array and returns the index
+## Finds the color int the array and returns the index.
+## Returns -1 if the color wasn't found.
 func color_in_array(array: Array, color: Color) -> int:
 	var idx = -1
 	for i in range(len(array)):

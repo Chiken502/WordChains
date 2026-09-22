@@ -1,13 +1,13 @@
 extends Label
 
-signal letter_changed(node, letter)
+signal letter_changed(node, letter) ## Notifys listeners when the letter has been changed
 
 var scripted_parent: Node2D # See if this is useful or needed
 
-var letter = "A"
-var colliding_body: RigidBody2D
+var letter = "A" ## Letter that this node represents
+var colliding_body: RigidBody2D ## Falling letter that is colliding
 
-var hinted = false:
+var hinted = false: ## If hinted the letter is highlighted to empisize a hint
 	set(value):
 		hinted = value
 		$MainParticles/Sprite2D.visible = value
@@ -46,7 +46,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			letter_changed.emit(self, new_letter)
 
 
-# New letter is legal, so we can keep it
+# if new letter is legal, so we can keep it
 func on_word_confirmed(node, new_letter: String):
 	if node == self:
 		if colliding_body: # Delete falling letter node

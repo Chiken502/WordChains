@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var letters = [
+var letters = [ ## All posible letters
 	"A",
 	"B",
 	"C",
@@ -28,21 +28,21 @@ var letters = [
 	"Y",
 	"Z",
 ]
-var letter = ""
-var being_dragged = false
+var letter = "" ## Letter that his node represents
+var being_dragged = false ## True if the player is dragging this node
 
-const COLLISION_THRESHOLD = 20.0
-const MAX_COLLISION_IMPULSE = 100.0
-const SOUND_COOLDOWN = 0.1
-var last_sound_time: float
+const COLLISION_THRESHOLD = 20.0 ## Threshold for how big of a collison is need to make a sound.
+const MAX_COLLISION_IMPULSE = 100.0 ## Max size of a collision for sound factor calculation
+const SOUND_COOLDOWN = 0.1 ## Cooldown between collsion sounds
+var last_sound_time: float ## Last time (msec) a collsion sound was made from this node
 
-var max_stretch: float = 1.4
-var min_squash: float = 0.7
-var stretch_factor: float = 0.01
-var recovery_speed: float = 15.0
+var max_stretch: float = 1.4 ## Max strech value for streching
+var min_squash: float = 0.7 ## Min scale size for streching
+var stretch_factor: float = 0.01 ## Amount that this node streches per frame
+var recovery_speed: float = 15.0 ## How fast node recovers from strech when still
 
-var ground_collider: StaticBody2D
-var game: Control:
+var ground_collider: StaticBody2D ## Ground body
+var game: Control: ## Game Frame, used for resized signal
 	set(value):
 		if game:
 			game.resized.disconnect(_parent_resized)
@@ -68,7 +68,7 @@ func _process(delta: float) -> void:
 			recovery_speed * delta,
 		)
 
-
+## Gets this node ready
 func get_ready():
 	$Label.text = letter
 
@@ -148,7 +148,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			play_collision_sound(volume_factor)
 			break
 
-
+## Plays a collision sound based on a volume factor
 func play_collision_sound(volume_factor: float):
 	var sound_player = AudioStreamPlayer.new()
 	sound_player.stream = preload("res://Audio/Sfx/collision.tres")
@@ -161,7 +161,7 @@ func play_collision_sound(volume_factor: float):
 
 	sound_player.connect("finished", sound_player.queue_free)
 
-
+## Applys strech to this node based on the nodes velocity
 func apply_stretch(velocity: Vector2):
 	var speed = velocity.length()
 	if speed > 0.1:
@@ -177,7 +177,7 @@ func apply_stretch(velocity: Vector2):
 			$Label.offset_transform_scale.x = squash_amount
 
 
-# More sound stuff. Commented out as sounds arn't in yet
+# More sound stuff. Commented this isn't used in this version
 func _on_body_entered(_body: Node) -> void:
 	pass
 	#if being_dragged:
@@ -198,7 +198,7 @@ func _on_body_entered(_body: Node) -> void:
 	#$AudioStreamPlayer2D.volume_db = clamp(audio_volume, -50, 5)
 	#$AudioStreamPlayer2D.play()
 
-
+# checks if letter is offscreen when game is resized
 func _parent_resized():
 	if global_position.x > game.size.x:
 		game.letter_off_screen(self)

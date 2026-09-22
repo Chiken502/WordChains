@@ -5,10 +5,13 @@ class_name ColorAgent
 @export var ground_color_rect: ColorRect ## The ground ColorRect
 
 ## Labels that need color changes. 
-## A label dons't need to be in this list if it uses a saved LabelSetting
+## A label doesn't need to be in this list if it uses a saved LabelSetting
 @export var labels: Array[Label] 
-@export var texture_buttons: Array[TextureButton]
 
+## Texture buttons that need color changes.
+@export var texture_buttons: Array[TextureButton] 
+
+## original colors
 var org_colors := ["3A86FF", "72B0FD", "96D8FE"]
 
 
@@ -18,7 +21,7 @@ func _ready() -> void: # Changes colors of scene at the start to match ColorMana
 	_on_colors_changed(org_colors)
 
 
-# receives color change from ColorManager, and changes colors in the current scene
+## receives color change from ColorManager, and changes colors in the current scene
 func _on_colors_changed(old_colors):
 	bg_color_rect.color = ColorManager.colors[ColorManager.current_color][3]
 	ground_color_rect.color = ColorManager.colors[ColorManager.current_color][1]

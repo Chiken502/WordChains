@@ -1,40 +1,52 @@
 extends Control
 
+## Notifys listener when a word is being changed
 signal word_confirmed(letter_node, new_letter: String)
-signal word_not_found(letter_node)
-signal game_ready
+signal word_not_found(letter_node) ## Notifys listener when a word is not found in the dictornary
+signal game_ready ## Notifys listener when the game has loaded everything and is ready
 
-var starting_word: String
-var target_word: String
-var current_word: String
-var solution = []
-var solution_long := []
-var shuffled
+var starting_word: String ## The word the player starts with
+var target_word: String ## The word the player is is trying to get to
+var current_word: String ## Current word that puzzle is on
 
-var undo_history: Array[String] = []
+## Stores the letters needed for the solution in the order they will be used, ex: "GMI"
+var solution = [] 
+var solution_long := [] ## Stores solution in full words instead of just letters  
+var shuffled = [] ## Stores a shuffled version of solution
 
-var hints := 0:
+var undo_history: Array[String] = [] ## History of undos, stored by full words
+
+var hints := 0: ## Amount of hints the player has avalible
 	set(value):
 		hints = value
 		$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(value)
 
-var hint_word_letter: Label
+var hint_word_letter: Label ## Current Word Letter that is higlighted due to a hint being used
 
-var completed = false
+var completed = false ## True if the level has been completed
 
 # Analytics
-var level_start_time = 0.0
-var hints_used = 0
-var undo_used = 0
+var level_start_time = 0.0 ## Time (msec) that the level was started
+var hints_used = 0 ## Amount of hints used on this level
+var undo_used = 0 ## Amount of undos used on this level
 
+# Nodes
+
+## Letter node the player drags
 const FALLING_LETTER = preload("res://_Components/falling_letter.tscn")
+## Letter node used for the current word UI
 const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn")
 
+## Node holding the target word UI
 @onready var target_label := $Control/VBoxContainer/TargetWord
+## Current Word HBox UI node
 @onready var cw_h_box := $Control/VBoxContainer/CurrentWordHBox
+## Undo button node
 @onready var undo_button := $Control/Bottom/HBoxContainer/Undo
 
+## Node that controls tween animations
 @onready var tween_controller = $TweenController
+## Node that holds the tutorial animation manager
 @onready var tutorial_manager = $tutorialManager
 
 
@@ -44,7 +56,7 @@ func _ready() -> void:
 	get_ready()
 	$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(hints)
 
-
+## A way to reset the game scene
 func get_ready():
 	if GameManager.tutorial_mode:
 		tutorial_manager.get_ready(self.game_ready)
@@ -115,7 +127,7 @@ func get_ready():
 	spawn_letters()
 	game_ready.emit()
 
-
+## Spwans falling letter nodes
 func spawn_letters():
 	shuffled = solution.duplicate() # duplicate to avoid shuffling the original solution
 	if solution is PackedStringArray:
@@ -127,7 +139,7 @@ func spawn_letters():
 	for l in shuffled: # Instantiate letters
 		letter_pos = spawn_letter(l, letter_pos)
 
-
+## Spawns a falling letter
 func spawn_letter(l: String, letter_pos: Array):
 	var letter = FALLING_LETTER.instantiate()
 
@@ -146,7 +158,7 @@ func spawn_letter(l: String, letter_pos: Array):
 	return letter_pos
 
 
-# Made sure the letters didn't collide with each other
+## Makes sure that falling letters don't collide with each other
 func check_letter_position(letter_pos: Array, letter: Node2D) -> Array:
 	var min_x := 100
 	var max_x := int(get_viewport_rect().size.x) - 100
@@ -187,7 +199,7 @@ func check_letter_position(letter_pos: Array, letter: Node2D) -> Array:
 	print("Couldn't find a safe position!")
 	return letter_pos
 
-
+## When a word is attempted to change
 func _on_current_word_letter_changed(node, letter):
 	var index = cw_h_box.get_children().find(node)
 
@@ -261,6 +273,7 @@ func _process(_delta: float) -> void:
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
 
+			# If the puzzle is the daily puzzle
 			if not GameManager.daily_mode:
 				var success = await GameManager.load_level(
 					GameManager.current_difficulty,
@@ -343,7 +356,7 @@ func _on_undo_button_pressed() -> void:
 		current_word = prev_word
 		GameManager.current_word = current_word
 
-
+## Resets Current word HBox childeren
 func reset_self():
 	for child in cw_h_box.get_children():
 		child.queue_free()
@@ -355,7 +368,7 @@ func _on_home_button_pressed() -> void:
 
 
 func _on_hint_button_pressed() -> void:
-	if GameManager.tutorial_mode:
+	if GameManager.tutorial_mode: # run tutorial if in tutorial mode
 		if (completed == true or current_word == target_word):
 			return
 		tutorial_manager.get_ready(get_tree().create_timer(0.1).timeout)
@@ -424,7 +437,7 @@ func _on_resized() -> void:
 	$Control/Bottom/Bottom/CollisionShape2D.shape.size.x = size.x
 	$Control/Bottom/Bottom/CollisionShape2D.position.x = size.x / 2
 
-
+## Respawns a letter if off screen.
 func letter_off_screen(letter):
 	var l = letter.letter
 

@@ -1,18 +1,19 @@
 extends Camera2D
 # from https://www.youtube.com/watch?v=pG4KGyxQp40
 
-var shake_intensity: float = 0.0
-var active_snake_time: float = 0.0
+var shake_intensity: float = 0.0 ## How intense the screeen shake is
+var active_snake_time: float = 0.0 ## How long the camera shake lasts
 
-var shake_decay: float = 50
+var shake_decay: float = 50 ## How much the screen shake decays each frame
 
-var shake_time: float = 0.0
+var shake_time: float = 0.0 ## Current time in the screen shake
 var shake_time_speed: float = 20.0
 
 var noise = FastNoiseLite.new()
 
 
 func _process(delta: float) -> void:
+	# Handle the screen shake
 	if active_snake_time > 0:
 		shake_time += delta * shake_time_speed
 		active_snake_time -= delta
@@ -26,7 +27,7 @@ func _process(delta: float) -> void:
 	else:
 		offset = lerp(offset, Vector2.ZERO, 10.5 * delta)
 
-
+## Shake the screen.
 func screen_shake(intensity: int, time: float):
 	noise.seed = randi()
 	noise.frequency = 2.0

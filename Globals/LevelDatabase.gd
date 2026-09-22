@@ -1,18 +1,22 @@
 extends Node
 
-signal daily_loaded()
-signal request_received(response_code: int)
-signal daily_failed(response_code: int)
+signal daily_loaded ## Notifys listeners when the daily level has been loaded
+signal daily_failed(response_code: int) ## Notifys listeners that the daily level failded to load
 
-signal level_loaded
-signal level_load_fail
+## Notifys listeners when the Time API request is recived
+signal request_received(response_code: int) 
 
-var day_of_year: int = -1
-var utc_datetime: String
+signal level_loaded ## Notifys listeners when a level has been loaded
+signal level_load_fail ## Notifys listeners when a level failed to load
 
+## Day of the year (UTC), fetched from a Time API, -1 if API hasn't been called
+var day_of_year: int = -1 
+var utc_datetime: String ## UTC datetime fetched from Time API, null if API hasn't been called
 
+## Loads the level at the difficulty and level number give.
 func load_level(difficulty: int, level: int):
 	await get_tree().process_frame
+	
 	if FileAccess.file_exists("res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1)):
 		var puzzle_file = FileAccess.open(
 			"res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1),
@@ -39,7 +43,7 @@ func load_level(difficulty: int, level: int):
 		level_load_fail.emit()
 		print("Difficulty %s's file couldn't be found" % difficulty)
 
-
+## Sends API for the datetime and day of the year data.
 func fetch_date():
 	print("Loading daily level")
 	var http = HTTPRequest.new()
@@ -47,6 +51,7 @@ func fetch_date():
 	add_child(http)
 	http.request_completed.connect(self._http_request_completed)
 
+	# fetch api key for RapidAPI
 	var file = FileAccess.open("res://api_key.json", FileAccess.READ)
 	var raw_data = file.get_as_text()
 	file.close()
@@ -70,7 +75,7 @@ func fetch_date():
 	else:
 		print("Requested Time")
 
-
+## Loads the daily level, only works if day_of_year != -1
 func load_daily_level():
 	if day_of_year != -1:
 		print("Loading puzzle file")
@@ -93,7 +98,7 @@ func load_daily_level():
 
 		daily_loaded.emit()
 
-
+## Gets the short solution from the puzzles long solution
 func get_short_solution(solution_long: Array) -> String:
 	var result = ""
 
@@ -115,7 +120,7 @@ func get_short_solution(solution_long: Array) -> String:
 
 	return result
 
-
+## Time API request is completed
 func _http_request_completed(
 	_result: int,
 	response_code: int,
@@ -138,7 +143,7 @@ func _http_request_completed(
 		print("API Request failed with response code: ", response_code)
 		daily_failed.emit(response_code)
 
-
+## Parses json raw text to a dictionary
 func parse_response(raw_text: String) -> Dictionary:
 	var result_dict: Dictionary = { }
 

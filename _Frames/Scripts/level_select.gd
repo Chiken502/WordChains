@@ -1,7 +1,5 @@
 extends Control
 
-var level_select_node = preload("res://_Components/level_select_button.tscn")
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +17,7 @@ func _ready() -> void:
 	ColorManager.change_color(ColorManager.current_color)
 	MusicManager.scene_loaded()
 
+	# Connect Control animations
 	$VBoxContainer/Title.mouse_entered.connect(_on_control_mouse_entered.bind($VBoxContainer/Title))
 	$VBoxContainer/Title.mouse_exited.connect(_on_control_mouse_exited.bind($VBoxContainer/Title))
 

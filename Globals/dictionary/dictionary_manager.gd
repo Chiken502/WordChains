@@ -20,12 +20,12 @@ func _process(_delta: float) -> void:
 		words_loaded = true
 
 
-## checks if word is in the dictionary
+## Checks if word is in the dictionary
 func is_legal_word(word: String) -> bool:
 	return word.to_lower() in words
 
 
-## load the dictionary
+## Load the dictionary
 func load_dictionary():
 	var file_path = "res://Globals/dictionary/12dicts_words.txt"
 	var file = FileAccess.open(file_path, FileAccess.READ)

@@ -5,7 +5,7 @@ var settings_path := "user://settings.data"
 
 # Once have more settings, save settings to a config file.
 
-
+## Saves game settings to settings_path
 func save_settings():
 	print("Saving Settings...")
 	var settings_file = FileAccess.open(settings_path, FileAccess.WRITE)
@@ -20,7 +20,7 @@ func save_settings():
 	settings_file.store_var(settings_data)
 	print("Settings Saved")
 
-
+## Saves game progress to save_path
 func save_game():
 	print("Saving Game...")
 	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
@@ -41,7 +41,8 @@ func save_game():
 	save_file.store_var(save_data)
 	print("Game Saved")
 
-
+## Loads game files, and assigns the values to the correct Autoloads
+## Loads defult values if file wasn't found to read.
 func load_game():
 	print("Loading game...")
 	print("Loading Settings")

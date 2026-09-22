@@ -1,8 +1,8 @@
 extends Node2D
 
-var letter_being_dragged: RigidBody2D
-var prev_mouse_pos: Vector2 = Vector2.ZERO
-var mouse_velocity: Vector2 = Vector2.ZERO
+var letter_being_dragged: RigidBody2D ## Falling Letter being dragged by the player
+var prev_mouse_pos: Vector2 = Vector2.ZERO ## Mouse position on previous frame
+var mouse_velocity: Vector2 = Vector2.ZERO ## Mouse velocity calculated based on last frame
 
 
 func _input(event: InputEvent) -> void:
@@ -23,7 +23,7 @@ func _input(event: InputEvent) -> void:
 				letter_being_dragged.being_dragged = false
 			letter_being_dragged = null
 
-
+## Checks for a letter under the mouse, to drag
 func raycast_check():
 	var space_state = get_world_2d().direct_space_state
 	var parameters = PhysicsPointQueryParameters2D.new()

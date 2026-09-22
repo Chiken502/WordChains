@@ -1,6 +1,6 @@
 extends Node
 
-
+## Called when a frame is loaded. Connects buttons pressed signals to a sound
 func scene_loaded():
 	print("Scene Loaded")
 	for node in get_tree().current_scene.find_children("*", "", true, false):

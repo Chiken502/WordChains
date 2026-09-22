@@ -5,6 +5,7 @@ extends Control
 func _ready() -> void:
 	MusicManager.scene_loaded()
 	
+	# Connect Chedda Boards if not logged in already
 	if !CheddaBoards.is_logged_in():
 		CheddaBoards.login_anonymous()
 		await CheddaBoards.login_success
@@ -17,6 +18,7 @@ func _ready() -> void:
 		(func(score, _streak):print("score submitted: " + str(score)))
 	)
 	
+	# Show the correct UI, for wether you have a nickname yet or not
 	if GameManager.nickname.strip_edges() == "" or CheddaBoards.get_nickname().strip_edges() == "":
 		print("Nickname is \"" + CheddaBoards.get_nickname() + "\"")
 		$VBoxContainer/VBoxContainer.show()
@@ -31,6 +33,7 @@ func _ready() -> void:
 		show_leaderboard()
 		GameManager.daily_mode = false
 	
+	# Connect Control Animations
 	$VBoxContainer/Title.mouse_entered.connect(_on_control_mouse_entered.bind($VBoxContainer/Title))
 	$VBoxContainer/Title.mouse_exited.connect(_on_control_mouse_exited.bind($VBoxContainer/Title))
 	
@@ -39,13 +42,13 @@ func _ready() -> void:
 	%Home.button_up.connect(_on_button_up.bind(%Home))
 	%Home.button_down.connect(_on_button_down.bind($%Home))
 
-
+## Fetches the leaderboard
 func show_leaderboard():
 	print("REQUESTING LEADERBOARD")
 	CheddaBoards.get_scoreboard("daily-puzzle-times")
 	print("GET_SCOREBOARD CALLED")
 
-
+## Leader board request recived
 func _on_leaderboard(_sb_id, _config, entries):
 	print("LEADERBOARD RECEIVED")
 	$VBoxContainer/ScrollContainer/VBoxContainer2/Label.hide()
@@ -66,7 +69,7 @@ func _on_leaderboard(_sb_id, _config, entries):
 				.set_trans(Tween.TRANS_QUINT)
 		await tween.finished
 
-
+# Nickname button pressed
 func _on_button_pressed() -> void:
 	if $VBoxContainer/VBoxContainer/LineEdit.text != "":
 		CheddaBoards.login_anonymous($VBoxContainer/VBoxContainer/LineEdit.text)
@@ -118,7 +121,8 @@ func _on_button_down(button: Button):
 
 		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
 
-
+# Formats the line edit according rules in to 
+# https://docs.cheddaboards.com/api/errors#nickname-rejected
 func _on_line_edit_text_changed(new_text: String) -> void:
 	var lineedit = $VBoxContainer/VBoxContainer/LineEdit
 	var filtered := ""

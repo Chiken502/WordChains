@@ -1,24 +1,27 @@
 extends Node2D
 
+## Sprite that shows the hand for the tutorial
 var sprite: Sprite2D
 
-var hand_texture: ImageTexture
-var closed_hand_texture: ImageTexture
+var hand_texture: ImageTexture ## Open hand texture
+var closed_hand_texture: ImageTexture ## Closed hand texture
 
 var tween: Tween
 
-var example_letter: RigidBody2D
-var letters = []
+var example_letter: RigidBody2D ## Falling Letter node used for demenstration
+var letters = [] ## All falling letters in the scene
 
-var running = false
+var running = false ## True if the tutorial is currently running
 
-
+## Call to start the tutorial, needs a signal to tell it when to start 
+## so everything to load before it runs
 func get_ready(start_signal: Signal):
 	if running:
 		return
 
 	running = true
 
+	# set up the tutorial sprite
 	sprite = Sprite2D.new()
 	hand_texture = ColorManager.modify_svg("res://Resources/hand.svg.txt")
 	closed_hand_texture = ColorManager.modify_svg("res://Resources/hand-back-fist.svg.txt")
@@ -32,6 +35,7 @@ func get_ready(start_signal: Signal):
 
 	await get_tree().create_timer(1).timeout
 
+	# Find the falling letter that will be used
 	for child in get_parent().get_children():
 		if child.is_in_group("falling letter"):
 			letters.append(child)

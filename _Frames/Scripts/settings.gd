@@ -1,13 +1,15 @@
 extends Control
 
+## Music bus to control music volume
 var music_bus_idx := AudioServer.get_bus_index("Music Bus")
+## Sound bus to control sound effect volume
 var sound_bus_idx := AudioServer.get_bus_index("SFX Bus")
 
-var sound_feedback_cooldown := 0.4
-var last_sound_feedback: float
+var sound_feedback_cooldown := 0.4 ## Delay between sound feedback sounds
+var last_sound_feedback: float ## last time sound feedback time
 
-var settings_changed = false
-var nickname_changed = false
+var settings_changed = false ## If the settings have been changed and need to be saved
+var nickname_changed = false ## If nickname has been changed and the game save needs updated
 
 
 # Called when the node enters the scene tree for the first time.
@@ -56,7 +58,7 @@ func _on_home_pressed() -> void:
 	save_settings()
 	GameManager.back_to_menu()
 
-
+## Saves and changes made 
 func save_settings():
 	if nickname_changed:
 		if !CheddaBoards.is_logged_in():
