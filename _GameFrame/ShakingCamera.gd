@@ -1,7 +1,7 @@
 extends Camera2D
 # from https://www.youtube.com/watch?v=pG4KGyxQp40
 
-var shake_intensity: float = 0.0 ## How intense the screeen shake is
+var shake_intensity: float = 0.0 ## How intense the screen shake is
 var active_snake_time: float = 0.0 ## How long the camera shake lasts
 
 var shake_decay: float = 50 ## How much the screen shake decays each frame

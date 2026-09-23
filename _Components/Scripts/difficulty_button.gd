@@ -1,6 +1,6 @@
 extends Button
 
-## Dificulty level the button represents
+## Difficulty level the button represents
 @export var difficulty = 1:
 	set(value):
 		difficulty = value

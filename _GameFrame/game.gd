@@ -1,9 +1,9 @@
 extends Control
 
-## Notifys listener when a word is being changed
+## Notifies listener when a word is being changed
 signal word_confirmed(letter_node, new_letter: String)
-signal word_not_found(letter_node) ## Notifys listener when a word is not found in the dictornary
-signal game_ready ## Notifys listener when the game has loaded everything and is ready
+signal word_not_found(letter_node) ## Notifies listener when a word is not found in the dictionary
+signal game_ready ## Notifies listener when the game has loaded everything and is ready
 
 var starting_word: String ## The word the player starts with
 var target_word: String ## The word the player is is trying to get to
@@ -16,12 +16,12 @@ var shuffled = [] ## Stores a shuffled version of solution
 
 var undo_history: Array[String] = [] ## History of undos, stored by full words
 
-var hints := 0: ## Amount of hints the player has avalible
+var hints := 0: ## Amount of hints the player has available
 	set(value):
 		hints = value
 		$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(value)
 
-var hint_word_letter: Label ## Current Word Letter that is higlighted due to a hint being used
+var hint_word_letter: Label ## Current Word Letter that is highlighted due to a hint being used
 
 var completed = false ## True if the level has been completed
 
@@ -147,7 +147,7 @@ func get_ready():
 	spawn_letters()
 	game_ready.emit()
 
-## Spwans falling letter nodes
+## Spawns falling letter nodes
 func spawn_letters():
 	shuffled = solution.duplicate() # duplicate to avoid shuffling the original solution
 	if solution is PackedStringArray:
@@ -376,7 +376,7 @@ func _on_undo_button_pressed() -> void:
 		current_word = prev_word
 		GameManager.current_word = current_word
 
-## Resets Current word HBox childeren
+## Resets Current word HBox children
 func reset_self():
 	for child in cw_h_box.get_children():
 		child.queue_free()

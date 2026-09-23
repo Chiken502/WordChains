@@ -14,7 +14,7 @@ var current_difficulty := 0 ## Current Difficulty Level
 var amt_of_hints := 0 ## Amount of hints the player has remaining
 
 # Settings Variables
-var screen_shake_on = true ## Controls wether the screen shakes when a word is not in the dictonary
+var screen_shake_on = true ## Controls wether the screen shakes when a word is not in the dictionary
 
 var tutorial_mode = false ## True if the player is in the tutorial
 var need_tutorial = true ## True if the player needs to play the tutorial
@@ -65,15 +65,15 @@ func _ready() -> void:
 	# Fetch current day of the year
 	LevelDatabase.fetch_date()
 
-	# Set up PostHog Anylitics
+	# Set up PostHog Analytics
 	await PostHog.initialized
 	PostHog.auto_include_properties["distribution_platform"] = "itchio"
 	PostHog.auto_include_properties["game_version"] = current_game_version
 	PostHog.capture("GAME_START")
 
 
-func _on_chedda_login_success(nickname):
-	print(nickname + " login successful")
+func _on_chedda_login_success(nick_name):
+	print(nick_name + " login successful")
 
 
 func _on_chedda_login_failed(error):
@@ -85,8 +85,8 @@ func _on_chedda_login_failed(error):
 func load_level(difficulty: int, level_num: int) -> bool:
 	print("LOADING LEVEL")
 
-	# Set up Signal Resolver to tell when one of two signals is recived.
-	var error = { "result": "fail" } # This needs to be a dictonary to be accesed by a lamda func
+	# Set up Signal Resolver to tell when one of two signals is received.
+	var error = { "result": "fail" } # This needs to be a dictionary to be accessed by a lambda func
 	var resolver = SignalResolver.new()
 
 	LevelDatabase.level_loaded.connect(
@@ -146,8 +146,8 @@ func back_to_menu():
 ## Loads the daily puzzle and changes the scene to the game frame
 func load_daily_puzzle(panel: Panel):
 	if GameManager.day_of_year != -1: # If day of the year isn't loaded yet
-		# Set up Signal Resolver to tell when one of two signals is recived.
-		var error = { "response_code": 0 } # This needs to be a dictonary to be accesed by a lamda
+		# Set up Signal Resolver to tell when one of two signals is received.
+		var error = { "response_code": 0 } # This needs to be a dictionary to be accessed by a lambda
 		var resolver = SignalResolver.new()
 
 		LevelDatabase.daily_failed.connect(
@@ -185,7 +185,7 @@ func open_leaderboard():
 	get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
 
 ## Signal Resolver is used when you need to await one or more signals at a time 
-## and have a diffrent outcome for each.
+## and have a different outcome for each.
 class SignalResolver:
 	@warning_ignore("unused_signal")
 	signal done

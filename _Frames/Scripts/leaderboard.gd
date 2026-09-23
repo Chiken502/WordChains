@@ -48,7 +48,7 @@ func show_leaderboard():
 	CheddaBoards.get_scoreboard("daily-puzzle-times")
 	print("GET_SCOREBOARD CALLED")
 
-## Leader board request recived
+## Leader board request received
 func _on_leaderboard(_sb_id, _config, entries):
 	print("LEADERBOARD RECEIVED")
 	$VBoxContainer/ScrollContainer/VBoxContainer2/Label.hide()

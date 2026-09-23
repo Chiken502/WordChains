@@ -1,13 +1,13 @@
 extends Node
 
-signal daily_loaded ## Notifys listeners when the daily level has been loaded
-signal daily_failed(response_code: int) ## Notifys listeners that the daily level failded to load
+signal daily_loaded ## Notifies listeners when the daily level has been loaded
+signal daily_failed(response_code: int) ## Notifies listeners that the daily level failed to load
 
-## Notifys listeners when the Time API request is recived
+## Notifies listeners when the Time API request is received
 signal request_received(response_code: int) 
 
-signal level_loaded ## Notifys listeners when a level has been loaded
-signal level_load_fail ## Notifys listeners when a level failed to load
+signal level_loaded ## Notifies listeners when a level has been loaded
+signal level_load_fail ## Notifies listeners when a level failed to load
 
 ## Day of the year (UTC), fetched from a Time API, -1 if API hasn't been called
 var day_of_year: int = -1 

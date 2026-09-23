@@ -13,7 +13,7 @@ var time : int = 0: ## How long in tenths of a second the player took to complet
 	set(value):
 		time = value
 
-		# Time formating
+		# Time formatting
 		var minutes := int(floor(time / 600.0))
 		var seconds := int(floor((time % 600)) / 10.0)
 		var tenths := time % 10

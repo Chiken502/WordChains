@@ -1,13 +1,13 @@
 extends Label
 
-signal letter_changed(node, letter) ## Notifys listeners when the letter has been changed
+signal letter_changed(node, letter) ## Notifies listeners when the letter has been changed
 
 var scripted_parent: Node2D # See if this is useful or needed
 
 var letter = "A" ## Letter that this node represents
 var colliding_body: RigidBody2D ## Falling letter that is colliding
 
-var hinted = false: ## If hinted the letter is highlighted to empisize a hint
+var hinted = false: ## If hinted the letter is highlighted to emphasize a hint
 	set(value):
 		hinted = value
 		$MainParticles/Sprite2D.visible = value

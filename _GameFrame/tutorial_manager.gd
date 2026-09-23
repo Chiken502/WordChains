@@ -8,7 +8,7 @@ var closed_hand_texture: ImageTexture ## Closed hand texture
 
 var tween: Tween
 
-var example_letter: RigidBody2D ## Falling Letter node used for demenstration
+var example_letter: RigidBody2D ## Falling Letter node used for demonstration
 var letters = [] ## All falling letters in the scene
 
 var running = false ## True if the tutorial is currently running

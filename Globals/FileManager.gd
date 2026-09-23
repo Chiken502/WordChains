@@ -42,7 +42,7 @@ func save_game():
 	print("Game Saved")
 
 ## Loads game files, and assigns the values to the correct Autoloads
-## Loads defult values if file wasn't found to read.
+## Loads default values if file wasn't found to read.
 func load_game():
 	print("Loading game...")
 	print("Loading Settings")

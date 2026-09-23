@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var letters = [ ## All posible letters
+var letters = [ ## All possible letters
 	"A",
 	"B",
 	"C",
@@ -31,15 +31,15 @@ var letters = [ ## All posible letters
 var letter = "" ## Letter that his node represents
 var being_dragged = false ## True if the player is dragging this node
 
-const COLLISION_THRESHOLD = 20.0 ## Threshold for how big of a collison is need to make a sound.
+const COLLISION_THRESHOLD = 20.0 ## Threshold for how big of a collision is need to make a sound.
 const MAX_COLLISION_IMPULSE = 100.0 ## Max size of a collision for sound factor calculation
-const SOUND_COOLDOWN = 0.1 ## Cooldown between collsion sounds
-var last_sound_time: float ## Last time (msec) a collsion sound was made from this node
+const SOUND_COOLDOWN = 0.1 ## Cooldown between collision sounds
+var last_sound_time: float ## Last time (msec) a collision sound was made from this node
 
-var max_stretch: float = 1.4 ## Max strech value for streching
-var min_squash: float = 0.7 ## Min scale size for streching
-var stretch_factor: float = 0.01 ## Amount that this node streches per frame
-var recovery_speed: float = 15.0 ## How fast node recovers from strech when still
+var max_stretch: float = 1.4 ## Max stretch value for stretching
+var min_squash: float = 0.7 ## Min scale size for stretching
+var stretch_factor: float = 0.01 ## Amount that this node stretches per frame
+var recovery_speed: float = 15.0 ## How fast node recovers from stretch when still
 
 var ground_collider: StaticBody2D ## Ground body
 var game: Control: ## Game Frame, used for resized signal
@@ -161,7 +161,7 @@ func play_collision_sound(volume_factor: float):
 
 	sound_player.connect("finished", sound_player.queue_free)
 
-## Applys strech to this node based on the nodes velocity
+## Applies stretch to this node based on the nodes velocity
 func apply_stretch(velocity: Vector2):
 	var speed = velocity.length()
 	if speed > 0.1:
