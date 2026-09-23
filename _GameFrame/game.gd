@@ -10,13 +10,14 @@ var target_word: String ## The word the player is is trying to get to
 var current_word: String ## Current word that puzzle is on
 
 ## Stores the letters needed for the solution in the order they will be used, ex: "GMI"
-var solution = [] 
-var solution_long := [] ## Stores solution in full words instead of just letters  
+var solution = []
+var solution_long := [] ## Stores solution in full words instead of just letters
 var shuffled = [] ## Stores a shuffled version of solution
 
 var undo_history: Array[String] = [] ## History of undos, stored by full words
 
-var hints := 0: ## Amount of hints the player has available
+var hints := 0:
+	## Amount of hints the player has available
 	set(value):
 		hints = value
 		$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(value)
@@ -55,9 +56,9 @@ func _ready() -> void:
 	MusicManager.scene_loaded()
 	get_ready()
 	$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(hints)
-	
+
 	var difficulty_text = ""
-	
+
 	if GameManager.daily_mode:
 		difficulty_text = "Daily Puzzle"
 		$Control/levelInfo/levelNum.hide()
@@ -71,8 +72,9 @@ func _ready() -> void:
 				difficulty_text = "HARD"
 			3:
 				difficulty_text = "EXPERT"
-	
+
 	$Control/levelInfo/levelDif.text = difficulty_text
+
 
 ## A way to reset the game scene
 func get_ready():
@@ -117,8 +119,10 @@ func get_ready():
 	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
-	
-	$Control/levelInfo/levelNum.text = "Level " + str(GameManager.current_levels[GameManager.current_difficulty] + 1)
+
+	$Control/levelInfo/levelNum.text = "Level " + str(
+		GameManager.current_levels[GameManager.current_difficulty] + 1
+	)
 
 	if GameManager.daily_mode:
 		PostHog.capture(
@@ -147,6 +151,7 @@ func get_ready():
 	spawn_letters()
 	game_ready.emit()
 
+
 ## Spawns falling letter nodes
 func spawn_letters():
 	shuffled = solution.duplicate() # duplicate to avoid shuffling the original solution
@@ -158,6 +163,7 @@ func spawn_letters():
 
 	for l in shuffled: # Instantiate letters
 		letter_pos = spawn_letter(l, letter_pos)
+
 
 ## Spawns a falling letter
 func spawn_letter(l: String, letter_pos: Array):
@@ -219,6 +225,7 @@ func check_letter_position(letter_pos: Array, letter: Node2D) -> Array:
 	print("Couldn't find a safe position!")
 	return letter_pos
 
+
 ## When a word is attempted to change
 func _on_current_word_letter_changed(node, letter):
 	var index = cw_h_box.get_children().find(node)
@@ -265,7 +272,10 @@ func _process(_delta: float) -> void:
 	if completed:
 		undo_button.disabled = true
 
-	if hints <= 0:
+	if GameManager.daily_mode:
+		%Hint.disabled = true
+		%Hint.tooltip_text = "Hints are disabled for the daily puzzle"
+	elif hints <= 0:
 		%Hint.disabled = true
 		%Hint.tooltip_text = "To get more hints complete levels!"
 	else:
@@ -376,6 +386,7 @@ func _on_undo_button_pressed() -> void:
 		current_word = prev_word
 		GameManager.current_word = current_word
 
+
 ## Resets Current word HBox children
 func reset_self():
 	for child in cw_h_box.get_children():
@@ -456,6 +467,7 @@ func _on_hint_button_pressed() -> void:
 func _on_resized() -> void:
 	$Control/Bottom/Bottom/CollisionShape2D.shape.size.x = size.x
 	$Control/Bottom/Bottom/CollisionShape2D.position.x = size.x / 2
+
 
 ## Respawns a letter if off screen.
 func letter_off_screen(letter):
