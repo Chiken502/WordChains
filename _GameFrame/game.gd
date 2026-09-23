@@ -55,6 +55,24 @@ func _ready() -> void:
 	MusicManager.scene_loaded()
 	get_ready()
 	$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(hints)
+	
+	var difficulty_text = ""
+	
+	if GameManager.daily_mode:
+		difficulty_text = "Daily Puzzle"
+		$Control/levelInfo/levelNum.hide()
+	else:
+		match GameManager.current_difficulty:
+			0:
+				difficulty_text = "EASY"
+			1:
+				difficulty_text = "MEDIUM"
+			2:
+				difficulty_text = "HARD"
+			3:
+				difficulty_text = "EXPERT"
+	
+	$Control/levelInfo/levelDif.text = difficulty_text
 
 ## A way to reset the game scene
 func get_ready():
@@ -99,6 +117,8 @@ func get_ready():
 	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
+	
+	$Control/levelInfo/levelNum.text = "Level " + str(GameManager.current_levels[GameManager.current_difficulty] + 1)
 
 	if GameManager.daily_mode:
 		PostHog.capture(
