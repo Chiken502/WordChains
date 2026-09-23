@@ -19,7 +19,7 @@ Then in late July of 2026, I decided to come back to this project and I complete
 
 So far the code base has been completely reworked, with completely new UI, effects, and music. Then I added more levels, a level select system, save files.
 
-<img src="ExampleImgs/example.gif" height="400" /> <img src="ExampleImgs/levelselect.png" height="400" width="360"/> <img src="ExampleImgs/settings.png" height="400"/>
+<img src="ExampleImgs/example.gif" height="400" /> <img src="ExampleImgs/levelselect.png" height="400" /> <img src="ExampleImgs/settings.png" height="400"/>
 
 #### The game can currently be played at https://chicken502.itch.io/word-chains
 
