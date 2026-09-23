@@ -6,6 +6,7 @@ signal tween_done
 @onready var current_word_container = $"../Control/VBoxContainer/CurrentWordHBox"
 @onready var wrong_word_label = $"../Control/VBoxContainer/WrongWord"
 
+var not_a_word_tween : Tween
 
 func _ready():
 	for button in [%Undo, %Home, %Hint]: # Connects button signals for animations
@@ -52,24 +53,31 @@ func slide_off(size: Vector2):
 
 # Shakes the current words to indicate that its not a word
 func not_a_word():
-	var tween = get_tree().create_tween()
+	if not_a_word_tween:
+		not_a_word_tween.kill()
+		not_a_word_tween = null
+		wrong_word_label.modulate = Color.WHITE
+
+	not_a_word_tween = get_tree().create_tween()
 
 	var random_offset = Vector2(randf_range(0, 1), randf_range(0, 1)).normalized() * 5
 	current_word_container.offset_transform_position = random_offset
-	tween \
+	not_a_word_tween \
 		.tween_property(current_word_container, "offset_transform_position", Vector2.ZERO, 0.5) \
 		.set_trans(Tween.TRANS_ELASTIC) \
 		.set_ease(Tween.EASE_IN_OUT)
 
-	tween \
+	not_a_word_tween \
 		.tween_property(wrong_word_label, "modulate", Color.TRANSPARENT, 1.0) \
 		.set_ease(Tween.EASE_OUT) \
 		.set_trans(Tween.TRANS_SINE)
 
-	await tween.finished
+	await not_a_word_tween.finished
 	wrong_word_label.text = ""
 	wrong_word_label.modulate = Color.WHITE
 	tween_done.emit()
+	not_a_word_tween.kill()
+	not_a_word_tween = null
 
 
 # button animations

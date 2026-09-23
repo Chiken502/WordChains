@@ -257,7 +257,7 @@ func _on_current_word_letter_changed(node, letter):
 		if GameManager.screen_shake_on:
 			$Control/CameraHolder/ShakeCamera2D.screen_shake(10, 0.75)
 
-		$Control/VBoxContainer/WrongWord.text = "[b]" + new_word.capitalize() + "[/b] is not a word"
+		$Control/VBoxContainer/WrongWord.text = "[b]" + new_word.to_upper() + "[/b] is not a word"
 
 		$TweenController.not_a_word()
 		word_not_found.emit(node) #TODO: ADD ERROR SOUND
