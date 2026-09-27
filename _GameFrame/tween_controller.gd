@@ -9,7 +9,7 @@ signal tween_done
 var not_a_word_tween : Tween
 
 func _ready():
-	for button in [%Undo, %Home, %Hint]: # Connects button signals for animations
+	for button in [%Undo, %Home, %Hint, %Reset]: # Connects button signals for animations
 		button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
 		button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
 		button.button_up.connect(_on_button_up.bind(button))
@@ -107,3 +107,10 @@ func _on_button_down(button: Button):
 		var tween = get_tree().create_tween()
 
 		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
+
+
+func _on_reset_pressed() -> void:
+	var tween = get_tree().create_tween()
+	
+	%Reset.offset_transform_rotation = 0
+	tween.tween_property(%Reset, "offset_transform_rotation", PI, 0.5)

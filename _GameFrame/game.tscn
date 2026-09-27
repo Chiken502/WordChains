@@ -329,6 +329,22 @@ text = "Level 6"
 label_settings = SubResource("LabelSettings_55afc")
 horizontal_alignment = 1
 
+[node name="Reset" type="Button" parent="Control" unique_id=1760344279]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -66.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 66.0
+grow_horizontal = 0
+offset_transform_enabled = true
+theme = ExtResource("4_3g1ng")
+theme_override_font_sizes/font_size = 26
+text = "arrows-spin"
+
 [node name="ColorAgent" type="Node" parent="." unique_id=2117236080 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("7_p1fqw")
 bg_color_rect = NodePath("../Control/ColorRect")
@@ -343,3 +359,5 @@ script = ExtResource("10_56ccj")
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Home" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Hint" to="." method="_on_hint_button_pressed"]
+[connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="Control/Reset" to="TweenController" method="_on_reset_pressed"]

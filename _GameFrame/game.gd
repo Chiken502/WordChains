@@ -264,10 +264,12 @@ func _on_current_word_letter_changed(node, letter):
 
 
 func _process(_delta: float) -> void:
-	if undo_history:
+	if undo_history and not completed:
 		undo_button.disabled = false
+		%Reset.disabled = false
 	else:
 		undo_button.disabled = true
+		%Reset.disabled = true
 
 	if completed:
 		undo_button.disabled = true
@@ -474,3 +476,27 @@ func letter_off_screen(letter):
 	var l = letter.letter
 
 	spawn_letter(l, [])
+
+
+func _on_reset_pressed() -> void:
+	#undo_history.reverse()
+	
+	print(undo_history)
+	undo_history.reverse()
+	var current_char = current_word.split("")
+	var prev_char = undo_history[0].split("")
+	for i in range(len(undo_history)):
+		for j in range(len(current_char)):
+			if prev_char[j] != current_char[j]:
+				spawn_letter(current_char[j], [])
+				break
+		current_char = prev_char
+		if len(undo_history) > i+1:
+			prev_char = undo_history[i+1].split("")
+	
+	undo_history = []
+	current_word = starting_word
+	
+	for i in range(cw_h_box.get_child_count()):
+		var label = cw_h_box.get_child(i)
+		label.text = current_word[i]
