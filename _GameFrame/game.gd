@@ -412,8 +412,7 @@ func _on_hint_button_pressed() -> void:
 		tutorial_manager.get_ready(get_tree().create_timer(0.1).timeout)
 	else:
 		if (
-			completed == true or current_word == target_word
-			or current_word == solution_long[-2] or hints <= 0
+			completed == true or current_word == target_word or hints <= 0
 		):
 			return
 
