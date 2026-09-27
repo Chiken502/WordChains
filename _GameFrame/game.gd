@@ -142,6 +142,11 @@ func get_ready():
 				"difficulty": GameManager.current_difficulty,
 			},
 		)
+	
+	if GameManager.daily_mode or GameManager.tutorial_mode:
+		%Reset.hide()
+	else:
+		%Reset.show()
 
 	# Animate words sliding on
 	tween_controller.slide_in(self.size)
@@ -479,8 +484,6 @@ func letter_off_screen(letter):
 
 
 func _on_reset_pressed() -> void:
-	#undo_history.reverse()
-	
 	print(undo_history)
 	undo_history.reverse()
 	var current_char = current_word.split("")
@@ -500,3 +503,4 @@ func _on_reset_pressed() -> void:
 	for i in range(cw_h_box.get_child_count()):
 		var label = cw_h_box.get_child(i)
 		label.text = current_word[i]
+		label.reset()

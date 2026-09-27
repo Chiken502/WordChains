@@ -72,3 +72,6 @@ func success():
 # Called when undo is used
 func flash_undo():
 	$MainParticles/UndoParticles.emitting = true
+
+func reset():
+	$MainParticles/ResetParticles.emitting = true

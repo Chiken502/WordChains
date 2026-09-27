@@ -342,6 +342,7 @@ offset_bottom = 66.0
 grow_horizontal = 0
 offset_transform_enabled = true
 theme = ExtResource("4_3g1ng")
+theme_override_colors/font_disabled_color = Color(0.44705883, 0.6901961, 0.99215686, 0)
 theme_override_font_sizes/font_size = 26
 text = "arrows-spin"
 

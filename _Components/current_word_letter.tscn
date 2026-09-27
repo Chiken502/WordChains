@@ -44,6 +44,10 @@ metadata/_snap_enabled = true
 offsets = PackedFloat32Array(0.6559324, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
+[sub_resource type="Gradient" id="Gradient_b178d"]
+offsets = PackedFloat32Array(0.62203413, 1)
+colors = PackedColorArray(1, 1, 1, 0.83137256, 1, 1, 1, 0)
+
 [node name="Curent Word Letter" type="Label" unique_id=1838218017]
 offset_right = 44.0
 offset_bottom = 112.0
@@ -117,6 +121,24 @@ initial_velocity_max = 600.0
 scale_amount_min = 0.5
 scale_amount_max = 1.5
 color_ramp = SubResource("Gradient_mvqqf")
+
+[node name="ResetParticles" type="CPUParticles2D" parent="MainParticles" unique_id=1655997830]
+emitting = false
+amount = 12
+texture = SubResource("GradientTexture2D_h7xov")
+one_shot = true
+explosiveness = 0.92
+randomness = 0.24
+lifetime_randomness = 0.31
+emission_shape = 1
+emission_sphere_radius = 35.0
+gravity = Vector2(0, 0)
+orbit_velocity_max = 1.0
+linear_accel_min = 5.0
+linear_accel_max = 5.0
+scale_amount_min = 1.5
+scale_amount_max = 3.5
+color_ramp = SubResource("Gradient_b178d")
 
 [connection signal="resized" from="." to="." method="_on_resized"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
