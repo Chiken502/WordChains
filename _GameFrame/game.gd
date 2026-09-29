@@ -26,6 +26,10 @@ var hint_word_letter: Label ## Current Word Letter that is highlighted due to a 
 
 var completed = false ## True if the level has been completed
 
+var timed_mode_seconds = 30
+var timed_mode_minutes = 1
+var timed_mode_levels_completed = 0
+
 # Analytics
 var level_start_time = 0.0 ## Time (msec) that the level was started
 var hints_used = 0 ## Amount of hints used on this level
@@ -49,6 +53,8 @@ const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn"
 @onready var tween_controller = $TweenController
 ## Node that holds the tutorial animation manager
 @onready var tutorial_manager = $tutorialManager
+## Timer that handles seconds for timed mode timer.
+@onready var timed_timer = $TimedModeTimer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -62,6 +68,12 @@ func _ready() -> void:
 	if GameManager.daily_mode:
 		difficulty_text = "Daily Puzzle"
 		$Control/levelInfo/levelNum.hide()
+	elif GameManager.timed_mode:
+		difficulty_text = "Levels Completed: " + str(timed_mode_levels_completed)
+		$Control/levelInfo/levelNum.text = "2:30"
+		%Reset.disabled = true
+		%Hint.disabled = true
+		timed_timer.start()
 	else:
 		match GameManager.current_difficulty:
 			0:
@@ -120,9 +132,10 @@ func get_ready():
 	hints_used = 0
 	undo_used = 0
 
-	$Control/levelInfo/levelNum.text = "Level " + str(
-		GameManager.current_levels[GameManager.current_difficulty] + 1
-	)
+	if not GameManager.timed_mode:
+		$Control/levelInfo/levelNum.text = "Level " + str(
+			GameManager.current_levels[GameManager.current_difficulty] + 1
+		)
 
 	if GameManager.daily_mode:
 		PostHog.capture(
@@ -142,7 +155,7 @@ func get_ready():
 				"difficulty": GameManager.current_difficulty,
 			},
 		)
-	
+
 	if GameManager.daily_mode or GameManager.tutorial_mode:
 		%Reset.hide()
 	else:
@@ -289,6 +302,10 @@ func _process(_delta: float) -> void:
 		%Hint.disabled = false
 		%Hint.tooltip_text = ""
 
+	if GameManager.timed_mode:
+		%Hint.disabled = true
+		%Reset.disabled = true
+
 	# Checks if puzzle is completed
 	if current_word == target_word:
 		if not completed:
@@ -309,6 +326,12 @@ func _process(_delta: float) -> void:
 			GameManager.amt_of_hints = hints
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
+
+			if GameManager.timed_mode:
+				timed_mode_levels_completed += 1
+				$Control/levelInfo/levelDif.text = "Levels Completed: " + str(
+					timed_mode_levels_completed
+				)
 
 			# If the puzzle is the daily puzzle
 			if not GameManager.daily_mode:
@@ -411,9 +434,7 @@ func _on_hint_button_pressed() -> void:
 			return
 		tutorial_manager.get_ready(get_tree().create_timer(0.1).timeout)
 	else:
-		if (
-			completed == true or current_word == target_word or hints <= 0
-		):
+		if (completed == true or current_word == target_word or hints <= 0):
 			return
 
 		hints -= 1
@@ -493,13 +514,29 @@ func _on_reset_pressed() -> void:
 				spawn_letter(current_char[j], [])
 				break
 		current_char = prev_char
-		if len(undo_history) > i+1:
-			prev_char = undo_history[i+1].split("")
-	
+		if len(undo_history) > i + 1:
+			prev_char = undo_history[i + 1].split("")
+
 	undo_history = []
 	current_word = starting_word
-	
+
 	for i in range(cw_h_box.get_child_count()):
 		var label = cw_h_box.get_child(i)
 		label.text = current_word[i]
 		label.reset()
+
+
+func _on_timed_mode_timer_timeout() -> void:
+	if timed_mode_seconds <= 0:
+		timed_mode_minutes -= 1
+		timed_mode_seconds = 59
+	else:
+		timed_mode_seconds -= 1
+
+	if timed_mode_minutes < 0:
+		timed_timer.stop()
+		GameManager.timed_mode_levels_completed = timed_mode_levels_completed
+		GameManager.open_leaderboard()
+	else:
+		$Control/levelInfo/levelNum.text = str(timed_mode_minutes) + ":" \
+				+ str(timed_mode_seconds).pad_zeros(2)

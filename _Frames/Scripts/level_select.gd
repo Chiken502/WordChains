@@ -76,3 +76,7 @@ func _on_daily_button_pressed() -> void:
 	else:
 		$Panel.show()
 		GameManager.load_daily_puzzle($Panel)
+
+
+func _on_timed_mode_pressed() -> void:
+	GameManager.load_timed_mode()

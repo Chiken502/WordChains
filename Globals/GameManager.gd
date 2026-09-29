@@ -9,7 +9,7 @@ var solution_long := [] ## Stores solution in words instead of just letters
 
 var current_game_version := "v04.b" ## Current game version number
 
-var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level. 
+var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level.
 var current_difficulty := 0 ## Current Difficulty Level
 var amt_of_hints := 0 ## Amount of hints the player has remaining
 
@@ -21,17 +21,22 @@ var need_tutorial = true ## True if the player needs to play the tutorial
 
 var daily_mode = false ## True if the player is currently playing the daily level
 var daily_time = 0 ## In tenth of seconds, Time that player took to complete the daily level
-var daily_completed = false ## True if the player has already played the daily level in the current day (UTC)
-var day_of_year = -1: ## Day of the year (UTC)
+## True if the player has already played the daily level in the current day (UTC)
+var daily_completed = false
+var day_of_year = -1:
+	## Day of the year (UTC)
 	set(value):
 		day_of_year = value
 		if day_of_year != -1:
 			daily_completed = last_day_completed == day_of_year
 var last_day_completed = -1 ## Last day that the daily puzzle was completed.
 
-## Nickname that is used for the CheddaBoards leader board. 
+var timed_mode = false ## True if player is playing Timed Mode
+var timed_mode_levels_completed = 0 ## How many levels were completed in the last timed mode run
+
+## Nickname that is used for the CheddaBoards leader board.
 ## Must have completed a daily puzzle to have
-var nickname = "" 
+var nickname = ""
 
 
 func _ready() -> void:
@@ -118,13 +123,16 @@ func load_level(difficulty: int, level_num: int) -> bool:
 	print("LEVEL FAILED TO LOAD")
 	return false
 
+
 ## Changes the scene to settings
 func open_settings():
 	get_tree().change_scene_to_file("res://_Frames/settings.tscn")
 
+
 ## Changes the scene to credits
 func open_credits():
 	get_tree().change_scene_to_file("res://_Frames/credits.tscn")
+
 
 ## Changes the scene to level select, or if tutorial is needed, to the tutorial
 func open_level_select():
@@ -135,19 +143,24 @@ func open_level_select():
 		load_level(0, 0)
 		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
+
 ## Changes the scene to the game frame
 func start_game():
 	get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+
 
 ## Changes the scene to the main menu
 func back_to_menu():
 	get_tree().change_scene_to_file("res://_Frames/menu.tscn")
 
+
 ## Loads the daily puzzle and changes the scene to the game frame
 func load_daily_puzzle(panel: Panel):
 	if GameManager.day_of_year != -1: # If day of the year isn't loaded yet
 		# Set up Signal Resolver to tell when one of two signals is received.
-		var error = { "response_code": 0 } # This needs to be a dictionary to be accessed by a lambda
+
+		# This needs to be a dictionary to be accessed by a lambda
+		var error = { "response_code": 0 }
 		var resolver = SignalResolver.new()
 
 		LevelDatabase.daily_failed.connect(
@@ -180,11 +193,19 @@ func load_daily_puzzle(panel: Panel):
 		LevelDatabase.load_daily_level()
 		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
+
 ## Opens the leaderboard frame
 func open_leaderboard():
 	get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
 
-## Signal Resolver is used when you need to await one or more signals at a time 
+
+func load_timed_mode():
+	load_level(1, randi_range(0, 50))
+	timed_mode = true
+	get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+
+
+## Signal Resolver is used when you need to await one or more signals at a time
 ## and have a different outcome for each.
 class SignalResolver:
 	@warning_ignore("unused_signal")

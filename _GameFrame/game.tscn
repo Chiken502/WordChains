@@ -356,9 +356,12 @@ metadata/_custom_type_script = "uid://d2toi3smadpcb"
 [node name="tutorialManager" type="Node2D" parent="." unique_id=480504236]
 script = ExtResource("10_56ccj")
 
+[node name="TimedModeTimer" type="Timer" parent="." unique_id=1930062600]
+
 [connection signal="resized" from="." to="." method="_on_resized"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Home" to="." method="_on_home_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Hint" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Control/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Control/Reset" to="TweenController" method="_on_reset_pressed"]
+[connection signal="timeout" from="TimedModeTimer" to="." method="_on_timed_mode_timer_timeout"]

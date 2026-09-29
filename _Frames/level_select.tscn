@@ -83,9 +83,10 @@ anchor_bottom = 1.0
 offset_bottom = -188.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 12
 
 [node name="Spacer" type="Control" parent="VBoxContainer" unique_id=863027879]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 25)
 layout_mode = 2
 
 [node name="Title" type="Label" parent="VBoxContainer" unique_id=1846998786]
@@ -96,7 +97,7 @@ text = "LEVEL SELECT"
 label_settings = ExtResource("2_6ejmw")
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=325043654]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="DailyButton" type="Button" parent="VBoxContainer" unique_id=615345161]
@@ -107,6 +108,15 @@ offset_transform_enabled = true
 theme = ExtResource("1_s6f1j")
 theme_type_variation = &"ReadableButton"
 text = "Daily Puzzle"
+
+[node name="Timed Mode" type="Button" parent="VBoxContainer" unique_id=750891366]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_s6f1j")
+theme_type_variation = &"ReadableButton"
+text = "Timed Mode"
 
 [node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=10815102]
 custom_minimum_size = Vector2(0, 20)
@@ -159,3 +169,4 @@ autowrap_mode = 3
 
 [connection signal="pressed" from="Bottom/HBoxContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="VBoxContainer/DailyButton" to="." method="_on_daily_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Timed Mode" to="." method="_on_timed_mode_pressed"]

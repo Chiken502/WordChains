@@ -1,6 +1,7 @@
 extends RigidBody2D
 
-var letters = [ ## All possible letters
+var letters = [
+	## All possible letters
 	"A",
 	"B",
 	"C",
@@ -42,7 +43,8 @@ var stretch_factor: float = 0.01 ## Amount that this node stretches per frame
 var recovery_speed: float = 15.0 ## How fast node recovers from stretch when still
 
 var ground_collider: StaticBody2D ## Ground body
-var game: Control: ## Game Frame, used for resized signal
+var game: Control:
+	## Game Frame, used for resized signal
 	set(value):
 		if game:
 			game.resized.disconnect(_parent_resized)
@@ -57,7 +59,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if is_instance_valid(self):
+	if is_instance_valid(self) and is_instance_valid(ground_collider):
 		if global_position.y > ground_collider.global_position.y: # keep above ground plane
 			position.y = ground_collider.global_position.y
 		elif position.y < -800 and linear_velocity.y < 0: # Prevents form flying off screen
@@ -67,6 +69,7 @@ func _process(delta: float) -> void:
 			Vector2.ONE,
 			recovery_speed * delta,
 		)
+
 
 ## Gets this node ready
 func get_ready():
@@ -148,6 +151,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 			play_collision_sound(volume_factor)
 			break
 
+
 ## Plays a collision sound based on a volume factor
 func play_collision_sound(volume_factor: float):
 	var sound_player = AudioStreamPlayer.new()
@@ -160,6 +164,7 @@ func play_collision_sound(volume_factor: float):
 	sound_player.play()
 
 	sound_player.connect("finished", sound_player.queue_free)
+
 
 ## Applies stretch to this node based on the nodes velocity
 func apply_stretch(velocity: Vector2):
@@ -197,6 +202,7 @@ func _on_body_entered(_body: Node) -> void:
 	#return
 	#$AudioStreamPlayer2D.volume_db = clamp(audio_volume, -50, 5)
 	#$AudioStreamPlayer2D.play()
+
 
 # checks if letter is offscreen when game is resized
 func _parent_resized():

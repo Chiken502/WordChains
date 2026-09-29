@@ -1,5 +1,7 @@
 extends Control
 
+var mode = "daily"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,12 +28,19 @@ func _ready() -> void:
 		if GameManager.daily_mode:
 			var score = maxi(0, 36000 - GameManager.daily_time)
 			CheddaBoards.submit_score(score)
+			mode = "daily"
 			print("Submitting score")
+		if GameManager.timed_mode:
+			var score = GameManager.timed_mode_levels_completed
+			CheddaBoards.submit_score_to_board("timed-mode", score)
+			mode = "timed"
+			print("Submitting Score")
 		
 		$VBoxContainer/VBoxContainer.hide()
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
 		show_leaderboard()
 		GameManager.daily_mode = false
+		GameManager.timed_mode = false
 	
 	# Connect Control Animations
 	$VBoxContainer/Title.mouse_entered.connect(_on_control_mouse_entered.bind($VBoxContainer/Title))
@@ -42,11 +51,19 @@ func _ready() -> void:
 	%Home.button_up.connect(_on_button_up.bind(%Home))
 	%Home.button_down.connect(_on_button_down.bind($%Home))
 
+
 ## Fetches the leaderboard
 func show_leaderboard():
 	print("REQUESTING LEADERBOARD")
-	CheddaBoards.get_scoreboard("daily-puzzle-times")
+	if GameManager.daily_completed:
+		CheddaBoards.get_scoreboard("daily-puzzle-times")
+	elif GameManager.timed_mode:
+		CheddaBoards.get_scoreboard("timed-mode")
+	else:
+		print(">>>SOMETHING WENT WRONG HERE<<<")
+		return
 	print("GET_SCOREBOARD CALLED")
+
 
 ## Leader board request received
 func _on_leaderboard(_sb_id, _config, entries):
@@ -57,9 +74,13 @@ func _on_leaderboard(_sb_id, _config, entries):
 
 		var panel: Control = preload("res://_Components/leaderboard_panel.tscn").instantiate()
 		$VBoxContainer/ScrollContainer/VBoxContainer2.add_child(panel)
+		panel.mode = mode
 		panel.rank = int(i["rank"])
 		panel.nickname = i["nickname"]
-		panel.time = 36000 - i["score"]
+		if mode == "daily":
+			panel.time = 36000 - i["score"]
+		else:
+			panel.time = i["score"]
 
 		panel.offset_transform_scale = Vector2(1.2, 1.2)
 		var tween = get_tree().create_tween()
@@ -68,6 +89,7 @@ func _on_leaderboard(_sb_id, _config, entries):
 				.set_ease(Tween.EASE_OUT) \
 				.set_trans(Tween.TRANS_QUINT)
 		await tween.finished
+
 
 # Nickname button pressed
 func _on_button_pressed() -> void:
@@ -82,8 +104,16 @@ func _on_button_pressed() -> void:
 		GameManager.nickname = $VBoxContainer/VBoxContainer/LineEdit.text
 		FileManager.save_game()
 
-		var score = maxi(0, 36000 - GameManager.daily_time)
-		CheddaBoards.submit_score(score)
+		if GameManager.daily_mode:
+			var score = maxi(0, 36000 - GameManager.daily_time)
+			CheddaBoards.submit_score(score)
+			mode = "daily"
+			print("Submitting score")
+		if GameManager.timed_mode:
+			var score = GameManager.timed_mode_levels_completed
+			CheddaBoards.submit_score_to_board("timed-mode", score)
+			mode = "timed"
+			print("Submitting Score")
 
 		$VBoxContainer/VBoxContainer.hide()
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
@@ -121,7 +151,8 @@ func _on_button_down(button: Button):
 
 		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
 
-# Formats the line edit according rules in to 
+
+# Formats the line edit according rules in to
 # https://docs.cheddaboards.com/api/errors#nickname-rejected
 func _on_line_edit_text_changed(new_text: String) -> void:
 	var lineedit = $VBoxContainer/VBoxContainer/LineEdit
