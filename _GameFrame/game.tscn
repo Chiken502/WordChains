@@ -325,6 +325,7 @@ horizontal_alignment = 1
 
 [node name="levelNum" type="Label" parent="Control/levelInfo" unique_id=71479185]
 layout_mode = 2
+offset_transform_enabled = true
 text = "Level 6"
 label_settings = SubResource("LabelSettings_55afc")
 horizontal_alignment = 1

@@ -31,6 +31,11 @@ func _ready() -> void:
 	%DailyButton.button_down.connect(_on_button_down.bind(%DailyButton))
 	%DailyButton.button_up.connect(_on_button_up.bind(%DailyButton))
 
+	%"Timed Mode".mouse_entered.connect(_on_control_mouse_entered.bind(%"Timed Mode"))
+	%"Timed Mode".mouse_exited.connect(_on_control_mouse_exited.bind(%"Timed Mode"))
+	%"Timed Mode".button_down.connect(_on_button_down.bind(%"Timed Mode"))
+	%"Timed Mode".button_up.connect(_on_button_up.bind(%"Timed Mode"))
+
 	if GameManager.daily_completed:
 		%DailyButton.text = "View Daily Leaderboard"
 

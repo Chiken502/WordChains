@@ -1,6 +1,6 @@
 extends Control
 
-var mode = "daily"
+var mode = "timed"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,7 +27,7 @@ func _ready() -> void:
 	else:
 		if GameManager.daily_mode:
 			var score = maxi(0, 36000 - GameManager.daily_time)
-			CheddaBoards.submit_score(score)
+			CheddaBoards.submit_score_to_board("daily-puzzle-times", score)
 			mode = "daily"
 			print("Submitting score")
 		if GameManager.timed_mode:
@@ -62,7 +62,7 @@ func show_leaderboard():
 	else:
 		print(">>>SOMETHING WENT WRONG HERE<<<")
 		return
-	print("GET_SCOREBOARD CALLED")
+	print("GET_SCOREBOARD CALLED: " + mode)
 
 
 ## Leader board request received

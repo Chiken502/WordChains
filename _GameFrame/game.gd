@@ -540,3 +540,6 @@ func _on_timed_mode_timer_timeout() -> void:
 	else:
 		$Control/levelInfo/levelNum.text = str(timed_mode_minutes) + ":" \
 				+ str(timed_mode_seconds).pad_zeros(2)
+	
+	if timed_mode_minutes == 0 and timed_mode_seconds <= 3:
+		$Control/levelInfo/levelNum.label_settings.font_size += 10
