@@ -1,6 +1,6 @@
 extends Control
 
-var mode = "timed"
+var mode = "daily"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -27,7 +27,7 @@ func _ready() -> void:
 	else:
 		if GameManager.daily_mode:
 			var score = maxi(0, 36000 - GameManager.daily_time)
-			CheddaBoards.submit_score_to_board("daily-puzzle-times", score)
+			CheddaBoards.submit_score_to_board("daily-puzzle", score)
 			mode = "daily"
 			print("Submitting score")
 		if GameManager.timed_mode:
@@ -55,9 +55,9 @@ func _ready() -> void:
 ## Fetches the leaderboard
 func show_leaderboard():
 	print("REQUESTING LEADERBOARD")
-	if GameManager.daily_completed:
-		CheddaBoards.get_scoreboard("daily-puzzle-times")
-	elif GameManager.timed_mode:
+	if mode == "daily":
+		CheddaBoards.get_scoreboard("daily-puzzle")
+	elif mode == "timed":
 		CheddaBoards.get_scoreboard("timed-mode")
 	else:
 		print(">>>SOMETHING WENT WRONG HERE<<<")
@@ -106,7 +106,7 @@ func _on_button_pressed() -> void:
 
 		if GameManager.daily_mode:
 			var score = maxi(0, 36000 - GameManager.daily_time)
-			CheddaBoards.submit_score(score)
+			CheddaBoards.submit_score_to_board("daily-puzzle", score)
 			mode = "daily"
 			print("Submitting score")
 		if GameManager.timed_mode:
@@ -119,6 +119,8 @@ func _on_button_pressed() -> void:
 		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
 		await CheddaBoards.score_submitted
 		show_leaderboard()
+		GameManager.daily_mode = false
+		GameManager.timed_mode = false
 
 
 func _on_home_pressed() -> void:
