@@ -335,11 +335,16 @@ func _process(_delta: float) -> void:
 
 			# If the puzzle is the daily puzzle
 			if not GameManager.daily_mode:
-				var success = await GameManager.load_level(
-					GameManager.current_difficulty,
-					GameManager.current_levels[GameManager.current_difficulty] + 1,
-				)
-				GameManager.current_levels[GameManager.current_difficulty] += 1
+				var success = false
+				
+				if not GameManager.timed_mode:
+					success = await GameManager.load_level(
+						GameManager.current_difficulty,
+						GameManager.current_levels[GameManager.current_difficulty] + 1,
+					)
+					GameManager.current_levels[GameManager.current_difficulty] += 1
+				else:
+					success = await GameManager.load_level(1, randi_range(0, 50))
 
 				if success:
 					var level_time = (Time.get_ticks_msec() - level_start_time) / 1000.0
