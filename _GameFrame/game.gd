@@ -402,6 +402,8 @@ func _process(_delta: float) -> void:
 
 func _on_undo_button_pressed() -> void:
 	if undo_history: #TODO: ADD UNDO SOUND?
+		deffiniton_showing = false
+		$DictonaryPanel.visible = deffiniton_showing
 		var prev_word = undo_history.pop_back() # pop_back removes and returns last value
 		print(prev_word)
 
@@ -447,6 +449,8 @@ func _on_home_button_pressed() -> void:
 
 
 func _on_hint_button_pressed() -> void:
+	deffiniton_showing = false
+	$DictonaryPanel.visible = deffiniton_showing
 	if GameManager.tutorial_mode: # run tutorial if in tutorial mode
 		if (completed == true or current_word == target_word):
 			return
@@ -526,6 +530,8 @@ func letter_off_screen(letter):
 
 
 func _on_reset_pressed() -> void:
+	deffiniton_showing = false
+	$DictonaryPanel.visible = deffiniton_showing
 	print(undo_history)
 	undo_history.reverse()
 	var current_char = current_word.split("")
@@ -556,6 +562,8 @@ func _on_timed_mode_timer_timeout() -> void:
 		timed_mode_seconds -= 1
 
 	if timed_mode_minutes < 0:
+		deffiniton_showing = false
+		$DictonaryPanel.visible = deffiniton_showing
 		timed_timer.stop()
 		GameManager.timed_mode_levels_completed = timed_mode_levels_completed
 		GameManager.open_leaderboard()
