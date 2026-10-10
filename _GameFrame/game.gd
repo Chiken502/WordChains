@@ -582,6 +582,7 @@ func _on_dictonary_pressed() -> void:
 	if deffiniton_showing:
 		var url = "https://freedictionaryapi.com/api/v1/entries/en/%s" % current_word.to_lower()
 		var error = http_request.request(url)
+		$DictonaryPanel.loading = true
 		
 		if error != OK:
 			push_error("An error occurred while initiating the HTTP request.")
@@ -591,6 +592,7 @@ func _on_dictonary_request_completed(_result: int, response_code: int, _headers:
 		var raw_text: String = body.get_string_from_utf8()
 		var data = JSON.parse_string(raw_text)
 		if data != null:
+			$DictonaryPanel.loading = false
 			$DictonaryPanel.word = str(data["word"]).capitalize()
 			$DictonaryPanel.definition = data["entries"][0]["senses"][0]["definition"]
 			$DictonaryPanel.part_of_speech = str(data["entries"][0]["partOfSpeech"]).capitalize()
