@@ -314,6 +314,10 @@ func _process(_delta: float) -> void:
 	if GameManager.timed_mode:
 		%Hint.disabled = true
 		%Reset.disabled = true
+	
+	if $LetterControler.letter_being_dragged and deffiniton_showing:
+		deffiniton_showing = false
+		$DictonaryPanel.visible = deffiniton_showing
 
 	# Checks if puzzle is completed
 	if current_word == target_word:
