@@ -2,14 +2,8 @@
 
 [ext_resource type="Script" uid="uid://tbfdrgf55iao" path="res://_Frames/Scripts/menu.gd" id="1_ph7o7"]
 [ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="2_qfaas"]
-[ext_resource type="FontFile" uid="uid://bjy5iambxwpes" path="res://Fonts/Zain-ExtraBold.ttf" id="3_a7p0o"]
+[ext_resource type="LabelSettings" uid="uid://durmvkuotp5nn" path="res://Resources/Title.tres" id="3_kmebn"]
 [ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="4_kmebn"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_4x8ju"]
-line_spacing = -98.0
-font = ExtResource("3_a7p0o")
-font_size = 128
-font_color = Color(0.227451, 0.52549, 1, 1)
 
 [node name="Menu" type="Control" unique_id=2118893300]
 layout_mode = 3
@@ -91,7 +85,7 @@ offset_transform_enabled = true
 mouse_filter = 1
 text = "WORD 
 CHAINS"
-label_settings = SubResource("LabelSettings_4x8ju")
+label_settings = ExtResource("3_kmebn")
 horizontal_alignment = 1
 vertical_alignment = 1
 

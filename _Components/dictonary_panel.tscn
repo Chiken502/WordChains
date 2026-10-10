@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cp6hxees2wupy" path="res://_Components/Scripts/dictonary_panel.gd" id="1_f07js"]
 [ext_resource type="LabelSettings" uid="uid://dp0smxmbmwnh5" path="res://Resources/deffinition.tres" id="3_4cwcn"]
 [ext_resource type="LabelSettings" uid="uid://b5xga74j7h5dh" path="res://Resources/dictonary_word.tres" id="3_f07js"]
+[ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="4_v5lsc"]
 
 [node name="DictonaryPanel" type="Control" unique_id=76161317]
 layout_mode = 3
@@ -50,10 +51,23 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = -7
 
-[node name="Word" type="Label" parent="VBoxContainer" unique_id=1189379000]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2101289760]
 layout_mode = 2
-text = "Loading"
+
+[node name="Word" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1189379000]
+layout_mode = 2
+text = "Loading "
 label_settings = ExtResource("3_f07js")
+
+[node name="Divider" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=429949403]
+layout_mode = 2
+text = "·"
+label_settings = ExtResource("4_v5lsc")
+
+[node name="PartSpeech" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=619107622]
+layout_mode = 2
+text = "Noun"
+label_settings = ExtResource("3_4cwcn")
 
 [node name="Deffinition" type="Label" parent="VBoxContainer" unique_id=1507514094]
 custom_minimum_size = Vector2(50, 0)

@@ -593,6 +593,7 @@ func _on_dictonary_request_completed(_result: int, response_code: int, _headers:
 		if data != null:
 			$DictonaryPanel.word = str(data["word"]).capitalize()
 			$DictonaryPanel.definition = data["entries"][0]["senses"][0]["definition"]
+			$DictonaryPanel.part_of_speech = str(data["entries"][0]["partOfSpeech"]).capitalize()
 		else:
 			print("Failed to parse JSON (or data was invalid/empty). CODE: 200")
 	elif response_code == 429:
