@@ -26,6 +26,8 @@ var hint_word_letter: Label ## Current Word Letter that is highlighted due to a 
 
 var completed = false ## True if the level has been completed
 
+var deffiniton_showing = false
+
 var timed_mode_seconds = 30
 var timed_mode_minutes = 1
 var timed_mode_levels_completed = 0
@@ -43,9 +45,9 @@ const FALLING_LETTER = preload("res://_Components/falling_letter.tscn")
 const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn")
 
 ## Node holding the target word UI
-@onready var target_label := $Control/VBoxContainer/TargetWord
+@onready var target_label := $Control/Control2/VBoxContainer/TargetWord
 ## Current Word HBox UI node
-@onready var cw_h_box := $Control/VBoxContainer/CurrentWordHBox
+@onready var cw_h_box := $Control/Control2/VBoxContainer/CurrentWordHBox
 ## Undo button node
 @onready var undo_button := $Control/Bottom/HBoxContainer/Undo
 
@@ -86,6 +88,8 @@ func _ready() -> void:
 				difficulty_text = "EXPERT"
 
 	$Control/levelInfo/levelDif.text = difficulty_text
+
+	$DictonaryPanel.hide()
 
 
 ## A way to reset the game scene
@@ -160,7 +164,7 @@ func get_ready():
 		%Reset.hide()
 	else:
 		%Reset.show()
-
+	
 	# Animate words sliding on
 	tween_controller.slide_in(self.size)
 	await tween_controller.tween_done
@@ -168,6 +172,10 @@ func get_ready():
 	# Spawn falling letters
 	spawn_letters()
 	game_ready.emit()
+	
+	var offset = 20
+	$DictonaryPanel.size = Vector2(%Dictonary.global_position.x - offset - 50, size.y / 3)
+	$DictonaryPanel.position = Vector2(offset, %Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2)
 
 
 ## Spawns falling letter nodes
@@ -266,7 +274,7 @@ func _on_current_word_letter_changed(node, letter):
 		GameManager.current_word = current_word
 		word_confirmed.emit(node, letter)
 		MusicManager.connect_sound()
-		$Control/VBoxContainer/Hint.text = ""
+		$Control/Control2/VBoxContainer/Hint.text = ""
 		if hint_word_letter:
 			hint_word_letter.hinted = false
 			hint_word_letter = null
@@ -275,7 +283,7 @@ func _on_current_word_letter_changed(node, letter):
 		if GameManager.screen_shake_on:
 			$Control/CameraHolder/ShakeCamera2D.screen_shake(10, 0.75)
 
-		$Control/VBoxContainer/WrongWord.text = "[b]" + new_word.to_upper() + "[/b] is not a word"
+		$Control/Control2/VBoxContainer/WrongWord.text = "[b]" + new_word.to_upper() + "[/b] is not a word"
 
 		$TweenController.not_a_word()
 		word_not_found.emit(node) #TODO: ADD ERROR SOUND
@@ -315,7 +323,7 @@ func _process(_delta: float) -> void:
 				child.success()
 			MusicManager.complete_sound()
 
-			$Control/VBoxContainer/Hint.text = ""
+			$Control/Control2/VBoxContainer/Hint.text = ""
 
 			await get_tree().create_timer(1).timeout #TODO: ADD CHIME SOUND
 
@@ -449,8 +457,8 @@ func _on_hint_button_pressed() -> void:
 
 		if undo_history.is_empty():
 			hint = "Next word is [b]" + solution_long[1] + "[/b]."
-			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 28)
-			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 32)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 28)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 32)
 		elif current_word in solution_long:
 			var idx = solution_long.find(current_word)
 			var next_word = solution_long[idx + 1]
@@ -475,8 +483,8 @@ func _on_hint_button_pressed() -> void:
 				"ninth",
 			]
 
-			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
-			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 26)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 26)
 			hint = "Try changing the [b]" + numbers_in_words[letter_idx] + "[/b] letter."
 			hint_word_letter = cw_h_box.get_children()[letter_idx]
 			hint_word_letter.hinted = true
@@ -488,17 +496,21 @@ func _on_hint_button_pressed() -> void:
 				else:
 					break
 
-			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 18)
-			$Control/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 18)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
 			hint = "You need to [b]undo[/b] back to [b]" + undo_history[undo_idx] + "[/b]."
 
 		if hint:
-			$Control/VBoxContainer/Hint.text = hint
+			$Control/Control2/VBoxContainer/Hint.text = hint
 
 
 func _on_resized() -> void:
 	$Control/Bottom/Bottom/CollisionShape2D.shape.size.x = size.x
 	$Control/Bottom/Bottom/CollisionShape2D.position.x = size.x / 2
+
+	var offset = 20
+	$DictonaryPanel.size = Vector2(%Dictonary.global_position.x - offset - 50, size.y / 3)
+	$DictonaryPanel.position = Vector2(offset, %Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2)
 
 
 ## Respawns a letter if off screen.
@@ -548,3 +560,8 @@ func _on_timed_mode_timer_timeout() -> void:
 	
 	if timed_mode_minutes == 0 and timed_mode_seconds <= 3:
 		$Control/levelInfo/levelNum.label_settings.font_size += 10
+
+
+func _on_dictonary_pressed() -> void:
+	deffiniton_showing = !deffiniton_showing
+	$DictonaryPanel.visible = deffiniton_showing

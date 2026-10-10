@@ -2,9 +2,9 @@ extends Node2D
 
 signal tween_done
 
-@onready var word_container = $"../Control/VBoxContainer"
-@onready var current_word_container = $"../Control/VBoxContainer/CurrentWordHBox"
-@onready var wrong_word_label = $"../Control/VBoxContainer/WrongWord"
+@onready var word_container = $"../Control/Control2/VBoxContainer"
+@onready var current_word_container = $"../Control/Control2/VBoxContainer/CurrentWordHBox"
+@onready var wrong_word_label = $"../Control/Control2/VBoxContainer/WrongWord"
 
 var not_a_word_tween : Tween
 

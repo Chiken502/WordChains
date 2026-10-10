@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bhdbqn4chevmy"]
+
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_4yvfi"]
+[ext_resource type="LabelSettings" uid="uid://cd4808gjis3qt" path="res://Resources/settings_label.tres" id="2_f54kp"]
+[ext_resource type="LabelSettings" uid="uid://dp0smxmbmwnh5" path="res://Resources/deffinition.tres" id="3_4cwcn"]
+
+[node name="DictonaryPanel" type="Control" unique_id=76161317]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 448.0
+offset_bottom = 174.0
+
+[node name="Panel" type="Panel" parent="." unique_id=593772213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_4yvfi")
+
+[node name="Panel2" type="Panel" parent="." unique_id=6223437]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.7853982
+pivot_offset = Vector2(20, 20)
+theme = ExtResource("1_4yvfi")
+theme_type_variation = &"SharpPanel"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=43681435]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -7
+
+[node name="Word" type="Label" parent="VBoxContainer" unique_id=1189379000]
+layout_mode = 2
+text = "Hello"
+label_settings = ExtResource("2_f54kp")
+
+[node name="Deffinition" type="Label" parent="VBoxContainer" unique_id=1507514094]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "A greeting (salutation) said when meeting someone or acknowledging someone’s arrival or presence."
+label_settings = ExtResource("3_4cwcn")
+autowrap_mode = 3
+
+[node name="Control" type="Control" parent="." unique_id=1622855884]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

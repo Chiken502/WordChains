@@ -233,6 +233,10 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1n0ar"]
+bg_color = Color(0.447059, 0.690196, 0.992157, 1)
+shadow_color = Color(0, 0, 0, 0.3372549)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56ccj"]
 bg_color = Color(0.447059, 0.690196, 0.992157, 1)
 border_width_left = 5
@@ -326,6 +330,8 @@ RichTextLabel/font_sizes/normal_font_size = 24
 RichTextLabel/fonts/bold_font = ExtResource("1_jgrfi")
 RichTextLabel/fonts/normal_font = ExtResource("9_4x8ju")
 ScrollContainer/constants/scrollbar_h_separation = 8
+SharpPanel/base_type = &"Panel"
+SharpPanel/styles/panel = SubResource("StyleBoxFlat_1n0ar")
 TooltipLabel/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 TooltipLabel/font_sizes/font_size = 26
 TooltipLabel/fonts/font = ExtResource("6_vocpi")
