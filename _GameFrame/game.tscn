@@ -402,6 +402,8 @@ offset_right = 408.0
 offset_bottom = 474.0
 offset_transform_enabled = true
 
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=761641145]
+
 [connection signal="resized" from="." to="." method="_on_resized"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Home" to="." method="_on_home_button_pressed"]
@@ -410,3 +412,4 @@ offset_transform_enabled = true
 [connection signal="pressed" from="Control/Control2/Actions/Reset" to="TweenController" method="_on_reset_pressed"]
 [connection signal="pressed" from="Control/Control2/Actions/Dictonary" to="." method="_on_dictonary_pressed"]
 [connection signal="timeout" from="TimedModeTimer" to="." method="_on_timed_mode_timer_timeout"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_dictonary_request_completed"]

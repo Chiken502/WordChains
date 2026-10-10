@@ -58,6 +58,7 @@ const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn"
 ## Timer that handles seconds for timed mode timer.
 @onready var timed_timer = $TimedModeTimer
 
+@onready var http_request: HTTPRequest = $HTTPRequest
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -565,3 +566,24 @@ func _on_timed_mode_timer_timeout() -> void:
 func _on_dictonary_pressed() -> void:
 	deffiniton_showing = !deffiniton_showing
 	$DictonaryPanel.visible = deffiniton_showing
+	
+	if deffiniton_showing:
+		var url = "https://freedictionaryapi.com/api/v1/entries/en/%s" % current_word.to_lower()
+		var error = http_request.request(url)
+		
+		if error != OK:
+			push_error("An error occurred while initiating the HTTP request.")
+
+func _on_dictonary_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
+	if response_code == 200:
+		var raw_text: String = body.get_string_from_utf8()
+		var data = JSON.parse_string(raw_text)
+		if data != null:
+			$DictonaryPanel.word = str(data["word"]).capitalize()
+			$DictonaryPanel.definition = data["entries"][0]["senses"][0]["definition"]
+		else:
+			print("Failed to parse JSON (or data was invalid/empty). CODE: 200")
+	elif response_code == 429:
+		pass
+	else:
+		print("Dictonary_Request response code : %s" % response_code)
