@@ -4,7 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void: # Connect signals for animations
 	MusicManager.scene_loaded()
-	for button in [%Settings, %Play, %Credits]:
+	for button in [%Settings, %Play, %Credits, %Stats, %LevelSelect]:
 		button.mouse_entered.connect(_on_control_mouse_entered.bind(button))
 		button.mouse_exited.connect(_on_control_mouse_exited.bind(button))
 		button.button_up.connect(_on_button_up.bind(button))
@@ -19,7 +19,16 @@ func _on_settings_pressed() -> void:
 
 
 func _on_play_pressed() -> void:
-	GameManager.open_level_select()
+	if not GameManager.need_tutorial:
+		GameManager.load_level(
+			GameManager.last_difficulty,
+			GameManager.current_levels[GameManager.last_difficulty],
+		)
+		GameManager.start_game()
+	else:
+		GameManager.tutorial_mode = true
+		GameManager.load_level(0, 0)
+		get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
 
 
 func _on_credits_pressed() -> void:
@@ -51,3 +60,11 @@ func _on_button_down(button: Button):
 		var tween = get_tree().create_tween()
 
 		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
+
+
+func _on_stats_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_level_select_pressed() -> void:
+	GameManager.open_level_select()

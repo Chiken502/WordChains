@@ -6,10 +6,11 @@ signal tween_done
 @onready var current_word_container = $"../Control/Control2/VBoxContainer/CurrentWordHBox"
 @onready var wrong_word_label = $"../Control/Control2/VBoxContainer/WrongWord"
 
-var not_a_word_tween : Tween
+var not_a_word_tween: Tween
+
 
 func _ready():
-	for button in [%Undo, %Home, %Hint, %Reset]: # Connects button signals for animations
+	for button in [%Undo, %LevelSelect, %Hint, %Reset]: # Connects button signals for animations
 		button.mouse_entered.connect(_on_button_mouse_entered.bind(button))
 		button.mouse_exited.connect(_on_button_mouse_exited.bind(button))
 		button.button_up.connect(_on_button_up.bind(button))
@@ -63,14 +64,16 @@ func not_a_word():
 	var random_offset = Vector2(randf_range(0, 1), randf_range(0, 1)).normalized() * 5
 	current_word_container.offset_transform_position = random_offset
 	not_a_word_tween \
-		.tween_property(current_word_container, "offset_transform_position", Vector2.ZERO, 0.5) \
-		.set_trans(Tween.TRANS_ELASTIC) \
-		.set_ease(Tween.EASE_IN_OUT)
+			.tween_property(
+				current_word_container, "offset_transform_position", Vector2.ZERO, 0.5
+			) \
+			.set_trans(Tween.TRANS_ELASTIC) \
+			.set_ease(Tween.EASE_IN_OUT)
 
 	not_a_word_tween \
-		.tween_property(wrong_word_label, "modulate", Color.TRANSPARENT, 1.0) \
-		.set_ease(Tween.EASE_OUT) \
-		.set_trans(Tween.TRANS_SINE)
+			.tween_property(wrong_word_label, "modulate", Color.TRANSPARENT, 1.0) \
+			.set_ease(Tween.EASE_OUT) \
+			.set_trans(Tween.TRANS_SINE)
 
 	await not_a_word_tween.finished
 	wrong_word_label.text = ""
@@ -111,6 +114,6 @@ func _on_button_down(button: Button):
 
 func _on_reset_pressed() -> void:
 	var tween = get_tree().create_tween()
-	
+
 	%Reset.offset_transform_rotation = 0
 	tween.tween_property(%Reset, "offset_transform_rotation", PI, 0.5)

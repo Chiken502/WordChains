@@ -36,6 +36,7 @@ func save_game():
 		"hints": GameManager.amt_of_hints,
 		"nickname": GameManager.nickname,
 		"lastDailyComplete": last_daily_complete,
+		"lastDifficulty": GameManager.last_difficulty
 	}
 
 	save_file.store_var(save_data)
@@ -77,4 +78,5 @@ func load_game():
 		GameManager.need_tutorial = data.get("needTutorial", true)
 		GameManager.nickname = data.get("nickname", "")
 		GameManager.last_day_completed = data.get("lastDailyComplete", -1)
+		GameManager.last_difficulty = data.get("lastDifficulty", 0)
 	print("Game Loaded")

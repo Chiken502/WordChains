@@ -153,13 +153,13 @@ theme = ExtResource("4_3g1ng")
 disabled = true
 text = "arrow-rotate-right"
 
-[node name="Home" type="Button" parent="Control/Bottom/HBoxContainer" unique_id=126771325]
+[node name="LevelSelect" type="Button" parent="Control/Bottom/HBoxContainer" unique_id=126771325]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("4_3g1ng")
-text = "Home"
+text = "List"
 
 [node name="Hint" type="Button" parent="Control/Bottom/HBoxContainer" unique_id=324054477]
 unique_name_in_owner = true
@@ -406,7 +406,7 @@ offset_transform_enabled = true
 
 [connection signal="resized" from="." to="." method="_on_resized"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Undo" to="." method="_on_undo_button_pressed"]
-[connection signal="pressed" from="Control/Bottom/HBoxContainer/Home" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="Control/Bottom/HBoxContainer/LevelSelect" to="." method="_on_level_select_button_pressed"]
 [connection signal="pressed" from="Control/Bottom/HBoxContainer/Hint" to="." method="_on_hint_button_pressed"]
 [connection signal="pressed" from="Control/Control2/Actions/Reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="Control/Control2/Actions/Reset" to="TweenController" method="_on_reset_pressed"]

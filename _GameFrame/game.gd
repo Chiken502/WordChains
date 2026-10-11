@@ -60,6 +60,7 @@ const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn"
 
 @onready var http_request: HTTPRequest = $HTTPRequest
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	MusicManager.scene_loaded()
@@ -165,7 +166,7 @@ func get_ready():
 		%Reset.hide()
 	else:
 		%Reset.show()
-	
+
 	# Animate words sliding on
 	tween_controller.slide_in(self.size)
 	await tween_controller.tween_done
@@ -173,10 +174,13 @@ func get_ready():
 	# Spawn falling letters
 	spawn_letters()
 	game_ready.emit()
-	
+
 	var offset = 20
 	$DictonaryPanel.size = Vector2(%Dictonary.global_position.x - offset - 50, size.y / 3)
-	$DictonaryPanel.position = Vector2(offset, %Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2)
+	$DictonaryPanel.position = Vector2(
+		offset,
+		%Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2,
+	)
 
 
 ## Spawns falling letter nodes
@@ -314,7 +318,7 @@ func _process(_delta: float) -> void:
 	if GameManager.timed_mode:
 		%Hint.disabled = true
 		%Reset.disabled = true
-	
+
 	if $LetterControler.letter_being_dragged and deffiniton_showing:
 		deffiniton_showing = false
 		$DictonaryPanel.visible = deffiniton_showing
@@ -349,7 +353,7 @@ func _process(_delta: float) -> void:
 			# If the puzzle is the daily puzzle
 			if not GameManager.daily_mode:
 				var success = false
-				
+
 				if not GameManager.timed_mode:
 					success = await GameManager.load_level(
 						GameManager.current_difficulty,
@@ -443,9 +447,9 @@ func reset_self():
 		child.queue_free()
 
 
-func _on_home_button_pressed() -> void:
+func _on_level_select_button_pressed() -> void:
 	FileManager.save_game()
-	GameManager.back_to_menu()
+	GameManager.open_level_select()
 
 
 func _on_hint_button_pressed() -> void:
@@ -466,8 +470,14 @@ func _on_hint_button_pressed() -> void:
 
 		if undo_history.is_empty():
 			hint = "Next word is [b]" + solution_long[1] + "[/b]."
-			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 28)
-			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 32)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
+				"normal_font_size",
+				28,
+			)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
+				"normal_font_size",
+				32,
+			)
 		elif current_word in solution_long:
 			var idx = solution_long.find(current_word)
 			var next_word = solution_long[idx + 1]
@@ -492,8 +502,14 @@ func _on_hint_button_pressed() -> void:
 				"ninth",
 			]
 
-			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
-			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 26)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
+				"normal_font_size",
+				22,
+			)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
+				"normal_font_size",
+				26,
+			)
 			hint = "Try changing the [b]" + numbers_in_words[letter_idx] + "[/b] letter."
 			hint_word_letter = cw_h_box.get_children()[letter_idx]
 			hint_word_letter.hinted = true
@@ -505,8 +521,14 @@ func _on_hint_button_pressed() -> void:
 				else:
 					break
 
-			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 18)
-			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override("normal_font_size", 22)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
+				"normal_font_size",
+				18,
+			)
+			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
+				"normal_font_size",
+				22,
+			)
 			hint = "You need to [b]undo[/b] back to [b]" + undo_history[undo_idx] + "[/b]."
 
 		if hint:
@@ -519,7 +541,10 @@ func _on_resized() -> void:
 
 	var offset = 20
 	$DictonaryPanel.size = Vector2(%Dictonary.global_position.x - offset - 50, size.y / 3)
-	$DictonaryPanel.position = Vector2(offset, %Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2)
+	$DictonaryPanel.position = Vector2(
+		offset,
+		%Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2,
+	)
 
 
 ## Respawns a letter if off screen.
@@ -570,7 +595,7 @@ func _on_timed_mode_timer_timeout() -> void:
 	else:
 		$Control/levelInfo/levelNum.text = str(timed_mode_minutes) + ":" \
 				+ str(timed_mode_seconds).pad_zeros(2)
-	
+
 	if timed_mode_minutes == 0 and timed_mode_seconds <= 3:
 		$Control/levelInfo/levelNum.label_settings.font_size += 10
 
@@ -578,16 +603,22 @@ func _on_timed_mode_timer_timeout() -> void:
 func _on_dictonary_pressed() -> void:
 	deffiniton_showing = !deffiniton_showing
 	$DictonaryPanel.visible = deffiniton_showing
-	
+
 	if deffiniton_showing:
 		var url = "https://freedictionaryapi.com/api/v1/entries/en/%s" % current_word.to_lower()
 		var error = http_request.request(url)
 		$DictonaryPanel.loading = true
-		
+
 		if error != OK:
 			push_error("An error occurred while initiating the HTTP request.")
 
-func _on_dictonary_request_completed(_result: int, response_code: int, _headers: PackedStringArray, body: PackedByteArray) -> void:
+
+func _on_dictonary_request_completed(
+	_result: int,
+	response_code: int,
+	_headers: PackedStringArray,
+	body: PackedByteArray,
+) -> void:
 	if response_code == 200:
 		var raw_text: String = body.get_string_from_utf8()
 		var data = JSON.parse_string(raw_text)

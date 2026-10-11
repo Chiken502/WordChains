@@ -11,6 +11,7 @@ var current_game_version := "v04.b" ## Current game version number
 
 var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level.
 var current_difficulty := 0 ## Current Difficulty Level
+var last_difficulty := 0 ## Last played difficulty level
 var amt_of_hints := 0 ## Amount of hints the player has remaining
 
 # Settings Variables

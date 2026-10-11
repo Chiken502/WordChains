@@ -34,18 +34,28 @@ grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.227451, 0.52549, 1, 1)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1425916714]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=24852451]
 layout_mode = 1
-anchors_preset = 14
+anchors_preset = -1
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -188.5
+offset_top = -87.0
+offset_right = 188.5
+offset_bottom = 196.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1425916714]
+layout_mode = 2
 theme_override_constants/separation = 56
 alignment = 1
 
-[node name="Settings" type="Button" parent="HBoxContainer" unique_id=833888503]
+[node name="Settings" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=833888503]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -54,15 +64,15 @@ offset_transform_enabled = true
 theme = ExtResource("2_qfaas")
 text = "gear"
 
-[node name="Play" type="Button" parent="HBoxContainer" unique_id=1596516660]
+[node name="Play" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1596516660]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(97, 97)
+custom_minimum_size = Vector2(115, 115)
 layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("2_qfaas")
 text = "play"
 
-[node name="Credits" type="Button" parent="HBoxContainer" unique_id=616349202]
+[node name="Credits" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=616349202]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(75, 75)
 layout_mode = 2
@@ -70,6 +80,31 @@ size_flags_vertical = 4
 offset_transform_enabled = true
 theme = ExtResource("2_qfaas")
 text = "info"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=2106477094]
+layout_mode = 2
+theme_override_constants/separation = 56
+alignment = 1
+
+[node name="Stats" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=1311365630]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_vertical = 4
+offset_transform_enabled = true
+theme = ExtResource("2_qfaas")
+theme_override_font_sizes/font_size = 44
+text = "chart-line"
+
+[node name="LevelSelect" type="Button" parent="VBoxContainer/HBoxContainer2" unique_id=641922452]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_vertical = 4
+offset_transform_enabled = true
+theme = ExtResource("2_qfaas")
+theme_override_font_sizes/font_size = 44
+text = "list"
 
 [node name="Title" type="Label" parent="." unique_id=1642298935]
 layout_mode = 1
@@ -96,6 +131,8 @@ ground_color_rect = NodePath("../ColorRect2")
 labels = [NodePath("../Title")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
 
-[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/Stats" to="." method="_on_stats_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/LevelSelect" to="." method="_on_level_select_pressed"]
