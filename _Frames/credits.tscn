@@ -3,7 +3,39 @@
 [ext_resource type="Script" uid="uid://ce0jkdx7ijl67" path="res://_Frames/Scripts/credits.gd" id="1_shu8t"]
 [ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="2_hkiig"]
 [ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="3_5ljro"]
+[ext_resource type="FontFile" uid="uid://ca8dx2diwqldv" path="res://Fonts/Zain-Black.ttf" id="5_hkiig"]
+[ext_resource type="FontFile" uid="uid://cc1ov6crrsoo8" path="res://Fonts/Zain-Bold.ttf" id="6_lms4j"]
 [ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="6_vo65t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c5orr"]
+font = ExtResource("5_hkiig")
+font_size = 200
+font_color = Color(0.447059, 0.690196, 0.992157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hkiig"]
+font = ExtResource("6_lms4j")
+font_size = 40
+font_color = Color(0.22745098, 0.5254902, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sckn6"]
+font = ExtResource("5_hkiig")
+font_size = 60
+font_color = Color(0.22745098, 0.5254902, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vo65t"]
+font = ExtResource("5_hkiig")
+font_size = 50
+font_color = Color(0.22745098, 0.5254902, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lms4j"]
+font = ExtResource("5_hkiig")
+font_size = 50
+font_color = Color(0.22745098, 0.5254902, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m6sdx"]
+font = ExtResource("5_hkiig")
+font_size = 32
+font_color = Color(0.22745098, 0.5254902, 1, 1)
 
 [node name="Credits" type="Control" unique_id=1144219969]
 layout_mode = 3
@@ -22,6 +54,25 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="W" type="Label" parent="." unique_id=1887978924]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_top = -314.0
+offset_right = -18.0
+offset_bottom = -34.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = -0.50232434
+offset_transform_enabled = true
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_c5orr")
 
 [node name="Bottom" type="Control" parent="." unique_id=933010128]
 custom_minimum_size = Vector2(0, 188)
@@ -62,46 +113,168 @@ offset_transform_enabled = true
 theme = ExtResource("2_hkiig")
 text = "Home"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1252761851]
+[node name="Title" type="Label" parent="." unique_id=1433060846]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_bottom = -188.0
+offset_left = -118.0
+offset_top = 40.0
+offset_right = 118.0
+offset_bottom = 68.0
 grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=1870827306]
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-
-[node name="Title" type="Label" parent="VBoxContainer" unique_id=1433060846]
-layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
 text = "CREDITS"
 label_settings = ExtResource("3_5ljro")
 
-[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=1193649742]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1681934175]
-layout_mode = 2
-theme = ExtResource("2_hkiig")
-bbcode_enabled = true
-text = "This game was made by [b]Chicken502[/b]
-
-Font is [b] Zain[/b] from [b] Google Fonts [/b]
-
-Icons from [b]Font Awesome Free Version 7 [/b]
-
-Godot splash screen by [b]Guhnahdahb[/b]"
-fit_content = true
-
-[node name="ColorAgent" type="Node" parent="." unique_id=201434127 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect")]
+[node name="ColorAgent" type="Node" parent="." unique_id=201434127 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("6_vo65t")
 bg_color_rect = NodePath("../ColorRect")
 ground_color_rect = NodePath("../Bottom/ColorRect2")
+labels = [NodePath("../Title"), NodePath("../W"), NodePath("../W2"), NodePath("../W3"), NodePath("../W4"), NodePath("../W5"), NodePath("../VBoxContainer/Label"), NodePath("../VBoxContainer/Label2"), NodePath("../VBoxContainer/Label3"), NodePath("../VBoxContainer/Label4"), NodePath("../VBoxContainer/Label5"), NodePath("../VBoxContainer/Label6"), NodePath("../VBoxContainer/Label7"), NodePath("../VBoxContainer/Label8")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[node name="W2" type="Label" parent="." unique_id=1814507081]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -140.00002
+offset_right = 127.0
+offset_bottom = 132.0
+grow_vertical = 2
+rotation = 0.276502
+offset_transform_enabled = true
+mouse_filter = 0
+text = "O"
+label_settings = SubResource("LabelSettings_c5orr")
+
+[node name="W3" type="Label" parent="." unique_id=1074469878]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -42.0
+offset_top = -140.0
+offset_right = 66.0
+offset_bottom = -85.0
+grow_horizontal = 0
+grow_vertical = 2
+rotation = 0.276502
+offset_transform_enabled = true
+mouse_filter = 0
+text = "R"
+label_settings = SubResource("LabelSettings_c5orr")
+
+[node name="W4" type="Label" parent="." unique_id=1158074138]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 106.0
+offset_top = 7.0
+offset_right = 135.0
+offset_bottom = 126.0
+rotation = 0.8591015
+offset_transform_enabled = true
+mouse_filter = 0
+text = "D"
+label_settings = SubResource("LabelSettings_c5orr")
+
+[node name="W5" type="Label" parent="." unique_id=1074198696]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -151.0
+offset_top = -23.0
+offset_right = -64.0
+offset_bottom = 278.0
+grow_horizontal = 0
+rotation = -0.56292737
+offset_transform_enabled = true
+mouse_filter = 0
+text = "S"
+label_settings = SubResource("LabelSettings_c5orr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=431682666]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -288.0
+offset_right = 165.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=489251859]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Game Made By"
+label_settings = SubResource("LabelSettings_hkiig")
+
+[node name="Label2" type="Label" parent="VBoxContainer" unique_id=1602475410]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Chicken502"
+label_settings = SubResource("LabelSettings_sckn6")
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=1845338050]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Godot Splash Screen By"
+label_settings = SubResource("LabelSettings_hkiig")
+
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=672674862]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Guhnahdahb"
+label_settings = SubResource("LabelSettings_vo65t")
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="VBoxContainer" unique_id=962414310]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Godot Splash Screen Sound Effects By"
+label_settings = SubResource("LabelSettings_hkiig")
+autowrap_mode = 3
+
+[node name="Label6" type="Label" parent="VBoxContainer" unique_id=1044640258]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Diim_1"
+label_settings = SubResource("LabelSettings_lms4j")
+horizontal_alignment = 2
+
+[node name="Label7" type="Label" parent="VBoxContainer" unique_id=848945277]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Fonts From"
+label_settings = SubResource("LabelSettings_hkiig")
+
+[node name="Label8" type="Label" parent="VBoxContainer" unique_id=1215788957]
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "Font Awesome & Google Fonts"
+label_settings = SubResource("LabelSettings_m6sdx")
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Bottom/Home" to="." method="_on_home_pressed"]
