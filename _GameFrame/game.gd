@@ -610,7 +610,10 @@ func _on_dictonary_pressed() -> void:
 		$DictonaryPanel.loading = true
 
 		if error != OK:
-			push_error("An error occurred while initiating the HTTP request.")
+			$DictonaryPanel.loading = false
+			$DictonaryPanel.word = "GD ERROR: " + str(error)
+			$DictonaryPanel.definition = "Something went wrong while requesting the deffinition."
+			$DictonaryPanel.part_of_speech = "Error"
 
 
 func _on_dictonary_request_completed(
@@ -630,6 +633,14 @@ func _on_dictonary_request_completed(
 		else:
 			print("Failed to parse JSON (or data was invalid/empty). CODE: 200")
 	elif response_code == 429:
-		pass
+		$DictonaryPanel.loading = false
+		$DictonaryPanel.word = "429"
+		$DictonaryPanel.definition = "You have been requesting to many deffinitions \
+		in the aloted time. Wait for ~1Hr and try again."
+		$DictonaryPanel.part_of_speech = "Error"
 	else:
 		print("Dictonary_Request response code : %s" % response_code)
+		$DictonaryPanel.loading = false
+		$DictonaryPanel.word = str(response_code)
+		$DictonaryPanel.definition = "Something went wrong while requesting the deffinition."
+		$DictonaryPanel.part_of_speech = "Error"
