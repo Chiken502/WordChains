@@ -60,7 +60,7 @@ func get_ready(start_signal: Signal):
 			break
 
 	var word_letter_label: Label = get_parent() \
-			.get_node("Control/VBoxContainer/CurrentWordHBox") \
+			.get_node("Control/Control2/VBoxContainer/CurrentWordHBox") \
 			.get_children()[letter_idx]
 
 	await get_tree().create_timer(0.5).timeout
