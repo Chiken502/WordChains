@@ -11,7 +11,6 @@ func _ready() -> void: # Connect signals for animations
 	%Home.button_down.connect(_on_button_down.bind(%Home))
 	
 	for label: Label in $ColorAgent.labels:
-		print(label)
 		label.mouse_entered.connect(_on_control_mouse_entered.bind(label))
 		label.mouse_exited.connect(_on_control_mouse_exited.bind(label))
 

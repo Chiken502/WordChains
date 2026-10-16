@@ -635,12 +635,12 @@ func _on_dictonary_request_completed(
 	elif response_code == 429:
 		$DictonaryPanel.loading = false
 		$DictonaryPanel.word = "429"
-		$DictonaryPanel.definition = "You have been requesting to many deffinitions \
-		in the aloted time. Wait for ~1Hr and try again."
+		$DictonaryPanel.definition = "You have been requesting to many definitions \
+		in the alloted time. Wait for ~1Hr and try again."
 		$DictonaryPanel.part_of_speech = "Error"
 	else:
 		print("Dictonary_Request response code : %s" % response_code)
 		$DictonaryPanel.loading = false
 		$DictonaryPanel.word = str(response_code)
-		$DictonaryPanel.definition = "Something went wrong while requesting the deffinition."
+		$DictonaryPanel.definition = "Something went wrong while requesting the definition."
 		$DictonaryPanel.part_of_speech = "Error"
