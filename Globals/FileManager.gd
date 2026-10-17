@@ -5,6 +5,7 @@ var settings_path := "user://settings.data"
 
 # Once have more settings, save settings to a config file.
 
+
 ## Saves game settings to settings_path
 func save_settings():
 	print("Saving Settings...")
@@ -19,6 +20,7 @@ func save_settings():
 
 	settings_file.store_var(settings_data)
 	print("Settings Saved")
+
 
 ## Saves game progress to save_path
 func save_game():
@@ -36,11 +38,18 @@ func save_game():
 		"hints": GameManager.amt_of_hints,
 		"nickname": GameManager.nickname,
 		"lastDailyComplete": last_daily_complete,
-		"lastDifficulty": GameManager.last_difficulty
+		"lastDifficulty": GameManager.last_difficulty,
+		"dailyPuzzlesCompleted": GameManager.daily_puzzles_completed,
+		"totalTimedLevelsCompleted": GameManager.total_timed_mode_puzzles_completed,
+		"bestTimedMode": GameManager.best_timed_mode,
+		"totalHintsUsed": GameManager.total_hints_used,
+		"totalUndosUsed": GameManager.total_undos_used,
+		"totalLetterDragged": GameManager.total_letters_dragged,
 	}
 
 	save_file.store_var(save_data)
 	print("Game Saved")
+
 
 ## Loads game files, and assigns the values to the correct Autoloads
 ## Loads default values if file wasn't found to read.
@@ -58,7 +67,10 @@ func load_game():
 		if data:
 			print("Settings File Retrieved...")
 
-			AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX Bus"), data.get("soundDB", 0))
+			AudioServer.set_bus_volume_db(
+				AudioServer.get_bus_index("SFX Bus"),
+				data.get("soundDB", 0),
+			)
 			AudioServer.set_bus_volume_db(
 				AudioServer.get_bus_index("Music Bus"),
 				data.get("musicDB", 0),
@@ -79,4 +91,11 @@ func load_game():
 		GameManager.nickname = data.get("nickname", "")
 		GameManager.last_day_completed = data.get("lastDailyComplete", -1)
 		GameManager.last_difficulty = data.get("lastDifficulty", 0)
+		
+		GameManager.daily_puzzles_completed = data.get("dailyPuzzlesCompleted", 0)
+		GameManager.total_timed_mode_puzzles_completed = data.get("totalTimedLevelsCompleted", 0)
+		GameManager.best_timed_mode = data.get("bestTimedMode", 0)
+		GameManager.total_hints_used = data.get("totalHintsUsed", 0)
+		GameManager.total_undos_used = data.get("totalUndosUsed", 0)
+		GameManager.total_letters_dragged = data.get("totalLetterDragged", 0)
 	print("Game Loaded")

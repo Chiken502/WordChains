@@ -35,6 +35,13 @@ var last_day_completed = -1 ## Last day that the daily puzzle was completed.
 var timed_mode = false ## True if player is playing Timed Mode
 var timed_mode_levels_completed = 0 ## How many levels were completed in the last timed mode run
 
+var daily_puzzles_completed = 0
+var total_timed_mode_puzzles_completed = 0
+var best_timed_mode = 0
+var total_hints_used = 0
+var total_undos_used = 0
+var total_letters_dragged = 0
+
 ## Nickname that is used for the CheddaBoards leader board.
 ## Must have completed a daily puzzle to have
 var nickname = ""

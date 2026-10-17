@@ -23,6 +23,7 @@ func _input(event: InputEvent) -> void:
 				else:
 					letter_being_dragged.linear_velocity = Vector2.ZERO # set letter velocity to 0
 				letter_being_dragged.being_dragged = false
+				GameManager.total_letters_dragged += 1
 			letter_being_dragged = null
 
 ## Checks for a letter under the mouse, to drag

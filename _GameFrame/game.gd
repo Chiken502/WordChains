@@ -400,6 +400,7 @@ func _process(_delta: float) -> void:
 
 				GameManager.daily_completed = true
 				GameManager.last_day_completed = GameManager.day_of_year
+				GameManager.daily_puzzles_completed += 1
 
 				FileManager.save_game()
 
@@ -420,6 +421,9 @@ func _on_undo_button_pressed() -> void:
 		deffiniton_showing = false
 		$DictonaryPanel.visible = deffiniton_showing
 		$LetterControler.last_time_dragging = Time.get_ticks_msec()
+		
+		GameManager.total_hints_used += 1
+		
 		var prev_word = undo_history.pop_back() # pop_back removes and returns last value
 		print(prev_word)
 
@@ -477,6 +481,7 @@ func _on_hint_button_pressed() -> void:
 
 		hints -= 1
 		GameManager.amt_of_hints = hints
+		GameManager.total_hints_used += 1
 
 		var hint = ""
 
@@ -604,6 +609,12 @@ func _on_timed_mode_timer_timeout() -> void:
 		$DictonaryPanel.visible = deffiniton_showing
 		timed_timer.stop()
 		GameManager.timed_mode_levels_completed = timed_mode_levels_completed
+		GameManager.total_timed_mode_puzzles_completed += timed_mode_levels_completed
+		
+		if timed_mode_levels_completed > GameManager.best_timed_mode:
+			GameManager.best_timed_mode = timed_mode_levels_completed
+		
+		FileManager.save_game()
 		GameManager.open_leaderboard()
 	else:
 		$Control/levelInfo/levelNum.text = str(timed_mode_minutes) + ":" \
