@@ -93,6 +93,8 @@ func _ready() -> void:
 
 	$DictonaryPanel.hide()
 
+	$LetterControler.last_time_dragging = Time.get_ticks_msec()
+
 
 ## A way to reset the game scene
 func get_ready():
@@ -323,6 +325,15 @@ func _process(_delta: float) -> void:
 		deffiniton_showing = false
 		$DictonaryPanel.visible = deffiniton_showing
 
+	if (
+		not completed and (Time.get_ticks_msec() - $LetterControler.last_time_dragging) > 5000
+		and hints > 0 and $Control/Control2/VBoxContainer/Hint.text == ""
+		and not deffiniton_showing and not GameManager.daily_mode and not GameManager.timed_mode
+	):
+		$TweenController.inactive = true
+	else:
+		$TweenController.inactive = false
+
 	# Checks if puzzle is completed
 	if current_word == target_word:
 		if not completed:
@@ -408,6 +419,7 @@ func _on_undo_button_pressed() -> void:
 	if undo_history: #TODO: ADD UNDO SOUND?
 		deffiniton_showing = false
 		$DictonaryPanel.visible = deffiniton_showing
+		$LetterControler.last_time_dragging = Time.get_ticks_msec()
 		var prev_word = undo_history.pop_back() # pop_back removes and returns last value
 		print(prev_word)
 
@@ -557,6 +569,7 @@ func letter_off_screen(letter):
 func _on_reset_pressed() -> void:
 	deffiniton_showing = false
 	$DictonaryPanel.visible = deffiniton_showing
+	$LetterControler.last_time_dragging = Time.get_ticks_msec()
 	print(undo_history)
 	undo_history.reverse()
 	var current_char = current_word.split("")

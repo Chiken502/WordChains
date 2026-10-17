@@ -4,6 +4,8 @@ var letter_being_dragged: RigidBody2D ## Falling Letter being dragged by the pla
 var prev_mouse_pos: Vector2 = Vector2.ZERO ## Mouse position on previous frame
 var mouse_velocity: Vector2 = Vector2.ZERO ## Mouse velocity calculated based on last frame
 
+var last_time_dragging = 0
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
@@ -53,3 +55,5 @@ func _process(delta: float) -> void:
 		)
 
 		prev_mouse_pos = mouse_pos
+		
+		last_time_dragging = Time.get_ticks_msec()

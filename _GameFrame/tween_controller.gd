@@ -8,6 +8,28 @@ signal tween_done
 
 var not_a_word_tween: Tween
 
+var inactive: bool = false:
+	set(value):
+		if inactive == value: # AVoid unessary tweens being called
+			return
+
+		inactive = value
+		if inactive:
+			inactive_tween = get_tree() \
+					.create_tween() \
+					.set_loops() \
+					.set_ease(Tween.EASE_IN) \
+					.set_trans(Tween.TRANS_SINE)
+			inactive_tween.tween_property(%Hint, "self_modulate", Color(Color.WHITE, 0.5), 1).set_delay(
+				0.1
+			)
+			inactive_tween.tween_property(%Hint, "self_modulate", Color.WHITE, 1).set_delay(0.5)
+		else:
+			inactive_tween.kill()
+			%Hint.self_modulate = Color.WHITE
+
+var inactive_tween: Tween
+
 
 func _ready():
 	for button in [%Undo, %LevelSelect, %Hint, %Reset]: # Connects button signals for animations
@@ -64,9 +86,7 @@ func not_a_word():
 	var random_offset = Vector2(randf_range(0, 1), randf_range(0, 1)).normalized() * 5
 	current_word_container.offset_transform_position = random_offset
 	not_a_word_tween \
-			.tween_property(
-				current_word_container, "offset_transform_position", Vector2.ZERO, 0.5
-			) \
+			.tween_property(current_word_container, "offset_transform_position", Vector2.ZERO, 0.5) \
 			.set_trans(Tween.TRANS_ELASTIC) \
 			.set_ease(Tween.EASE_IN_OUT)
 
