@@ -206,6 +206,8 @@ func load_daily_puzzle(panel: Panel):
 func open_leaderboard():
 	get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
 
+func open_stats_page():
+	get_tree().change_scene_to_file("res://_Frames/stats.tscn")
 
 func load_timed_mode():
 	load_level(1, randi_range(0, 50))

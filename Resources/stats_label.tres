@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://bj3cguejp5o1v"]
+
+[ext_resource type="FontFile" uid="uid://bjy5iambxwpes" path="res://Fonts/Zain-ExtraBold.ttf" id="1_xjxb6"]
+
+[resource]
+font = ExtResource("1_xjxb6")
+font_size = 40
+font_color = Color(0.22745098, 0.5254902, 1, 1)

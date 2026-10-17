@@ -85,7 +85,8 @@ func change_color(color_idx: int):
 			preload("res://Resources/difficulty_stars_label.tres"),
 			preload("res://Resources/difficulty_level_label.tres"),
 			preload("res://Resources/deffinition.tres"),
-			preload("res://Resources/dictonary_word.tres")
+			preload("res://Resources/dictonary_word.tres"),
+			preload("res://Resources/stats_label.tres")
 		]:
 			var font_color_idx = color_in_array(old_colors, label_settings.font_color)
 

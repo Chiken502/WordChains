@@ -63,7 +63,7 @@ func _on_button_down(button: Button):
 
 
 func _on_stats_pressed() -> void:
-	pass # Replace with function body.
+	GameManager.open_stats_page()
 
 
 func _on_level_select_pressed() -> void:

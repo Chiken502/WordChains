@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://c7mlvgw5q0fvi"]
+
+[ext_resource type="Script" uid="uid://dtni4kjatjijj" path="res://_Frames/Scripts/stats.gd" id="1_gkl3p"]
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_j3tc5"]
+[ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="2_gkl3p"]
+[ext_resource type="LabelSettings" uid="uid://bj3cguejp5o1v" path="res://Resources/stats_label.tres" id="3_q1elt"]
+[ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="5_q1elt"]
+
+[node name="Stats" type="Control" unique_id=1935043517]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gkl3p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=505797883]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.588235, 0.847059, 0.996078, 1)
+
+[node name="Bottom" type="Control" parent="." unique_id=1040658161]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="Bottom" unique_id=2061250282]
+custom_minimum_size = Vector2(0, 188)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.227451, 0.52549, 1, 1)
+
+[node name="Home" type="Button" parent="Bottom" unique_id=1281792049]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.5
+offset_right = 25.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+theme = ExtResource("1_j3tc5")
+text = "Home"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=778377744]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Spacer" type="Control" parent="VBoxContainer" unique_id=647144581]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=114714435]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+mouse_filter = 1
+text = "YOUR STATS"
+label_settings = ExtResource("2_gkl3p")
+horizontal_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=2114979091]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+
+[node name="PuzzlesCompleted" type="HBoxContainer" parent="VBoxContainer" unique_id=151468222]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/PuzzlesCompleted" unique_id=1708858924]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Puzzles Completed"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/PuzzlesCompleted" unique_id=87561727]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/PuzzlesCompleted" unique_id=319148042]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="DailysCompleted" type="HBoxContainer" parent="VBoxContainer" unique_id=1975609848]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/DailysCompleted" unique_id=525097459]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Daily Puzzles Completed"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/DailysCompleted" unique_id=624221046]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/DailysCompleted" unique_id=1302707503]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="TimedModesCompleted" type="HBoxContainer" parent="VBoxContainer" unique_id=1220703577]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/TimedModesCompleted" unique_id=1565772402]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Timed Mode Levels Completed"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TimedModesCompleted" unique_id=663724661]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/TimedModesCompleted" unique_id=1209563979]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="BestTimedMode" type="HBoxContainer" parent="VBoxContainer" unique_id=899807518]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/BestTimedMode" unique_id=1407843804]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Best Timed Mode"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/BestTimedMode" unique_id=2098816795]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/BestTimedMode" unique_id=478381482]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="HintsUsed" type="HBoxContainer" parent="VBoxContainer" unique_id=933954704]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HintsUsed" unique_id=1443907726]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Total Hints Used"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/HintsUsed" unique_id=562183695]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HintsUsed" unique_id=482337747]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="UndosUsed" type="HBoxContainer" parent="VBoxContainer" unique_id=1643424138]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/UndosUsed" unique_id=568008638]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Total Undos Used"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/UndosUsed" unique_id=924120630]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/UndosUsed" unique_id=620773231]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="LettersDraged" type="HBoxContainer" parent="VBoxContainer" unique_id=587720556]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="Label" type="Label" parent="VBoxContainer/LettersDraged" unique_id=1158065295]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Total Letters Dragged"
+label_settings = ExtResource("3_q1elt")
+
+[node name="Spacer" type="Control" parent="VBoxContainer/LettersDraged" unique_id=1025842465]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/LettersDraged" unique_id=1713494058]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "0"
+label_settings = ExtResource("3_q1elt")
+
+[node name="ColorAgent" type="Node" parent="." unique_id=1691312689 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect")]
+script = ExtResource("5_q1elt")
+bg_color_rect = NodePath("../ColorRect")
+ground_color_rect = NodePath("../Bottom/ColorRect2")
+metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[connection signal="pressed" from="Bottom/Home" to="." method="_on_home_pressed"]
