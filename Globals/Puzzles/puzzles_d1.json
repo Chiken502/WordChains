@@ -3,17 +3,15 @@
 	"total_puzzles": 50.0,
 	"puzzles": [
 		{
-			"start": "GOLD",
-			"target": "COIN",
+			"start": "SWAM",
+			"target": "AWAY",
 			"solution": [
-				"GOLD",
-				"COLD",
-				"CORD",
-				"CORN",
-				"COIN"
+				"SWAM",
+				"SWAY",
+				"AWAY"
 			],
-			"steps": 4.0,
-			"difficulty": 2.0
+			"steps": 2.0,
+			"difficulty": 1.0
 		},
 		{
 			"start": "GARB",
