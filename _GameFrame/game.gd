@@ -20,6 +20,7 @@ var hints := 0:
 	## Amount of hints the player has available
 	set(value):
 		hints = value
+		GameManager.amt_of_hints = hints
 		$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(value)
 
 var hint_word_letter: Label ## Current Word Letter that is highlighted due to a hint being used
@@ -65,6 +66,7 @@ const CURRENT_WORD_LETTER = preload("res://_Components/current_word_letter.tscn"
 func _ready() -> void:
 	MusicManager.scene_loaded()
 	get_ready()
+	hints = GameManager.amt_of_hints
 	$Control/Bottom/HBoxContainer/Hint/Panel/Label.text = str(hints)
 
 	var difficulty_text = ""
@@ -141,7 +143,6 @@ func get_ready():
 		word_confirmed.connect(l.on_word_confirmed)
 		word_not_found.connect(l.on_word_not_found)
 
-	hints = GameManager.amt_of_hints + 1
 	hints_used = 0
 	undo_used = 0
 
@@ -356,8 +357,6 @@ func _process(_delta: float) -> void:
 			tween_controller.slide_off(self.size)
 			await tween_controller.tween_done
 
-			GameManager.amt_of_hints = hints
-
 			if GameManager.tutorial_mode:
 				$Control/Control2/Actions.show()
 				%LevelSelect.show()
@@ -371,7 +370,7 @@ func _process(_delta: float) -> void:
 					timed_mode_levels_completed
 				)
 
-			# If the puzzle is the daily puzzle
+			# If the puzzle is not the daily puzzle
 			if not GameManager.daily_mode:
 				var success = false
 
@@ -381,6 +380,8 @@ func _process(_delta: float) -> void:
 						GameManager.current_levels[GameManager.current_difficulty] + 1,
 					)
 					GameManager.current_levels[GameManager.current_difficulty] += 1
+					
+					hints += 1
 				else:
 					success = await GameManager.load_level(1, randi_range(0, 50))
 
@@ -397,6 +398,7 @@ func _process(_delta: float) -> void:
 							"undosUsed": undo_used,
 						},
 					)
+					
 					get_ready()
 				else: # Happens on the last level.
 					print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
@@ -490,7 +492,6 @@ func _on_hint_button_pressed() -> void:
 			return
 
 		hints -= 1
-		GameManager.amt_of_hints = hints
 		GameManager.total_hints_used += 1
 
 		var hint = ""
