@@ -88,7 +88,7 @@ func _ready() -> void:
 				difficulty_text = "HARD"
 			3:
 				difficulty_text = "EXPERT"
-		
+
 		if GameManager.tutorial_mode:
 			$Control/levelInfo/levelNum.text = "Tutorial Level"
 
@@ -357,11 +357,11 @@ func _process(_delta: float) -> void:
 			await tween_controller.tween_done
 
 			GameManager.amt_of_hints = hints
-			
+
 			if GameManager.tutorial_mode:
 				$Control/Control2/Actions.show()
 				%LevelSelect.show()
-			
+
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
 
@@ -431,9 +431,9 @@ func _on_undo_button_pressed() -> void:
 		deffiniton_showing = false
 		$DictonaryPanel.visible = deffiniton_showing
 		$LetterControler.last_time_dragging = Time.get_ticks_msec()
-		
-		GameManager.total_hints_used += 1
-		
+
+		GameManager.total_undos_used += 1
+
 		var prev_word = undo_history.pop_back() # pop_back removes and returns last value
 		print(prev_word)
 
@@ -620,10 +620,10 @@ func _on_timed_mode_timer_timeout() -> void:
 		timed_timer.stop()
 		GameManager.timed_mode_levels_completed = timed_mode_levels_completed
 		GameManager.total_timed_mode_puzzles_completed += timed_mode_levels_completed
-		
+
 		if timed_mode_levels_completed > GameManager.best_timed_mode:
 			GameManager.best_timed_mode = timed_mode_levels_completed
-		
+
 		FileManager.save_game()
 		GameManager.open_leaderboard()
 	else:

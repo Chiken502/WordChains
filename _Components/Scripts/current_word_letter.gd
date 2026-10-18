@@ -54,6 +54,7 @@ func on_word_confirmed(node, new_letter: String):
 			letter = new_letter.to_upper()
 
 			colliding_body.queue_free()
+			GameManager.total_letters_dragged += 1
 			colliding_body = null
 
 			$MainParticles.emitting = true
