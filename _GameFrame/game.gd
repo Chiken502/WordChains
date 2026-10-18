@@ -445,7 +445,7 @@ func _on_undo_button_pressed() -> void:
 		var letter_node_pos = letter_node.global_position + (letter_node.size / 2)
 
 		var falling_letter = FALLING_LETTER.instantiate()
-		get_parent().add_child(falling_letter) # adds letter to main scene
+		add_child(falling_letter) # adds letter to main scene
 		falling_letter.position = letter_node_pos
 		falling_letter.letter = current_char[index]
 		falling_letter.ground_collider = $Control/Bottom/Bottom
