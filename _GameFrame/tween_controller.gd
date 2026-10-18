@@ -17,7 +17,7 @@ var inactive: bool = false:
 		if inactive:
 			inactive_tween = get_tree() \
 					.create_tween() \
-					.set_loops() \
+					.set_loops(100) \
 					.set_ease(Tween.EASE_IN) \
 					.set_trans(Tween.TRANS_SINE)
 			inactive_tween.tween_property(%Hint, "self_modulate", Color(Color.WHITE, 0.5), 1).set_delay(
