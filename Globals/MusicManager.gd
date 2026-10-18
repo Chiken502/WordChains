@@ -12,6 +12,8 @@ func start_music():
 	await get_tree().create_timer(0.5).timeout
 	$MusicPlayer/MusicOpener.play()
 
+func stop_music():
+	$MusicPlayer.stop()
 
 func button_pressed():
 	$ButtonPress.play()

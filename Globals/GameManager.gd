@@ -47,6 +47,8 @@ var total_letters_dragged = 0
 var nickname = ""
 
 
+var _defaults: Dictionary = {}
+
 func _ready() -> void:
 	randomize()
 	FileManager.load_game()
@@ -213,6 +215,12 @@ func load_timed_mode():
 	load_level(1, randi_range(0, 50))
 	timed_mode = true
 	get_tree().change_scene_to_file("res://_GameFrame/game.tscn")
+
+
+func reset_autoload():
+	var current_script = get_script()
+	set_script(null)
+	set_script(current_script)
 
 
 ## Signal Resolver is used when you need to await one or more signals at a time

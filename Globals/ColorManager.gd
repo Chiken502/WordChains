@@ -34,47 +34,48 @@ func change_color(color_idx: int):
 		old_colors.remove_at(0) # Removes color name
 		current_color = color_idx
 
-		var theme = preload("res://Resources/main_theme.tres")
+		var themes = [preload("res://Resources/main_theme.tres"), preload("res://Resources/window_theme.tres")]
 
-		# Search through each theme type like: Button, H-slider ect
-		for theme_type in theme.get_type_list():
-			var color_list = theme.get_color_list(theme_type)
-			for prop_name in color_list:
-				var prop_color_idx = color_in_array(
-					old_colors,
-					theme.get_color(prop_name, theme_type),
-				)
-
-				if prop_color_idx != -1: # Swaps the colors, based on index values
-					theme.set_color(
-						prop_name,
-						theme_type,
-						Color(colors[current_color][prop_color_idx + 1]),
+		for theme:Theme in themes:
+			# Search through each theme type like: Button, H-slider ect
+			for theme_type in theme.get_type_list():
+				var color_list = theme.get_color_list(theme_type)
+				for prop_name in color_list:
+					var prop_color_idx = color_in_array(
+						old_colors,
+						theme.get_color(prop_name, theme_type),
 					)
 
-			# Change colors in style boxes
-			var stylebox_list = theme.get_stylebox_list(theme_type)
-			for stylebox_name in stylebox_list:
-				var style_box := theme.get_stylebox(stylebox_name, theme_type).duplicate()
+					if prop_color_idx != -1: # Swaps the colors, based on index values
+						theme.set_color(
+							prop_name,
+							theme_type,
+							Color(colors[current_color][prop_color_idx + 1]),
+						)
 
-				if style_box is StyleBoxFlat:
-					var bg_idx = color_in_array(old_colors, style_box.bg_color)
+				# Change colors in style boxes
+				var stylebox_list = theme.get_stylebox_list(theme_type)
+				for stylebox_name in stylebox_list:
+					var style_box := theme.get_stylebox(stylebox_name, theme_type).duplicate()
 
-					var border_idx = color_in_array(old_colors, style_box.border_color)
+					if style_box is StyleBoxFlat:
+						var bg_idx = color_in_array(old_colors, style_box.bg_color)
 
-					if bg_idx != -1:
-						style_box.bg_color = Color(colors[current_color][bg_idx + 1])
+						var border_idx = color_in_array(old_colors, style_box.border_color)
 
-					if border_idx != -1:
-						style_box.border_color = Color(colors[current_color][border_idx + 1])
+						if bg_idx != -1:
+							style_box.bg_color = Color(colors[current_color][bg_idx + 1])
 
-					theme.set_stylebox(stylebox_name, theme_type, style_box)
+						if border_idx != -1:
+							style_box.border_color = Color(colors[current_color][border_idx + 1])
 
-			if theme_type != "OptionButton": # Modifys all icons except for option button icons
-				for icon_name in theme.get_icon_list(theme_type):
-					var icon_path = "res://Resources/" + icon_name + ".svg.txt"
+						theme.set_stylebox(stylebox_name, theme_type, style_box)
 
-					theme.set_icon(icon_name, theme_type, modify_svg(icon_path))
+				if theme_type != "OptionButton": # Modifys all icons except for option button icons
+					for icon_name in theme.get_icon_list(theme_type):
+						var icon_path = "res://Resources/" + icon_name + ".svg.txt"
+
+						theme.set_icon(icon_name, theme_type, modify_svg(icon_path))
 
 		# Modifys colors of label settings
 		for label_settings: LabelSettings in [

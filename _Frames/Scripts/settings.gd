@@ -24,20 +24,13 @@ func _ready() -> void:
 	$VBoxContainer/Color/OptionButton.selected = ColorManager.current_color
 
 	# Connect signals for animations
-	%Home.button_up.connect(_on_button_up.bind(%Home))
-	%Home.button_down.connect(_on_button_down.bind(%Home))
-	$VBoxContainer/ScreenShake/CheckBox.button_up.connect(
-		_on_button_up.bind($VBoxContainer/ScreenShake/CheckBox)
-	)
-	$VBoxContainer/ScreenShake/CheckBox.button_down.connect(
-		_on_button_down.bind($VBoxContainer/ScreenShake/CheckBox)
-	)
-	%TutorialButton.button_up.connect(_on_button_up.bind(%TutorialButton))
-	%TutorialButton.button_down.connect(_on_button_down.bind(%TutorialButton))
-
-	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake, %Nickname, %TutorialButton]:
+	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake, %Nickname, %TutorialButton, %ResetButton]:
 		control.mouse_entered.connect(_on_control_mouse_entered.bind(control))
 		control.mouse_exited.connect(_on_control_mouse_exited.bind(control))
+	
+	for button in [%Home, $VBoxContainer/ScreenShake/CheckBox, %TutorialButton, %ResetButton]:
+		button.button_up.connect(_on_button_up.bind(button))
+		button.button_down.connect(_on_button_down.bind(button))
 
 	$VBoxContainer/ScreenShake/CheckBox.button_pressed = GameManager.screen_shake_on
 
@@ -150,3 +143,21 @@ func _on_replay_tutorial_button_pressed() -> void:
 	save_settings()
 	GameManager.need_tutorial = true
 	GameManager.open_level_select()
+
+
+func _on_reset_button_pressed() -> void:
+	$"Dimming Panel".show()
+	$ConfirmationDialog.show()
+
+
+func _on_confirmation_dialog_close_requested() -> void:
+	$"Dimming Panel".hide()
+
+
+func _on_confirmation_dialog_confirmed() -> void:
+	$"Dimming Panel".hide()
+	FileManager.erase_save_file()
+
+
+func _on_confirmation_dialog_canceled() -> void:
+	$"Dimming Panel".hide()

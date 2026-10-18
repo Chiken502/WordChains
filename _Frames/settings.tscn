@@ -6,6 +6,7 @@
 [ext_resource type="LabelSettings" uid="uid://bsp6c6y4nxdwg" path="res://Resources/header_label.tres" id="3_x0uk4"]
 [ext_resource type="LabelSettings" uid="uid://cd4808gjis3qt" path="res://Resources/settings_label.tres" id="4_h37ls"]
 [ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="5_nair6"]
+[ext_resource type="Theme" uid="uid://chujkrv8dmk5h" path="res://Resources/window_theme.tres" id="7_ra52q"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mvqqf"]
 font = ExtResource("3_s1s6w")
@@ -111,7 +112,7 @@ text = "SETTINGS"
 label_settings = ExtResource("3_x0uk4")
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=858924735]
-custom_minimum_size = Vector2(0, 65)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="Color" type="HBoxContainer" parent="VBoxContainer" unique_id=999394556]
@@ -196,7 +197,7 @@ layout_mode = 2
 offset_transform_enabled = true
 
 [node name="Spacer" type="Control" parent="VBoxContainer/Nickname" unique_id=1549068158]
-custom_minimum_size = Vector2(0, 24)
+custom_minimum_size = Vector2(0, 12)
 layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Nickname" unique_id=345500714]
@@ -227,12 +228,49 @@ theme = ExtResource("2_klobn")
 theme_type_variation = &"ReadableButton"
 text = "Replay Tutorial"
 
+[node name="ResetButton" type="VBoxContainer" parent="VBoxContainer" unique_id=827054949]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="ResetButton" type="Button" parent="VBoxContainer/ResetButton" unique_id=794491776]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("2_klobn")
+theme_type_variation = &"ReadableButton"
+text = "Reset Game"
+
 [node name="ColorAgent" type="Node" parent="." unique_id=1148928729 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("5_nair6")
 bg_color_rect = NodePath("../ColorRect")
 ground_color_rect = NodePath("../Bottom/ColorRect2")
 labels = [NodePath("../Bottom/Version")]
 metadata/_custom_type_script = "uid://d2toi3smadpcb"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1285682766]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(414, 199)
+theme = ExtResource("7_ra52q")
+ok_button_text = "Delete Save File"
+dialog_text = "Are you sure you want to delete your save file?
+This action is irreversible.
+
+Note: This will not erase your settings"
+dialog_autowrap = true
+
+[node name="Dimming Panel" type="Panel" parent="." unique_id=1665703447]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="pressed" from="Bottom/Home" to="." method="_on_home_pressed"]
 [connection signal="item_selected" from="VBoxContainer/Color/OptionButton" to="." method="_on_option_button_item_selected"]
@@ -241,3 +279,7 @@ metadata/_custom_type_script = "uid://d2toi3smadpcb"
 [connection signal="pressed" from="VBoxContainer/ScreenShake/CheckBox" to="." method="_on_check_box_pressed"]
 [connection signal="text_changed" from="VBoxContainer/Nickname/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="VBoxContainer/TutorialReplay/TutorialButton" to="." method="_on_replay_tutorial_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ResetButton/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="close_requested" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_close_requested"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

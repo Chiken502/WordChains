@@ -99,3 +99,21 @@ func load_game():
 		GameManager.total_undos_used = data.get("totalUndosUsed", 0)
 		GameManager.total_letters_dragged = data.get("totalLetterDragged", 0)
 	print("Game Loaded")
+
+
+func erase_save_file():
+	if FileAccess.file_exists(save_path):
+		var error = DirAccess.remove_absolute(save_path)
+		
+		if error == OK:
+			print("Save file deleted successfully")
+			MusicManager.stop_music()
+			GameManager.reset_autoload()
+			save_game()
+			get_tree().change_scene_to_file("res://_Frames/splash.tscn")
+		else:
+			print("Failed to delete save file. Error: ", error)
+			push_error("Failed to delete save file. Error: ", error)
+	else:
+		print("No Save file found")
+		push_error("No Save File Found")
