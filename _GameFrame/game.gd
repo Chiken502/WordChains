@@ -88,6 +88,9 @@ func _ready() -> void:
 				difficulty_text = "HARD"
 			3:
 				difficulty_text = "EXPERT"
+		
+		if GameManager.tutorial_mode:
+			$Control/levelInfo/levelNum.text = "Tutorial Level"
 
 	$Control/levelInfo/levelDif.text = difficulty_text
 
@@ -100,6 +103,8 @@ func _ready() -> void:
 func get_ready():
 	if GameManager.tutorial_mode:
 		tutorial_manager.get_ready(self.game_ready)
+		$Control/Control2/Actions.hide()
+		%LevelSelect.hide()
 	solution.clear()
 
 	level_start_time = Time.get_ticks_msec()
@@ -352,6 +357,11 @@ func _process(_delta: float) -> void:
 			await tween_controller.tween_done
 
 			GameManager.amt_of_hints = hints
+			
+			if GameManager.tutorial_mode:
+				$Control/Control2/Actions.show()
+				%LevelSelect.show()
+			
 			GameManager.tutorial_mode = false
 			GameManager.need_tutorial = false
 
