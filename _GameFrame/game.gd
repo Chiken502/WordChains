@@ -98,8 +98,6 @@ func _ready() -> void:
 
 	$DictonaryPanel.hide()
 
-	$LetterControler.last_time_dragging = Time.get_ticks_msec()
-
 
 ## A way to reset the game scene
 func get_ready():
@@ -189,6 +187,8 @@ func get_ready():
 		offset,
 		%Dictonary.global_position.y + %Dictonary.size.y / 2 - $DictonaryPanel.size.y / 2,
 	)
+
+	$LetterControler.last_time_dragging = Time.get_ticks_msec()
 
 
 ## Spawns falling letter nodes
@@ -380,7 +380,7 @@ func _process(_delta: float) -> void:
 						GameManager.current_levels[GameManager.current_difficulty] + 1,
 					)
 					GameManager.current_levels[GameManager.current_difficulty] += 1
-					
+
 					hints += 1
 				else:
 					success = await GameManager.load_level(1, randi_range(0, 50))
@@ -398,7 +398,7 @@ func _process(_delta: float) -> void:
 							"undosUsed": undo_used,
 						},
 					)
-					
+
 					get_ready()
 				else: # Happens on the last level.
 					print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
