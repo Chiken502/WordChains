@@ -333,8 +333,8 @@ func _process(_delta: float) -> void:
 
 	if (
 		not completed and (Time.get_ticks_msec() - $LetterControler.last_time_dragging) > 5000
-		and hints > 0 and $Control/Control2/VBoxContainer/Hint.text == ""
-		and not deffiniton_showing and not GameManager.daily_mode and not GameManager.timed_mode
+		and hints > 0 and $Control/Control2/VBoxContainer/Hint.text == "" and not deffiniton_showing
+		and not GameManager.daily_mode and not GameManager.timed_mode and GameManager.hint_flashing
 	):
 		$TweenController.inactive = true
 	else:

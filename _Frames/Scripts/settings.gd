@@ -24,15 +24,33 @@ func _ready() -> void:
 	$VBoxContainer/Color/OptionButton.selected = ColorManager.current_color
 
 	# Connect signals for animations
-	for control in [%Color, %Music, %Sound, %Home, %Title, %ScreenShake, %Nickname, %TutorialButton, %ResetButton]:
+	for control in [
+		%Color,
+		%Music,
+		%Sound,
+		%Home,
+		%Title,
+		%ScreenShake,
+		%Nickname,
+		%TutorialButton,
+		%ResetButton,
+		%HintFlash,
+	]:
 		control.mouse_entered.connect(_on_control_mouse_entered.bind(control))
 		control.mouse_exited.connect(_on_control_mouse_exited.bind(control))
-	
-	for button in [%Home, $VBoxContainer/ScreenShake/CheckBox, %TutorialButton, %ResetButton]:
+
+	for button in [
+		%Home,
+		$VBoxContainer/ScreenShake/CheckBox,
+		%TutorialButton,
+		%ResetButton,
+		$VBoxContainer/HintFlash/CheckBox,
+	]:
 		button.button_up.connect(_on_button_up.bind(button))
 		button.button_down.connect(_on_button_down.bind(button))
 
 	$VBoxContainer/ScreenShake/CheckBox.button_pressed = GameManager.screen_shake_on
+	$VBoxContainer/HintFlash/CheckBox.button_pressed = GameManager.hint_flashing
 
 	last_sound_feedback = Time.get_ticks_msec() / 1000.0 + 0.5
 
@@ -51,7 +69,8 @@ func _on_home_pressed() -> void:
 	save_settings()
 	GameManager.back_to_menu()
 
-## Saves and changes made 
+
+## Saves and changes made
 func save_settings():
 	if nickname_changed:
 		if !CheddaBoards.is_logged_in():
@@ -102,6 +121,11 @@ func _on_option_button_item_selected(index: int) -> void:
 func _on_check_box_pressed() -> void:
 	settings_changed = true
 	GameManager.screen_shake_on = $VBoxContainer/ScreenShake/CheckBox.button_pressed
+
+
+func _on_hint_flash_pressed() -> void:
+	settings_changed = true
+	GameManager.hint_flashing = $VBoxContainer/HintFlash/CheckBox.button_pressed
 
 
 func _on_music_slider_value_changed(value: float) -> void:

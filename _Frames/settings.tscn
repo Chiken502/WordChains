@@ -112,7 +112,6 @@ text = "SETTINGS"
 label_settings = ExtResource("3_x0uk4")
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=858924735]
-custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 
 [node name="Color" type="HBoxContainer" parent="VBoxContainer" unique_id=999394556]
@@ -186,6 +185,23 @@ text = "Screen Shake"
 label_settings = ExtResource("4_h37ls")
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/ScreenShake" unique_id=1415117339]
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("2_klobn")
+button_pressed = true
+
+[node name="HintFlash" type="HBoxContainer" parent="VBoxContainer" unique_id=362970437]
+unique_name_in_owner = true
+layout_mode = 2
+offset_transform_enabled = true
+theme_override_constants/separation = 84
+
+[node name="Label" type="Label" parent="VBoxContainer/HintFlash" unique_id=2059155637]
+layout_mode = 2
+text = "Hint Flashing"
+label_settings = ExtResource("4_h37ls")
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HintFlash" unique_id=1520277470]
 layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("2_klobn")
@@ -277,6 +293,7 @@ grow_vertical = 2
 [connection signal="value_changed" from="VBoxContainer/Music/HSlider" to="." method="_on_music_slider_value_changed"]
 [connection signal="value_changed" from="VBoxContainer/Sound/HSlider" to="." method="_on_sound_slider_value_changed"]
 [connection signal="pressed" from="VBoxContainer/ScreenShake/CheckBox" to="." method="_on_check_box_pressed"]
+[connection signal="pressed" from="VBoxContainer/HintFlash/CheckBox" to="." method="_on_hint_flash_pressed"]
 [connection signal="text_changed" from="VBoxContainer/Nickname/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="pressed" from="VBoxContainer/TutorialReplay/TutorialButton" to="." method="_on_replay_tutorial_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ResetButton/ResetButton" to="." method="_on_reset_button_pressed"]

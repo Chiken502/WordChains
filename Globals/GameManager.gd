@@ -16,6 +16,7 @@ var amt_of_hints := 0 ## Amount of hints the player has remaining
 
 # Settings Variables
 var screen_shake_on = true ## Controls wether the screen shakes when a word is not in the dictionary
+var hint_flashing = true
 
 var tutorial_mode = false ## True if the player is in the tutorial
 var need_tutorial = true ## True if the player needs to play the tutorial
@@ -46,8 +47,8 @@ var total_letters_dragged = 0
 ## Must have completed a daily puzzle to have
 var nickname = ""
 
+var _defaults: Dictionary = { }
 
-var _defaults: Dictionary = {}
 
 func _ready() -> void:
 	randomize()
@@ -208,8 +209,10 @@ func load_daily_puzzle(panel: Panel):
 func open_leaderboard():
 	get_tree().change_scene_to_file("res://_Frames/leaderboard.tscn")
 
+
 func open_stats_page():
 	get_tree().change_scene_to_file("res://_Frames/stats.tscn")
+
 
 func load_timed_mode():
 	load_level(1, randi_range(0, 50))

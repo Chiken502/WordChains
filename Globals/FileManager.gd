@@ -16,6 +16,7 @@ func save_settings():
 		"musicDB": AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music Bus")),
 		"gameColor": ColorManager.colors[ColorManager.current_color][0],
 		"cameraShake": GameManager.screen_shake_on,
+		"hintFlash": GameManager.hint_flashing
 	}
 
 	settings_file.store_var(settings_data)
@@ -77,6 +78,7 @@ func load_game():
 			)
 			ColorManager.change_color(ColorManager.get_color_idx(data.get("gameColor", "Blue")))
 			GameManager.screen_shake_on = data.get("cameraShake", true)
+			GameManager.hint_flashing = data.get("hintFlash", true)
 			print("Settings Loaded")
 
 	if not FileAccess.file_exists(save_path):
