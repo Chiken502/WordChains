@@ -389,6 +389,8 @@ func _process(_delta: float) -> void:
 						]
 						tween_controller.hint_given()
 
+					FileManager.save_game()
+
 				else:
 					success = await GameManager.load_level(1, randi_range(0, 50))
 
