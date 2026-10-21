@@ -74,6 +74,17 @@ func slide_off(size: Vector2):
 	tween_done.emit()
 
 
+func hint_given():
+	var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+	tween.set_parallel()
+	
+	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel", "offset_transform_scale", Vector2(2, 2), 0.5)
+	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel/Label", "offset_transform_scale", Vector2(1.1, 1.1), 0.5)
+	tween.chain()
+	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel", "offset_transform_scale", Vector2.ONE, 1.0).set_delay(1.0)
+	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel/Label", "offset_transform_scale", Vector2.ONE, 1.0).set_delay(1.0)
+
+
 # Shakes the current words to indicate that its not a word
 func not_a_word():
 	if not_a_word_tween:

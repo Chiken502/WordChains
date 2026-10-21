@@ -183,6 +183,7 @@ offset_right = -10.0
 offset_bottom = -5.0
 grow_horizontal = 0
 grow_vertical = 0
+offset_transform_enabled = true
 theme = ExtResource("4_3g1ng")
 
 [node name="Label" type="Label" parent="Control/Bottom/HBoxContainer/Hint/Panel" unique_id=659382177]
@@ -194,6 +195,7 @@ offset_top = 2.0
 offset_right = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+offset_transform_enabled = true
 text = "0"
 label_settings = SubResource("LabelSettings_6wqon")
 horizontal_alignment = 1
