@@ -8,6 +8,15 @@ signal tween_done
 
 var not_a_word_tween: Tween
 
+var trigger_debug_tween = false:
+	set(value):
+		trigger_debug_tween = value
+		if trigger_debug_tween:
+			hint_given() # Change this out when needed
+		
+		trigger_debug_tween = false
+
+
 var inactive: bool = false:
 	set(value):
 		if inactive == value: # AVoid unessary tweens being called
