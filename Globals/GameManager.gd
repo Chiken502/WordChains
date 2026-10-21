@@ -13,6 +13,8 @@ var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level.
 var current_difficulty := 0 ## Current Difficulty Level
 var last_difficulty := 0 ## Last played difficulty level
 var amt_of_hints := 0 ## Amount of hints the player has remaining
+var levels_to_hint := []
+var defults_levels_to_hints := [4, 3, 2, 1]
 
 # Settings Variables
 var screen_shake_on = true ## Controls wether the screen shakes when a word is not in the dictionary

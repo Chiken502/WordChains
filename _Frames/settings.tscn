@@ -186,6 +186,7 @@ label_settings = ExtResource("4_h37ls")
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/ScreenShake" unique_id=1415117339]
 layout_mode = 2
+size_flags_horizontal = 8
 offset_transform_enabled = true
 theme = ExtResource("2_klobn")
 button_pressed = true
@@ -194,7 +195,7 @@ button_pressed = true
 unique_name_in_owner = true
 layout_mode = 2
 offset_transform_enabled = true
-theme_override_constants/separation = 84
+theme_override_constants/separation = 86
 
 [node name="Label" type="Label" parent="VBoxContainer/HintFlash" unique_id=2059155637]
 layout_mode = 2
@@ -203,6 +204,7 @@ label_settings = ExtResource("4_h37ls")
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/HintFlash" unique_id=1520277470]
 layout_mode = 2
+size_flags_horizontal = 8
 offset_transform_enabled = true
 theme = ExtResource("2_klobn")
 button_pressed = true

@@ -381,7 +381,13 @@ func _process(_delta: float) -> void:
 					)
 					GameManager.current_levels[GameManager.current_difficulty] += 1
 
-					hints += 1
+					#hints += 1
+					GameManager.levels_to_hint[GameManager.current_difficulty] -= 1
+					if GameManager.levels_to_hint[GameManager.current_difficulty] <= 0:
+						hints += 1
+						GameManager.levels_to_hint[GameManager.current_difficulty] = GameManager.defults_levels_to_hints[GameManager.current_difficulty]
+						print("HINT GIVEN")
+
 				else:
 					success = await GameManager.load_level(1, randi_range(0, 50))
 

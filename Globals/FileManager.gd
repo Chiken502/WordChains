@@ -40,6 +40,7 @@ func save_game():
 		"nickname": GameManager.nickname,
 		"lastDailyComplete": last_daily_complete,
 		"lastDifficulty": GameManager.last_difficulty,
+		"levelsToHint": GameManager.levels_to_hint,
 		"dailyPuzzlesCompleted": GameManager.daily_puzzles_completed,
 		"totalTimedLevelsCompleted": GameManager.total_timed_mode_puzzles_completed,
 		"bestTimedMode": GameManager.best_timed_mode,
@@ -93,6 +94,7 @@ func load_game():
 		GameManager.nickname = data.get("nickname", "")
 		GameManager.last_day_completed = data.get("lastDailyComplete", -1)
 		GameManager.last_difficulty = data.get("lastDifficulty", 0)
+		GameManager.levels_to_hint = data.get("levelsToHint", GameManager.defults_levels_to_hints.duplicate())
 		
 		GameManager.daily_puzzles_completed = data.get("dailyPuzzlesCompleted", 0)
 		GameManager.total_timed_mode_puzzles_completed = data.get("totalTimedLevelsCompleted", 0)
