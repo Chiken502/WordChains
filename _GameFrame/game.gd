@@ -174,6 +174,7 @@ func get_ready():
 		%Reset.show()
 
 	# Animate words sliding on
+	$Control/Control2/VBoxContainer/WrongWord.text = ""
 	tween_controller.slide_in(self.size)
 	await tween_controller.tween_done
 
@@ -351,8 +352,17 @@ func _process(_delta: float) -> void:
 
 			$Control/Control2/VBoxContainer/Hint.text = ""
 
+			var secret_solution = false
+			for i in get_children():
+				if i.is_in_group("falling letter"):
+					secret_solution = true
+
+			if secret_solution:
+				$Control/Control2/VBoxContainer/WrongWord.text = "[wave]You Found a Secret Solution!"
+
 			await get_tree().create_timer(1).timeout
 
+			
 			for i in get_children():
 				if i.is_in_group("falling letter"):
 					tween_controller.slide_letter_off(i, self.size)
