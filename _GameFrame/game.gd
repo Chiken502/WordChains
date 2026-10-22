@@ -351,7 +351,11 @@ func _process(_delta: float) -> void:
 
 			$Control/Control2/VBoxContainer/Hint.text = ""
 
-			await get_tree().create_timer(1).timeout #TODO: ADD CHIME SOUND
+			await get_tree().create_timer(1).timeout
+
+			for i in get_children():
+				if i.is_in_group("falling letter"):
+					tween_controller.slide_letter_off(i, self.size)
 
 			# animation
 			tween_controller.slide_off(self.size)

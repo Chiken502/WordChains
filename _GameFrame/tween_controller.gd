@@ -13,9 +13,8 @@ var trigger_debug_tween = false:
 		trigger_debug_tween = value
 		if trigger_debug_tween:
 			hint_given() # Change this out when needed
-		
-		trigger_debug_tween = false
 
+		trigger_debug_tween = false
 
 var inactive: bool = false:
 	set(value):
@@ -83,15 +82,39 @@ func slide_off(size: Vector2):
 	tween_done.emit()
 
 
+func slide_letter_off(letter, size: Vector2):
+	var tween = get_tree().create_tween().set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUINT)
+
+	tween.tween_property(letter, "position", Vector2(-size.x / 2 - 200, letter.position.y), 0.75)
+	tween.tween_callback(
+		func():
+			letter.queue_free(),
+	)
+
+
 func hint_given():
 	var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
 	tween.set_parallel()
-	
-	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel", "offset_transform_scale", Vector2(2, 2), 0.5)
-	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel/Label", "offset_transform_scale", Vector2(1.1, 1.1), 0.5)
+
+	tween.tween_property(
+		$"../Control/Bottom/HBoxContainer/Hint/Panel",
+		"offset_transform_scale",
+		Vector2(2, 2),
+		0.5,
+	)
+	tween.tween_property(
+		$"../Control/Bottom/HBoxContainer/Hint/Panel/Label",
+		"offset_transform_scale",
+		Vector2(1.1, 1.1),
+		0.5,
+	)
 	tween.chain()
-	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel", "offset_transform_scale", Vector2.ONE, 1.0).set_delay(1.0)
-	tween.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel/Label", "offset_transform_scale", Vector2.ONE, 1.0).set_delay(1.0)
+	tween \
+			.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel", "offset_transform_scale", Vector2.ONE, 1.0) \
+			.set_delay(1.0)
+	tween \
+			.tween_property($"../Control/Bottom/HBoxContainer/Hint/Panel/Label", "offset_transform_scale", Vector2.ONE, 1.0) \
+			.set_delay(1.0)
 
 
 # Shakes the current words to indicate that its not a word
