@@ -1,6 +1,6 @@
 {
   "word_length": "mixed",
-  "total_puzzles": 50,
+  "total_puzzles": 100,
   "puzzles": [
     {
       "start": "CUBS",
@@ -748,6 +748,756 @@
         "BOTS",
         "BOOS",
         "ZOOS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "MOVED",
+      "target": "PATHS",
+      "solution": [
+        "MOVED",
+        "MOVES",
+        "MOLES",
+        "MALES",
+        "MATES",
+        "MATHS",
+        "PATHS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DARES",
+      "target": "TASKS",
+      "solution": [
+        "DARES",
+        "CARES",
+        "CAKES",
+        "TAKES",
+        "TALES",
+        "TALKS",
+        "TASKS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BITTER",
+      "target": "MARRED",
+      "solution": [
+        "BITTER",
+        "BATTER",
+        "BARTER",
+        "BARBER",
+        "BARBED",
+        "BARRED",
+        "MARRED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FIXES",
+      "target": "GENTS",
+      "solution": [
+        "FIXES",
+        "MIXES",
+        "MINES",
+        "MINUS",
+        "MENUS",
+        "GENUS",
+        "GENTS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BLAMED",
+      "target": "FLOWED",
+      "solution": [
+        "BLAMED",
+        "BLAMES",
+        "FLAMES",
+        "FLARES",
+        "FLARED",
+        "FLAWED",
+        "FLOWED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "JEANS",
+      "target": "MARKS",
+      "solution": [
+        "JEANS",
+        "LEANS",
+        "LEAKS",
+        "PEAKS",
+        "PERKS",
+        "PARKS",
+        "MARKS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CUBES",
+      "target": "WIPED",
+      "solution": [
+        "CUBES",
+        "CURES",
+        "CARES",
+        "WARES",
+        "WIRES",
+        "WIPES",
+        "WIPED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "HOODS",
+      "target": "MINUS",
+      "solution": [
+        "HOODS",
+        "MOODS",
+        "MOLDS",
+        "MOLES",
+        "MILES",
+        "MINES",
+        "MINUS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "HOSTS",
+      "target": "ROVER",
+      "solution": [
+        "HOSTS",
+        "POSTS",
+        "POSES",
+        "LOSES",
+        "LOVES",
+        "LOVER",
+        "ROVER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "GROPING",
+      "target": "STORING",
+      "solution": [
+        "GROPING",
+        "GROWING",
+        "GLOWING",
+        "SLOWING",
+        "SNOWING",
+        "SNORING",
+        "STORING"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BLING",
+      "target": "SHEEP",
+      "solution": [
+        "BLING",
+        "BLIND",
+        "BLEND",
+        "BLEED",
+        "BLEEP",
+        "SLEEP",
+        "SHEEP"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SPOTS",
+      "target": "STOVE",
+      "solution": [
+        "SPOTS",
+        "SPITS",
+        "SPITE",
+        "SPIKE",
+        "SPOKE",
+        "STOKE",
+        "STOVE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "ADDED",
+      "target": "FAKES",
+      "solution": [
+        "ADDED",
+        "AIDED",
+        "AIRED",
+        "FIRED",
+        "FARED",
+        "FAKED",
+        "FAKES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DIALS",
+      "target": "SHARE",
+      "solution": [
+        "DIALS",
+        "DEALS",
+        "SEALS",
+        "SEARS",
+        "SCARS",
+        "SCARE",
+        "SHARE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CIDER",
+      "target": "MIXED",
+      "solution": [
+        "CIDER",
+        "RIDER",
+        "RIDES",
+        "RITES",
+        "MITES",
+        "MIXES",
+        "MIXED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CONES",
+      "target": "LOCUS",
+      "solution": [
+        "CONES",
+        "CANES",
+        "LANES",
+        "LACES",
+        "LACKS",
+        "LOCKS",
+        "LOCUS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CHUNK",
+      "target": "CRACK",
+      "solution": [
+        "CHUNK",
+        "CHUCK",
+        "CHICK",
+        "THICK",
+        "TRICK",
+        "TRACK",
+        "CRACK"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "HADES",
+      "target": "MOCKS",
+      "solution": [
+        "HADES",
+        "FADES",
+        "FACES",
+        "LACES",
+        "LACKS",
+        "LOCKS",
+        "MOCKS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOLTS",
+      "target": "FOULS",
+      "solution": [
+        "BOLTS",
+        "BOOTS",
+        "BOOKS",
+        "COOKS",
+        "COOLS",
+        "FOOLS",
+        "FOULS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SIZES",
+      "target": "WALLS",
+      "solution": [
+        "SIZES",
+        "SITES",
+        "MITES",
+        "MATES",
+        "MALES",
+        "MALLS",
+        "WALLS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BUSTER",
+      "target": "MASHED",
+      "solution": [
+        "BUSTER",
+        "BUTTER",
+        "BATTER",
+        "BATTED",
+        "BATHED",
+        "BASHED",
+        "MASHED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "HERDS",
+      "target": "KINKS",
+      "solution": [
+        "HERDS",
+        "HEADS",
+        "BEADS",
+        "BENDS",
+        "BINDS",
+        "KINDS",
+        "KINKS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CRIES",
+      "target": "TEARS",
+      "solution": [
+        "CRIES",
+        "TRIES",
+        "TRIPS",
+        "TRAPS",
+        "TRAMS",
+        "TEAMS",
+        "TEARS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PEAKING",
+      "target": "WEDDING",
+      "solution": [
+        "PEAKING",
+        "LEAKING",
+        "LEADING",
+        "LENDING",
+        "BENDING",
+        "BEDDING",
+        "WEDDING"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CITED",
+      "target": "KILOS",
+      "solution": [
+        "CITED",
+        "CITES",
+        "MITES",
+        "MILES",
+        "MILLS",
+        "KILLS",
+        "KILOS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PERKS",
+      "target": "SEEKS",
+      "solution": [
+        "PERKS",
+        "PEAKS",
+        "PEARS",
+        "SEARS",
+        "SEAMS",
+        "SEEMS",
+        "SEEKS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SHINY",
+      "target": "SLANT",
+      "solution": [
+        "SHINY",
+        "SHINE",
+        "SWINE",
+        "SWING",
+        "SLING",
+        "SLANG",
+        "SLANT"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FOOTY",
+      "target": "GOLDS",
+      "solution": [
+        "FOOTY",
+        "FORTY",
+        "FORTS",
+        "FORKS",
+        "FOLKS",
+        "FOLDS",
+        "GOLDS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "REVEL",
+      "target": "TOWED",
+      "solution": [
+        "REVEL",
+        "LEVEL",
+        "LEVER",
+        "LOVER",
+        "LOWER",
+        "TOWER",
+        "TOWED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PATTY",
+      "target": "RANDY",
+      "solution": [
+        "PATTY",
+        "PARTY",
+        "PARRY",
+        "HARRY",
+        "HARDY",
+        "HANDY",
+        "RANDY"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BANDS",
+      "target": "RARER",
+      "solution": [
+        "BANDS",
+        "LANDS",
+        "LANES",
+        "LACES",
+        "RACES",
+        "RACER",
+        "RARER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BLOCK",
+      "target": "SHADE",
+      "solution": [
+        "BLOCK",
+        "BLACK",
+        "SLACK",
+        "SHACK",
+        "SHARK",
+        "SHARE",
+        "SHADE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SEARS",
+      "target": "SLASH",
+      "solution": [
+        "SEARS",
+        "SEAMS",
+        "SLAMS",
+        "CLAMS",
+        "CLASS",
+        "CLASH",
+        "SLASH"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "KINDS",
+      "target": "LOWER",
+      "solution": [
+        "KINDS",
+        "FINDS",
+        "FINES",
+        "LINES",
+        "LINER",
+        "LONER",
+        "LOWER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LACKS",
+      "target": "MYTHS",
+      "solution": [
+        "LACKS",
+        "RACKS",
+        "RACES",
+        "RATES",
+        "MATES",
+        "MATHS",
+        "MYTHS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BANDS",
+      "target": "COSTS",
+      "solution": [
+        "BANDS",
+        "LANDS",
+        "LANES",
+        "CANES",
+        "CASES",
+        "CASTS",
+        "COSTS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOILS",
+      "target": "MAKES",
+      "solution": [
+        "BOILS",
+        "SOILS",
+        "SAILS",
+        "MAILS",
+        "MALLS",
+        "MALES",
+        "MAKES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CAKES",
+      "target": "LOWER",
+      "solution": [
+        "CAKES",
+        "LAKES",
+        "LIKES",
+        "LINES",
+        "LINER",
+        "LONER",
+        "LOWER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LOCKER",
+      "target": "MARKER",
+      "solution": [
+        "LOCKER",
+        "LOCKED",
+        "LACKED",
+        "BACKED",
+        "BACKER",
+        "BARKER",
+        "MARKER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SHOOT",
+      "target": "SLATE",
+      "solution": [
+        "SHOOT",
+        "SHORT",
+        "SHORE",
+        "STORE",
+        "STARE",
+        "STATE",
+        "SLATE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BEADED",
+      "target": "FLARED",
+      "solution": [
+        "BEADED",
+        "BEAMED",
+        "BLAMED",
+        "BLAMES",
+        "FLAMES",
+        "FLARES",
+        "FLARED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SLUGS",
+      "target": "STOOL",
+      "solution": [
+        "SLUGS",
+        "SLUMS",
+        "SLUMP",
+        "STUMP",
+        "STOMP",
+        "STOOP",
+        "STOOL"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "GATES",
+      "target": "HONED",
+      "solution": [
+        "GATES",
+        "MATES",
+        "MALES",
+        "MOLES",
+        "HOLES",
+        "HOLED",
+        "HONED"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BEARD",
+      "target": "KILLS",
+      "solution": [
+        "BEARD",
+        "BEARS",
+        "BEATS",
+        "BELTS",
+        "BELLS",
+        "BILLS",
+        "KILLS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CAKES",
+      "target": "RESTS",
+      "solution": [
+        "CAKES",
+        "CASES",
+        "CASTS",
+        "COSTS",
+        "POSTS",
+        "PESTS",
+        "RESTS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CURLS",
+      "target": "LINER",
+      "solution": [
+        "CURLS",
+        "CURES",
+        "CARES",
+        "CANES",
+        "LANES",
+        "LINES",
+        "LINER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DIVAS",
+      "target": "MALLS",
+      "solution": [
+        "DIVAS",
+        "DIVES",
+        "FIVES",
+        "FILES",
+        "MILES",
+        "MALES",
+        "MALLS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "JAILS",
+      "target": "PARTY",
+      "solution": [
+        "JAILS",
+        "HAILS",
+        "HAIRS",
+        "HAIRY",
+        "HARRY",
+        "PARRY",
+        "PARTY"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CLASS",
+      "target": "CREPT",
+      "solution": [
+        "CLASS",
+        "CLASH",
+        "CRASH",
+        "CRUSH",
+        "CRUST",
+        "CREST",
+        "CREPT"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "POSES",
+      "target": "WINDY",
+      "solution": [
+        "POSES",
+        "POLES",
+        "PILES",
+        "PINES",
+        "WINES",
+        "WINDS",
+        "WINDY"
       ],
       "steps": 6,
       "difficulty": 4
