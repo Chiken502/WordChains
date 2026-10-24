@@ -1,5 +1,5 @@
 # Word Chains
-current version : v0.4b
+current version : v0.5b
 
 Word Chains is a word puzzle game made in Godot 4.7. In it you try to reach the target word by changing only one letter at a time. [Play it now on itch.io](https://chicken502.itch.io/word-chains)
 
@@ -27,6 +27,18 @@ So far the code base has been completely reworked, with completely new UI, effec
 - This project is under 'MIT' License
 
 ## Updates
+### v0.5b, 10/24/26
+- Level Reset Button
+- Timed Mode
+- Dictionary look up feature
+- GUI Scaling fix
+- Revamped Credits Screen
+- Rearranged main menu
+- Stats Page
+- Puzzle Generation Overhaul
+- Complete Game Reset
+- And lots of small bug fixes
+
 ### v0.4b, 9/24/26
 - +200 New levels
 - Daily puzzles
