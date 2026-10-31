@@ -68,7 +68,7 @@ func _process(delta: float) -> void:
 		if letter:
 			if letter_being_highlighted != letter.get_parent():
 				if letter_being_highlighted:
-					letter_being_highlighted = ColorManager.colors[ColorManager.current_color][1]
+					letter_being_highlighted.modulate = ColorManager.colors[ColorManager.current_color][1]
 				letter_being_highlighted = letter.get_parent()
 				letter_being_highlighted.being_highlighted = true
 				letter_being_highlighted.modulate = ColorManager.colors[ColorManager.current_color][2]
