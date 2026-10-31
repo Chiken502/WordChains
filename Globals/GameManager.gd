@@ -49,8 +49,6 @@ var total_letters_dragged = 0
 ## Must have completed a daily puzzle to have
 var nickname = ""
 
-var _defaults: Dictionary = { }
-
 
 func _ready() -> void:
 	randomize()

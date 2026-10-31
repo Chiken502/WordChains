@@ -58,6 +58,8 @@ func save_game():
 func load_game():
 	print("Loading game...")
 	print("Loading Settings")
+	
+	var settings_data: Dictionary = {}
 	if not FileAccess.file_exists(settings_path):
 		print("No settings file found!")
 
@@ -65,43 +67,43 @@ func load_game():
 		ColorManager.change_color(ColorManager.current_color)
 	else:
 		var file = FileAccess.open(settings_path, FileAccess.READ)
-		var data = file.get_var()
-		if data:
-			print("Settings File Retrieved...")
+		settings_data = file.get_var()
+		print("Settings File Retrieved...")
 
-			AudioServer.set_bus_volume_db(
-				AudioServer.get_bus_index("SFX Bus"),
-				data.get("soundDB", 0),
-			)
-			AudioServer.set_bus_volume_db(
-				AudioServer.get_bus_index("Music Bus"),
-				data.get("musicDB", 0),
-			)
-			ColorManager.change_color(ColorManager.get_color_idx(data.get("gameColor", "Blue")))
-			GameManager.screen_shake_on = data.get("cameraShake", true)
-			GameManager.hint_flashing = data.get("hintFlash", true)
-			print("Settings Loaded")
+	AudioServer.set_bus_volume_db(
+		AudioServer.get_bus_index("SFX Bus"),
+		settings_data.get("soundDB", 0),
+	)
+	AudioServer.set_bus_volume_db(
+		AudioServer.get_bus_index("Music Bus"),
+		settings_data.get("musicDB", 0),
+	)
+	ColorManager.change_color(ColorManager.get_color_idx(settings_data.get("gameColor", "Blue")))
+	GameManager.screen_shake_on = settings_data.get("cameraShake", true)
+	GameManager.hint_flashing = settings_data.get("hintFlash", true)
+	print("Settings Loaded")
 
+	var save_data : Dictionary = {}
 	if not FileAccess.file_exists(save_path):
 		print("No save file found!")
 	else:
 		var file = FileAccess.open(save_path, FileAccess.READ)
-		var data: Dictionary = file.get_var()
+		save_data = file.get_var()
 
-		GameManager.current_levels = data.get("current_levels", [0, 0, 0, 0])
-		GameManager.amt_of_hints = data.get("hints", 0)
-		GameManager.need_tutorial = data.get("needTutorial", true)
-		GameManager.nickname = data.get("nickname", "")
-		GameManager.last_day_completed = data.get("lastDailyComplete", -1)
-		GameManager.last_difficulty = data.get("lastDifficulty", 0)
-		GameManager.levels_to_hint = data.get("levelsToHint", GameManager.defults_levels_to_hints.duplicate())
-		
-		GameManager.daily_puzzles_completed = data.get("dailyPuzzlesCompleted", 0)
-		GameManager.total_timed_mode_puzzles_completed = data.get("totalTimedLevelsCompleted", 0)
-		GameManager.best_timed_mode = data.get("bestTimedMode", 0)
-		GameManager.total_hints_used = data.get("totalHintsUsed", 0)
-		GameManager.total_undos_used = data.get("totalUndosUsed", 0)
-		GameManager.total_letters_dragged = data.get("totalLetterDragged", 0)
+	GameManager.current_levels = save_data.get("current_levels", [0, 0, 0, 0])
+	GameManager.amt_of_hints = save_data.get("hints", 0)
+	GameManager.need_tutorial = save_data.get("needTutorial", true)
+	GameManager.nickname = save_data.get("nickname", "")
+	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
+	GameManager.last_difficulty = save_data.get("lastDifficulty", 0)
+	GameManager.levels_to_hint = save_data.get("levelsToHint", GameManager.defults_levels_to_hints.duplicate())
+	
+	GameManager.daily_puzzles_completed = save_data.get("dailyPuzzlesCompleted", 0)
+	GameManager.total_timed_mode_puzzles_completed = save_data.get("totalTimedLevelsCompleted", 0)
+	GameManager.best_timed_mode = save_data.get("bestTimedMode", 0)
+	GameManager.total_hints_used = save_data.get("totalHintsUsed", 0)
+	GameManager.total_undos_used = save_data.get("totalUndosUsed", 0)
+	GameManager.total_letters_dragged = save_data.get("totalLetterDragged", 0)
 	print("Game Loaded")
 
 
