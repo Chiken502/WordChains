@@ -1,5 +1,7 @@
 extends RigidBody2D
 
+signal not_highlighted
+
 var letters = [
 	## All possible letters
 	"A",
@@ -31,6 +33,7 @@ var letters = [
 ]
 var letter = "" ## Letter that his node represents
 var being_dragged = false ## True if the player is dragging this node
+var being_highlighted = false
 
 const COLLISION_THRESHOLD = 20.0 ## Threshold for how big of a collision is need to make a sound.
 const MAX_COLLISION_IMPULSE = 100.0 ## Max size of a collision for sound factor calculation

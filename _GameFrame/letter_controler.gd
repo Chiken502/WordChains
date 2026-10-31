@@ -1,6 +1,7 @@
 extends Node2D
 
 var letter_being_dragged: RigidBody2D ## Falling Letter being dragged by the player
+var letter_being_highlighted: RigidBody2D
 var prev_mouse_pos: Vector2 = Vector2.ZERO ## Mouse position on previous frame
 var mouse_velocity: Vector2 = Vector2.ZERO ## Mouse velocity calculated based on last frame
 
@@ -42,6 +43,10 @@ func raycast_check():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if letter_being_dragged: # Move letter to mouse
+		if letter_being_highlighted == letter_being_dragged:
+			letter_being_highlighted.modulate = ColorManager.colors[ColorManager.current_color][1]
+			letter_being_highlighted = null
+		
 		var mouse_pos = get_global_mouse_position()
 		mouse_velocity = (mouse_pos - prev_mouse_pos) / delta
 
@@ -58,3 +63,18 @@ func _process(delta: float) -> void:
 		prev_mouse_pos = mouse_pos
 		
 		last_time_dragging = Time.get_ticks_msec()
+	else:
+		var letter = raycast_check()
+		if letter:
+			if letter_being_highlighted != letter.get_parent():
+				if letter_being_highlighted:
+					letter_being_highlighted = ColorManager.colors[ColorManager.current_color][1]
+				letter_being_highlighted = letter.get_parent()
+				letter_being_highlighted.being_highlighted = true
+				letter_being_highlighted.modulate = ColorManager.colors[ColorManager.current_color][2]
+			
+		else:
+			if letter_being_highlighted:
+				letter_being_highlighted.modulate = ColorManager.colors[ColorManager.current_color][1]
+				letter_being_highlighted = null
+			
