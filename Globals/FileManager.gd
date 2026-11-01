@@ -97,6 +97,8 @@ func load_game():
 	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
 	GameManager.last_difficulty = save_data.get("lastDifficulty", 0)
 	GameManager.levels_to_hint = save_data.get("levelsToHint", GameManager.defults_levels_to_hints.duplicate())
+	if GameManager.levels_to_hint == []:
+		GameManager.levels_to_hint = GameManager.defults_levels_to_hints.duplicate()
 	
 	GameManager.daily_puzzles_completed = save_data.get("dailyPuzzlesCompleted", 0)
 	GameManager.total_timed_mode_puzzles_completed = save_data.get("totalTimedLevelsCompleted", 0)
