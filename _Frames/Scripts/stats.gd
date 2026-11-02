@@ -5,7 +5,7 @@ extends Control
 func _ready() -> void:
 	FileManager.save_game()
 
-	$VBoxContainer/PuzzlesCompleted/Label2.text = str(get_total_puzzles_completed())
+	$VBoxContainer/PuzzlesCompleted/Label2.text = str(get_total_puzzles_completed()) + "/" + str(LevelDatabase.get_total_levels())
 	$VBoxContainer/DailysCompleted/Label2.text = str(GameManager.daily_puzzles_completed)
 	$VBoxContainer/TimedModesCompleted/Label2.text = str(
 		GameManager.total_timed_mode_puzzles_completed

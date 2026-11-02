@@ -109,7 +109,7 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="VBoxContainer/PuzzlesCompleted" unique_id=319148042]
 layout_mode = 2
 size_flags_horizontal = 10
-text = "0"
+text = "0/0"
 label_settings = ExtResource("3_q1elt")
 
 [node name="DailysCompleted" type="HBoxContainer" parent="VBoxContainer" unique_id=1975609848]

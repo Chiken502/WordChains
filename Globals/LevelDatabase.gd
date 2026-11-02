@@ -163,3 +163,19 @@ func parse_response(raw_text: String) -> Dictionary:
 			result_dict[key] = value
 
 	return result_dict
+
+
+func get_total_levels() -> int:
+	var total = 0
+	
+	for i in range(4):
+		print(i)
+		if FileAccess.file_exists("res://Globals/Puzzles/puzzles_d%s.json" % (i+1)):
+			var puzzle_file = FileAccess.open(
+				"res://Globals/Puzzles/puzzles_d%s.json" % (i+1),
+				FileAccess.READ,
+			)
+			var data = JSON.parse_string(puzzle_file.get_as_text())
+			total += data["total_puzzles"]
+	
+	return total
