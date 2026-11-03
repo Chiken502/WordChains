@@ -165,6 +165,13 @@ corner_radius_bottom_left = 10
 expand_margin_top = 5.0
 expand_margin_bottom = 5.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdu44"]
+bg_color = Color(0.227451, 0.52549, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kckp"]
 bg_color = Color(0.227451, 0.52549, 1, 1)
 border_width_left = 4
@@ -310,6 +317,10 @@ HSlider/icons/grabber_highlight = null
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_6mhpt")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_ohexs")
 HSlider/styles/slider = SubResource("StyleBoxFlat_3j6r5")
+LangugeButton/base_type = &"Button"
+LangugeButton/constants/icon_max_width = 50
+LangugeButton/styles/disabled = SubResource("StyleBoxFlat_bdu44")
+LangugeButton/styles/normal = SubResource("StyleBoxFlat_bdu44")
 LineEdit/colors/caret_color = Color(0.588235, 0.847059, 0.996078, 1)
 LineEdit/colors/font_color = Color(0.588235, 0.847059, 0.996078, 1)
 LineEdit/colors/font_placeholder_color = Color(0.447059, 0.690196, 0.992157, 1)

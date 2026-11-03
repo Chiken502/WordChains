@@ -1,0 +1,62 @@
+extends Control
+
+var expanded = false
+
+var current_langauge = "EN"
+var other_langauges = ["EN", "ES", "DE", "FR"]
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	var buttons := $VBoxContainer.get_children()
+	for i in range(1, buttons.size()):
+		buttons[i].offset_transform_scale = Vector2(0, 0)
+		var texture_rect : TextureRect= buttons[i].get_children()[0].get_children()[0]
+		texture_rect.texture = load("res://Flags/%s.png" % other_langauges[i])
+		buttons[i].pressed.connect(_change_langauge.bind(other_langauges[i], texture_rect))
+		buttons[i].disabled = true
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+
+
+func expand():
+	var buttons : Array = $VBoxContainer.get_children()
+	for i in range(1, buttons.size()):
+		var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+		tween.tween_property(buttons[i], "offset_transform_scale", Vector2.ONE, 0.5)
+		await get_tree().create_timer(0.2).timeout
+	
+	for i in range(1, buttons.size()):
+		buttons[i].disabled = false
+	expanded = true
+
+
+func contract():
+	var buttons: Array = $ VBoxContainer.get_children()
+	for i in range(buttons.size() -1, 0, -1):
+		buttons[i].offset_transform_scale = Vector2(0, 0)
+	
+	for i in range(1, buttons.size()):
+		buttons[i].disabled = true
+	expanded = false
+
+
+func _on_button_pressed() -> void:
+	if !expanded:
+		expand()
+	else: 
+		contract()
+
+func _change_langauge(code: String, texture_rext: TextureRect):
+	other_langauges[other_langauges.find(code, 1)] = current_langauge
+	other_langauges[0] = code
+	
+	texture_rext.texture = load("res://Flags/%s.png" % current_langauge)
+	
+	current_langauge = code
+	
+	$VBoxContainer/Main/PanelContainer/TextureRect.texture = load("res://Flags/%s.png" % current_langauge)
+	
+	contract()

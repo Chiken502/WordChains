@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://c0ns2ppqyyp3h"]
+
+[ext_resource type="Theme" uid="uid://2g72kvtstj68" path="res://Resources/main_theme.tres" id="1_5qxue"]
+[ext_resource type="Script" uid="uid://b0eems5ltsyfq" path="res://_Components/language.gd" id="1_j18qx"]
+[ext_resource type="Texture2D" uid="uid://oa4p22ik5ls5" path="res://Flags/EN.png" id="2_s3e0q"]
+[ext_resource type="Texture2D" uid="uid://dwu34b7t27mln" path="res://Flags/DE.png" id="3_gsxye"]
+[ext_resource type="Texture2D" uid="uid://b3jknxygcfyn3" path="res://Flags/FR.png" id="4_j18qx"]
+[ext_resource type="Texture2D" uid="uid://calmbt6f7mffi" path="res://Flags/ES.png" id="5_kmo8r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n716j"]
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 15
+
+[sub_resource type="Theme" id="Theme_4qj2n"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_n716j")
+
+[node name="Language" type="Control" unique_id=811081401]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j18qx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=200979362]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 15.0
+offset_right = -15.0
+grow_horizontal = 0
+
+[node name="Main" type="Button" parent="VBoxContainer" unique_id=354230982]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_5qxue")
+theme_type_variation = &"LangugeButton"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Main" unique_id=939005776]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_4qj2n")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Main/PanelContainer" unique_id=1235932955]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_s3e0q")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=688151493]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_5qxue")
+theme_type_variation = &"LangugeButton"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Button2" unique_id=2086999741]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_4qj2n")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button2/PanelContainer" unique_id=327245329]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3_gsxye")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1943151214]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_5qxue")
+theme_type_variation = &"LangugeButton"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Button3" unique_id=959232649]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_4qj2n")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button3/PanelContainer" unique_id=135682136]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4_j18qx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1100022709]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+offset_transform_enabled = true
+theme = ExtResource("1_5qxue")
+theme_type_variation = &"LangugeButton"
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Button4" unique_id=1176592110]
+clip_children = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = SubResource("Theme_4qj2n")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button4/PanelContainer" unique_id=882531647]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("5_kmo8r")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="VBoxContainer/Main" to="." method="_on_button_pressed"]
