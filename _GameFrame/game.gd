@@ -663,7 +663,7 @@ func _on_dictonary_pressed() -> void:
 	$DictonaryPanel.visible = deffiniton_showing
 
 	if deffiniton_showing:
-		var url = "https://freedictionaryapi.com/api/v1/entries/en/%s" % current_word.to_lower()
+		var url = "https://freedictionaryapi.com/api/v1/entries/%s/%s" % [DictionaryManager.current_dict.to_lower(), current_word.to_lower()]
 		var error = http_request.request(url)
 		$DictonaryPanel.loading = true
 

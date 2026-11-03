@@ -1,0 +1,1306 @@
+{
+  "word_length": "mixed",
+  "total_puzzles": 100,
+  "puzzles": [
+    {
+      "start": "LEGO",
+      "target": "VIGA",
+      "solution": [
+        "LEGO",
+        "PEGO",
+        "PEGA",
+        "VEGA",
+        "VIGA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MEGA",
+      "target": "TIZA",
+      "solution": [
+        "MEGA",
+        "MAGA",
+        "MAZA",
+        "TAZA",
+        "TIZA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BANDO",
+      "target": "SANTA",
+      "solution": [
+        "BANDO",
+        "MANDO",
+        "MANTO",
+        "SANTO",
+        "SANTA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CANSA",
+      "target": "MARTE",
+      "solution": [
+        "CANSA",
+        "MANSA",
+        "MANTA",
+        "MARTA",
+        "MARTE"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "PINO",
+      "target": "RARA",
+      "solution": [
+        "PINO",
+        "PINA",
+        "PANA",
+        "RANA",
+        "RARA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LAVE",
+      "target": "LIZA",
+      "solution": [
+        "LAVE",
+        "LAVA",
+        "LAMA",
+        "LIMA",
+        "LIZA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CELTA",
+      "target": "VASTO",
+      "solution": [
+        "CELTA",
+        "CESTA",
+        "CASTA",
+        "VASTA",
+        "VASTO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LOTE",
+      "target": "MECA",
+      "solution": [
+        "LOTE",
+        "MOTE",
+        "MOTA",
+        "META",
+        "MECA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CERA",
+      "target": "MUDO",
+      "solution": [
+        "CERA",
+        "MERA",
+        "MERO",
+        "MURO",
+        "MUDO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MOLA",
+      "target": "SITO",
+      "solution": [
+        "MOLA",
+        "SOLA",
+        "SOTA",
+        "SITA",
+        "SITO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CANSA",
+      "target": "MARCO",
+      "solution": [
+        "CANSA",
+        "MANSA",
+        "MANSO",
+        "MANCO",
+        "MARCO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BOLO",
+      "target": "MUDA",
+      "solution": [
+        "BOLO",
+        "BOLA",
+        "MOLA",
+        "MULA",
+        "MUDA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CONTA",
+      "target": "TAREA",
+      "solution": [
+        "CONTA",
+        "TONTA",
+        "TANTA",
+        "TARTA",
+        "TAREA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "PACTO",
+      "target": "RANGO",
+      "solution": [
+        "PACTO",
+        "TACTO",
+        "TANTO",
+        "TANGO",
+        "RANGO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CEDA",
+      "target": "DOLO",
+      "solution": [
+        "CEDA",
+        "CELA",
+        "COLA",
+        "COLO",
+        "DOLO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CURRO",
+      "target": "MARGA",
+      "solution": [
+        "CURRO",
+        "CARRO",
+        "CARGO",
+        "CARGA",
+        "MARGA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BARDO",
+      "target": "PAUTA",
+      "solution": [
+        "BARDO",
+        "PARDO",
+        "PARTO",
+        "PARTA",
+        "PAUTA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "COPE",
+      "target": "FITO",
+      "solution": [
+        "COPE",
+        "COPO",
+        "COTO",
+        "FOTO",
+        "FITO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "SENO",
+      "target": "TOMO",
+      "solution": [
+        "SENO",
+        "RENO",
+        "REMO",
+        "ROMO",
+        "TOMO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "RUSA",
+      "target": "SAGA",
+      "solution": [
+        "RUSA",
+        "MUSA",
+        "MASA",
+        "MAGA",
+        "SAGA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "RARO",
+      "target": "SILO",
+      "solution": [
+        "RARO",
+        "RATO",
+        "RITO",
+        "SITO",
+        "SILO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BANCA",
+      "target": "DARDO",
+      "solution": [
+        "BANCA",
+        "BARCA",
+        "BARCO",
+        "BARDO",
+        "DARDO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LOCA",
+      "target": "RARA",
+      "solution": [
+        "LOCA",
+        "COCA",
+        "CACA",
+        "CARA",
+        "RARA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "ROMA",
+      "target": "TIRO",
+      "solution": [
+        "ROMA",
+        "TOMA",
+        "TOMO",
+        "TIMO",
+        "TIRO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "POPE",
+      "target": "TAZA",
+      "solution": [
+        "POPE",
+        "TOPE",
+        "TOPA",
+        "TAPA",
+        "TAZA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CARGA",
+      "target": "TORNA",
+      "solution": [
+        "CARGA",
+        "CARTA",
+        "TARTA",
+        "TORTA",
+        "TORNA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CURA",
+      "target": "SITA",
+      "solution": [
+        "CURA",
+        "PURA",
+        "PUTA",
+        "PITA",
+        "SITA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CERA",
+      "target": "ROCE",
+      "solution": [
+        "CERA",
+        "CORA",
+        "COCA",
+        "ROCA",
+        "ROCE"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "JETA",
+      "target": "LANA",
+      "solution": [
+        "JETA",
+        "BETA",
+        "BATA",
+        "LATA",
+        "LANA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CELO",
+      "target": "MASA",
+      "solution": [
+        "CELO",
+        "CELA",
+        "CALA",
+        "MALA",
+        "MASA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LAZO",
+      "target": "RASO",
+      "solution": [
+        "LAZO",
+        "MAZO",
+        "MATO",
+        "RATO",
+        "RASO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BOTE",
+      "target": "GASA",
+      "solution": [
+        "BOTE",
+        "BOTA",
+        "GOTA",
+        "GATA",
+        "GASA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CALA",
+      "target": "RABO",
+      "solution": [
+        "CALA",
+        "CAMA",
+        "RAMA",
+        "RAMO",
+        "RABO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CASI",
+      "target": "LOCA",
+      "solution": [
+        "CASI",
+        "CASA",
+        "COSA",
+        "LOSA",
+        "LOCA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "FALSA",
+      "target": "PALIO",
+      "solution": [
+        "FALSA",
+        "SALSA",
+        "SALIA",
+        "SALIO",
+        "PALIO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "TENA",
+      "target": "VAGO",
+      "solution": [
+        "TENA",
+        "VENA",
+        "VANA",
+        "VAGA",
+        "VAGO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "DINA",
+      "target": "PELO",
+      "solution": [
+        "DINA",
+        "PINA",
+        "PENA",
+        "PELA",
+        "PELO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CABE",
+      "target": "MOCO",
+      "solution": [
+        "CABE",
+        "CABO",
+        "COBO",
+        "COCO",
+        "MOCO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CURA",
+      "target": "MATO",
+      "solution": [
+        "CURA",
+        "CARA",
+        "CATA",
+        "MATA",
+        "MATO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "HORCA",
+      "target": "ZORRA",
+      "solution": [
+        "HORCA",
+        "HORDA",
+        "BORDA",
+        "BORRA",
+        "ZORRA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CASA",
+      "target": "VIDA",
+      "solution": [
+        "CASA",
+        "CADA",
+        "CEDA",
+        "VEDA",
+        "VIDA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CEJA",
+      "target": "PUMA",
+      "solution": [
+        "CEJA",
+        "CAJA",
+        "PAJA",
+        "PUJA",
+        "PUMA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CELDA",
+      "target": "CHOTA",
+      "solution": [
+        "CELDA",
+        "CELTA",
+        "CULTA",
+        "CUOTA",
+        "CHOTA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CAMA",
+      "target": "ZUMO",
+      "solution": [
+        "CAMA",
+        "SAMA",
+        "SUMA",
+        "SUMO",
+        "ZUMO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "NABO",
+      "target": "TOCA",
+      "solution": [
+        "NABO",
+        "NACO",
+        "TACO",
+        "TOCO",
+        "TOCA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "FIJA",
+      "target": "TATO",
+      "solution": [
+        "FIJA",
+        "FIJO",
+        "FITO",
+        "TITO",
+        "TATO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "TORTA",
+      "target": "VASTA",
+      "solution": [
+        "TORTA",
+        "CORTA",
+        "CARTA",
+        "CASTA",
+        "VASTA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "HOJA",
+      "target": "ZARA",
+      "solution": [
+        "HOJA",
+        "COJA",
+        "CAJA",
+        "CARA",
+        "ZARA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "DOMO",
+      "target": "PEGO",
+      "solution": [
+        "DOMO",
+        "POMO",
+        "POLO",
+        "PELO",
+        "PEGO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LEMA",
+      "target": "RUSA",
+      "solution": [
+        "LEMA",
+        "LIMA",
+        "RIMA",
+        "RISA",
+        "RUSA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "RUDA",
+      "target": "TOPO",
+      "solution": [
+        "RUDA",
+        "RODA",
+        "TODA",
+        "TOPA",
+        "TOPO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "PARRA",
+      "target": "ZURDA",
+      "solution": [
+        "PARRA",
+        "BARRA",
+        "BURRA",
+        "BURDA",
+        "ZURDA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CUYA",
+      "target": "MURO",
+      "solution": [
+        "CUYA",
+        "CURA",
+        "DURA",
+        "DURO",
+        "MURO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "PICO",
+      "target": "TOGA",
+      "solution": [
+        "PICO",
+        "POCO",
+        "TOCO",
+        "TOCA",
+        "TOGA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CANA",
+      "target": "RUSO",
+      "solution": [
+        "CANA",
+        "CASA",
+        "CASO",
+        "RASO",
+        "RUSO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LULA",
+      "target": "PICO",
+      "solution": [
+        "LULA",
+        "LILA",
+        "PILA",
+        "PICA",
+        "PICO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MIRA",
+      "target": "ROPA",
+      "solution": [
+        "MIRA",
+        "TIRA",
+        "TIPA",
+        "TOPA",
+        "ROPA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "GATO",
+      "target": "SODA",
+      "solution": [
+        "GATO",
+        "GATA",
+        "GOTA",
+        "SOTA",
+        "SODA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LEMA",
+      "target": "TAZA",
+      "solution": [
+        "LEMA",
+        "GEMA",
+        "GAMA",
+        "GAZA",
+        "TAZA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "NADO",
+      "target": "NENE",
+      "solution": [
+        "NADO",
+        "NANO",
+        "NANA",
+        "NENA",
+        "NENE"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "GEMA",
+      "target": "VEDA",
+      "solution": [
+        "GEMA",
+        "LEMA",
+        "LENA",
+        "VENA",
+        "VEDA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CANO",
+      "target": "TINA",
+      "solution": [
+        "CANO",
+        "MANO",
+        "MANA",
+        "MINA",
+        "TINA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BOLO",
+      "target": "TACO",
+      "solution": [
+        "BOLO",
+        "COLO",
+        "COCO",
+        "TOCO",
+        "TACO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LOMO",
+      "target": "TIRA",
+      "solution": [
+        "LOMO",
+        "TOMO",
+        "TIMO",
+        "TIRO",
+        "TIRA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BURRA",
+      "target": "PERSA",
+      "solution": [
+        "BURRA",
+        "BARRA",
+        "PARRA",
+        "PERRA",
+        "PERSA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "FRASCO",
+      "target": "GRANJA",
+      "solution": [
+        "FRASCO",
+        "FRANCO",
+        "FRANCA",
+        "FRANJA",
+        "GRANJA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CONO",
+      "target": "GAMA",
+      "solution": [
+        "CONO",
+        "CANO",
+        "GANO",
+        "GANA",
+        "GAMA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CONO",
+      "target": "HOME",
+      "solution": [
+        "CONO",
+        "TONO",
+        "TOMO",
+        "TOME",
+        "HOME"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LINO",
+      "target": "MOJO",
+      "solution": [
+        "LINO",
+        "FINO",
+        "FIJO",
+        "MIJO",
+        "MOJO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CUYO",
+      "target": "SACO",
+      "solution": [
+        "CUYO",
+        "CAYO",
+        "CANO",
+        "SANO",
+        "SACO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "DINO",
+      "target": "GALO",
+      "solution": [
+        "DINO",
+        "SINO",
+        "SANO",
+        "GANO",
+        "GALO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BECA",
+      "target": "CODO",
+      "solution": [
+        "BECA",
+        "BOCA",
+        "COCA",
+        "COCO",
+        "CODO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MAZO",
+      "target": "ROSA",
+      "solution": [
+        "MAZO",
+        "MAZA",
+        "RAZA",
+        "ROZA",
+        "ROSA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LANA",
+      "target": "NIDO",
+      "solution": [
+        "LANA",
+        "NANA",
+        "NADA",
+        "NADO",
+        "NIDO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BORDO",
+      "target": "SENDA",
+      "solution": [
+        "BORDO",
+        "SORDO",
+        "SORDA",
+        "SONDA",
+        "SENDA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CERA",
+      "target": "CUCO",
+      "solution": [
+        "CERA",
+        "CORA",
+        "COCA",
+        "COCO",
+        "CUCO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "GIRO",
+      "target": "MESA",
+      "solution": [
+        "GIRO",
+        "GIRA",
+        "MIRA",
+        "MERA",
+        "MESA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MULA",
+      "target": "TATO",
+      "solution": [
+        "MULA",
+        "MALA",
+        "TALA",
+        "TATA",
+        "TATO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MUDA",
+      "target": "SAMA",
+      "solution": [
+        "MUDA",
+        "DUDA",
+        "DADA",
+        "DAMA",
+        "SAMA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "NETO",
+      "target": "RUDO",
+      "solution": [
+        "NETO",
+        "NATO",
+        "NADO",
+        "NUDO",
+        "RUDO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "COFRE",
+      "target": "FORRO",
+      "solution": [
+        "COFRE",
+        "COBRE",
+        "COBRO",
+        "CORRO",
+        "FORRO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "COFRE",
+      "target": "CORTA",
+      "solution": [
+        "COFRE",
+        "COBRE",
+        "COBRA",
+        "CORRA",
+        "CORTA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "HILO",
+      "target": "LULA",
+      "solution": [
+        "HILO",
+        "FILO",
+        "FILA",
+        "LILA",
+        "LULA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "PATADA",
+      "target": "TAJADA",
+      "solution": [
+        "PATADA",
+        "PASADA",
+        "BASADA",
+        "BAJADA",
+        "TAJADA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "RADA",
+      "target": "SERA",
+      "solution": [
+        "RADA",
+        "CADA",
+        "CEDA",
+        "SEDA",
+        "SERA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "COPA",
+      "target": "VIDA",
+      "solution": [
+        "COPA",
+        "CEPA",
+        "CEDA",
+        "VEDA",
+        "VIDA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "DUELA",
+      "target": "FIERA",
+      "solution": [
+        "DUELA",
+        "MUELA",
+        "MUERA",
+        "FUERA",
+        "FIERA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LINO",
+      "target": "VELO",
+      "solution": [
+        "LINO",
+        "VINO",
+        "VITO",
+        "VETO",
+        "VELO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LIGA",
+      "target": "PEGO",
+      "solution": [
+        "LIGA",
+        "MIGA",
+        "MEGA",
+        "PEGA",
+        "PEGO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "EURO",
+      "target": "META",
+      "solution": [
+        "EURO",
+        "MURO",
+        "MERO",
+        "MERA",
+        "META"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "PELAR",
+      "target": "REGIA",
+      "solution": [
+        "PELAR",
+        "PEGAR",
+        "REGAR",
+        "REGIR",
+        "REGIA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "BATA",
+      "target": "PELO",
+      "solution": [
+        "BATA",
+        "PATA",
+        "PALA",
+        "PELA",
+        "PELO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LIRA",
+      "target": "ROJA",
+      "solution": [
+        "LIRA",
+        "LORA",
+        "CORA",
+        "COJA",
+        "ROJA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MINA",
+      "target": "PARO",
+      "solution": [
+        "MINA",
+        "PINA",
+        "PANA",
+        "PARA",
+        "PARO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "GALA",
+      "target": "HIJA",
+      "solution": [
+        "GALA",
+        "HALA",
+        "HOLA",
+        "HOJA",
+        "HIJA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "LULA",
+      "target": "PENE",
+      "solution": [
+        "LULA",
+        "LUNA",
+        "LENA",
+        "PENA",
+        "PENE"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "MOLA",
+      "target": "PUTA",
+      "solution": [
+        "MOLA",
+        "POLA",
+        "PALA",
+        "PATA",
+        "PUTA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "JARA",
+      "target": "MENA",
+      "solution": [
+        "JARA",
+        "CARA",
+        "CERA",
+        "MERA",
+        "MENA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "SACADA",
+      "target": "TAJADA",
+      "solution": [
+        "SACADA",
+        "SALADA",
+        "BALADA",
+        "BAJADA",
+        "TAJADA"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    },
+    {
+      "start": "CEBRA",
+      "target": "CERRO",
+      "solution": [
+        "CEBRA",
+        "COBRA",
+        "CORRA",
+        "CORRO",
+        "CERRO"
+      ],
+      "steps": 4,
+      "difficulty": 2
+    }
+  ]
+}

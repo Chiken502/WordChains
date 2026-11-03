@@ -7,13 +7,18 @@ var other_langauges = ["EN", "ES", "DE", "FR"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	current_langauge = DictionaryManager.current_dict
+	other_langauges[other_langauges.find(current_langauge)] = "EN"
+	other_langauges[0] = current_langauge
+	
 	var buttons := $VBoxContainer.get_children()
-	for i in range(1, buttons.size()):
-		buttons[i].offset_transform_scale = Vector2(0, 0)
+	for i in range(buttons.size()):
 		var texture_rect : TextureRect= buttons[i].get_children()[0].get_children()[0]
 		texture_rect.texture = load("res://Flags/%s.png" % other_langauges[i])
-		buttons[i].pressed.connect(_change_langauge.bind(other_langauges[i], texture_rect))
-		buttons[i].disabled = true
+		if i>0:
+			buttons[i].offset_transform_scale = Vector2(0, 0)
+			buttons[i].pressed.connect(_change_langauge.bind(other_langauges[i], texture_rect))
+			buttons[i].disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -56,6 +61,8 @@ func _change_langauge(code: String, texture_rext: TextureRect):
 	texture_rext.texture = load("res://Flags/%s.png" % current_langauge)
 	
 	current_langauge = code
+	DictionaryManager.change_dictionary(code)
+	FileManager.save_game()
 	
 	$VBoxContainer/Main/PanelContainer/TextureRect.texture = load("res://Flags/%s.png" % current_langauge)
 	

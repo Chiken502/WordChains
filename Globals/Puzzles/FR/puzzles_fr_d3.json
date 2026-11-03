@@ -1,0 +1,1506 @@
+{
+  "word_length": "mixed",
+  "total_puzzles": 100,
+  "puzzles": [
+    {
+      "start": "LIEU",
+      "target": "SUIS",
+      "solution": [
+        "LIEU",
+        "LIES",
+        "LITS",
+        "BITS",
+        "BUTS",
+        "BUIS",
+        "SUIS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "HALLE",
+      "target": "VERTU",
+      "solution": [
+        "HALLE",
+        "HALTE",
+        "HANTE",
+        "VANTE",
+        "VENTE",
+        "VERTE",
+        "VERTU"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CARTEL",
+      "target": "COGNER",
+      "solution": [
+        "CARTEL",
+        "CARTES",
+        "CERTES",
+        "CERNES",
+        "CORNES",
+        "CORNER",
+        "COGNER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CRIE",
+      "target": "LAMA",
+      "solution": [
+        "CRIE",
+        "BRIE",
+        "BAIE",
+        "RAIE",
+        "RAME",
+        "LAME",
+        "LAMA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PINS",
+      "target": "TEST",
+      "solution": [
+        "PINS",
+        "VINS",
+        "VINT",
+        "VENT",
+        "LENT",
+        "LEST",
+        "TEST"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PAIN",
+      "target": "POUR",
+      "solution": [
+        "PAIN",
+        "TAIN",
+        "TAIT",
+        "TOIT",
+        "TOUT",
+        "TOUR",
+        "POUR"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "COGNE",
+      "target": "FENDU",
+      "solution": [
+        "COGNE",
+        "CONNE",
+        "SONNE",
+        "SONDE",
+        "FONDE",
+        "FONDU",
+        "FENDU"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "AURA",
+      "target": "MAIN",
+      "solution": [
+        "AURA",
+        "DURA",
+        "DURS",
+        "MURS",
+        "MARS",
+        "MAIS",
+        "MAIN"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CAVE",
+      "target": "PETS",
+      "solution": [
+        "CAVE",
+        "GAVE",
+        "GARE",
+        "PARE",
+        "PARS",
+        "PERS",
+        "PETS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LACS",
+      "target": "RAIL",
+      "solution": [
+        "LACS",
+        "BACS",
+        "BATS",
+        "RATS",
+        "RATE",
+        "RAIE",
+        "RAIL"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CENT",
+      "target": "NOUE",
+      "solution": [
+        "CENT",
+        "SENT",
+        "SONT",
+        "SOIT",
+        "SOIE",
+        "NOIE",
+        "NOUE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PISTE",
+      "target": "TERME",
+      "solution": [
+        "PISTE",
+        "PESTE",
+        "VESTE",
+        "VERTE",
+        "VERRE",
+        "TERRE",
+        "TERME"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "JOUR",
+      "target": "VIDA",
+      "solution": [
+        "JOUR",
+        "JOUE",
+        "VOUE",
+        "VOTE",
+        "VITE",
+        "VIDE",
+        "VIDA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LUGE",
+      "target": "POUF",
+      "solution": [
+        "LUGE",
+        "LOGE",
+        "LOUE",
+        "JOUE",
+        "JOUR",
+        "POUR",
+        "POUF"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DANSE",
+      "target": "PORTA",
+      "solution": [
+        "DANSE",
+        "DENSE",
+        "PENSE",
+        "PERSE",
+        "PERTE",
+        "PORTE",
+        "PORTA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FORMA",
+      "target": "SAULE",
+      "solution": [
+        "FORMA",
+        "FORME",
+        "FORTE",
+        "SORTE",
+        "SOUTE",
+        "SAUTE",
+        "SAULE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FAIRE",
+      "target": "PARER",
+      "solution": [
+        "FAIRE",
+        "PAIRE",
+        "PAIRS",
+        "PAIES",
+        "PAYES",
+        "PAYER",
+        "PARER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CASTE",
+      "target": "PENDU",
+      "solution": [
+        "CASTE",
+        "VASTE",
+        "VESTE",
+        "VENTE",
+        "VENDE",
+        "VENDU",
+        "PENDU"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CARNET",
+      "target": "TARTES",
+      "solution": [
+        "CARNET",
+        "CORNET",
+        "CORNES",
+        "CERNES",
+        "CERTES",
+        "CARTES",
+        "TARTES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "TANT",
+      "target": "TEST",
+      "solution": [
+        "TANT",
+        "TINT",
+        "VINT",
+        "VENT",
+        "LENT",
+        "LEST",
+        "TEST"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "GLAS",
+      "target": "SOUS",
+      "solution": [
+        "GLAS",
+        "GRAS",
+        "BRAS",
+        "BRIS",
+        "BOIS",
+        "SOIS",
+        "SOUS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LOBE",
+      "target": "VAIN",
+      "solution": [
+        "LOBE",
+        "LOUE",
+        "VOUE",
+        "VOIE",
+        "VOIS",
+        "VAIS",
+        "VAIN"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DURA",
+      "target": "ORES",
+      "solution": [
+        "DURA",
+        "DURS",
+        "DUES",
+        "LUES",
+        "LIES",
+        "OIES",
+        "ORES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "AIDA",
+      "target": "JURA",
+      "solution": [
+        "AIDA",
+        "AIDE",
+        "AIRE",
+        "CIRE",
+        "CURE",
+        "JURE",
+        "JURA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LOBES",
+      "target": "TIRES",
+      "solution": [
+        "LOBES",
+        "ROBES",
+        "ROSES",
+        "DOSES",
+        "DISES",
+        "DIRES",
+        "TIRES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "SOLE",
+      "target": "VINS",
+      "solution": [
+        "SOLE",
+        "VOLE",
+        "VOIE",
+        "VOIT",
+        "VONT",
+        "VINT",
+        "VINS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "AILE",
+      "target": "NETS",
+      "solution": [
+        "AILE",
+        "MILE",
+        "MISE",
+        "MISS",
+        "MESS",
+        "METS",
+        "NETS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOYS",
+      "target": "PILE",
+      "solution": [
+        "BOYS",
+        "BOLS",
+        "COLS",
+        "CILS",
+        "FILS",
+        "FILE",
+        "PILE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FILES",
+      "target": "PAIRE",
+      "solution": [
+        "FILES",
+        "PILES",
+        "PIGES",
+        "PAGES",
+        "PAIES",
+        "PAIRS",
+        "PAIRE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "ARME",
+      "target": "SALA",
+      "solution": [
+        "ARME",
+        "AIME",
+        "AILE",
+        "PILE",
+        "PALE",
+        "SALE",
+        "SALA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FUIR",
+      "target": "RAIL",
+      "solution": [
+        "FUIR",
+        "FUIS",
+        "HUIS",
+        "HAIS",
+        "HAIE",
+        "RAIE",
+        "RAIL"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LOIS",
+      "target": "TEND",
+      "solution": [
+        "LOIS",
+        "BOIS",
+        "BONS",
+        "BOND",
+        "FOND",
+        "FEND",
+        "TEND"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CAUSE",
+      "target": "LAMPE",
+      "solution": [
+        "CAUSE",
+        "CASSE",
+        "CASTE",
+        "CARTE",
+        "CARPE",
+        "CAMPE",
+        "LAMPE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOYS",
+      "target": "CHUT",
+      "solution": [
+        "BOYS",
+        "BOIS",
+        "BRIS",
+        "CRIS",
+        "CRUS",
+        "CRUT",
+        "CHUT"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "COMA",
+      "target": "SAGE",
+      "solution": [
+        "COMA",
+        "COLA",
+        "COLS",
+        "SOLS",
+        "SOLE",
+        "SALE",
+        "SAGE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "MINCE",
+      "target": "VENDS",
+      "solution": [
+        "MINCE",
+        "PINCE",
+        "PINTE",
+        "PENTE",
+        "VENTE",
+        "VENDE",
+        "VENDS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "NOIR",
+      "target": "VEUX",
+      "solution": [
+        "NOIR",
+        "VOIR",
+        "VOIT",
+        "VONT",
+        "VENT",
+        "VEUT",
+        "VEUX"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOUC",
+      "target": "TRIO",
+      "solution": [
+        "BOUC",
+        "BOUT",
+        "BRUT",
+        "BRUN",
+        "BRIN",
+        "BRIO",
+        "TRIO"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOTS",
+      "target": "LEST",
+      "solution": [
+        "BOTS",
+        "MOTS",
+        "METS",
+        "MENS",
+        "MENT",
+        "LENT",
+        "LEST"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "NEUTRE",
+      "target": "VENDRE",
+      "solution": [
+        "NEUTRE",
+        "FEUTRE",
+        "FOUTRE",
+        "FOUDRE",
+        "FONDRE",
+        "FENDRE",
+        "VENDRE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "COURU",
+      "target": "DOUTE",
+      "solution": [
+        "COURU",
+        "COURS",
+        "COUPS",
+        "COUPE",
+        "SOUPE",
+        "SOUTE",
+        "DOUTE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PARIER",
+      "target": "TANTES",
+      "solution": [
+        "PARIER",
+        "MARIER",
+        "MANIER",
+        "MANGER",
+        "MANGES",
+        "MANTES",
+        "TANTES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "JOUER",
+      "target": "MORNE",
+      "solution": [
+        "JOUER",
+        "JOUES",
+        "JOIES",
+        "JOINS",
+        "MOINS",
+        "MOINE",
+        "MORNE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "JOUR",
+      "target": "SENT",
+      "solution": [
+        "JOUR",
+        "FOUR",
+        "FOUS",
+        "SOUS",
+        "SONS",
+        "SENS",
+        "SENT"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "GAIS",
+      "target": "POSA",
+      "solution": [
+        "GAIS",
+        "GAIE",
+        "PAIE",
+        "PAPE",
+        "POPE",
+        "POSE",
+        "POSA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BRUT",
+      "target": "HORS",
+      "solution": [
+        "BRUT",
+        "BOUT",
+        "TOUT",
+        "TORT",
+        "DORT",
+        "DORS",
+        "HORS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CRUE",
+      "target": "PANS",
+      "solution": [
+        "CRUE",
+        "CRIE",
+        "PRIE",
+        "PAIE",
+        "PARE",
+        "PARS",
+        "PANS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LIES",
+      "target": "SEIN",
+      "solution": [
+        "LIES",
+        "LITS",
+        "LOTS",
+        "LOIS",
+        "SOIS",
+        "SOIN",
+        "SEIN"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FIXE",
+      "target": "JURA",
+      "solution": [
+        "FIXE",
+        "RIXE",
+        "RIRE",
+        "CIRE",
+        "CURE",
+        "JURE",
+        "JURA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FANS",
+      "target": "JOUG",
+      "solution": [
+        "FANS",
+        "FAIS",
+        "FOIS",
+        "FOUS",
+        "FOUR",
+        "JOUR",
+        "JOUG"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BASE",
+      "target": "SANG",
+      "solution": [
+        "BASE",
+        "CASE",
+        "CAGE",
+        "SAGE",
+        "SAGA",
+        "SANA",
+        "SANG"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "POUCE",
+      "target": "TARDE",
+      "solution": [
+        "POUCE",
+        "PONCE",
+        "PONTE",
+        "PORTE",
+        "PARTE",
+        "TARTE",
+        "TARDE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BASE",
+      "target": "JURY",
+      "solution": [
+        "BASE",
+        "CASE",
+        "CAVE",
+        "CUVE",
+        "CURE",
+        "JURE",
+        "JURY"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "MODE",
+      "target": "PILE",
+      "solution": [
+        "MODE",
+        "CODE",
+        "COKE",
+        "CAKE",
+        "CALE",
+        "PALE",
+        "PILE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOIS",
+      "target": "VIDA",
+      "solution": [
+        "BOIS",
+        "VOIS",
+        "VOIE",
+        "VOTE",
+        "VITE",
+        "VIDE",
+        "VIDA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "METTE",
+      "target": "NUIRE",
+      "solution": [
+        "METTE",
+        "MOTTE",
+        "BOTTE",
+        "BOITE",
+        "BOIRE",
+        "NOIRE",
+        "NUIRE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "NEUVE",
+      "target": "SENTI",
+      "solution": [
+        "NEUVE",
+        "VEUVE",
+        "VERVE",
+        "VERTE",
+        "VENTE",
+        "SENTE",
+        "SENTI"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "COLS",
+      "target": "VEND",
+      "solution": [
+        "COLS",
+        "BOLS",
+        "BONS",
+        "BOND",
+        "FOND",
+        "FEND",
+        "VEND"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "AUNE",
+      "target": "FUEL",
+      "solution": [
+        "AUNE",
+        "DUNE",
+        "DURE",
+        "DURS",
+        "DUES",
+        "DUEL",
+        "FUEL"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FILS",
+      "target": "KART",
+      "solution": [
+        "FILS",
+        "FINS",
+        "PINS",
+        "PANS",
+        "PARS",
+        "PART",
+        "KART"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LION",
+      "target": "PARC",
+      "solution": [
+        "LION",
+        "PION",
+        "PAON",
+        "PAIN",
+        "PAIE",
+        "PARE",
+        "PARC"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "VEAU",
+      "target": "VOLS",
+      "solution": [
+        "VEAU",
+        "VENU",
+        "VENT",
+        "VONT",
+        "VOIT",
+        "VOIS",
+        "VOLS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "ANSE",
+      "target": "PORT",
+      "solution": [
+        "ANSE",
+        "AISE",
+        "AIRE",
+        "PIRE",
+        "PARE",
+        "PART",
+        "PORT"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CAVES",
+      "target": "MORTS",
+      "solution": [
+        "CAVES",
+        "CUVES",
+        "CURES",
+        "PURES",
+        "PORES",
+        "PORTS",
+        "MORTS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PEAU",
+      "target": "VAUX",
+      "solution": [
+        "PEAU",
+        "VEAU",
+        "VENU",
+        "VENT",
+        "VEUT",
+        "VAUT",
+        "VAUX"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "GARE",
+      "target": "VIES",
+      "solution": [
+        "GARE",
+        "MARE",
+        "MIRE",
+        "AIRE",
+        "AIRS",
+        "AIES",
+        "VIES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BADGE",
+      "target": "RARES",
+      "solution": [
+        "BADGE",
+        "BARGE",
+        "MARGE",
+        "MARIE",
+        "MARIS",
+        "MARES",
+        "RARES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "MILLES",
+      "target": "PARLEZ",
+      "solution": [
+        "MILLES",
+        "BILLES",
+        "BELLES",
+        "PELLES",
+        "PERLES",
+        "PARLES",
+        "PARLEZ"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DARD",
+      "target": "RAVI",
+      "solution": [
+        "DARD",
+        "LARD",
+        "LAID",
+        "RAID",
+        "RAIE",
+        "RAVE",
+        "RAVI"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BOIT",
+      "target": "POSA",
+      "solution": [
+        "BOIT",
+        "VOIT",
+        "VOIE",
+        "VOTE",
+        "POTE",
+        "POSE",
+        "POSA"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FOLLE",
+      "target": "VERTE",
+      "solution": [
+        "FOLLE",
+        "COLLE",
+        "CELLE",
+        "PELLE",
+        "PERLE",
+        "PERTE",
+        "VERTE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "MONTES",
+      "target": "PENSEZ",
+      "solution": [
+        "MONTES",
+        "MANTES",
+        "TANTES",
+        "TENTES",
+        "PENTES",
+        "PENSES",
+        "PENSEZ"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PORTA",
+      "target": "VOLER",
+      "solution": [
+        "PORTA",
+        "PORTS",
+        "PORES",
+        "POTES",
+        "VOTES",
+        "VOTER",
+        "VOLER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "MULES",
+      "target": "VENEZ",
+      "solution": [
+        "MULES",
+        "MILES",
+        "MINES",
+        "MINER",
+        "MENER",
+        "MENEZ",
+        "VENEZ"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DARD",
+      "target": "RIME",
+      "solution": [
+        "DARD",
+        "LARD",
+        "LAID",
+        "RAID",
+        "RAIE",
+        "RAME",
+        "RIME"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BILLE",
+      "target": "VERTU",
+      "solution": [
+        "BILLE",
+        "BELLE",
+        "PELLE",
+        "PERLE",
+        "PERTE",
+        "VERTE",
+        "VERTU"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "ARME",
+      "target": "COLS",
+      "solution": [
+        "ARME",
+        "AIME",
+        "AILE",
+        "FILE",
+        "FILS",
+        "CILS",
+        "COLS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BAVE",
+      "target": "VOIE",
+      "solution": [
+        "BAVE",
+        "CAVE",
+        "CAKE",
+        "COKE",
+        "COTE",
+        "VOTE",
+        "VOIE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CONTE",
+      "target": "FOLLE",
+      "solution": [
+        "CONTE",
+        "PONTE",
+        "PONCE",
+        "POUCE",
+        "POULE",
+        "FOULE",
+        "FOLLE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PEND",
+      "target": "RASE",
+      "solution": [
+        "PEND",
+        "PERD",
+        "PERS",
+        "PARS",
+        "PARE",
+        "RARE",
+        "RASE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FRET",
+      "target": "NOIE",
+      "solution": [
+        "FRET",
+        "FRIT",
+        "FAIT",
+        "SAIT",
+        "SOIT",
+        "SOIE",
+        "NOIE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BELLE",
+      "target": "MONTE",
+      "solution": [
+        "BELLE",
+        "PELLE",
+        "PERLE",
+        "PERTE",
+        "PORTE",
+        "MORTE",
+        "MONTE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LUGE",
+      "target": "PAYS",
+      "solution": [
+        "LUGE",
+        "JUGE",
+        "JURE",
+        "PURE",
+        "PARE",
+        "PAYE",
+        "PAYS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DONNA",
+      "target": "MOQUE",
+      "solution": [
+        "DONNA",
+        "DONNE",
+        "BONNE",
+        "BORNE",
+        "MORNE",
+        "MORUE",
+        "MOQUE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "TELLES",
+      "target": "VARIER",
+      "solution": [
+        "TELLES",
+        "PELLES",
+        "PERLES",
+        "PARLES",
+        "PARLER",
+        "PARIER",
+        "VARIER"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FAUX",
+      "target": "POSE",
+      "solution": [
+        "FAUX",
+        "TAUX",
+        "TOUX",
+        "ROUX",
+        "ROUE",
+        "ROSE",
+        "POSE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FUIR",
+      "target": "PORC",
+      "solution": [
+        "FUIR",
+        "FUIS",
+        "PUIS",
+        "PURS",
+        "PARS",
+        "PARC",
+        "PORC"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "AILLE",
+      "target": "COLIS",
+      "solution": [
+        "AILLE",
+        "FILLE",
+        "FOLLE",
+        "FOLIE",
+        "JOLIE",
+        "JOLIS",
+        "COLIS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FORT",
+      "target": "JUPE",
+      "solution": [
+        "FORT",
+        "DORT",
+        "DORA",
+        "DURA",
+        "JURA",
+        "JURE",
+        "JUPE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BULLE",
+      "target": "SOUDE",
+      "solution": [
+        "BULLE",
+        "BALLE",
+        "SALLE",
+        "SAULE",
+        "SAUTE",
+        "SOUTE",
+        "SOUDE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PRIT",
+      "target": "RUSH",
+      "solution": [
+        "PRIT",
+        "PRIE",
+        "PAIE",
+        "RAIE",
+        "RASE",
+        "RUSE",
+        "RUSH"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "HAINE",
+      "target": "PIGES",
+      "solution": [
+        "HAINE",
+        "GAINE",
+        "GAINS",
+        "PAINS",
+        "PAIES",
+        "PAGES",
+        "PIGES"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "LARME",
+      "target": "PARUS",
+      "solution": [
+        "LARME",
+        "LARGE",
+        "MARGE",
+        "MARIE",
+        "PARIE",
+        "PARUE",
+        "PARUS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "NOMMA",
+      "target": "SORTS",
+      "solution": [
+        "NOMMA",
+        "NOMME",
+        "NORME",
+        "FORME",
+        "FORTE",
+        "SORTE",
+        "SORTS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "DIRES",
+      "target": "TAPIE",
+      "solution": [
+        "DIRES",
+        "PIRES",
+        "PIPES",
+        "PAPES",
+        "TAPES",
+        "TAPIS",
+        "TAPIE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "BERGE",
+      "target": "MAINS",
+      "solution": [
+        "BERGE",
+        "BERNE",
+        "BORNE",
+        "MORNE",
+        "MOINE",
+        "MOINS",
+        "MAINS"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "CORS",
+      "target": "IODE",
+      "solution": [
+        "CORS",
+        "SORS",
+        "SOUS",
+        "MOUS",
+        "MOUE",
+        "MODE",
+        "IODE"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "PENSER",
+      "target": "POSTEZ",
+      "solution": [
+        "PENSER",
+        "PENSES",
+        "PERSES",
+        "PERTES",
+        "PORTES",
+        "POSTES",
+        "POSTEZ"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FOND",
+      "target": "REIN",
+      "solution": [
+        "FOND",
+        "FONT",
+        "SONT",
+        "SOIT",
+        "SOIN",
+        "SEIN",
+        "REIN"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    },
+    {
+      "start": "FLOU",
+      "target": "TROT",
+      "solution": [
+        "FLOU",
+        "CLOU",
+        "CHOU",
+        "CHOC",
+        "CROC",
+        "TROC",
+        "TROT"
+      ],
+      "steps": 6,
+      "difficulty": 4
+    }
+  ]
+}

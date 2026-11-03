@@ -1,0 +1,1406 @@
+{
+  "word_length": "mixed",
+  "total_puzzles": 100,
+  "puzzles": [
+    {
+      "start": "LECKEN",
+      "target": "ZELTEN",
+      "solution": [
+        "LECKEN",
+        "WECKEN",
+        "WERKEN",
+        "WERTEN",
+        "WELTEN",
+        "ZELTEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BIETE",
+      "target": "SIEGE",
+      "solution": [
+        "BIETE",
+        "MIETE",
+        "MIESE",
+        "RIESE",
+        "RIEGE",
+        "SIEGE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "EURE",
+      "target": "MING",
+      "solution": [
+        "EURE",
+        "EULE",
+        "EILE",
+        "EINE",
+        "MINE",
+        "MING"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "WATTS",
+      "target": "WINKE",
+      "solution": [
+        "WATTS",
+        "WATTE",
+        "WARTE",
+        "WIRTE",
+        "WIRKE",
+        "WINKE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BIOS",
+      "target": "RAUE",
+      "solution": [
+        "BIOS",
+        "BISS",
+        "BASS",
+        "BAUS",
+        "RAUS",
+        "RAUE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "KILLEN",
+      "target": "TASSEN",
+      "solution": [
+        "KILLEN",
+        "PILLEN",
+        "PILSEN",
+        "PISSEN",
+        "PASSEN",
+        "TASSEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FEIER",
+      "target": "LOGEN",
+      "solution": [
+        "FEIER",
+        "LEIER",
+        "LEBER",
+        "LEBEN",
+        "LOBEN",
+        "LOGEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FADE",
+      "target": "KALB",
+      "solution": [
+        "FADE",
+        "MADE",
+        "MALE",
+        "MALI",
+        "KALI",
+        "KALB"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MIST",
+      "target": "RATS",
+      "solution": [
+        "MIST",
+        "MAST",
+        "MAUT",
+        "MAUS",
+        "RAUS",
+        "RATS"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LINKS",
+      "target": "SENKT",
+      "solution": [
+        "LINKS",
+        "LINKE",
+        "WINKE",
+        "WINKT",
+        "SINKT",
+        "SENKT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "CELLE",
+      "target": "REIST",
+      "solution": [
+        "CELLE",
+        "WELLE",
+        "WEILE",
+        "WEISE",
+        "REISE",
+        "REIST"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "REINE",
+      "target": "TORTE",
+      "solution": [
+        "REINE",
+        "WEINE",
+        "WEITE",
+        "WERTE",
+        "WORTE",
+        "TORTE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LEST",
+      "target": "SEEN",
+      "solution": [
+        "LEST",
+        "REST",
+        "REIT",
+        "SEIT",
+        "SEIN",
+        "SEEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "REIFER",
+      "target": "WALTEN",
+      "solution": [
+        "REIFER",
+        "REITER",
+        "WEITER",
+        "WEITEN",
+        "WELTEN",
+        "WALTEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEIM",
+      "target": "WAHR",
+      "solution": [
+        "BEIM",
+        "LEIM",
+        "LEHM",
+        "LAHM",
+        "LAHR",
+        "WAHR"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HOLE",
+      "target": "KEIN",
+      "solution": [
+        "HOLE",
+        "HOLM",
+        "HELM",
+        "HEIM",
+        "KEIM",
+        "KEIN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "ALTEN",
+      "target": "EINEM",
+      "solution": [
+        "ALTEN",
+        "ALLEN",
+        "ELLEN",
+        "EILEN",
+        "EINEN",
+        "EINEM"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "DATEN",
+      "target": "FIXEN",
+      "solution": [
+        "DATEN",
+        "BATEN",
+        "BADEN",
+        "FADEN",
+        "FAXEN",
+        "FIXEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FASS",
+      "target": "KALI",
+      "solution": [
+        "FASS",
+        "HASS",
+        "HALS",
+        "HALB",
+        "KALB",
+        "KALI"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "DINGE",
+      "target": "ZIEHT",
+      "solution": [
+        "DINGE",
+        "RINGE",
+        "RIEGE",
+        "ZIEGE",
+        "ZIEHE",
+        "ZIEHT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HALLEN",
+      "target": "ZEUGEN",
+      "solution": [
+        "HALLEN",
+        "HELLEN",
+        "ZELLEN",
+        "ZEILEN",
+        "ZEIGEN",
+        "ZEUGEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "REIZT",
+      "target": "WORTE",
+      "solution": [
+        "REIZT",
+        "REIZE",
+        "REITE",
+        "WEITE",
+        "WERTE",
+        "WORTE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LAIEN",
+      "target": "ROHES",
+      "solution": [
+        "LAIEN",
+        "LASEN",
+        "RASEN",
+        "ROSEN",
+        "ROHEN",
+        "ROHES"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HEER",
+      "target": "MAIL",
+      "solution": [
+        "HEER",
+        "MEER",
+        "MEHR",
+        "MEHL",
+        "MAHL",
+        "MAIL"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MWST",
+      "target": "TALK",
+      "solution": [
+        "MWST",
+        "MAST",
+        "MALT",
+        "KALT",
+        "KALK",
+        "TALK"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LOBTE",
+      "target": "RAUPE",
+      "solution": [
+        "LOBTE",
+        "LEBTE",
+        "LEUTE",
+        "LAUTE",
+        "RAUTE",
+        "RAUPE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LOHNEN",
+      "target": "WOLLEN",
+      "solution": [
+        "LOHNEN",
+        "BOHNEN",
+        "BOHLEN",
+        "SOHLEN",
+        "SOLLEN",
+        "WOLLEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LAGE",
+      "target": "TEXT",
+      "solution": [
+        "LAGE",
+        "LEGE",
+        "LESE",
+        "LEST",
+        "TEST",
+        "TEXT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HEIDEN",
+      "target": "LAUTEM",
+      "solution": [
+        "HEIDEN",
+        "LEIDEN",
+        "LEITEN",
+        "LEUTEN",
+        "LAUTEN",
+        "LAUTEM"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HAUS",
+      "target": "POET",
+      "solution": [
+        "HAUS",
+        "HAUT",
+        "HART",
+        "PART",
+        "PORT",
+        "POET"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "GEIST",
+      "target": "GESTE",
+      "solution": [
+        "GEIST",
+        "REIST",
+        "REISE",
+        "REITE",
+        "RESTE",
+        "GESTE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "OASE",
+      "target": "WOHN",
+      "solution": [
+        "OASE",
+        "HASE",
+        "HOSE",
+        "HOHE",
+        "HOHN",
+        "WOHN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEIDE",
+      "target": "HEFTE",
+      "solution": [
+        "BEIDE",
+        "LEIDE",
+        "LEITE",
+        "LEUTE",
+        "HEUTE",
+        "HEFTE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "NAHEN",
+      "target": "ROHES",
+      "solution": [
+        "NAHEN",
+        "NASEN",
+        "RASEN",
+        "ROSEN",
+        "ROHEN",
+        "ROHES"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HALL",
+      "target": "SITZ",
+      "solution": [
+        "HALL",
+        "WALL",
+        "WALZ",
+        "SALZ",
+        "SATZ",
+        "SITZ"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LETZT",
+      "target": "REISE",
+      "solution": [
+        "LETZT",
+        "HETZT",
+        "HEIZT",
+        "REIZT",
+        "REIST",
+        "REISE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "RUSSE",
+      "target": "WIRFT",
+      "solution": [
+        "RUSSE",
+        "RISSE",
+        "WISSE",
+        "WISST",
+        "WIRST",
+        "WIRFT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEIN",
+      "target": "HASE",
+      "solution": [
+        "BEIN",
+        "MEIN",
+        "MAIN",
+        "HAIN",
+        "HAIE",
+        "HASE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "EDLES",
+      "target": "EIFER",
+      "solution": [
+        "EDLES",
+        "EDLEN",
+        "EILEN",
+        "EINEN",
+        "EINER",
+        "EIFER"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BISSEN",
+      "target": "FESTEM",
+      "solution": [
+        "BISSEN",
+        "WISSEN",
+        "WESSEN",
+        "WESTEN",
+        "FESTEN",
+        "FESTEM"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "RAUPE",
+      "target": "WISSE",
+      "solution": [
+        "RAUPE",
+        "RAUTE",
+        "RASTE",
+        "RASSE",
+        "RISSE",
+        "WISSE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "KANNE",
+      "target": "TEINT",
+      "solution": [
+        "KANNE",
+        "KENNE",
+        "KEINE",
+        "MEINE",
+        "MEINT",
+        "TEINT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "GASE",
+      "target": "PULT",
+      "solution": [
+        "GASE",
+        "GAST",
+        "GALT",
+        "KALT",
+        "KULT",
+        "PULT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HALBEN",
+      "target": "KILLEN",
+      "solution": [
+        "HALBEN",
+        "HALLEN",
+        "HELLEN",
+        "WELLEN",
+        "WILLEN",
+        "KILLEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BALD",
+      "target": "DING",
+      "solution": [
+        "BALD",
+        "BAND",
+        "FAND",
+        "FANG",
+        "FING",
+        "DING"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FELL",
+      "target": "WEIB",
+      "solution": [
+        "FELL",
+        "FEHL",
+        "HEHL",
+        "HEIL",
+        "WEIL",
+        "WEIB"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FADEN",
+      "target": "HUFEN",
+      "solution": [
+        "FADEN",
+        "BADEN",
+        "BASEN",
+        "HASEN",
+        "HAFEN",
+        "HUFEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BOHLEN",
+      "target": "SEIFEN",
+      "solution": [
+        "BOHLEN",
+        "FOHLEN",
+        "FEHLEN",
+        "FEILEN",
+        "SEILEN",
+        "SEIFEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BLUME",
+      "target": "HOLTE",
+      "solution": [
+        "BLUME",
+        "BLUTE",
+        "BAUTE",
+        "HAUTE",
+        "HALTE",
+        "HOLTE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "KITS",
+      "target": "NASA",
+      "solution": [
+        "KITS",
+        "BITS",
+        "BISS",
+        "BASS",
+        "NASS",
+        "NASA"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "GEBT",
+      "target": "NEID",
+      "solution": [
+        "GEBT",
+        "GEHT",
+        "SEHT",
+        "SEIT",
+        "SEID",
+        "NEID"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "ASIEN",
+      "target": "ZUGES",
+      "solution": [
+        "ASIEN",
+        "ARIEN",
+        "ARGEN",
+        "AUGEN",
+        "AUGES",
+        "ZUGES"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "WECK",
+      "target": "WILL",
+      "solution": [
+        "WECK",
+        "WERK",
+        "WERD",
+        "WIRD",
+        "WILD",
+        "WILL"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MADEN",
+      "target": "POLEN",
+      "solution": [
+        "MADEN",
+        "BADEN",
+        "BODEN",
+        "HODEN",
+        "HOLEN",
+        "POLEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LEGE",
+      "target": "SEID",
+      "solution": [
+        "LEGE",
+        "REGE",
+        "REGT",
+        "REIT",
+        "SEIT",
+        "SEID"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HEIDE",
+      "target": "REGIE",
+      "solution": [
+        "HEIDE",
+        "LEIDE",
+        "LEITE",
+        "REITE",
+        "REGTE",
+        "REGIE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "PAKT",
+      "target": "SATZ",
+      "solution": [
+        "PAKT",
+        "HAKT",
+        "HAFT",
+        "SAFT",
+        "SATT",
+        "SATZ"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEST",
+      "target": "RAUS",
+      "solution": [
+        "BEST",
+        "BIST",
+        "BISS",
+        "BASS",
+        "BAUS",
+        "RAUS"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FERSE",
+      "target": "KURVE",
+      "solution": [
+        "FERSE",
+        "FERNE",
+        "KERNE",
+        "KERZE",
+        "KURZE",
+        "KURVE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "GEIGE",
+      "target": "VERSE",
+      "solution": [
+        "GEIGE",
+        "FEIGE",
+        "FEINE",
+        "FERNE",
+        "FERSE",
+        "VERSE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "WETTE",
+      "target": "WOLLT",
+      "solution": [
+        "WETTE",
+        "WEITE",
+        "WEILE",
+        "WELLE",
+        "WOLLE",
+        "WOLLT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MAUL",
+      "target": "TANG",
+      "solution": [
+        "MAUL",
+        "MAUS",
+        "HAUS",
+        "HANS",
+        "HANG",
+        "TANG"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "DOSEN",
+      "target": "GABEL",
+      "solution": [
+        "DOSEN",
+        "HOSEN",
+        "HASEN",
+        "HABEN",
+        "GABEN",
+        "GABEL"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FINNE",
+      "target": "WIRKT",
+      "solution": [
+        "FINNE",
+        "FINDE",
+        "WINDE",
+        "WINKE",
+        "WIRKE",
+        "WIRKT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LAUBE",
+      "target": "WEISE",
+      "solution": [
+        "LAUBE",
+        "LAUTE",
+        "LEUTE",
+        "LEITE",
+        "WEITE",
+        "WEISE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "GARTEN",
+      "target": "HEMDEN",
+      "solution": [
+        "GARTEN",
+        "HARTEN",
+        "HORTEN",
+        "HORDEN",
+        "HERDEN",
+        "HEMDEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "WEITEM",
+      "target": "ZARTES",
+      "solution": [
+        "WEITEM",
+        "WEITEN",
+        "WERTEN",
+        "WARTEN",
+        "ZARTEN",
+        "ZARTES"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "WERKES",
+      "target": "ZARTER",
+      "solution": [
+        "WERKES",
+        "WERTES",
+        "WERTEN",
+        "WARTEN",
+        "ZARTEN",
+        "ZARTER"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HERDEN",
+      "target": "NETTES",
+      "solution": [
+        "HERDEN",
+        "WERDEN",
+        "WERTEN",
+        "WETTEN",
+        "NETTEN",
+        "NETTES"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FALLE",
+      "target": "TEILS",
+      "solution": [
+        "FALLE",
+        "HALLE",
+        "HELLE",
+        "HEILE",
+        "TEILE",
+        "TEILS"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "KEGEL",
+      "target": "WESER",
+      "solution": [
+        "KEGEL",
+        "HEGEL",
+        "HEGEN",
+        "WEGEN",
+        "WESEN",
+        "WESER"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HAST",
+      "target": "LIMO",
+      "solution": [
+        "HAST",
+        "LAST",
+        "LIST",
+        "LISA",
+        "LIMA",
+        "LIMO"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "SEHNE",
+      "target": "WERBE",
+      "solution": [
+        "SEHNE",
+        "LEHNE",
+        "LERNE",
+        "KERNE",
+        "KERBE",
+        "WERBE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "RECHT",
+      "target": "SETZT",
+      "solution": [
+        "RECHT",
+        "REIHT",
+        "REIZT",
+        "HEIZT",
+        "HETZT",
+        "SETZT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEST",
+      "target": "WILD",
+      "solution": [
+        "BEST",
+        "WEST",
+        "WERT",
+        "WIRT",
+        "WIRD",
+        "WILD"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "DEPP",
+      "target": "NEIN",
+      "solution": [
+        "DEPP",
+        "SEPP",
+        "SEPT",
+        "SEIT",
+        "SEIN",
+        "NEIN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BETTY",
+      "target": "RASSE",
+      "solution": [
+        "BETTY",
+        "BETTE",
+        "RETTE",
+        "RATTE",
+        "RASTE",
+        "RASSE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEIDEN",
+      "target": "LAUFEN",
+      "solution": [
+        "BEIDEN",
+        "LEIDEN",
+        "LEITEN",
+        "LEUTEN",
+        "LAUTEN",
+        "LAUFEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "NETZ",
+      "target": "POET",
+      "solution": [
+        "NETZ",
+        "NETT",
+        "NEST",
+        "PEST",
+        "POST",
+        "POET"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEETE",
+      "target": "MERKE",
+      "solution": [
+        "BEETE",
+        "BESTE",
+        "WESTE",
+        "WERTE",
+        "WERKE",
+        "MERKE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MELDE",
+      "target": "RENNT",
+      "solution": [
+        "MELDE",
+        "MEIDE",
+        "MEINE",
+        "REINE",
+        "RENNE",
+        "RENNT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BUNTES",
+      "target": "RANKEN",
+      "solution": [
+        "BUNTES",
+        "BUNDES",
+        "BANDES",
+        "BANDEN",
+        "BANKEN",
+        "RANKEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FERN",
+      "target": "HOHL",
+      "solution": [
+        "FERN",
+        "KERN",
+        "KORN",
+        "HORN",
+        "HOHN",
+        "HOHL"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HAST",
+      "target": "SOLI",
+      "solution": [
+        "HAST",
+        "HALT",
+        "HOLT",
+        "HOLD",
+        "SOLD",
+        "SOLI"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HELLES",
+      "target": "MEINEM",
+      "solution": [
+        "HELLES",
+        "HELLEN",
+        "HEILEN",
+        "MEILEN",
+        "MEINEN",
+        "MEINEM"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FEST",
+      "target": "WAHL",
+      "solution": [
+        "FEST",
+        "WEST",
+        "WEHT",
+        "WEHR",
+        "WAHR",
+        "WAHL"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BEIDE",
+      "target": "LEERE",
+      "solution": [
+        "BEIDE",
+        "LEIDE",
+        "LEINE",
+        "LEHNE",
+        "LEHRE",
+        "LEERE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LINSE",
+      "target": "WEILE",
+      "solution": [
+        "LINSE",
+        "LINDE",
+        "WINDE",
+        "WENDE",
+        "WEIDE",
+        "WEILE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "LAGO",
+      "target": "ROHE",
+      "solution": [
+        "LAGO",
+        "LAGE",
+        "RAGE",
+        "REGE",
+        "REHE",
+        "ROHE"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MERKEL",
+      "target": "NETTEN",
+      "solution": [
+        "MERKEL",
+        "MERKEN",
+        "WERKEN",
+        "WERTEN",
+        "WETTEN",
+        "NETTEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FAND",
+      "target": "KURT",
+      "solution": [
+        "FAND",
+        "FUND",
+        "KUND",
+        "KUNZ",
+        "KURZ",
+        "KURT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "KILLEN",
+      "target": "PUSTEN",
+      "solution": [
+        "KILLEN",
+        "PILLEN",
+        "PILSEN",
+        "PISSEN",
+        "PISTEN",
+        "PUSTEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HEXE",
+      "target": "KEHR",
+      "solution": [
+        "HEXE",
+        "HEGE",
+        "WEGE",
+        "WEHE",
+        "WEHR",
+        "KEHR"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "FEHLEN",
+      "target": "SAGTEN",
+      "solution": [
+        "FEHLEN",
+        "FEILEN",
+        "SEILEN",
+        "SEITEN",
+        "SAITEN",
+        "SAGTEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "HIRTEN",
+      "target": "ZEITEN",
+      "solution": [
+        "HIRTEN",
+        "HARTEN",
+        "WARTEN",
+        "WERTEN",
+        "WEITEN",
+        "ZEITEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "KANTE",
+      "target": "WARST",
+      "solution": [
+        "KANTE",
+        "KARTE",
+        "WARTE",
+        "WARNE",
+        "WARNT",
+        "WARST"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BITTEN",
+      "target": "DIESEL",
+      "solution": [
+        "BITTEN",
+        "MITTEN",
+        "MIETEN",
+        "MIESEN",
+        "DIESEN",
+        "DIESEL"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "BIENEN",
+      "target": "HACKEN",
+      "solution": [
+        "BIENEN",
+        "BINNEN",
+        "BANNEN",
+        "BANKEN",
+        "BACKEN",
+        "HACKEN"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "MALT",
+      "target": "REIS",
+      "solution": [
+        "MALT",
+        "MAST",
+        "RAST",
+        "REST",
+        "REIT",
+        "REIS"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    },
+    {
+      "start": "NASSE",
+      "target": "PACKT",
+      "solution": [
+        "NASSE",
+        "MASSE",
+        "MASKE",
+        "MACKE",
+        "PACKE",
+        "PACKT"
+      ],
+      "steps": 5,
+      "difficulty": 3
+    }
+  ]
+}

@@ -40,7 +40,11 @@ func save_game():
 		"nickname": GameManager.nickname,
 		"lastDailyComplete": last_daily_complete,
 		"lastDifficulty": GameManager.last_difficulty,
-		"levelsToHint": GameManager.levels_to_hint,
+		"lastLanguage": DictionaryManager.current_dict,
+		"enLevelData": GameManager.en_levels,
+		"deLevelData": GameManager.de_levels,
+		"esLevelData": GameManager.es_levels,
+		"frLevelData": GameManager.fr_levels,
 		"dailyPuzzlesCompleted": GameManager.daily_puzzles_completed,
 		"totalTimedLevelsCompleted": GameManager.total_timed_mode_puzzles_completed,
 		"bestTimedMode": GameManager.best_timed_mode,
@@ -96,7 +100,12 @@ func load_game():
 	GameManager.nickname = save_data.get("nickname", "")
 	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
 	GameManager.last_difficulty = save_data.get("lastDifficulty", 0)
-	GameManager.levels_to_hint = save_data.get("levelsToHint", GameManager.defults_levels_to_hints.duplicate())
+	DictionaryManager.change_dictionary(save_data.get("lastLanguage", "EN"))
+	GameManager.en_levels = save_data.get("enLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
+	GameManager.de_levels = save_data.get("deLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
+	GameManager.es_levels = save_data.get("esLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
+	GameManager.fr_levels = save_data.get("frLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
+	GameManager.change_dicts(DictionaryManager.current_dict)
 	if GameManager.levels_to_hint == []:
 		GameManager.levels_to_hint = GameManager.defults_levels_to_hints.duplicate()
 	

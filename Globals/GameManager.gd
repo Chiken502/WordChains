@@ -13,8 +13,13 @@ var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level.
 var current_difficulty := 0 ## Current Difficulty Level
 var last_difficulty := 0 ## Last played difficulty level
 var amt_of_hints := 0 ## Amount of hints the player has remaining
-var levels_to_hint := []
 var defults_levels_to_hints := [4, 3, 2, 1]
+var levels_to_hint := defults_levels_to_hints.duplicate()
+
+var de_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
+var en_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
+var es_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
+var fr_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
 
 # Settings Variables
 var screen_shake_on = true ## Controls wether the screen shakes when a word is not in the dictionary
@@ -224,6 +229,27 @@ func reset_autoload():
 	var current_script = get_script()
 	set_script(null)
 	set_script(current_script)
+
+
+func change_dicts(code: String):
+	var temp_lang_levels = []
+	
+	match (code):
+		"DE":
+			temp_lang_levels = de_levels
+		"EN":
+			temp_lang_levels = en_levels
+		"ES":
+			temp_lang_levels = es_levels
+		"FR":
+			temp_lang_levels = fr_levels
+	
+	current_levels = temp_lang_levels[0]
+	levels_to_hint = temp_lang_levels[1]
+	if levels_to_hint == []:
+		levels_to_hint = defults_levels_to_hints.duplicate()
+	
+	print(levels_to_hint)
 
 
 ## Signal Resolver is used when you need to await one or more signals at a time

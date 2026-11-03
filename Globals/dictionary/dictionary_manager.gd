@@ -1,6 +1,7 @@
 extends Node
 
 var dictionary = ""
+var current_dict = "EN"
 var words: Array
 var words_loaded = false
 
@@ -27,7 +28,7 @@ func is_legal_word(word: String) -> bool:
 
 ## Load the dictionary
 func load_dictionary():
-	var file_path = "res://Globals/dictionary/ENdict.txt"
+	var file_path = "res://Globals/dictionary/%sdict.txt" % current_dict
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	#var file = ResourceLoader.load(file_path)
 	if file:
@@ -35,3 +36,11 @@ func load_dictionary():
 		return file_content
 	push_warning("Failed to load dictionary")
 	return null
+
+func change_dictionary(code: String):
+	print("Changing Dict to: " + code)
+	current_dict = code
+	
+	dictionary = load_dictionary()
+	words = dictionary.split("\n", false)
+	words_loaded = true

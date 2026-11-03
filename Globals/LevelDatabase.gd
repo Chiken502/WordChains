@@ -17,9 +17,9 @@ var utc_datetime: String ## UTC datetime fetched from Time API, null if API hasn
 func load_level(difficulty: int, level: int):
 	await get_tree().process_frame
 	
-	if FileAccess.file_exists("res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1)):
+	if FileAccess.file_exists("res://Globals/Puzzles/%s/puzzles_%s_d%s.json" % [DictionaryManager.current_dict, DictionaryManager.current_dict.to_lower(), (difficulty + 1)]):
 		var puzzle_file = FileAccess.open(
-			"res://Globals/Puzzles/puzzles_d%s.json" % (difficulty + 1),
+			"res://Globals/Puzzles/%s/puzzles_%s_d%s.json" % [DictionaryManager.current_dict, DictionaryManager.current_dict.to_lower(), (difficulty + 1)],
 			FileAccess.READ,
 		)
 		var data = JSON.parse_string(puzzle_file.get_as_text())
@@ -80,7 +80,7 @@ func load_daily_level():
 	if day_of_year != -1:
 		print("Loading puzzle file")
 		var puzzle_file = FileAccess.open(
-			"res://Globals/Puzzles/daily_puzzles.json",
+			"res://Globals/Puzzles/%sdaily_puzzles.json" % DictionaryManager.current_dict,
 			FileAccess.READ,
 		)
 		var data = JSON.parse_string(puzzle_file.get_as_text())
@@ -170,9 +170,9 @@ func get_total_levels() -> int:
 	
 	for i in range(4):
 		print(i)
-		if FileAccess.file_exists("res://Globals/Puzzles/puzzles_d%s.json" % (i+1)):
+		if FileAccess.file_exists("res://Globals/Puzzles/%s/puzzles_%s_d%s.json" % [DictionaryManager.current_dict, DictionaryManager.current_dict.to_lower(), (i + 1)]):
 			var puzzle_file = FileAccess.open(
-				"res://Globals/Puzzles/puzzles_d%s.json" % (i+1),
+				"res://Globals/Puzzles/%s/puzzles_%s_d%s.json" % [DictionaryManager.current_dict, DictionaryManager.current_dict.to_lower(), (i + 1)],
 				FileAccess.READ,
 			)
 			var data = JSON.parse_string(puzzle_file.get_as_text())
