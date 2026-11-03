@@ -27,7 +27,7 @@ func is_legal_word(word: String) -> bool:
 
 ## Load the dictionary
 func load_dictionary():
-	var file_path = "res://Globals/dictionary/12dicts_words.txt"
+	var file_path = "res://Globals/dictionary/ENdict.txt"
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	#var file = ResourceLoader.load(file_path)
 	if file:
