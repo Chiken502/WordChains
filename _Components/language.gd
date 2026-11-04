@@ -1,6 +1,7 @@
 extends Control
 
-var expanded = false
+enum {OPEN, CLOSED, ANIMATING}
+var state = CLOSED
 
 var current_langauge = "EN"
 var other_langauges = ["EN", "ES", "DE", "FR"]
@@ -27,6 +28,7 @@ func _process(_delta: float) -> void:
 
 
 func expand():
+	state = ANIMATING
 	var buttons : Array = $VBoxContainer.get_children()
 	for i in range(1, buttons.size()):
 		var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
@@ -35,23 +37,26 @@ func expand():
 	
 	for i in range(1, buttons.size()):
 		buttons[i].disabled = false
-	expanded = true
+	
+	await get_tree().create_timer(0.2).timeout
+	state = OPEN
 
 
 func contract():
+	state = ANIMATING
 	var buttons: Array = $ VBoxContainer.get_children()
 	for i in range(buttons.size() -1, 0, -1):
 		buttons[i].offset_transform_scale = Vector2(0, 0)
 	
 	for i in range(1, buttons.size()):
 		buttons[i].disabled = true
-	expanded = false
+	state = CLOSED
 
 
 func _on_button_pressed() -> void:
-	if !expanded:
+	if state == CLOSED:
 		expand()
-	else: 
+	elif state == OPEN: 
 		contract()
 
 func _change_langauge(index: int, texture_rext: TextureRect):
