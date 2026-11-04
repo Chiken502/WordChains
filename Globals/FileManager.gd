@@ -26,6 +26,7 @@ func save_settings():
 ## Saves game progress to save_path
 func save_game():
 	print("Saving Game...")
+	GameManager.change_dicts(DictionaryManager.current_dict, DictionaryManager.current_dict) # Saves level progress for diff lang
 	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
 
 	var last_daily_complete = GameManager.last_day_completed
