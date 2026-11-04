@@ -12,7 +12,7 @@ var current_game_version := "v0.51b" ## Current game version number
 var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level.
 var current_difficulty := 0 ## Current Difficulty Level
 var last_difficulty := 0 ## Last played difficulty level
-var amt_of_hints := 0 ## Amount of hints the player has remaining
+var amt_of_hints := 1 ## Amount of hints the player has remaining
 var defults_levels_to_hints := [4, 3, 2, 1]
 var levels_to_hint := defults_levels_to_hints.duplicate()
 

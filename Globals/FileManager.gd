@@ -95,7 +95,7 @@ func load_game():
 		save_data = file.get_var()
 
 	GameManager.current_levels = save_data.get("current_levels", [0, 0, 0, 0])
-	GameManager.amt_of_hints = save_data.get("hints", 0)
+	GameManager.amt_of_hints = save_data.get("hints", 1)
 	GameManager.need_tutorial = save_data.get("needTutorial", true)
 	GameManager.nickname = save_data.get("nickname", "")
 	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
