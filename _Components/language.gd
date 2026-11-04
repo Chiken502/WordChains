@@ -17,7 +17,7 @@ func _ready() -> void:
 		texture_rect.texture = load("res://Flags/%s.png" % other_langauges[i])
 		if i>0:
 			buttons[i].offset_transform_scale = Vector2(0, 0)
-			buttons[i].pressed.connect(_change_langauge.bind(other_langauges[i], texture_rect))
+			buttons[i].pressed.connect(_change_langauge.bind(i, texture_rect))
 			buttons[i].disabled = true
 
 
@@ -54,14 +54,17 @@ func _on_button_pressed() -> void:
 	else: 
 		contract()
 
-func _change_langauge(code: String, texture_rext: TextureRect):
-	other_langauges[other_langauges.find(code, 1)] = current_langauge
-	other_langauges[0] = code
+func _change_langauge(index: int, texture_rext: TextureRect):
+	var new_lang = other_langauges[index]
+	var old_lang = current_langauge
+	
+	other_langauges[index] = old_lang
+	other_langauges[0] = new_lang
 	
 	texture_rext.texture = load("res://Flags/%s.png" % current_langauge)
 	
-	current_langauge = code
-	DictionaryManager.change_dictionary(code)
+	current_langauge = new_lang
+	DictionaryManager.change_dictionary(new_lang)
 	FileManager.save_game()
 	
 	$VBoxContainer/Main/PanelContainer/TextureRect.texture = load("res://Flags/%s.png" % current_langauge)
