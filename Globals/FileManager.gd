@@ -101,12 +101,12 @@ func load_game():
 	GameManager.nickname = save_data.get("nickname", "")
 	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
 	GameManager.last_difficulty = save_data.get("lastDifficulty", 0)
-	DictionaryManager.change_dictionary(save_data.get("lastLanguage", "EN"))
+	
 	GameManager.en_levels = save_data.get("enLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
 	GameManager.de_levels = save_data.get("deLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
 	GameManager.es_levels = save_data.get("esLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
 	GameManager.fr_levels = save_data.get("frLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
-	GameManager.change_dicts(DictionaryManager.current_dict)
+	DictionaryManager.change_dictionary(save_data.get("lastLanguage", "EN"))
 	if GameManager.levels_to_hint == []:
 		GameManager.levels_to_hint = GameManager.defults_levels_to_hints.duplicate()
 	
