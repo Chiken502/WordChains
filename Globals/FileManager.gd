@@ -26,7 +26,7 @@ func save_settings():
 ## Saves game progress to save_path
 func save_game():
 	print("Saving Game...")
-	GameManager.change_dicts(DictionaryManager.current_dict, DictionaryManager.current_dict) # Saves level progress for diff lang
+	GameManager.save_language_progress(DictionaryManager.current_dict)
 	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
 
 	var last_daily_complete = GameManager.last_day_completed
@@ -95,7 +95,7 @@ func load_game():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		save_data = file.get_var()
 
-	GameManager.current_levels = save_data.get("current_levels", [0, 0, 0, 0])
+	#GameManager.current_levels = save_data.get("current_levels", [0, 0, 0, 0])
 	GameManager.amt_of_hints = save_data.get("hints", 1)
 	GameManager.need_tutorial = save_data.get("needTutorial", true)
 	GameManager.nickname = save_data.get("nickname", "")
@@ -107,6 +107,7 @@ func load_game():
 	GameManager.es_levels = save_data.get("esLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
 	GameManager.fr_levels = save_data.get("frLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
 	DictionaryManager.change_dictionary(save_data.get("lastLanguage", "EN"))
+	GameManager.load_language_progress(DictionaryManager.current_dict)
 	if GameManager.levels_to_hint == []:
 		GameManager.levels_to_hint = GameManager.defults_levels_to_hints.duplicate()
 	

@@ -39,10 +39,7 @@ func load_dictionary():
 	words_loaded = true
 
 func change_dictionary(code: String):
-	var old_dict = current_dict
 	print("Changing Dict to: " + code)
 	current_dict = code
 	
 	load_dictionary()
-	
-	GameManager.change_dicts(old_dict, current_dict)

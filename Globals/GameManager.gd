@@ -231,22 +231,8 @@ func reset_autoload():
 	set_script(current_script)
 
 
-func change_dicts(old_code: String, code: String):
+func load_language_progress(code: String):
 	var temp_lang_levels = []
-	
-	match (old_code):
-		"DE":
-			de_levels = [current_levels, levels_to_hint]
-			print(de_levels)
-		"EN":
-			en_levels = [current_levels, levels_to_hint]
-			print(en_levels)
-		"ES":
-			es_levels = [current_levels, levels_to_hint]
-			print(es_levels)
-		"FR":
-			fr_levels = [current_levels, levels_to_hint]
-			print(fr_levels)
 	
 	match (code):
 		"DE":
@@ -258,10 +244,27 @@ func change_dicts(old_code: String, code: String):
 		"FR":
 			temp_lang_levels = fr_levels
 	
-	current_levels = temp_lang_levels[0]
-	levels_to_hint = temp_lang_levels[1]
+	current_levels = temp_lang_levels[0].duplicate()
+	levels_to_hint = temp_lang_levels[1].duplicate()
 	if levels_to_hint == []:
 		levels_to_hint = defults_levels_to_hints.duplicate()
+
+
+func save_language_progress(code: String):
+	var progress = [
+		current_levels.duplicate(),
+		levels_to_hint.duplicate()
+	]
+
+	match code:
+		"EN":
+			en_levels = progress
+		"DE":
+			de_levels = progress
+		"ES":
+			es_levels = progress
+		"FR":
+			fr_levels = progress
 
 
 ## Signal Resolver is used when you need to await one or more signals at a time
