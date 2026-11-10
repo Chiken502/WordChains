@@ -80,7 +80,7 @@ func load_daily_level():
 	if day_of_year != -1:
 		print("Loading puzzle file")
 		var puzzle_file = FileAccess.open(
-			"res://Globals/Puzzles/%sdaily_puzzles.json" % DictionaryManager.current_dict,
+			"res://Globals/Puzzles/%s/daily_puzzles_%s.json" % [DictionaryManager.current_dict, DictionaryManager.current_dict.to_lower()],
 			FileAccess.READ,
 		)
 		var data = JSON.parse_string(puzzle_file.get_as_text())

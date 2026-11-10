@@ -429,8 +429,7 @@ func _process(_delta: float) -> void:
 				var level_time = (Time.get_ticks_msec() - level_start_time) / 100.0
 				GameManager.daily_time = level_time
 
-				GameManager.daily_completed = true
-				GameManager.last_day_completed = GameManager.day_of_year
+				GameManager.set_daily_completed()
 				GameManager.daily_puzzles_completed += 1
 
 				FileManager.save_game()

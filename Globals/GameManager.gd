@@ -297,6 +297,12 @@ func get_levels_to_hints():
 func set_levels_to_hints(value: int):
 	progress[DictionaryManager.current_dict]["levelsToHints"][current_difficulty] = value
 
+func get_daily_completed():
+	return progress[DictionaryManager.current_dict]["dailyCompleted"]
+
+func set_daily_completed():
+	progress[DictionaryManager.current_dict]["dailyCompleted"] = true
+	progress[DictionaryManager.current_dict]["lastDayCompleted"] = day_of_year
 
 ## Signal Resolver is used when you need to await one or more signals at a time
 ## and have a different outcome for each.

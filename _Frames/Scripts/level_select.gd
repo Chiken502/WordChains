@@ -36,7 +36,7 @@ func _ready() -> void:
 	%"Timed Mode".button_down.connect(_on_button_down.bind(%"Timed Mode"))
 	%"Timed Mode".button_up.connect(_on_button_up.bind(%"Timed Mode"))
 
-	if GameManager.daily_completed:
+	if GameManager.get_daily_completed():
 		%DailyButton.text = "View Daily Leaderboard"
 
 
@@ -77,7 +77,7 @@ func _on_button_down(button: Button):
 
 
 func _on_daily_button_pressed() -> void:
-	if GameManager.daily_completed:
+	if GameManager.get_daily_completed():
 		GameManager.open_leaderboard()
 	else:
 		$Panel.show()

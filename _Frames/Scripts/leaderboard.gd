@@ -27,7 +27,7 @@ func _ready() -> void:
 	else:
 		if GameManager.daily_mode:
 			var score = maxi(0, 36000 - GameManager.daily_time)
-			CheddaBoards.submit_score_to_board("daily-puzzle", score)
+			CheddaBoards.submit_score_to_board("daily-puzzle-%s" % DictionaryManager.current_dict.to_lower(), score)
 			mode = "daily"
 			print("Submitting score")
 		if GameManager.timed_mode:
@@ -56,7 +56,7 @@ func _ready() -> void:
 func show_leaderboard():
 	print("REQUESTING LEADERBOARD")
 	if mode == "daily":
-		CheddaBoards.get_scoreboard("daily-puzzle")
+		CheddaBoards.get_scoreboard("daily-puzzle-%s" % DictionaryManager.current_dict.to_lower())
 	elif mode == "timed":
 		CheddaBoards.get_scoreboard("timed-mode")
 	else:
@@ -106,7 +106,7 @@ func _on_button_pressed() -> void:
 
 		if GameManager.daily_mode:
 			var score = maxi(0, 36000 - GameManager.daily_time)
-			CheddaBoards.submit_score_to_board("daily-puzzle", score)
+			CheddaBoards.submit_score_to_board("daily-puzzle-%s" % DictionaryManager.current_dict.to_lower(), score)
 			mode = "daily"
 			print("Submitting score")
 		if GameManager.timed_mode:
