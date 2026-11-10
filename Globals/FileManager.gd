@@ -1,10 +1,7 @@
 extends Node
 
-var save_path := "user://savegame.data"
-var settings_path := "user://settings.data"
-
-# Once have more settings, save settings to a config file.
-
+var save_path := "user://savegame.json"
+var settings_path := "user://settings.json"
 
 ## Saves game settings to settings_path
 func save_settings():
@@ -26,7 +23,6 @@ func save_settings():
 ## Saves game progress to save_path
 func save_game():
 	print("Saving Game...")
-	GameManager.save_language_progress(DictionaryManager.current_dict)
 	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
 
 	var last_daily_complete = GameManager.last_day_completed
@@ -36,16 +32,13 @@ func save_game():
 
 	var save_data = {
 		"needTutorial": GameManager.need_tutorial,
-		"current_levels": GameManager.current_levels,
 		"hints": GameManager.amt_of_hints,
 		"nickname": GameManager.nickname,
 		"lastDailyComplete": last_daily_complete,
 		"lastDifficulty": GameManager.last_difficulty,
 		"lastLanguage": DictionaryManager.current_dict,
-		"enLevelData": GameManager.en_levels,
-		"deLevelData": GameManager.de_levels,
-		"esLevelData": GameManager.es_levels,
-		"frLevelData": GameManager.fr_levels,
+		"progress": GameManager.progress,
+		
 		"dailyPuzzlesCompleted": GameManager.daily_puzzles_completed,
 		"totalTimedLevelsCompleted": GameManager.total_timed_mode_puzzles_completed,
 		"bestTimedMode": GameManager.best_timed_mode,
@@ -95,21 +88,13 @@ func load_game():
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		save_data = file.get_var()
 
-	#GameManager.current_levels = save_data.get("current_levels", [0, 0, 0, 0])
 	GameManager.amt_of_hints = save_data.get("hints", 1)
 	GameManager.need_tutorial = save_data.get("needTutorial", true)
 	GameManager.nickname = save_data.get("nickname", "")
 	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
 	GameManager.last_difficulty = save_data.get("lastDifficulty", 0)
-	
-	GameManager.en_levels = save_data.get("enLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
-	GameManager.de_levels = save_data.get("deLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
-	GameManager.es_levels = save_data.get("esLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
-	GameManager.fr_levels = save_data.get("frLevelData", [[0, 0, 0, 0], GameManager.defults_levels_to_hints.duplicate()])
+	GameManager.progress = save_data.get("progress", GameManager.defult_progress.duplicate(true))
 	DictionaryManager.change_dictionary(save_data.get("lastLanguage", "EN"))
-	GameManager.load_language_progress(DictionaryManager.current_dict)
-	if GameManager.levels_to_hint == []:
-		GameManager.levels_to_hint = GameManager.defults_levels_to_hints.duplicate()
 	
 	GameManager.daily_puzzles_completed = save_data.get("dailyPuzzlesCompleted", 0)
 	GameManager.total_timed_mode_puzzles_completed = save_data.get("totalTimedLevelsCompleted", 0)

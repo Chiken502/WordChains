@@ -22,7 +22,7 @@ func _on_play_pressed() -> void:
 	if not GameManager.need_tutorial:
 		GameManager.load_level(
 			GameManager.last_difficulty,
-			GameManager.current_levels[GameManager.last_difficulty],
+			GameManager.progress[DictionaryManager.current_dict]["levelProg"][GameManager.last_difficulty],
 		)
 		GameManager.start_game()
 	else:

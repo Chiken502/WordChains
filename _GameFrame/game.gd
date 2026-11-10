@@ -145,9 +145,7 @@ func get_ready():
 	undo_used = 0
 
 	if not GameManager.timed_mode:
-		$Control/levelInfo/levelNum.text = "Level " + str(
-			GameManager.current_levels[GameManager.current_difficulty] + 1
-		)
+		$Control/levelInfo/levelNum.text = "Level " + str(GameManager.get_current_level_value() + 1)
 
 	if GameManager.daily_mode:
 		PostHog.capture(
@@ -163,7 +161,7 @@ func get_ready():
 		PostHog.capture(
 			"level_started",
 			{
-				"level": GameManager.current_levels[GameManager.current_difficulty] + 1,
+				"level": GameManager.get_current_level_value() + 1,
 				"difficulty": GameManager.current_difficulty,
 			},
 		)
@@ -391,16 +389,14 @@ func _process(_delta: float) -> void:
 				if not GameManager.timed_mode:
 					success = await GameManager.load_level(
 						GameManager.current_difficulty,
-						GameManager.current_levels[GameManager.current_difficulty] + 1,
+						GameManager.get_current_level_value() + 1,
 					)
-					GameManager.current_levels[GameManager.current_difficulty] += 1
+					GameManager.advance_current_level()
 
-					GameManager.levels_to_hint[GameManager.current_difficulty] -= 1
-					if GameManager.levels_to_hint[GameManager.current_difficulty] <= 0:
+					GameManager.set_levels_to_hints(GameManager.get_levels_to_hints() - 1)
+					if GameManager.get_levels_to_hints() <= 0:
 						hints += 1
-						GameManager.levels_to_hint[GameManager.current_difficulty] = GameManager.defults_levels_to_hints[
-							GameManager.current_difficulty
-						]
+						GameManager.set_levels_to_hints(GameManager.defults_levels_to_hints[GameManager.current_difficulty])
 						tween_controller.hint_given()
 
 					FileManager.save_game()
@@ -414,7 +410,7 @@ func _process(_delta: float) -> void:
 					PostHog.capture(
 						"level complete",
 						{
-							"level": GameManager.current_levels[GameManager.current_difficulty],
+							"level": GameManager.get_current_level_value(),
 							"difficulty": GameManager.current_difficulty,
 							"time": level_time,
 							"hintsUsed": hints_used,
@@ -424,10 +420,10 @@ func _process(_delta: float) -> void:
 
 					get_ready()
 				else: # Happens on the last level.
-					print("Couldn't load level %s. Going Home" % str(GameManager.current_level + 1))
+					print("Couldn't load level %s. Going Home" % str(GameManager.get_current_level_value() + 1))
 
 					PostHog.capture("GAME_COMPLETE")
-					GameManager.current_level = 0
+					GameManager.set_current_level_value(0)
 					GameManager.back_to_menu()
 			else:
 				var level_time = (Time.get_ticks_msec() - level_start_time) / 100.0

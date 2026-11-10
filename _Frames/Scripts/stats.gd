@@ -35,7 +35,7 @@ func _ready() -> void:
 
 func get_total_puzzles_completed():
 	var total = 0
-	for i in GameManager.current_levels:
+	for i in GameManager.progress[DictionaryManager.current_dict]["levelProg"]:
 		total += i
 
 	return total

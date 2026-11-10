@@ -45,7 +45,7 @@ func _on_home_pressed() -> void:
 
 
 func _level_selected(difficulty: int):
-	GameManager.load_level(difficulty, GameManager.current_levels[difficulty])
+	GameManager.load_level(difficulty, GameManager.progress[DictionaryManager.current_dict]["levelProg"][GameManager.last_difficulty])
 	GameManager.last_difficulty = difficulty
 	GameManager.start_game()
 

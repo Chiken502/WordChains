@@ -69,9 +69,7 @@ func _change_langauge(index: int, texture_rext: TextureRect):
 	texture_rext.texture = load("res://Flags/%s.png" % current_langauge)
 	
 	current_langauge = new_lang
-	GameManager.save_language_progress(DictionaryManager.current_dict)
 	DictionaryManager.change_dictionary(new_lang)
-	GameManager.load_language_progress(DictionaryManager.current_dict)
 	FileManager.save_game()
 	
 	$VBoxContainer/Main/PanelContainer/TextureRect.texture = load("res://Flags/%s.png" % current_langauge)

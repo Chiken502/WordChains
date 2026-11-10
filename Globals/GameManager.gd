@@ -9,17 +9,65 @@ var solution_long := [] ## Stores solution in words instead of just letters
 
 var current_game_version := "v0.51b" ## Current game version number
 
-var current_levels := [0, 0, 0, 0] ## Progress on each difficulty level.
 var current_difficulty := 0 ## Current Difficulty Level
 var last_difficulty := 0 ## Last played difficulty level
 var amt_of_hints := 1 ## Amount of hints the player has remaining
 var defults_levels_to_hints := [4, 3, 2, 1]
-var levels_to_hint := defults_levels_to_hints.duplicate()
 
-var de_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
-var en_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
-var es_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
-var fr_levels := [[0, 0, 0, 0], defults_levels_to_hints.duplicate()]
+
+var progress : Dictionary = {
+	"DE": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	},
+	"EN": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	},
+	"ES": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	},
+	"FR": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	}
+}
+
+var defult_progress : Dictionary = {
+	"DE": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	},
+	"EN": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	},
+	"ES": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	},
+	"FR": {
+		"levelProg" : [0,0,0,0],
+		"levelsToHints" : defults_levels_to_hints.duplicate(),
+		"dailyCompleted" : false,
+		"lastDayCompleted" : -1,
+	}
+}
 
 # Settings Variables
 var screen_shake_on = true ## Controls wether the screen shakes when a word is not in the dictionary
@@ -231,40 +279,23 @@ func reset_autoload():
 	set_script(current_script)
 
 
-func load_language_progress(code: String):
-	var temp_lang_levels = []
-	
-	match (code):
-		"DE":
-			temp_lang_levels = de_levels
-		"EN":
-			temp_lang_levels = en_levels
-		"ES":
-			temp_lang_levels = es_levels
-		"FR":
-			temp_lang_levels = fr_levels
-	
-	current_levels = temp_lang_levels[0].duplicate()
-	levels_to_hint = temp_lang_levels[1].duplicate()
-	if levels_to_hint == []:
-		levels_to_hint = defults_levels_to_hints.duplicate()
+# Progress Helper Methods
+func get_current_level_value():
+	return progress[DictionaryManager.current_dict]["levelProg"][current_difficulty]
 
 
-func save_language_progress(code: String):
-	var progress = [
-		current_levels.duplicate(),
-		levels_to_hint.duplicate()
-	]
+func set_current_level_value(value:int):
+	progress[DictionaryManager.current_dict]["levelProg"][current_difficulty] = value
 
-	match code:
-		"EN":
-			en_levels = progress
-		"DE":
-			de_levels = progress
-		"ES":
-			es_levels = progress
-		"FR":
-			fr_levels = progress
+
+func advance_current_level(amount: int = 1):
+	progress[DictionaryManager.current_dict]["levelProg"][current_difficulty] += amount
+
+func get_levels_to_hints():
+	return progress[DictionaryManager.current_dict]["levelsToHints"][current_difficulty]
+
+func set_levels_to_hints(value: int):
+	progress[DictionaryManager.current_dict]["levelsToHints"][current_difficulty] = value
 
 
 ## Signal Resolver is used when you need to await one or more signals at a time
