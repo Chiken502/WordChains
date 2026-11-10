@@ -6,6 +6,9 @@ var state = CLOSED
 var current_langauge = "EN"
 var other_langauges = ["EN", "ES", "DE", "FR"]
 
+var active_tweens : Array[Tween] = []
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	current_langauge = DictionaryManager.current_dict
@@ -22,16 +25,22 @@ func _ready() -> void:
 			buttons[i].disabled = true
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _clear_tweens() -> void:
+	for tween in active_tweens:
+		if tween and tween.is_valid():
+			tween.kill()
+	
+	active_tweens.clear()
 
 
 func expand():
+	_clear_tweens()
 	state = ANIMATING
+
 	var buttons : Array = $VBoxContainer.get_children()
 	for i in range(1, buttons.size()):
 		var tween = get_tree().create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+		active_tweens.append(tween)
 		tween.tween_property(buttons[i], "offset_transform_scale", Vector2.ONE, 0.5)
 		await get_tree().create_timer(0.2).timeout
 	
@@ -43,7 +52,9 @@ func expand():
 
 
 func contract():
+	_clear_tweens()
 	state = ANIMATING
+	
 	var buttons: Array = $ VBoxContainer.get_children()
 	for i in range(buttons.size() -1, 0, -1):
 		buttons[i].offset_transform_scale = Vector2(0, 0)
