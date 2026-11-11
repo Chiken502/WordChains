@@ -88,7 +88,7 @@ func _on_leaderboard(_sb_id, _config, entries):
 				.tween_property(panel, "offset_transform_scale", Vector2.ONE, 0.5) \
 				.set_ease(Tween.EASE_OUT) \
 				.set_trans(Tween.TRANS_QUINT)
-		await tween.finished
+		await get_tree().create_timer(0.1).timeout
 
 
 # Nickname button pressed
