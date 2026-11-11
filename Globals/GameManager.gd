@@ -85,8 +85,8 @@ var day_of_year = -1:
 	set(value):
 		day_of_year = value
 		if day_of_year != -1:
-			daily_completed = last_day_completed == day_of_year
-var last_day_completed = -1 ## Last day that the daily puzzle was completed.
+			for i in progress:
+				progress[i]["dailyCompleted"] = progress[i]["lastDayCompleted"] == day_of_year
 
 var timed_mode = false ## True if player is playing Timed Mode
 var timed_mode_levels_completed = 0 ## How many levels were completed in the last timed mode run

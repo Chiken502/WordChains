@@ -25,16 +25,10 @@ func save_game():
 	print("Saving Game...")
 	var save_file = FileAccess.open(save_path, FileAccess.WRITE)
 
-	var last_daily_complete = GameManager.last_day_completed
-
-	if GameManager.daily_completed:
-		last_daily_complete = GameManager.day_of_year
-
 	var save_data = {
 		"needTutorial": GameManager.need_tutorial,
 		"hints": GameManager.amt_of_hints,
 		"nickname": GameManager.nickname,
-		"lastDailyComplete": last_daily_complete,
 		"lastDifficulty": GameManager.last_difficulty,
 		"lastLanguage": DictionaryManager.current_dict,
 		"progress": GameManager.progress,
@@ -81,22 +75,23 @@ func load_game():
 	GameManager.hint_flashing = settings_data.get("hintFlash", true)
 	print("Settings Loaded")
 
-	var save_data : Dictionary = {}
+	var save_data = {}
 	if not FileAccess.file_exists(save_path):
 		print("No save file found!")
 	else:
 		var file = FileAccess.open(save_path, FileAccess.READ)
 		save_data = file.get_var()
+		
+		if save_data == null:
+			save_data = {} # Still lets the .get do defults
 
 	GameManager.amt_of_hints = save_data.get("hints", 1)
 	GameManager.need_tutorial = save_data.get("needTutorial", true)
 	GameManager.nickname = save_data.get("nickname", "")
-	GameManager.last_day_completed = save_data.get("lastDailyComplete", -1)
 	GameManager.last_difficulty = save_data.get("lastDifficulty", 0)
 	GameManager.progress = save_data.get("progress", GameManager.defult_progress.duplicate(true))
 	DictionaryManager.change_dictionary(save_data.get("lastLanguage", "EN"))
 	
-	GameManager.daily_puzzles_completed = save_data.get("dailyPuzzlesCompleted", 0)
 	GameManager.total_timed_mode_puzzles_completed = save_data.get("totalTimedLevelsCompleted", 0)
 	GameManager.best_timed_mode = save_data.get("bestTimedMode", 0)
 	GameManager.total_hints_used = save_data.get("totalHintsUsed", 0)
