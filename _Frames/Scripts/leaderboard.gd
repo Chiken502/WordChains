@@ -93,31 +93,37 @@ func _on_leaderboard(_sb_id, _config, entries):
 
 # Nickname button pressed
 func _on_button_pressed() -> void:
-	if $VBoxContainer/VBoxContainer/LineEdit.text != "":
-		CheddaBoards.login_anonymous($VBoxContainer/VBoxContainer/LineEdit.text)
-		print("WAITING FOR LOGIN")
-
-		await CheddaBoards.login_success
-
-		print("LOGIN FINISHED")
-
+	if $VBoxContainer/VBoxContainer/LineEdit.text.strip_edges() != "":
 		GameManager.nickname = $VBoxContainer/VBoxContainer/LineEdit.text
 		FileManager.save_game()
 
-		if GameManager.daily_mode:
-			var score = maxi(0, 36000 - GameManager.daily_time)
-			CheddaBoards.submit_score_to_board("daily-puzzle-%s" % DictionaryManager.current_dict.to_lower(), score)
-			mode = "daily"
-			print("Submitting score")
-		if GameManager.timed_mode:
-			var score = GameManager.timed_mode_levels_completed
-			CheddaBoards.submit_score_to_board("timed-mode", score)
-			mode = "timed"
-			print("Submitting Score")
+		print("WAITING FOR LOGIN")
+		CheddaBoards.login_success.connect(_login_success)
+		CheddaBoards.login_anonymous($VBoxContainer/VBoxContainer/LineEdit.text)
 
-		$VBoxContainer/VBoxContainer.hide()
-		$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
-		await CheddaBoards.score_submitted
+
+func _login_success(_nickname:String = ""):
+	print("LOGIN FINISHED")
+
+	CheddaBoards.score_submitted_to_board.connect(_score_submitted)
+
+	if GameManager.daily_mode:
+		var score = maxi(0, 36000 - GameManager.daily_time)
+		CheddaBoards.submit_score_to_board("daily-puzzle-%s" % DictionaryManager.current_dict.to_lower(), score)
+		mode = "daily"
+		print("Submitting score")
+	if GameManager.timed_mode:
+		var score = GameManager.timed_mode_levels_completed
+		CheddaBoards.submit_score_to_board("timed-mode", score)
+		mode = "timed"
+		print("Submitting Score")
+
+	$VBoxContainer/VBoxContainer.hide()
+	$VBoxContainer/ScrollContainer/VBoxContainer2/Label.show()
+	print("Waiting on score to submit")
+
+func _score_submitted(scoreboard_id: String, _score: int, _streak: int):
+		print("Score submitted signal recived. ID: ", scoreboard_id)
 		show_leaderboard()
 		GameManager.daily_mode = false
 		GameManager.timed_mode = false
