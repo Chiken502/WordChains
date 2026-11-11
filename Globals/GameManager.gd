@@ -78,14 +78,13 @@ var need_tutorial = true ## True if the player needs to play the tutorial
 
 var daily_mode = false ## True if the player is currently playing the daily level
 var daily_time = 0 ## In tenth of seconds, Time that player took to complete the daily level
-## True if the player has already played the daily level in the current day (UTC)
-var daily_completed = false
 var day_of_year = -1:
 	## Day of the year (UTC)
 	set(value):
 		day_of_year = value
 		if day_of_year != -1:
 			for i in progress:
+				print(progress[i]["lastDayCompleted"], "==", day_of_year,": ", i)
 				progress[i]["dailyCompleted"] = progress[i]["lastDayCompleted"] == day_of_year
 
 var timed_mode = false ## True if player is playing Timed Mode
@@ -303,6 +302,7 @@ func get_daily_completed():
 func set_daily_completed():
 	progress[DictionaryManager.current_dict]["dailyCompleted"] = true
 	progress[DictionaryManager.current_dict]["lastDayCompleted"] = day_of_year
+	FileManager.save_game()
 
 ## Signal Resolver is used when you need to await one or more signals at a time
 ## and have a different outcome for each.

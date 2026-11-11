@@ -137,7 +137,7 @@ func _http_request_completed(
 			day_of_year = int(response["\"day_of_year\""])
 			GameManager.day_of_year = day_of_year
 			utc_datetime = String(response["\"utc_datetime\""])
-			print(day_of_year)
+			print("DOY:	", day_of_year)
 			request_received.emit(200)
 	else:
 		print("API Request failed with response code: ", response_code)
