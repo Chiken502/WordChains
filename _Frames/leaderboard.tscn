@@ -6,6 +6,43 @@
 [ext_resource type="Script" uid="uid://d2toi3smadpcb" path="res://Classes/color_agent.gd" id="4_0khxy"]
 [ext_resource type="LabelSettings" uid="uid://cd4808gjis3qt" path="res://Resources/settings_label.tres" id="4_uw418"]
 
+[sub_resource type="Animation" id="Animation_uw418"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["LOADING"]
+}
+
+[sub_resource type="Animation" id="Animation_lv3td"]
+resource_name = "loading"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.76666665, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": ["LOADING", "LOADING...", "LOADING..."]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x62lq"]
+_data = {
+&"RESET": SubResource("Animation_uw418"),
+&"loading": SubResource("Animation_lv3td")
+}
+
 [node name="Leaderboard" type="Control" unique_id=2132258922]
 layout_mode = 3
 anchors_preset = 15
@@ -146,6 +183,10 @@ layout_mode = 2
 text = "LOADING"
 label_settings = ExtResource("4_uw418")
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/ScrollContainer/VBoxContainer2/Label" unique_id=488537165]
+libraries/ = SubResource("AnimationLibrary_x62lq")
+autoplay = &"loading"
 
 [node name="ColorAgent" type="Node" parent="." unique_id=303691738 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("4_0khxy")
