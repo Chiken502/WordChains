@@ -11,6 +11,12 @@ var active_tweens : Array[Tween] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	for button in [$VBoxContainer/Main, $VBoxContainer/Button2, $VBoxContainer/Button3, $VBoxContainer/Button4]:
+		button.mouse_entered.connect(_on_control_mouse_entered.bind(button))
+		button.mouse_exited.connect(_on_control_mouse_exited.bind(button))
+		button.button_up.connect(_on_button_up.bind(button))
+		button.button_down.connect(_on_button_down.bind(button))
+	
 	current_langauge = DictionaryManager.current_dict
 	other_langauges[other_langauges.find(current_langauge)] = "EN"
 	other_langauges[0] = current_langauge
@@ -70,6 +76,7 @@ func _on_button_pressed() -> void:
 	elif state == OPEN: 
 		contract()
 
+
 func _change_langauge(index: int, texture_rext: TextureRect):
 	var new_lang = other_langauges[index]
 	var old_lang = current_langauge
@@ -86,3 +93,32 @@ func _change_langauge(index: int, texture_rext: TextureRect):
 	$VBoxContainer/Main/PanelContainer/TextureRect.texture = load("res://Flags/%s.png" % current_langauge)
 	
 	contract()
+
+
+# Animations 
+func _on_control_mouse_entered(button: Button) -> void:
+	if not button.disabled:
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(button, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+
+
+func _on_control_mouse_exited(button: Button) -> void:
+	if not button.disabled:
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(button, "offset_transform_scale", Vector2(1, 1), 0.1)
+
+
+func _on_button_up(button: Button):
+	if not button.disabled:
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(button, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+
+
+func _on_button_down(button: Button):
+	if not button.disabled:
+		var tween = get_tree().create_tween()
+
+		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
