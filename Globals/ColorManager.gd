@@ -106,7 +106,7 @@ func change_color(color_idx: int):
 func modify_svg(path: String) -> ImageTexture:
 	var file = FileAccess.open(path, FileAccess.READ)
 	if not file:
-		push_error("Failed to open SVG file.")
+		push_error("Failed to open SVG file: ", path)
 		return
 
 	var svg_txt = file.get_as_text()
