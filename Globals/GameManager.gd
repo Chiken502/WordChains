@@ -7,7 +7,7 @@ var target_word := "" ## The word the player is trying to get to
 var solution := "" ## Stores the letters needed for the solution in the order they will be used
 var solution_long := [] ## Stores solution in words instead of just letters
 
-var current_game_version := "v0.51b" ## Current game version number
+var current_game_version := "v0.6b" ## Current game version number
 
 var current_difficulty := 0 ## Current Difficulty Level
 var last_difficulty := 0 ## Last played difficulty level
