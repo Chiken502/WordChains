@@ -69,6 +69,10 @@ debug={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://Resources/WordChainsTranslations.de.translation", "res://Resources/WordChainsTranslations.en.translation", "res://Resources/WordChainsTranslations.es.translation", "res://Resources/WordChainsTranslations.fr.translation")
+
 [rendering]
 
 textures/vram_compression/import_etc2_astc=true

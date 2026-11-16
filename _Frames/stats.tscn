@@ -83,7 +83,7 @@ unique_name_in_owner = true
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 1
-text = "YOUR STATS"
+text = "STATS"
 label_settings = ExtResource("2_gkl3p")
 horizontal_alignment = 1
 
@@ -99,7 +99,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/PuzzlesCompleted" unique_id=1708858924]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Puzzles Completed"
+text = "STATS_PUZZLES_COMPLETED"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/PuzzlesCompleted" unique_id=87561727]
@@ -120,7 +120,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/DailysCompleted" unique_id=525097459]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Daily Puzzles Completed"
+text = "STATS_DAILYS_COMPLETED"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/DailysCompleted" unique_id=624221046]
@@ -141,7 +141,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/TimedModesCompleted" unique_id=1565772402]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Timed Mode Levels Completed"
+text = "STATS_TIME_COMPLETED"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/TimedModesCompleted" unique_id=663724661]
@@ -162,7 +162,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/BestTimedMode" unique_id=1407843804]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Best Timed Mode"
+text = "STATS_BEST_TIMED"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/BestTimedMode" unique_id=2098816795]
@@ -183,7 +183,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/HintsUsed" unique_id=1443907726]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Total Hints Used"
+text = "STATS_TOTAL_HINTS"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/HintsUsed" unique_id=562183695]
@@ -204,7 +204,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/UndosUsed" unique_id=568008638]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Total Undos Used"
+text = "STATS_TOTAL_UNDOS"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/UndosUsed" unique_id=924120630]
@@ -225,7 +225,7 @@ offset_transform_enabled = true
 [node name="Label" type="Label" parent="VBoxContainer/LettersDraged" unique_id=1158065295]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "Total Letters Dragged"
+text = "STATS_TOTAL_LETTERS_DRAGGED"
 label_settings = ExtResource("3_q1elt")
 
 [node name="Spacer" type="Control" parent="VBoxContainer/LettersDraged" unique_id=1025842465]

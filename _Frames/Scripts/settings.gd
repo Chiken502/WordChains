@@ -19,7 +19,7 @@ func _ready() -> void:
 	MusicManager.scene_loaded()
 	# Set up option buttons options
 	for colors in ColorManager.colors:
-		$VBoxContainer/Color/OptionButton.add_item(colors[0])
+		$VBoxContainer/Color/OptionButton.add_item(tr("COLORS_" + colors[0].to_upper()))
 
 	$VBoxContainer/Color/OptionButton.selected = ColorManager.current_color
 

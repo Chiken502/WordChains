@@ -110,6 +110,7 @@ offset_transform_enabled = true
 mouse_filter = 1
 text = "SETTINGS"
 label_settings = ExtResource("3_x0uk4")
+horizontal_alignment = 1
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=858924735]
 layout_mode = 2
@@ -122,7 +123,7 @@ theme_override_constants/separation = 44
 
 [node name="Label" type="Label" parent="VBoxContainer/Color" unique_id=2044065118]
 layout_mode = 2
-text = "Color"
+text = "SETTINGS_COLOR"
 label_settings = ExtResource("4_h37ls")
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/Color" unique_id=318284854]
@@ -142,7 +143,7 @@ theme_override_constants/separation = 43
 
 [node name="Label" type="Label" parent="VBoxContainer/Music" unique_id=1082011452]
 layout_mode = 2
-text = "Music"
+text = "SETTINGS_MUSIC"
 label_settings = ExtResource("4_h37ls")
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/Music" unique_id=78421592]
@@ -162,7 +163,7 @@ theme_override_constants/separation = 34
 
 [node name="Label" type="Label" parent="VBoxContainer/Sound" unique_id=723964161]
 layout_mode = 2
-text = "Sound"
+text = "SETTINGS_SOUND"
 label_settings = ExtResource("4_h37ls")
 
 [node name="HSlider" type="HSlider" parent="VBoxContainer/Sound" unique_id=1804269823]
@@ -181,7 +182,7 @@ theme_override_constants/separation = 84
 
 [node name="Label" type="Label" parent="VBoxContainer/ScreenShake" unique_id=377312275]
 layout_mode = 2
-text = "Screen Shake"
+text = "SETTINGS_SCREEN_SHAKE"
 label_settings = ExtResource("4_h37ls")
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/ScreenShake" unique_id=1415117339]
@@ -199,7 +200,7 @@ theme_override_constants/separation = 86
 
 [node name="Label" type="Label" parent="VBoxContainer/HintFlash" unique_id=2059155637]
 layout_mode = 2
-text = "Hint Flashing"
+text = "SETTINGS_HINT_FLASHING"
 label_settings = ExtResource("4_h37ls")
 
 [node name="CheckBox" type="CheckBox" parent="VBoxContainer/HintFlash" unique_id=1520277470]
@@ -220,13 +221,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/Nickname" unique_id=345500714]
 layout_mode = 2
-text = "Display Name"
+text = "LEADERBOARD_NAME_PLACEHOLDER"
 label_settings = ExtResource("4_h37ls")
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/Nickname" unique_id=341988913]
 layout_mode = 2
 theme = ExtResource("2_klobn")
-placeholder_text = "Not set yet"
+placeholder_text = "SETTINGS_NOT_SET"
 max_length = 16
 emoji_menu_enabled = false
 
@@ -244,7 +245,7 @@ layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("2_klobn")
 theme_type_variation = &"ReadableButton"
-text = "Replay Tutorial"
+text = "SETTINGS_REPLAY_TUTORIAL"
 
 [node name="ResetButton" type="VBoxContainer" parent="VBoxContainer" unique_id=827054949]
 layout_mode = 2
@@ -256,7 +257,7 @@ layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("2_klobn")
 theme_type_variation = &"ReadableButton"
-text = "Reset Game"
+text = "SETTINGS_RESET_GAME"
 
 [node name="ColorAgent" type="Node" parent="." unique_id=1148928729 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("5_nair6")
@@ -267,15 +268,14 @@ metadata/_custom_type_script = "uid://d2toi3smadpcb"
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1285682766]
 oversampling_override = 1.0
+title = "SETTINGS_CONFIRM"
 initial_position = 2
 size = Vector2i(414, 199)
 theme = ExtResource("7_ra52q")
-ok_button_text = "Delete Save File"
-dialog_text = "Are you sure you want to delete your save file?
-This action is irreversible.
-
-Note: This will not erase your settings"
+ok_button_text = "SETTINGS_DELETE_SAVE"
+dialog_text = "SETTINS_ARE_YOU_SURE"
 dialog_autowrap = true
+cancel_button_text = "SETTINGS_CANCEL"
 
 [node name="Dimming Panel" type="Panel" parent="." unique_id=1665703447]
 visible = false

@@ -113,21 +113,6 @@ offset_transform_enabled = true
 theme = ExtResource("2_hkiig")
 text = "Home"
 
-[node name="Title" type="Label" parent="." unique_id=1433060846]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -118.0
-offset_top = 40.0
-offset_right = 118.0
-offset_bottom = 68.0
-grow_horizontal = 2
-offset_transform_enabled = true
-mouse_filter = 0
-text = "CREDITS"
-label_settings = ExtResource("3_5ljro")
-
 [node name="ColorAgent" type="Node" parent="." unique_id=201434127 node_paths=PackedStringArray("bg_color_rect", "ground_color_rect", "labels")]
 script = ExtResource("6_vo65t")
 bg_color_rect = NodePath("../ColorRect")
@@ -199,6 +184,21 @@ mouse_filter = 0
 text = "S"
 label_settings = SubResource("LabelSettings_c5orr")
 
+[node name="Title" type="Label" parent="." unique_id=1433060846]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -118.0
+offset_top = 40.0
+offset_right = 118.0
+offset_bottom = 108.0
+grow_horizontal = 2
+offset_transform_enabled = true
+mouse_filter = 0
+text = "CREDITS"
+label_settings = ExtResource("3_5ljro")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=431682666]
 layout_mode = 1
 anchors_preset = 8
@@ -219,7 +219,7 @@ theme_override_constants/separation = 0
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 0
-text = "Game Made By"
+text = "CREDITS_GAME_MADE"
 label_settings = SubResource("LabelSettings_hkiig")
 
 [node name="Label2" type="Label" parent="VBoxContainer" unique_id=1602475410]
@@ -234,7 +234,7 @@ horizontal_alignment = 2
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 0
-text = "Godot Splash Screen By"
+text = "CREDITS_GODOT_SPLASH"
 label_settings = SubResource("LabelSettings_hkiig")
 
 [node name="Label4" type="Label" parent="VBoxContainer" unique_id=672674862]
@@ -250,7 +250,7 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 0
-text = "Godot Splash Screen Sound Effects By"
+text = "CREDITS_GODOT_SPLASH_SOUNDS"
 label_settings = SubResource("LabelSettings_hkiig")
 autowrap_mode = 3
 
@@ -266,7 +266,7 @@ horizontal_alignment = 2
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 0
-text = "Fonts From"
+text = "CREDITS_FONTS"
 label_settings = SubResource("LabelSettings_hkiig")
 
 [node name="Label8" type="Label" parent="VBoxContainer" unique_id=1215788957]

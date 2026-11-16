@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dy2wpso8trrvt"
+
+[deps]
+
+files=["res://Resources/WordChainsTranslations.en.translation", "res://Resources/WordChainsTranslations.fr.translation", "res://Resources/WordChainsTranslations.es.translation", "res://Resources/WordChainsTranslations.de.translation"]
+
+source_file="res://Resources/WordChainsTranslations.csv"
+dest_files=["res://Resources/WordChainsTranslations.en.translation", "res://Resources/WordChainsTranslations.fr.translation", "res://Resources/WordChainsTranslations.es.translation", "res://Resources/WordChainsTranslations.de.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

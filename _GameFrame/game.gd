@@ -72,10 +72,10 @@ func _ready() -> void:
 	var difficulty_text = ""
 
 	if GameManager.daily_mode:
-		difficulty_text = "Daily Puzzle"
+		difficulty_text = tr("GAME_DAILY_PUZZLE") # "Daily Puzzle
 		$Control/levelInfo/levelNum.hide()
 	elif GameManager.timed_mode:
-		difficulty_text = "Levels Completed: " + str(timed_mode_levels_completed)
+		difficulty_text =  tr("GAME_LEVELS_COMPLETED") + ": " + str(timed_mode_levels_completed)
 		$Control/levelInfo/levelNum.text = "2:30"
 		%Reset.disabled = true
 		%Hint.disabled = true
@@ -83,16 +83,16 @@ func _ready() -> void:
 	else:
 		match GameManager.current_difficulty:
 			0:
-				difficulty_text = "EASY"
+				difficulty_text = tr("GAME_EASY_MODE")
 			1:
-				difficulty_text = "MEDIUM"
+				difficulty_text = tr("GAME_MEDIUM_MODE")
 			2:
-				difficulty_text = "HARD"
+				difficulty_text = tr("GAME_HARD_MODE")
 			3:
-				difficulty_text = "EXPERT"
+				difficulty_text = tr("GAME_EXPERT_MODE")
 
 		if GameManager.tutorial_mode:
-			$Control/levelInfo/levelNum.text = "Tutorial Level"
+			$Control/levelInfo/levelNum.text = tr("GAME_TUTORIAL_LEVEL")
 
 	$Control/levelInfo/levelDif.text = difficulty_text
 
@@ -145,7 +145,7 @@ func get_ready():
 	undo_used = 0
 
 	if not GameManager.timed_mode:
-		$Control/levelInfo/levelNum.text = "Level " + str(GameManager.get_current_level_value() + 1)
+		$Control/levelInfo/levelNum.text = tr("GAME_LEVEL") + " " + str(GameManager.get_current_level_value() + 1)
 
 	if GameManager.daily_mode:
 		PostHog.capture(
@@ -295,7 +295,7 @@ func _on_current_word_letter_changed(node, letter):
 		if GameManager.screen_shake_on:
 			$Control/CameraHolder/ShakeCamera2D.screen_shake(10, 0.75)
 
-		$Control/Control2/VBoxContainer/WrongWord.text = "[b]" + new_word.to_upper() + "[/b] is not a word"
+		$Control/Control2/VBoxContainer/WrongWord.text = "[b]" + new_word.to_upper() + "[/b] " + tr("GAME_NOT_WORD")
 
 		$TweenController.not_a_word()
 		word_not_found.emit(node) #TODO: ADD ERROR SOUND
@@ -314,10 +314,10 @@ func _process(_delta: float) -> void:
 
 	if GameManager.daily_mode:
 		%Hint.disabled = true
-		%Hint.tooltip_text = "Hints are disabled for the daily puzzle"
+		%Hint.tooltip_text = tr("GAME_HINTS_DISABLED")
 	elif hints <= 0:
 		%Hint.disabled = true
-		%Hint.tooltip_text = "To get more hints complete levels!"
+		%Hint.tooltip_text = tr("GAME_MORE_HINTS")
 	else:
 		%Hint.disabled = false
 		%Hint.tooltip_text = ""
@@ -356,7 +356,7 @@ func _process(_delta: float) -> void:
 					secret_solution = true
 
 			if secret_solution:
-				$Control/Control2/VBoxContainer/WrongWord.text = "[wave]You Found a Secret Solution!"
+				$Control/Control2/VBoxContainer/WrongWord.text = "[wave]" + tr("GAME_SECRET_SOLUTION")
 
 			await get_tree().create_timer(1).timeout
 
@@ -378,7 +378,7 @@ func _process(_delta: float) -> void:
 
 			if GameManager.timed_mode:
 				timed_mode_levels_completed += 1
-				$Control/levelInfo/levelDif.text = "Levels Completed: " + str(
+				$Control/levelInfo/levelDif.text = tr("GAME_LEVELS_COMPLETED") + ": " + str(
 					timed_mode_levels_completed
 				)
 
@@ -515,7 +515,7 @@ func _on_hint_button_pressed() -> void:
 		var hint = ""
 
 		if undo_history.is_empty():
-			hint = "Next word is [b]" + solution_long[1] + "[/b]."
+			hint = tr("GAME_HINT_NEXT_WORD") + " [b]" + solution_long[1] + "[/b]."
 			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
 				"normal_font_size",
 				28,
@@ -537,15 +537,15 @@ func _on_hint_button_pressed() -> void:
 					break
 
 			var numbers_in_words = [
-				"first",
-				"second",
-				"third",
-				"fourth",
-				"fifth",
-				"sixth",
-				"seventh",
-				"eighth",
-				"ninth",
+				tr("GAME_FIRST").capitalize(),
+				tr("GAME_SECOND").capitalize(),
+				tr("GAME_THIRD").capitalize(),
+				tr("GAME_FOURTH").capitalize(),
+				tr("GAME_FIFTH").capitalize(),
+				tr("GAME_SIXTH").capitalize(),
+				tr("GAME_SEVENTH").capitalize(),
+				tr("GAME_EIGHTH").capitalize(),
+				tr("GAME_NINTH").capitalize(),
 			]
 
 			$Control/Control2/VBoxContainer/Hint.add_theme_font_size_override(
@@ -556,7 +556,7 @@ func _on_hint_button_pressed() -> void:
 				"normal_font_size",
 				26,
 			)
-			hint = "Try changing the [b]" + numbers_in_words[letter_idx] + "[/b] letter."
+			hint = tr("GAME_HINT_TRY_CHANGING") + " [b]" + numbers_in_words[letter_idx] + "[/b] " +tr("GAME_LETTER") + "." 
 			hint_word_letter = cw_h_box.get_children()[letter_idx]
 			hint_word_letter.hinted = true
 		else:
@@ -575,7 +575,7 @@ func _on_hint_button_pressed() -> void:
 				"normal_font_size",
 				22,
 			)
-			hint = "You need to [b]undo[/b] back to [b]" + undo_history[undo_idx] + "[/b]."
+			hint = tr("GAME_HINT_NEED_TO") + " [b]" + tr("GAME_UNDO") + "[/b] " + tr("GAME_HINT_BACK_TO") + " [b]" + undo_history[undo_idx] + "[/b]."
 
 		if hint:
 			$Control/Control2/VBoxContainer/Hint.text = hint
@@ -664,9 +664,9 @@ func _on_dictonary_pressed() -> void:
 
 		if error != OK:
 			$DictonaryPanel.loading = false
-			$DictonaryPanel.word = "GD ERROR: " + str(error)
-			$DictonaryPanel.definition = "Something went wrong while requesting the deffinition."
-			$DictonaryPanel.part_of_speech = "Error"
+			$DictonaryPanel.word = "GD"+ tr("GAME_ERROR").to_upper() + " : " + str(error)
+			$DictonaryPanel.definition = tr("GAME_DEFINITION_ERROR")
+			$DictonaryPanel.part_of_speech = tr("GAME_ERROR")
 
 
 func _on_dictonary_request_completed(
@@ -687,17 +687,16 @@ func _on_dictonary_request_completed(
 			print("Failed to parse JSON (or data was invalid/empty). CODE: 200")
 			$DictonaryPanel.loading = false
 			$DictonaryPanel.word = str(data["word"]).capitalize()
-			$DictonaryPanel.definition = "Deffinition for " + str(data["word"]).capitalize() + " was not found"
-			$DictonaryPanel.part_of_speech = "Error"
+			$DictonaryPanel.definition = tr("GAME_DEFINITION_FOR") + " " + str(data["word"]).capitalize() + " " + tr("GAME_DEFINTION_NOT_FOUND")
+			$DictonaryPanel.part_of_speech = tr("GAME_ERROR")
 	elif response_code == 429:
 		$DictonaryPanel.loading = false
 		$DictonaryPanel.word = "429"
-		$DictonaryPanel.definition = "You have been requesting to many definitions \
-		in the alloted time. Wait for ~1Hr and try again."
-		$DictonaryPanel.part_of_speech = "Error"
+		$DictonaryPanel.definition = tr("GAME_DEFFINITON_ERROR_429")
+		$DictonaryPanel.part_of_speech = tr("GAME_ERROR")
 	else:
 		print("Dictonary_Request response code : %s" % response_code)
 		$DictonaryPanel.loading = false
 		$DictonaryPanel.word = str(response_code)
-		$DictonaryPanel.definition = "Something went wrong while requesting the definition."
-		$DictonaryPanel.part_of_speech = "Error"
+		$DictonaryPanel.definition = tr("GAME_DEFINITION_ERROR")
+		$DictonaryPanel.part_of_speech = tr("GAME_ERROR")

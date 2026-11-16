@@ -37,7 +37,7 @@ func _ready() -> void:
 	%"Timed Mode".button_up.connect(_on_button_up.bind(%"Timed Mode"))
 
 	if GameManager.get_daily_completed():
-		%DailyButton.text = "View Daily Leaderboard"
+		%DailyButton.text = tr("LEVEL_SELECT_VEIW_DAILY_LEADERBOARD")
 
 
 func _on_home_pressed() -> void:

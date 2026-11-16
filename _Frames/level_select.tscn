@@ -93,7 +93,7 @@ layout_mode = 2
 layout_mode = 2
 offset_transform_enabled = true
 mouse_filter = 1
-text = "LEVEL SELECT"
+text = "LEVEL_SELECT"
 label_settings = ExtResource("2_6ejmw")
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=325043654]
@@ -107,7 +107,7 @@ layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("1_s6f1j")
 theme_type_variation = &"ReadableButton"
-text = "Daily Puzzle"
+text = "GAME_DAILY_PUZZLE"
 
 [node name="Timed Mode" type="Button" parent="VBoxContainer" unique_id=750891366]
 unique_name_in_owner = true
@@ -116,7 +116,7 @@ layout_mode = 2
 offset_transform_enabled = true
 theme = ExtResource("1_s6f1j")
 theme_type_variation = &"ReadableButton"
-text = "Timed Mode"
+text = "LEVEL_SELECT_TIMED_MODE"
 
 [node name="Spacer3" type="Control" parent="VBoxContainer" unique_id=10815102]
 custom_minimum_size = Vector2(0, 20)

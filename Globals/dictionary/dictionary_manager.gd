@@ -41,5 +41,5 @@ func load_dictionary():
 func change_dictionary(code: String):
 	print("Changing Dict to: " + code)
 	current_dict = code
-	
+	TranslationServer.set_locale(current_dict.to_lower())
 	load_dictionary()

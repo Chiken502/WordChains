@@ -1,0 +1,87 @@
+STRING ID,_DESCRIPTION,en,fr,es,de
+LANGUAGE_CODE,IETF language tag(s) without dash,enUS enGB,frFR,esES esAR esMX,deDE deCH deAT
+LANGUAGE_EN,[LanguageName] in english,English,French,Spanish,German
+LANGUAGE_DIRECTION,ltr or rtl (text direction used by game code),ltr,ltr,ltr,ltr
+GAME_DAILY_PUZZLE,,Daily Puzzle,Casse-tête quotidien,Acertijo diario,Tägliches Rätsel
+GAME_LEVELS_COMPLETED,,Levels Completed,Niveaux terminés,Niveles completados,Abgeschlossene Level
+GAME_EASY_MODE,,Easy,Facile,Fácil,Einfach
+GAME_MEDIUM_MODE,,Medium,Moyen,Intermedio,Mittel
+GAME_HARD_MODE,,Hard,Difficile,Difícil,Schwer
+GAME_EXPERT_MODE,,Expert,Expert,Experto,Experte
+GAME_TUTORIAL_LEVEL,,Tutorial Level,Niveau tutoriel,Nivel de tutorial,Tutorial-Level
+GAME_LEVEL,,Level,Niveau,Nivel,Level
+GAME_NOT_WORD,,is not a word,n’est pas un mot,no es una palabra,ist kein Wort
+GAME_HINTS_DISABLED,,Hints are disabled for the daily puzzle,Les indices sont désactivés pour le casse-tête quotidien.,Las pistas están desactivadas para el rompecabezas diario.,Hinweise sind für das tägliche Rätsel deaktiviert.
+GAME_MORE_HINTS,,To get more hints complete levels!,"Pour obtenir plus d'indices, terminez des niveaux !",¡Completa niveles para obtener más pistas!,"Schließe Level ab, um weitere Hinweise zu erhalten!"
+GAME_SECRET_SOLUTION,,You Found a Secret Solution!,Vous avez trouvé une solution secrète !,¡Has encontrado una solución secreta!,Du hast eine geheime Lösung gefunden!
+GAME_HINT_NEXT_WORD,,Next word is,Le mot suivant est,La siguiente palabra es,Das nächste Wort ist
+GAME_HINT_TRY_CHANGING,,Try changing the,Essayez de modifier le,Prueba a cambiar el,"Versuchen Sie, das ... zu ändern"
+GAME_LETTER,,letter,lettre,carta,Buchstabe
+GAME_FIRST,,First,Première ,primera ,Erster 
+GAME_SECOND,,Second,Deuxième,segunda,Zweiter 
+GAME_THIRD,,Third,Troisième,tercera,Dritter 
+GAME_FOURTH,,Fourth,Quatrième,cuarta ,Vierter 
+GAME_FIFTH,,Fifth,Cinquième,quinta ,Fünfter 
+GAME_SIXTH,,Sixth,Sixième,sexta ,Sechster 
+GAME_SECENTH,,Seventh,Septième,séptima,Siebter 
+GAME_EIGHTH,,Eighth,Huitième,octava ,Achter 
+GAME_NINTH,,Ninth,Neuvième,novena ,Neunter 
+GAME_HINT_NEED_TO,,You need to,Vous devez,Necesitas,Du musst
+GAME_UNDO,,undo,défaire,deshacer,rückgängig machen
+GAME_HINT_BACK_TO,,back to,retour à,volver a,zurück zu
+GAME_DEFINITION_ERROR,,Something went wrong while requesting the definition.,Un problème est survenu lors de la demande de la définition.,Algo salió mal al solicitar la definición.,Beim Abrufen der Definition ist etwas schiefgelaufen.
+GAME_ERROR,,Error,Erreur,Error,Fehler
+GAME_DEFINITION_FOR,,Definition for,Définition de,Definición de,Definition für
+GAME_DEFINTION_NOT_FOUND,,was not found,n’a pas été trouvé,no se encontró,wurde nicht gefunden
+GAME_DEFFINITON_ERROR_429,,"You have been requesting to many definitions, in the allotted time. Wait for ~1Hr and try again.","Vous avez demandé un trop grand nombre de définitions dans le temps imparti. Patientez environ une heure, puis réessayez.",Has solicitado demasiadas definiciones en el tiempo permitido. Espera aproximadamente una hora y vuelve a intentarlo.,Du hast innerhalb des vorgegebenen Zeitraums zu viele Definitionen angefordert. Warte etwa eine Stunde und versuche es dann erneut.
+LEVEL_SELECT_VEIW_DAILY_LEADERBOARD,,View Daily Leaderboard,Voir le classement quotidien,Ver clasificación diaria,Tägliche Rangliste ansehen
+LEVEL_SELECT,,Level Select,Sélection de niveau,Selección de nivel,Levelauswahl
+LEVEL_SELECT_TIMED_MODE,,Timed Mode,Mode chronométré,Modo con límite de tiempo,Zeitmodus
+LEADERBOARD,,Leaderboard,Classement,Tabla de clasificación,Rangliste
+LEADERBOARD_NAME_PROMPT,,What do you want to be known as?,Sous quel nom souhaitez-vous être connu ?,¿Cómo quieres que te conozcan?,Wie möchtest du genannt werden?
+LEADERBOARD_NAME_PLACEHOLDER,,Display Name,nom d’affichage,Nombre para mostrar,Anzeigename
+LEADERBOARD_SAVE_SCORE,,Save Score,Enregistrer le score,Guardar puntuación,Spielstand speichern
+LEADERBOARD_LOADING,,Loading,Chargement,Cargando,Lädt
+CREDITS,,Credits,Remerciements,Créditos,Credits
+CREDITS_GAME_MADE,,Game Made By,Jeu créé par,Juego creado por,Spiel entwickelt von
+CREDITS_GODOT_SPLASH,,Godot Splash Screen By,Écran de démarrage Godot par,Pantalla de presentación de Godot por,Godot-Startbildschirm von
+CREDITS_GODOT_SPLASH_SOUNDS,,Godot Splash Screen Sound Effects By,Effets sonores de l'écran de démarrage Godot,Efectos de sonido de la pantalla de bienvenida de Godot por,Godot-Startbildschirm Soundeffekte von
+CREDITS_FONTS,,Fonts From,Polices provenant de,Tipografías de,Schriftarten von
+SETTINGS,,Settings,Paramètres,Ajustes,Einstellungen
+SETTINGS_COLOR,,Color,Couleur,Color,Farbe
+SETTINGS_MUSIC,,Music,Musique,Música,Musik
+SETTINGS_SOUND,,Sound,Son,Sonido,Audio
+SETTINGS_SCREEN_SHAKE,,Screen Shake,Secousse de l'écran,Vibración de la pantalla,Bildschirmwackeln
+SETTINGS_HINT_FLASHING,,Hint Flashing,Indice clignotant,Indicación parpadeante,Blinkender Hinweis
+SETTINGS_NOT_SET,,Not set yet,Pas encore défini,Aún no se ha establecido,Noch nicht festgelegt
+SETTINGS_REPLAY_TUTORIAL,,Replay Tutorial,Revoir le tutoriel,Repetir tutorial,Tutorial wiederholen
+SETTINGS_RESET_GAME,,Reset Game,Réinitialiser le jeu,Reiniciar juego,Spiel zurücksetzen
+SETTINGS_CONFIRM,,Please Confirm,Veuillez confirmer,"Por favor, confirme",Bitte bestätigen
+SETTINS_ARE_YOU_SURE,,"Are you sure you want to delete your save file? This action is irreversible. 
+
+Note: This will not erase your settings.","Êtes-vous sûr de vouloir supprimer votre fichier de sauvegarde ? Cette action est irréversible.
+
+Remarque : Cela n’effacera pas vos paramètres.","¿Estás seguro de que quieres eliminar tu archivo de guardado? Esta acción es irreversible.
+
+
+Nota: Esto no borrará tu configuración.","Bist du sicher, dass du deinen Spielstand löschen möchtest? Dieser Vorgang lässt sich nicht rückgängig machen.
+
+Hinweis: Ihre Einstellungen werden dadurch nicht gelöscht."
+SETTINGS_CANCEL,,Cancel,Annuler,Cancelar,Abbrechen
+SETTINGS_DELETE_SAVE,,Delete Save File,Supprimer le fichier de sauvegarde,Eliminar archivo guardado,Speicherdatei löschen
+COLORS_RED,,Red,Rouge,Rojo,Rot
+COLORS_ORANGE,,Orange,Orange,Naranja,Orange
+COLORS_YELLOW,,Yellow,Jaune,Amarillo,Gelb
+COLORS_GREEN,,Green,Vert,Verde,Grün
+COLORS_TEAL,,Teal,Sarcelle,Verde azulado,Petrol
+COLORS_BLUE,,Blue,Bleu,Azul,Blau
+COLORS_PURPLE,,Purple,Violet,Púrpura,Lila
+COLORS_BLACK,,Black,Noir,Negro,Schwarz
+STATS,,Your Stats,Vos statistiques,Tus estadísticas,Deine Statistiken
+STATS_PUZZLES_COMPLETED,,Puzzles Completed,Puzzles terminés,Rompecabezas completados,Gelöste Rätsel
+STATS_DAILYS_COMPLETED,,Daily Puzzles Completed,Casse-têtes quotidiens terminés,Acertijos diarios completados,Tägliche Rätsel abgeschlossen
+STATS_TIME_COMPLETED,,Time Mode Levels Completed,Niveaux terminés en mode Chrono,Niveles completados en el modo Tiempo,Abgeschlossene Level im Zeitmodus
+STATS_BEST_TIMED,,Best Timed Mode,Meilleur mode chronométré,Mejor modo con límite de tiempo,Bester zeitbasierter Modus
+STATS_TOTAL_HINTS,,Total Hints Used,Nombre total d'indices utilisés,Total de pistas utilizadas,Gesamtzahl der verwendeten Hinweise
+STATS_TOTAL_UNDOS,,Total Undos Used,Nombre total d'annulations effectuées,Total de acciones deshechas,Gesamtzahl der verwendeten Rückgängig-Schritte
+STATS_TOTAL_LETTERS_DRAGGED,,Total Letters Dragged,Nombre total de lettres déplacées,Total de letras arrastradas,Gesamtzahl der verschobenen Buchstaben

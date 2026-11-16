@@ -18,7 +18,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": ["LOADING"]
+"values": ["LEADERBOARD_LOADING"]
 }
 
 [sub_resource type="Animation" id="Animation_lv3td"]
@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.76666665, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": ["LOADING", "LOADING...", "LOADING..."]
+"values": ["LEADERBOARD_LOADING", "LEADERBOARD_LOADING...", "LEADERBOARD_LOADING..."]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x62lq"]
@@ -139,13 +139,13 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1019235518]
 layout_mode = 2
-text = "What do you want to be know as?"
+text = "LEADERBOARD_NAME_PROMPT"
 label_settings = ExtResource("4_uw418")
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/VBoxContainer" unique_id=907668006]
 layout_mode = 2
 theme = ExtResource("1_bg40d")
-placeholder_text = "Display Name"
+placeholder_text = "LEADERBOARD_NAME_PLACEHOLDER"
 max_length = 16
 
 [node name="Spacer" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=995473453]
@@ -158,7 +158,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_bg40d")
 theme_type_variation = &"ReadableButton"
-text = "Save Score"
+text = "LEADERBOARD_SAVE_SCORE"
 
 [node name="Spacer2" type="Control" parent="VBoxContainer/VBoxContainer" unique_id=2098507694]
 custom_minimum_size = Vector2(0, 100)
@@ -180,7 +180,7 @@ theme_override_constants/separation = 8
 [node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer2" unique_id=2100247924]
 visible = false
 layout_mode = 2
-text = "LOADING"
+text = "LEADERBOARD_LOADING"
 label_settings = ExtResource("4_uw418")
 horizontal_alignment = 1
 
