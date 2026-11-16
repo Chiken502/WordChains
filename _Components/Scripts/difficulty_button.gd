@@ -5,7 +5,7 @@ extends Button
 	set(value):
 		difficulty = value
 		$Control/Stars.text = "Star".repeat(difficulty)
-		$Level.text = "Level " + str(GameManager.progress[DictionaryManager.current_dict]["levelProg"][difficulty - 1] + 1)
+		$Level.text = tr("GAME_LEVEL") + " " + str(GameManager.progress[DictionaryManager.current_dict]["levelProg"][difficulty - 1] + 1)
 		match difficulty:
 			1:
 				$Control/Difficulty.text = tr("GAME_EASY_MODE")
