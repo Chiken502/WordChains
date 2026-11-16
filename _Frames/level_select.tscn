@@ -95,6 +95,7 @@ offset_transform_enabled = true
 mouse_filter = 1
 text = "LEVEL_SELECT"
 label_settings = ExtResource("2_6ejmw")
+uppercase = true
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=325043654]
 custom_minimum_size = Vector2(0, 50)

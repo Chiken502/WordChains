@@ -132,6 +132,7 @@ offset_transform_enabled = true
 mouse_filter = 1
 text = "LEADERBOARD"
 label_settings = ExtResource("2_ly34k")
+uppercase = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=969894008]
 visible = false

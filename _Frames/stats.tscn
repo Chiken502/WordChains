@@ -86,6 +86,7 @@ mouse_filter = 1
 text = "STATS"
 label_settings = ExtResource("2_gkl3p")
 horizontal_alignment = 1
+uppercase = true
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=2114979091]
 custom_minimum_size = Vector2(0, 65)

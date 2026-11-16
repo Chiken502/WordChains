@@ -111,6 +111,7 @@ mouse_filter = 1
 text = "SETTINGS"
 label_settings = ExtResource("3_x0uk4")
 horizontal_alignment = 1
+uppercase = true
 
 [node name="Spacer2" type="Control" parent="VBoxContainer" unique_id=858924735]
 layout_mode = 2
