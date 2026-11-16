@@ -7,6 +7,7 @@ var current_langauge = "EN"
 var other_langauges = ["EN", "ES", "DE", "FR"]
 
 var active_tweens : Array[Tween] = []
+var button_tweens := {}
 
 
 # Called when the node enters the scene tree for the first time.
@@ -37,6 +38,13 @@ func _clear_tweens() -> void:
 			tween.kill()
 	
 	active_tweens.clear()
+	
+	for button in button_tweens:
+		var tween: Tween = button_tweens[button]
+		if tween and tween.is_valid():
+			tween.kill()
+	
+	button_tweens.clear()
 
 
 func expand():
@@ -96,29 +104,28 @@ func _change_langauge(index: int, texture_rext: TextureRect):
 
 
 # Animations 
-func _on_control_mouse_entered(button: Button) -> void:
-	if not button.disabled:
-		var tween = get_tree().create_tween()
+func _tween_button_scale(button: Button, target_scale: Vector2) -> void:
+	if button.disabled:
+		return
+	if button_tweens.has(button) and is_instance_valid(button_tweens[button]):
+		button_tweens[button].kill()
+	
+	var tween = create_tween()
+	button_tweens[button] = tween
+	tween.tween_property(button, "offset_transform_scale", target_scale, 0.1)
 
-		tween.tween_property(button, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+
+func _on_control_mouse_entered(button: Button) -> void:
+	_tween_button_scale(button, Vector2(1.1, 1.1))
 
 
 func _on_control_mouse_exited(button: Button) -> void:
-	if not button.disabled:
-		var tween = get_tree().create_tween()
-
-		tween.tween_property(button, "offset_transform_scale", Vector2(1, 1), 0.1)
+	_tween_button_scale(button, Vector2(1, 1))
 
 
 func _on_button_up(button: Button):
-	if not button.disabled:
-		var tween = get_tree().create_tween()
-
-		tween.tween_property(button, "offset_transform_scale", Vector2(1.1, 1.1), 0.1)
+	_tween_button_scale(button, Vector2(1.1, 1.1))
 
 
 func _on_button_down(button: Button):
-	if not button.disabled:
-		var tween = get_tree().create_tween()
-
-		tween.tween_property(button, "offset_transform_scale", Vector2(0.8, 0.8), 0.1)
+	_tween_button_scale(button, Vector2(0.8, 0.8))
